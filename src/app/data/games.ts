@@ -1,0 +1,220 @@
+export interface Game {
+  id: string;
+  homeTeam: string;
+  awayTeam: string;
+  homeScore: number;
+  awayScore: number;
+  date: string;
+  time: string;
+  stadium: string;
+  status: "live" | "upcoming" | "final";
+  level: "Varsity" | "JV" | "Freshman";
+  quarter?: string;
+  timeRemaining?: string;
+  videoUrl?: string;
+  highlights?: string[];
+  attendance?: number;
+}
+
+export const games: Game[] = [
+  // All games from Fall 2025 season (no live games - it's March 2026, off-season)
+  {
+    id: "game-1",
+    homeTeam: "bellarmine",
+    awayTeam: "st-francis",
+    homeScore: 28,
+    awayScore: 24,
+    date: "2025-11-15", // CCS Championship game
+    time: "7:00 PM",
+    stadium: "Levi's Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 12500,
+    highlights: [
+      "Morrison 45-yard TD pass to Lopez",
+      "Miller 12-yard rushing TD",
+      "Chen 8-yard TD run",
+    ],
+  },
+  {
+    id: "game-2",
+    homeTeam: "valley-christian",
+    awayTeam: "mitty",
+    homeScore: 35,
+    awayScore: 21,
+    date: "2025-11-08", // Semifinal
+    time: "7:30 PM",
+    stadium: "Valley Christian Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 8200,
+    highlights: [
+      "Marasco 62-yard TD pass to Carter",
+      "Wilson 5-yard TD run",
+      "Brown interception return for TD",
+    ],
+  },
+  {
+    id: "game-3",
+    homeTeam: "serra",
+    awayTeam: "sacred-heart",
+    homeScore: 21,
+    awayScore: 28,
+    date: "2025-11-01", // Regular season finale
+    time: "7:00 PM",
+    stadium: "Serra Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 5800,
+  },
+  {
+    id: "game-4",
+    homeTeam: "los-gatos",
+    awayTeam: "wilcox",
+    homeScore: 14,
+    awayScore: 31,
+    date: "2025-10-25",
+    time: "7:00 PM",
+    stadium: "Los Gatos Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 4200,
+  },
+  {
+    id: "game-5",
+    homeTeam: "bellarmine",
+    awayTeam: "valley-christian",
+    homeScore: 31,
+    awayScore: 28,
+    date: "2025-10-18",
+    time: "7:00 PM",
+    stadium: "Levi's Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 15000,
+    highlights: [
+      "Morrison game-winning TD pass with 0:42 left",
+      "Marasco 3 TD passes",
+      "Chen 125 rushing yards",
+    ],
+  },
+  {
+    id: "game-6",
+    homeTeam: "st-francis",
+    awayTeam: "mitty",
+    homeScore: 24,
+    awayScore: 17,
+    date: "2025-10-11",
+    time: "7:30 PM",
+    stadium: "St. Francis Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 9500,
+  },
+  {
+    id: "game-7",
+    homeTeam: "sacred-heart",
+    awayTeam: "los-gatos",
+    homeScore: 35,
+    awayScore: 14,
+    date: "2025-10-04",
+    time: "7:00 PM",
+    stadium: "Kezar Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 7200,
+  },
+  {
+    id: "game-8",
+    homeTeam: "wilcox",
+    awayTeam: "serra",
+    homeScore: 42,
+    awayScore: 21,
+    date: "2025-09-27",
+    time: "7:00 PM",
+    stadium: "Wilcox Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 6800,
+  },
+  {
+    id: "game-9",
+    homeTeam: "bellarmine",
+    awayTeam: "mitty",
+    homeScore: 21,
+    awayScore: 14,
+    date: "2025-09-20",
+    time: "7:00 PM",
+    stadium: "Levi's Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 11200,
+  },
+  {
+    id: "game-10",
+    homeTeam: "valley-christian",
+    awayTeam: "st-francis",
+    homeScore: 38,
+    awayScore: 35,
+    date: "2025-09-13",
+    time: "7:30 PM",
+    stadium: "Valley Christian Stadium",
+    status: "final",
+    level: "Varsity",
+    attendance: 10500,
+  },
+  // JV Games
+  {
+    id: "game-jv-1",
+    homeTeam: "bellarmine",
+    awayTeam: "st-francis",
+    homeScore: 14,
+    awayScore: 10,
+    date: "2025-11-14",
+    time: "4:00 PM",
+    stadium: "Bellarmine Practice Field",
+    status: "final",
+    level: "JV",
+    attendance: 450,
+  },
+  {
+    id: "game-jv-2",
+    homeTeam: "valley-christian",
+    awayTeam: "mitty",
+    homeScore: 21,
+    awayScore: 17,
+    date: "2025-11-07",
+    time: "4:00 PM",
+    stadium: "Valley Christian Practice Field",
+    status: "final",
+    level: "JV",
+    attendance: 380,
+  },
+  // Freshman Games
+  {
+    id: "game-fr-1",
+    homeTeam: "serra",
+    awayTeam: "sacred-heart",
+    homeScore: 21,
+    awayScore: 28,
+    date: "2025-10-31",
+    time: "3:30 PM",
+    stadium: "Serra Practice Field",
+    status: "final",
+    level: "Freshman",
+    attendance: 250,
+  },
+  {
+    id: "game-fr-2",
+    homeTeam: "wilcox",
+    awayTeam: "los-gatos",
+    homeScore: 35,
+    awayScore: 14,
+    date: "2025-10-24",
+    time: "3:30 PM",
+    stadium: "Wilcox Practice Field",
+    status: "final",
+    level: "Freshman",
+    attendance: 220,
+  },
+];

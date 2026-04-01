@@ -28,21 +28,19 @@ jobs:
         with:
           node-version: 24
           cache: 'npm'
-          cache-dependency-path: Ccshubfigma/package.json
+          cache-dependency-path: package.json
       - name: Install dependencies
         run: npm install
-        working-directory: Ccshubfigma
       - name: Build
         run: |
           npm run build
           cp dist/index.html dist/404.html
-        working-directory: Ccshubfigma
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Ccshubfigma/dist
+          path: dist
 
   deploy:
     environment:

@@ -278,7 +278,7 @@ export function TeamDetail() {
                       {new Date(game.date).toLocaleDateString()} • {game.time}
                     </div>
                     <div className="font-semibold">
-                      {isHome ? "vs" : "@"} {opponentTeam?.name}
+                      {isHome ? "vs" : "@"} {opponentTeam?.name || "Opponent"}
                     </div>
                     <div className="text-xs text-zinc-500">{game.stadium}</div>
                   </Link>
@@ -327,7 +327,7 @@ export function TeamDetail() {
                     </span>
                   </div>
                   <div className="font-semibold">
-                    {isHome ? "vs" : "@"} {opponentTeam?.name}
+                    {isHome ? "vs" : "@"} {opponentTeam?.name || "Opponent"}
                   </div>
                   <div className="text-sm text-zinc-400">
                     {teamScore} - {oppScore}

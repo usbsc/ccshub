@@ -172,8 +172,8 @@ export function Schedule() {
                       <div className="flex items-center gap-4 flex-1">
                         <img src={away?.image} className="w-10 h-10 rounded-lg object-cover border border-zinc-800" alt="" />
                         <div className="min-w-0">
-                          <div className="font-black text-white uppercase tracking-tight truncate">{away?.name}</div>
-                          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{away?.record.wins}-{away?.record.losses}</div>
+                          <div className="font-black text-white uppercase tracking-tight truncate">{away?.name || "Away"}</div>
+                          <div className="text-[10px] font-bold text-zinc-500 uppercase">{away?.record ? `${away.record.wins}-${away.record.losses}` : "0-0"}</div>
                         </div>
                       </div>
 
@@ -181,12 +181,13 @@ export function Schedule() {
 
                       <div className="flex items-center gap-4 flex-1 justify-end text-right">
                         <div className="min-w-0">
-                          <div className="font-black text-white uppercase tracking-tight truncate">{home?.name}</div>
-                          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{home?.record.wins}-{home?.record.losses}</div>
+                          <div className="font-black text-white uppercase tracking-tight truncate">{home?.name || "Home"}</div>
+                          <div className="text-[10px] font-bold text-zinc-500 uppercase">{home?.record ? `${home.record.wins}-${home.record.losses}` : "0-0"}</div>
                         </div>
                         <img src={home?.image} className="w-10 h-10 rounded-lg object-cover border border-zinc-800" alt="" />
                       </div>
                     </div>
+
 
                     {/* Stadium */}
                     <div className="md:w-48 flex items-center justify-between md:justify-end gap-4 shrink-0">

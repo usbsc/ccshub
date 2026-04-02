@@ -126,8 +126,8 @@ export function Scores() {
                           {awayWon && <Trophy className="absolute -top-2 -left-2 w-6 h-6 text-yellow-500 bg-zinc-900 rounded-full p-1 border border-zinc-800" />}
                         </div>
                         <div className="flex-1">
-                          <div className="font-black text-xl text-white uppercase tracking-tight leading-none mb-1">{away?.name}</div>
-                          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{away?.mascot}</div>
+                          <div className="font-black text-xl text-white uppercase tracking-tight leading-none mb-1">{away?.name || "Away"}</div>
+                          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{away?.mascot || "Mascot"}</div>
                         </div>
                         <div className="text-4xl font-black text-white tabular-nums">{game.awayScore}</div>
                       </div>
@@ -138,8 +138,8 @@ export function Scores() {
                       <div className={`flex items-center gap-6 flex-row-reverse md:flex-row ${!awayWon ? 'opacity-100' : 'opacity-40'}`}>
                         <div className="text-4xl font-black text-white tabular-nums">{game.homeScore}</div>
                         <div className="flex-1 text-right md:text-left">
-                          <div className="font-black text-xl text-white uppercase tracking-tight leading-none mb-1">{home?.name}</div>
-                          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{home?.mascot}</div>
+                          <div className="font-black text-xl text-white uppercase tracking-tight leading-none mb-1">{home?.name || "Home"}</div>
+                          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{home?.mascot || "Mascot"}</div>
                         </div>
                         <div className="relative">
                           <img src={home?.image} className="w-16 h-16 rounded-2xl object-cover border-2 border-zinc-800" alt="" />

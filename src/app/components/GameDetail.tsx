@@ -90,9 +90,9 @@ export function GameDetail() {
               alt={away?.name}
               className="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-zinc-700"
             />
-            <h3 className="font-bold text-xl mb-1">{away?.name}</h3>
+            <h3 className="font-bold text-xl mb-1">{away?.name || "Away Team"}</h3>
             <p className="text-sm text-zinc-400">
-              {away?.record.wins}-{away?.record.losses}
+              {away?.record ? `${away.record.wins}-${away.record.losses}` : "0-0"}
             </p>
           </Link>
 
@@ -126,9 +126,9 @@ export function GameDetail() {
               alt={home?.name}
               className="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-zinc-700"
             />
-            <h3 className="font-bold text-xl mb-1">{home?.name}</h3>
+            <h3 className="font-bold text-xl mb-1">{home?.name || "Home Team"}</h3>
             <p className="text-sm text-zinc-400">
-              {home?.record.wins}-{home?.record.losses}
+              {home?.record ? `${home.record.wins}-${home.record.losses}` : "0-0"}
             </p>
           </Link>
         </div>

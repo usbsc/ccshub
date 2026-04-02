@@ -178,11 +178,11 @@ export function Home() {
 
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
-                          <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">{away?.name}</span>
+                          <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">{away?.name || "Away Team"}</span>
                           <span className="text-2xl font-black text-white">{game.awayScore}</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">{home?.name}</span>
+                          <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">{home?.name || "Home Team"}</span>
                           <span className="text-2xl font-black text-white">{game.homeScore}</span>
                         </div>
                       </div>

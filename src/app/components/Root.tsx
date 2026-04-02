@@ -58,7 +58,7 @@ export function Root() {
           {/* Desktop Navigation */}
           <nav className="mt-4 hidden md:flex items-center gap-1">
             {[
-              { path: "/", label: "Live Feed", icon: Trophy },
+              { path: "/", label: "Broadcasts", icon: Trophy },
               { path: "/rankings", label: "Rankings", icon: BarChart3 },
               { path: "/schedule", label: "Schedule", icon: Calendar },
               { path: "/scores", label: "Scores", icon: Trophy },

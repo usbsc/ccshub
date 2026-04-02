@@ -91,7 +91,7 @@ export function Schedule() {
         <section>
           <div className="flex items-center gap-3 mb-8">
             <span className="w-2 h-8 bg-red-600 rounded-full"></span>
-            <h2 className="text-3xl font-black tracking-tighter text-white uppercase">Live Action</h2>
+            <h2 className="text-3xl font-black tracking-tighter text-white uppercase">Live Broadcasts</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {liveGames.map((game) => {

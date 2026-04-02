@@ -146,7 +146,7 @@ export function Home() {
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-black tracking-tight flex items-center gap-3">
                 <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
-                {liveGames.length > 0 ? "Live Action" : "Upcoming Matches"}
+                {liveGames.length > 0 ? "Live Broadcasts" : "Upcoming Matches"}
               </h2>
               <Link to="/schedule" className="text-sm font-bold text-blue-500 hover:text-blue-400 flex items-center gap-1 group">
                 Full Schedule <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

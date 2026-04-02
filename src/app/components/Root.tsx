@@ -19,7 +19,12 @@ export function Root() {
   }, [homeTeam]);
 
   const isActive = (path: string) => {
-    return location.pathname === path || (path !== "/" && location.pathname.startsWith(path));
+    // Standardize paths by removing leading/trailing slashes for comparison
+    const currentPath = location.pathname.replace(/^\/ccshub/, "").replace(/\/$/, "") || "/";
+    const targetPath = path.replace(/\/$/, "") || "/";
+    
+    if (targetPath === "/") return currentPath === "/";
+    return currentPath.startsWith(targetPath);
   };
 
   return (
@@ -83,7 +88,7 @@ export function Root() {
         {/* Mobile Navigation Bar (Scrollable) */}
         <div className="md:hidden border-t border-zinc-900 px-2 py-2 flex gap-1 overflow-x-auto no-scrollbar">
           {[
-            { path: "/", label: "Home", icon: Trophy },
+            { path: "/", label: "Broadcasts", icon: Trophy },
             { path: "/rankings", label: "Rankings", icon: BarChart3 },
             { path: "/schedule", label: "Schedule", icon: Calendar },
             { path: "/scores", label: "Scores", icon: Trophy },

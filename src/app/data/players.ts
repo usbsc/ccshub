@@ -16,6 +16,9 @@ export interface Player {
   highlights?: string[];
 }
 
+// Using a stable, high-quality generic football player image for all profiles
+const GENERIC_PLAYER = "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=400&h=400&q=80";
+
 export const players: Player[] = [
   {
     id: "player-riordan-1",
@@ -33,7 +36,7 @@ export const players: Player[] = [
       touchdowns: 0,
       interceptions: 0,
     },
-    image: "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?q=80&w=400&h=400&fit=crop",
+    image: GENERIC_PLAYER,
     highlights: ["4-star recruit", "Elite speed and arm strength"],
   },
   {
@@ -51,7 +54,7 @@ export const players: Player[] = [
       yards: 0,
       touchdowns: 0,
     },
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&h=400&fit=crop",
+    image: GENERIC_PLAYER,
     highlights: ["Top ranked 2027 prospect", "Game-breaking speed"],
   },
   {
@@ -69,7 +72,7 @@ export const players: Player[] = [
       yards: 0,
       touchdowns: 0,
     },
-    image: "https://images.unsplash.com/photo-1508962913221-80d085c6a281?q=80&w=400&h=400&fit=crop",
+    image: GENERIC_PLAYER,
     highlights: ["Dynamic playmaker", "WCAL breakout candidate"],
   },
   {
@@ -87,7 +90,7 @@ export const players: Player[] = [
       yards: 0,
       touchdowns: 0,
     },
-    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=400&h=400&fit=crop",
+    image: GENERIC_PLAYER,
     highlights: ["BYU Commit", "Physical downhill runner"],
   },
   {
@@ -105,7 +108,7 @@ export const players: Player[] = [
       yards: 0,
       touchdowns: 0,
     },
-    image: "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=400&h=400&fit=crop",
+    image: GENERIC_PLAYER,
     highlights: ["Proven winner", "Exceptional decision making"],
   },
 ];

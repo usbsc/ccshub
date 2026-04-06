@@ -26,6 +26,9 @@ export interface Team {
     twitter?: string;
     instagram?: string;
     maxpreps?: string;
+    hudl?: string;
+    youtube?: string;
+    website?: string;
   };
 }
 
@@ -77,6 +80,9 @@ export const teams: Team[] = [
       twitter: "RiordanFootball",
       instagram: "riordanfootball",
       maxpreps: "https://www.maxpreps.com/ca/san-francisco/archbishop-riordan-crusaders/football/",
+      hudl: "https://www.hudl.com/team/8129/Archbishop-Riordan-High-School",
+      youtube: "@riordanhs",
+      website: "https://www.riordanhs.org/athletics",
     },
   },
   {
@@ -123,6 +129,9 @@ export const teams: Team[] = [
       twitter: "PadreFootball",
       instagram: "serra_football",
       maxpreps: "https://www.maxpreps.com/ca/san-mateo/serra-padres/football/",
+      hudl: "https://www.hudl.com/team/3724/Serra-High-School",
+      youtube: "@SerraHighSchool",
+      website: "https://www.serrahs.com/athletics",
     },
   },
   {
@@ -169,6 +178,9 @@ export const teams: Team[] = [
       twitter: "SF_LancerFB",
       instagram: "sfhslancerfootball",
       maxpreps: "https://www.maxpreps.com/ca/mountain-view/st-francis-lancers/football/",
+      hudl: "https://www.hudl.com/team/2476/St-Francis-High-School",
+      youtube: "@StFrancisLancers",
+      website: "https://www.sfhs.com/athletics",
     },
   },
   {
@@ -215,6 +227,9 @@ export const teams: Team[] = [
       twitter: "SI_Football",
       instagram: "si_football",
       maxpreps: "https://www.maxpreps.com/ca/san-francisco/st-ignatius-wildcats/football/",
+      hudl: "https://www.hudl.com/team/3834/St-Ignatius-College-Preparatory",
+      youtube: "@StIgnatiusSF",
+      website: "https://www.siprep.org/athletics",
     },
   },
   {
@@ -265,6 +280,9 @@ export const teams: Team[] = [
       twitter: "MittyFootball",
       instagram: "mittyfootball",
       maxpreps: "https://www.maxpreps.com/ca/san-jose/archbishop-mitty-monarchs/football/",
+      hudl: "https://www.hudl.com/team/2427/Archbishop-Mitty-High-School",
+      youtube: "@ArchbishopMittyHS",
+      website: "https://www.mitty.com/athletics",
     },
   },
   {
@@ -311,6 +329,9 @@ export const teams: Team[] = [
       twitter: "VC_Football",
       instagram: "vchsfbc",
       maxpreps: "https://www.maxpreps.com/ca/san-jose/valley-christian-warriors/football/",
+      hudl: "https://www.hudl.com/team/2500/Valley-Christian-High-School",
+      youtube: "@ValleyChristianSchools",
+      website: "https://www.vcs.net/athletics",
     },
   },
   {
@@ -357,6 +378,9 @@ export const teams: Team[] = [
       twitter: "BellsFootball",
       instagram: "bellarminefootball",
       maxpreps: "https://www.maxpreps.com/ca/san-jose/bellarmine-college-prep-bells/football/",
+      hudl: "https://www.hudl.com/team/2429/Bellarmine-College-Preparatory",
+      youtube: "@BellarmineCollegePrep",
+      website: "https://www.bcp.org/athletics",
     },
   },
   {
@@ -402,6 +426,11 @@ export const teams: Team[] = [
     socials: {
       twitter: "SHC_Football",
       instagram: "shc_football",
+      maxpreps:
+        "https://www.maxpreps.com/ca/san-francisco/sacred-heart-cathedral-prep-fighting-irish/football/",
+      hudl: "https://www.hudl.com/team/3836/Sacred-Heart-Cathedral-Preparatory",
+      youtube: "@SacredHeartCathedralPrep",
+      website: "https://www.shcp.edu/athletics",
     },
   },
   {
@@ -492,6 +521,10 @@ export const teams: Team[] = [
     socials: {
       twitter: "WilcoxFootball",
       instagram: "wilcox_football",
+      maxpreps: "https://www.maxpreps.com/ca/santa-clara/wilcox-chargers/football/",
+      hudl: "https://www.hudl.com/team/2494/Wilcox-High-School",
+      youtube: "@WilcoxHS",
+      website: "https://wilcox.scusd.net/athletics",
     },
   },
   {
@@ -538,6 +571,9 @@ export const teams: Team[] = [
       twitter: "PalyFootball",
       instagram: "palyfootball",
       maxpreps: "https://www.maxpreps.com/ca/palo-alto/palo-alto-vikings/football/",
+      hudl: "https://www.hudl.com/team/2486/Palo-Alto-High-School",
+      youtube: "@palyathletics",
+      website: "https://paly.net/athletics",
     },
   },
   {

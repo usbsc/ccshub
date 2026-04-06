@@ -11,7 +11,9 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\"",
     "type-check": "tsc --noEmit",
-    "update:maxpreps-rosters": "node scripts/update-maxpreps-rosters.mjs"
+    "update:maxpreps-teams": "node scripts/update-maxpreps-teams.mjs",
+    "update:maxpreps-rosters": "node scripts/update-maxpreps-rosters.mjs",
+    "update:maxpreps": "npm run update:maxpreps-teams && npm run update:maxpreps-rosters"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

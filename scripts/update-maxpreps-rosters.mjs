@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const TEAMS_PATH = path.join(process.cwd(), "src/app/data/teams.ts");
+const TEAMS_MAXPREPS_PATH = path.join(process.cwd(), "src/app/data/teams.maxpreps.generated.ts");
 const OUT_PATH = path.join(process.cwd(), "src/app/data/players.maxpreps.generated.ts");
 
 const GENERIC_PLAYER_IMAGE =
@@ -31,9 +32,22 @@ function parseTeams(tsText) {
 
     const hudlMatch = line.match(/hudl:\s*"([^"]+)"/);
     if (hudlMatch) current.hudl = hudlMatch[1];
+
+    if (line.trim() === "];") break;
   }
 
-  return teams.filter((t) => t.id && t.maxpreps);
+  return teams.filter((t) => t.id);
+}
+
+async function readGeneratedTeamData() {
+  try {
+    const text = await fs.readFile(TEAMS_MAXPREPS_PATH, "utf8");
+    const m = text.match(/export const maxprepsTeamData:[^=]*=\s*(\{[\s\S]*?\});/);
+    if (!m) return {};
+    return JSON.parse(m[1]);
+  } catch {
+    return {};
+  }
 }
 
 function rosterUrlFromMaxprepsUrl(maxprepsUrl) {
@@ -193,11 +207,18 @@ function renderTs(players, generatedAt) {
 async function main() {
   const tsText = await fs.readFile(TEAMS_PATH, "utf8");
   const teams = parseTeams(tsText);
+  const generatedTeamData = await readGeneratedTeamData();
 
-  console.log(`Found ${teams.length} teams with MaxPreps links`);
+  for (const t of teams) {
+    if (!t.maxpreps) t.maxpreps = generatedTeamData?.[t.id]?.maxprepsUrl;
+  }
+
+  const teamsWithMaxpreps = teams.filter((t) => typeof t.maxpreps === "string" && t.maxpreps.length > 0);
+
+  console.log(`Found ${teamsWithMaxpreps.length}/${teams.length} teams with MaxPreps links`);
 
   const allPlayers = [];
-  for (const team of teams) {
+  for (const team of teamsWithMaxpreps) {
     console.log(`Fetching roster: ${team.id}`);
     const rosterPlayers = await fetchRoster(team);
     console.log(`  players: ${rosterPlayers.length}`);
@@ -205,6 +226,11 @@ async function main() {
   }
 
   allPlayers.sort((a, b) => (a.team + a.name).localeCompare(b.team + b.name));
+
+  if (teamsWithMaxpreps.length !== teams.length) {
+    const missing = teams.filter((t) => !t.maxpreps).map((t) => t.id);
+    console.log(`Missing MaxPreps for ${missing.length} teams (first 25): ${missing.slice(0, 25).join(", ")}`);
+  }
 
   const generatedAt = new Date().toISOString();
   const outText = renderTs(allPlayers, generatedAt);

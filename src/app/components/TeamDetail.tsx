@@ -70,6 +70,9 @@ export function TeamDetail() {
                 <span className="text-zinc-300">
                   {team.record.wins}-{team.record.losses}
                 </span>
+                {typeof team.stateRank === "number" ? (
+                  <span className="text-zinc-300">CA #{team.stateRank}</span>
+                ) : null}
                 <span className="text-zinc-300 uppercase">{team.division}</span>
                 <span className="text-zinc-300 uppercase">{team.league}</span>
               </div>
@@ -114,9 +117,14 @@ export function TeamDetail() {
       </motion.div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {[
           { label: "Ranking", value: `#${team.ranking}`, icon: Award },
+          {
+            label: "CA Rank",
+            value: typeof team.stateRank === "number" ? `#${team.stateRank}` : "—",
+            icon: Award,
+          },
           {
             label: "Record",
             value: `${team.record.wins}-${team.record.losses}`,

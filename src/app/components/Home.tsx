@@ -9,11 +9,13 @@ import {
   Star,
   ChevronRight,
   Award,
+  Search,
 } from "lucide-react";
 import { games } from "../data/games";
 import { teams } from "../data/teams";
+import { players } from "../data/players";
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useAutoUpdate } from "../hooks/useAutoUpdate";
 import { ImageWithFallback } from "./common/ImageWithFallback";
 import { UPDATE_INTERVALS, DISPLAY_LIMITS } from "../constants";
@@ -23,6 +25,21 @@ export function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const homeTeam = homeTeamStorage.get();
   useAutoUpdate(UPDATE_INTERVALS.SCORES);
+
+  const [teamQuery, setTeamQuery] = useState("");
+  const [divisionLeagueQuery, setDivisionLeagueQuery] = useState("");
+  const [playerQuery, setPlayerQuery] = useState("");
+
+  const teamById = useMemo(() => new Map(teams.map((t) => [t.id, t])), []);
+
+  const playersByTeamText = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const p of players) {
+      const prev = m.get(p.team) || "";
+      m.set(p.team, `${prev}|${p.name.toLowerCase()}`);
+    }
+    return m;
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
@@ -38,7 +55,37 @@ export function Home() {
     ? games.filter((g) => g.homeTeam === homeTeam || g.awayTeam === homeTeam)
     : [];
 
-  const getTeam = (id: string) => teams.find((t) => t.id === id);
+  const getTeam = (id: string) => teamById.get(id);
+
+  const baseBroadcastGames = liveGames.length > 0 ? liveGames : upcomingGames;
+
+  const broadcastGames = useMemo(() => {
+    const tq = teamQuery.trim().toLowerCase();
+    const dlq = divisionLeagueQuery.trim().toLowerCase();
+    const pq = playerQuery.trim().toLowerCase();
+
+    return baseBroadcastGames.filter((game) => {
+      const home = teamById.get(game.homeTeam);
+      const away = teamById.get(game.awayTeam);
+
+      const teamHaystack = `${home?.name ?? ""} ${home?.mascot ?? ""} ${away?.name ?? ""} ${
+        away?.mascot ?? ""
+      }`.toLowerCase();
+      const matchesTeam = tq.length === 0 || teamHaystack.includes(tq);
+
+      const divisionLeagueHaystack = `${home?.division ?? ""} ${home?.league ?? ""} ${
+        away?.division ?? ""
+      } ${away?.league ?? ""}`.toLowerCase();
+      const matchesDivisionLeague = dlq.length === 0 || divisionLeagueHaystack.includes(dlq);
+
+      const matchesPlayer =
+        pq.length === 0 ||
+        (playersByTeamText.get(game.homeTeam) || "").includes(pq) ||
+        (playersByTeamText.get(game.awayTeam) || "").includes(pq);
+
+      return matchesTeam && matchesDivisionLeague && matchesPlayer;
+    });
+  }, [baseBroadcastGames, divisionLeagueQuery, playerQuery, teamById, teamQuery, playersByTeamText]);
   const topRankedTeams = [...teams]
     .sort((a, b) => a.ranking - b.ranking)
     .slice(0, DISPLAY_LIMITS.TOP_RANKED_TEAMS);
@@ -186,75 +233,121 @@ export function Home() {
               </Link>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-6">
-              {(liveGames.length > 0 ? liveGames : upcomingGames).map((game) => {
-                const home = getTeam(game.homeTeam);
-                const away = getTeam(game.awayTeam);
-                return (
-                  <Link
-                    key={game.id}
-                    to={`/game/${game.id}`}
-                    className="group relative bg-zinc-900 hover:bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-800 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-[0.98]"
-                  >
-                    <div className="p-6">
-                      <div className="flex justify-between items-center mb-6">
-                        <span className="bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase">
-                          {game.level} • {game.time}
-                        </span>
-                        {game.status === "live" && (
-                          <span className="flex items-center gap-1.5 text-red-500 text-[10px] font-black uppercase">
-                            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                            LIVE
-                          </span>
-                        )}
-                      </div>
-
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-800 p-1">
-                              <ImageWithFallback
-                                src={away?.image}
-                                className="w-full h-full object-contain"
-                                alt=""
-                              />
-                            </div>
-                            <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">
-                              {away?.name || "Away Team"}
-                            </span>
-                          </div>
-                          <span className="text-2xl font-black text-white">{game.awayScore}</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-800 p-1">
-                              <ImageWithFallback
-                                src={home?.image}
-                                className="w-full h-full object-contain"
-                                alt=""
-                              />
-                            </div>
-                            <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">
-                              {home?.name || "Home Team"}
-                            </span>
-                          </div>
-                          <span className="text-2xl font-black text-white">{game.homeScore}</span>
-                        </div>
-                      </div>
-
-                      <div className="mt-6 pt-6 border-t border-zinc-800 flex items-center justify-between text-[10px] font-bold text-zinc-500 tracking-wide">
-                        <span className="flex items-center gap-1.5 uppercase">
-                          <MapPin className="w-3 h-3" /> {game.stadium}
-                        </span>
-                        <span className="flex items-center gap-1.5 uppercase">
-                          <Users className="w-3 h-3" /> {game.attendance?.toLocaleString()}
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="relative group">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-blue-500 transition-colors" />
+                <input
+                  type="text"
+                  placeholder="Search team..."
+                  value={teamQuery}
+                  onChange={(e) => setTeamQuery(e.target.value)}
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                  aria-label="Search broadcasts by team"
+                />
+              </div>
+              <div className="relative group">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-blue-500 transition-colors" />
+                <input
+                  type="text"
+                  placeholder="Search division or league..."
+                  value={divisionLeagueQuery}
+                  onChange={(e) => setDivisionLeagueQuery(e.target.value)}
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                  aria-label="Search broadcasts by division or league"
+                />
+              </div>
+              <div className="relative group">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-blue-500 transition-colors" />
+                <input
+                  type="text"
+                  placeholder="Search player (optional)..."
+                  value={playerQuery}
+                  onChange={(e) => setPlayerQuery(e.target.value)}
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                  aria-label="Search broadcasts by player"
+                />
+              </div>
             </div>
+
+            <div className="text-[10px] font-black text-zinc-600 uppercase tracking-widest mb-6">
+              Showing {broadcastGames.length} of {baseBroadcastGames.length}
+            </div>
+
+            {broadcastGames.length === 0 ? (
+              <div className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-800 text-zinc-400">
+                No broadcasts match your search.
+              </div>
+            ) : (
+              <div className="grid sm:grid-cols-2 gap-6">
+                {broadcastGames.map((game) => {
+                  const home = getTeam(game.homeTeam);
+                  const away = getTeam(game.awayTeam);
+                  return (
+                    <Link
+                      key={game.id}
+                      to={`/game/${game.id}`}
+                      className="group relative bg-zinc-900 hover:bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-800 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-[0.98]"
+                    >
+                      <div className="p-6">
+                        <div className="flex justify-between items-center mb-6">
+                          <span className="bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase">
+                            {game.level} • {game.time}
+                          </span>
+                          {game.status === "live" && (
+                            <span className="flex items-center gap-1.5 text-red-500 text-[10px] font-black uppercase">
+                              <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                              LIVE
+                            </span>
+                          )}
+                        </div>
+
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-800 p-1">
+                                <ImageWithFallback
+                                  src={away?.image}
+                                  className="w-full h-full object-contain"
+                                  alt=""
+                                />
+                              </div>
+                              <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">
+                                {away?.name || "Away Team"}
+                              </span>
+                            </div>
+                            <span className="text-2xl font-black text-white">{game.awayScore}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-800 p-1">
+                                <ImageWithFallback
+                                  src={home?.image}
+                                  className="w-full h-full object-contain"
+                                  alt=""
+                                />
+                              </div>
+                              <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">
+                                {home?.name || "Home Team"}
+                              </span>
+                            </div>
+                            <span className="text-2xl font-black text-white">{game.homeScore}</span>
+                          </div>
+                        </div>
+
+                        <div className="mt-6 pt-6 border-t border-zinc-800 flex items-center justify-between text-[10px] font-bold text-zinc-500 tracking-wide">
+                          <span className="flex items-center gap-1.5 uppercase">
+                            <MapPin className="w-3 h-3" /> {game.stadium}
+                          </span>
+                          <span className="flex items-center gap-1.5 uppercase">
+                            <Users className="w-3 h-3" /> {game.attendance?.toLocaleString()}
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
           </section>
 
           {/* Featured Player Spotlight */}

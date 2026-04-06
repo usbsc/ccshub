@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Calendar, MapPin, Clock, ChevronRight, Filter } from "lucide-react";
+import { Calendar, MapPin, Clock, ChevronRight, Filter, Search } from "lucide-react";
 import {
   DEFAULT_GAMES_YEAR,
   GAME_YEARS,
@@ -8,27 +8,73 @@ import {
   type GameYear,
 } from "../data/games";
 import { teams } from "../data/teams";
-import { useState } from "react";
+import { players } from "../data/players";
+import { useMemo, useState } from "react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
 
 export function Schedule() {
   const [selectedLevel, setSelectedLevel] = useState<string>("all");
   const [selectedYear, setSelectedYear] = useState<GameYear>(DEFAULT_GAMES_YEAR);
 
+  const [teamQuery, setTeamQuery] = useState("");
+  const [divisionLeagueQuery, setDivisionLeagueQuery] = useState("");
+  const [playerQuery, setPlayerQuery] = useState("");
+
   const games = gamesByYear[selectedYear] ?? [];
 
   const levels = ["all", "Varsity", "JV", "Freshman"];
 
-  const filteredGames =
+  const teamById = useMemo(() => new Map(teams.map((t) => [t.id, t])), []);
+
+  const playersByTeamText = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const p of players) {
+      const prev = m.get(p.team) || "";
+      m.set(p.team, `${prev}|${p.name.toLowerCase()}`);
+    }
+    return m;
+  }, []);
+
+  const getTeam = (id: string) => teamById.get(id);
+
+  const levelFilteredGames =
     selectedLevel === "all" ? games : games.filter((g) => g.level === selectedLevel);
+
+  const filteredGames = useMemo(() => {
+    const tq = teamQuery.trim().toLowerCase();
+    const dlq = divisionLeagueQuery.trim().toLowerCase();
+    const pq = playerQuery.trim().toLowerCase();
+
+    if (tq.length === 0 && dlq.length === 0 && pq.length === 0) return levelFilteredGames;
+
+    return levelFilteredGames.filter((game) => {
+      const home = teamById.get(game.homeTeam);
+      const away = teamById.get(game.awayTeam);
+
+      const teamHaystack = `${home?.name ?? ""} ${home?.mascot ?? ""} ${away?.name ?? ""} ${
+        away?.mascot ?? ""
+      }`.toLowerCase();
+      const matchesTeam = tq.length === 0 || teamHaystack.includes(tq);
+
+      const divisionLeagueHaystack = `${home?.division ?? ""} ${home?.league ?? ""} ${
+        away?.division ?? ""
+      } ${away?.league ?? ""}`.toLowerCase();
+      const matchesDivisionLeague = dlq.length === 0 || divisionLeagueHaystack.includes(dlq);
+
+      const matchesPlayer =
+        pq.length === 0 ||
+        (playersByTeamText.get(game.homeTeam) || "").includes(pq) ||
+        (playersByTeamText.get(game.awayTeam) || "").includes(pq);
+
+      return matchesTeam && matchesDivisionLeague && matchesPlayer;
+    });
+  }, [divisionLeagueQuery, levelFilteredGames, playerQuery, teamById, teamQuery, playersByTeamText]);
 
   const upcomingGames = filteredGames
     .filter((g) => g.status === "upcoming")
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   const liveGames = filteredGames.filter((g) => g.status === "live");
-
-  const getTeam = (id: string) => teams.find((t) => t.id === id);
 
   // Group games by date
   const gamesByDate = upcomingGames.reduce(
@@ -107,8 +153,47 @@ export function Schedule() {
           </select>
 
           <div className="text-[10px] font-black text-zinc-600 uppercase tracking-widest flex items-center gap-2">
-            <Filter className="w-3 h-3" /> Showing {upcomingGames.length} Upcoming
+            <Filter className="w-3 h-3" /> Showing {liveGames.length} Live • {upcomingGames.length} Upcoming
           </div>
+        </div>
+      </div>
+
+      {/* Broadcast Search */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="relative group">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-green-500 transition-colors" />
+          <input
+            type="text"
+            placeholder="Search team..."
+            value={teamQuery}
+            onChange={(e) => setTeamQuery(e.target.value)}
+            className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+            aria-label="Search broadcasts by team"
+          />
+        </div>
+
+        <div className="relative group">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-green-500 transition-colors" />
+          <input
+            type="text"
+            placeholder="Search division or league..."
+            value={divisionLeagueQuery}
+            onChange={(e) => setDivisionLeagueQuery(e.target.value)}
+            className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+            aria-label="Search broadcasts by division or league"
+          />
+        </div>
+
+        <div className="relative group">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-green-500 transition-colors" />
+          <input
+            type="text"
+            placeholder="Search player (optional)..."
+            value={playerQuery}
+            onChange={(e) => setPlayerQuery(e.target.value)}
+            className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+            aria-label="Search broadcasts by player"
+          />
         </div>
       </div>
 

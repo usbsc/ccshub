@@ -178,7 +178,7 @@ export function Root() {
       {/* Footer */}
       <footer className="bg-zinc-950 border-t border-zinc-900 mt-20">
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
@@ -196,34 +196,6 @@ export function Root() {
                 The premier digital destination for Central Coast Section athletics. Real-time
                 scores, in-depth rankings, and elite player spotlights.
               </p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-zinc-200 mb-4 text-sm uppercase tracking-wider">
-                Resources
-              </h4>
-              <ul className="text-zinc-500 text-sm space-y-3 font-medium">
-                <li>
-                  <a href="#" className="hover:text-blue-400 transition-colors">
-                    MaxPreps CCS
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-400 transition-colors">
-                    CIF Official Stats
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-400 transition-colors">
-                    Hudl Highlights
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-400 transition-colors">
-                    CalPreps Rankings
-                  </a>
-                </li>
-              </ul>
             </div>
 
             <div>

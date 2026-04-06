@@ -1,3 +1,13 @@
+export type GameVideoProvider = "nfhs" | "youtube" | "hudl" | "maxpreps" | "other";
+
+export interface GameVideo {
+  provider: GameVideoProvider;
+  /** URL suitable for embedding in an <iframe> (for NFHS this is typically an embed URL). */
+  embedUrl: string;
+  /** Optional canonical page URL to open in a new tab (e.g. NFHS event page). */
+  pageUrl?: string;
+}
+
 export interface Game {
   id: string;
   homeTeam: string;
@@ -12,7 +22,9 @@ export interface Game {
   dataSource?: string;
   quarter?: string;
   timeRemaining?: string;
+  /** @deprecated Prefer `video.embedUrl` */
   videoUrl?: string;
+  video?: GameVideo;
   highlights?: string[];
   attendance?: number;
 }

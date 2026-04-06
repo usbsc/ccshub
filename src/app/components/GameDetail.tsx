@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router";
-import { MapPin, Users, Clock, TrendingUp, Award } from "lucide-react";
+import { MapPin, Users, Clock, TrendingUp, Award, ExternalLink } from "lucide-react";
 import { allGames } from "../data/games";
 import { teams } from "../data/teams";
 import { motion } from "motion/react";
@@ -23,10 +23,13 @@ export function GameDetail() {
   const home = teams.find((t) => t.id === game.homeTeam);
   const away = teams.find((t) => t.id === game.awayTeam);
 
+  const video =
+    game.video ?? (game.videoUrl ? { provider: "other" as const, embedUrl: game.videoUrl } : undefined);
+
   return (
     <div className="max-w-6xl mx-auto space-y-6">
       {/* Broadcast Video Section */}
-      {game.videoUrl && (
+      {video?.embedUrl && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -34,7 +37,8 @@ export function GameDetail() {
         >
           <div className="aspect-video w-full bg-zinc-950">
             <iframe
-              src={game.videoUrl}
+              src={video.embedUrl}
+              title={`${away?.name ?? "Away"} vs ${home?.name ?? "Home"} video`}
               className="w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -42,23 +46,41 @@ export function GameDetail() {
           </div>
           <div className="absolute top-6 left-6 flex items-center gap-3">
             <div className="bg-red-600 px-4 py-1.5 rounded-full flex items-center gap-2 shadow-xl border border-white/10">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              {game.status === "live" ? (
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              ) : null}
               <span className="text-xs font-black tracking-widest text-white uppercase">
-                Live Broadcast
+                {game.status === "live" ? "Live" : "Video"}
               </span>
             </div>
-            <div className="bg-zinc-900/80 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 border border-white/5">
-              <Users className="w-3.5 h-3.5 text-zinc-400" />
-              <span className="text-[10px] font-bold text-zinc-100 uppercase tracking-tighter">
-                12.5k watching
-              </span>
-            </div>
+
+            {video.provider === "nfhs" ? (
+              <div className="bg-zinc-900/80 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/5">
+                <span className="text-[10px] font-bold text-zinc-100 uppercase tracking-tighter">
+                  NFHS Network
+                </span>
+              </div>
+            ) : null}
+
+            {video.pageUrl ? (
+              <a
+                href={video.pageUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-zinc-900/80 hover:bg-zinc-900 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 border border-white/5"
+              >
+                <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
+                <span className="text-[10px] font-bold text-zinc-100 uppercase tracking-tighter">
+                  Open
+                </span>
+              </a>
+            ) : null}
           </div>
         </motion.div>
       )}
 
       {/* Game Header (only if no video or smaller version) */}
-      {!game.videoUrl && (
+      {!video?.embedUrl && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

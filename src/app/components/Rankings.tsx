@@ -172,7 +172,7 @@ export function Rankings() {
                         {team.name}
                       </div>
                       <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest truncate">
-                        {team.mascot} • {team.league}
+                        {team.mascot} • {team.division}
                         {typeof team.stateRank === "number" ? (
                           <span className="text-zinc-400"> • CA #{team.stateRank}</span>
                         ) : null}

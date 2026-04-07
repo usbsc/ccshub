@@ -22,6 +22,7 @@ import { useNfhsCifccsBroadcasts } from "../hooks/useNfhsCifccsBroadcasts";
 import { ImageWithFallback } from "./common/ImageWithFallback";
 import { UPDATE_INTERVALS, DISPLAY_LIMITS } from "../constants";
 import { homeTeamStorage } from "../services/storage";
+import { googleMapsSearchUrl } from "../utils/maps";
 
 export function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -438,7 +439,18 @@ export function Home() {
 
                         <div className="mt-6 pt-6 border-t border-zinc-800 flex items-center justify-between text-[10px] font-bold text-zinc-500 tracking-wide">
                           <span className="flex items-center gap-1.5 uppercase">
-                            <MapPin className="w-3 h-3" /> {game.stadium}
+                            <MapPin className="w-3 h-3" />
+                            <a
+                              href={googleMapsSearchUrl(
+                                `${game.stadium} ${home?.name ?? ""} ${away?.name ?? ""}`.trim()
+                              )}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline"
+                              title="Open in Google Maps"
+                            >
+                              {game.stadium}
+                            </a>
                           </span>
                           <span className="flex items-center gap-1.5 uppercase">
                             <Users className="w-3 h-3" /> {game.attendance?.toLocaleString()}

@@ -4,6 +4,7 @@ import { allGames } from "../data/games";
 import { teams } from "../data/teams";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
+import { googleMapsSearchUrl } from "../utils/maps";
 
 export function GameDetail() {
   const { gameId } = useParams();
@@ -106,7 +107,15 @@ export function GameDetail() {
               <div className="flex items-center gap-4 text-sm text-zinc-300 mb-2">
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
-                  {game.stadium}
+                  <a
+                    href={googleMapsSearchUrl(`${game.stadium} ${home?.name ?? ""}`.trim())}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                    title="Open in Google Maps"
+                  >
+                    {game.stadium}
+                  </a>
                 </div>
                 {game.attendance && (
                   <div className="flex items-center gap-2">

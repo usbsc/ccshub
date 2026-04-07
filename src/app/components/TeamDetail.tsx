@@ -24,6 +24,7 @@ import {
 import { players } from "../data/players";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
+import { googleMapsSearchUrl } from "../utils/maps";
 
 export function TeamDetail() {
   const { teamId } = useParams();
@@ -91,7 +92,6 @@ export function TeamDetail() {
                   <span className="text-zinc-300">CA #{team.stateRank}</span>
                 ) : null}
                 <span className="text-zinc-300 uppercase">{team.division}</span>
-                <span className="text-zinc-300 uppercase">{team.league}</span>
               </div>
 
               {team.socials && (
@@ -156,8 +156,25 @@ export function TeamDetail() {
             icon: TrendingUp,
           },
           { label: "Streak", value: team.streak ?? "—", icon: Zap },
-          { label: "Division", value: team.division, icon: Shield },
-          { label: "Stadium", value: team.stadium, icon: MapPin },
+          { label: "Division/League", value: team.division, icon: Shield },
+          {
+            label: "Stadium",
+            value:
+              team.stadium && team.stadium !== "N/A" ? (
+                <a
+                  href={googleMapsSearchUrl(`${team.stadium} ${team.name}`.trim())}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                  title="Open in Google Maps"
+                >
+                  {team.stadium}
+                </a>
+              ) : (
+                "—"
+              ),
+            icon: MapPin,
+          },
         ].map((stat, idx) => (
           <motion.div
             key={stat.label}

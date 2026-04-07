@@ -10,6 +10,7 @@ import {
 import { teams } from "../data/teams";
 import { useState } from "react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
+import { googleMapsSearchUrl } from "../utils/maps";
 
 export function Scores() {
   const [selectedLevel, setSelectedLevel] = useState<string>("all");
@@ -145,7 +146,18 @@ export function Scores() {
                       </span>
                       <div className="flex items-center gap-4">
                         <span className="flex items-center gap-1.5 text-[10px] font-bold text-zinc-600 uppercase">
-                          <MapPin className="w-3 h-3 text-red-500" /> {game.stadium}
+                          <MapPin className="w-3 h-3 text-red-500" />
+                          <a
+                            href={googleMapsSearchUrl(
+                              `${game.stadium} ${home?.name ?? ""} ${away?.name ?? ""}`.trim()
+                            )}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                            title="Open in Google Maps"
+                          >
+                            {game.stadium}
+                          </a>
                         </span>
                         {game.attendance && (
                           <span className="flex items-center gap-1.5 text-[10px] font-bold text-zinc-600 uppercase">

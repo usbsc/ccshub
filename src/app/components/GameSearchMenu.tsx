@@ -4,6 +4,7 @@ import { Search, X, Calendar, MapPin } from "lucide-react";
 import { allGames } from "../data/games";
 import { teams } from "../data/teams";
 import { ImageWithFallback } from "./common/ImageWithFallback";
+import { googleMapsSearchUrl } from "../utils/maps";
 
 interface GameSearchMenuProps {
   onClose: () => void;
@@ -141,7 +142,17 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
 
                     <div className="flex items-center gap-2 text-xs text-blue-300">
                       <MapPin className="w-3 h-3" />
-                      {game.stadium}
+                      <a
+                        href={googleMapsSearchUrl(
+                          `${game.stadium} ${home?.name ?? ""} ${away?.name ?? ""}`.trim()
+                        )}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                        title="Open in Google Maps"
+                      >
+                        {game.stadium}
+                      </a>
                       {game.time && ` • ${game.time}`}
                       <span className="ml-auto text-blue-400">{game.dataSource}</span>
                     </div>

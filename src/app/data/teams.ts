@@ -3495,8 +3495,35 @@ function createTeamPlaceholderLogo(team: Pick<Team, "name" | "colors">) {
   return svgToDataUri(svg);
 }
 
+const LEAGUE_NAME_ALIASES: Record<string, string> = {
+  "West Catholic Athletic League": "WCAL",
+  "Peninsula Athletic League": "PAL",
+};
+
+function normalizeLeagueName(name: string) {
+  const trimmed = name.trim();
+  return LEAGUE_NAME_ALIASES[trimmed] ?? trimmed;
+}
+
+function deriveLeagueAndDivision(leagueRaw: string): Pick<Team, "league" | "division"> {
+  const raw = leagueRaw.trim();
+  if (!raw) return { league: "Independent", division: "Independent" };
+
+  const parts = raw.split(" - ").map((p) => p.trim()).filter(Boolean);
+  if (parts.length >= 2) {
+    const league = normalizeLeagueName(parts[0] ?? raw);
+    const suffix = parts.slice(1).join(" - ");
+    return { league, division: `${league} - ${suffix}` };
+  }
+
+  const league = normalizeLeagueName(raw);
+  return { league, division: league };
+}
+
 export const teams: Team[] = baseTeams.map((team) => {
   const mp = maxprepsTeamData[team.id] ?? {};
+
+  const { league, division } = deriveLeagueAndDivision(team.league);
 
   const mergedImage = mp.schoolMascotUrl ?? team.image;
   const image =
@@ -3504,6 +3531,8 @@ export const teams: Team[] = baseTeams.map((team) => {
 
   return {
     ...team,
+    league,
+    division,
     image,
     socials: {
       ...team.socials,

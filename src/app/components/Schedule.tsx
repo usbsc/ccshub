@@ -12,6 +12,7 @@ import { players } from "../data/players";
 import { useMemo, useState } from "react";
 import { useNfhsCifccsBroadcasts } from "../hooks/useNfhsCifccsBroadcasts";
 import { ImageWithFallback } from "./common/ImageWithFallback";
+import { googleMapsSearchUrl } from "../utils/maps";
 
 export function Schedule() {
   const [selectedLevel, setSelectedLevel] = useState<string>("all");
@@ -373,7 +374,18 @@ export function Schedule() {
 
                   <div className="pt-6 border-t border-zinc-800 flex justify-between items-center">
                     <div className="flex items-center gap-2 text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
-                      <MapPin className="w-3 h-3 text-red-500" /> {game.stadium}
+                      <MapPin className="w-3 h-3 text-red-500" />
+                      <a
+                        href={googleMapsSearchUrl(
+                          `${game.stadium} ${home?.name ?? ""} ${away?.name ?? ""}`.trim()
+                        )}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                        title="Open in Google Maps"
+                      >
+                        {game.stadium}
+                      </a>
                     </div>
                     <ChevronRight className="w-5 h-5 text-zinc-700 group-hover:text-red-500 group-hover:translate-x-1 transition-all" />
                   </div>
@@ -467,7 +479,18 @@ export function Schedule() {
                     {/* Stadium */}
                     <div className="md:w-48 flex items-center justify-between md:justify-end gap-4 shrink-0">
                       <div className="flex items-center gap-2 text-[10px] font-black text-zinc-500 uppercase tracking-widest truncate max-w-[120px]">
-                        <MapPin className="w-3 h-3" /> {game.stadium}
+                        <MapPin className="w-3 h-3" />
+                        <a
+                          href={googleMapsSearchUrl(
+                            `${game.stadium} ${home?.name ?? ""} ${away?.name ?? ""}`.trim()
+                          )}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                          title="Open in Google Maps"
+                        >
+                          {game.stadium}
+                        </a>
                       </div>
                       <div className="w-8 h-8 rounded-full bg-zinc-800 group-hover:bg-green-600 flex items-center justify-center transition-all">
                         <ChevronRight className="w-4 h-4 text-zinc-500 group-hover:text-white" />

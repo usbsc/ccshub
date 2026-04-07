@@ -379,11 +379,7 @@ export function Home() {
               Showing {broadcastGames.length} of {baseBroadcastGames.length}
             </div>
 
-            {broadcastGames.length === 0 ? (
-              <div className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-800 text-zinc-400">
-                No broadcasts match your search.
-              </div>
-            ) : (
+            {broadcastGames.length > 0 ? (
               <div className="grid sm:grid-cols-2 gap-6">
                 {broadcastGames.map((game) => {
                   const home = getTeam(game.homeTeam);
@@ -453,7 +449,7 @@ export function Home() {
                   );
                 })}
               </div>
-            )}
+            ) : null}
           </section>
 
           {/* Featured Player Spotlight */}

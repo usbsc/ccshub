@@ -3454,12 +3454,57 @@ export const baseTeams: Team[] = [
   },
 ];
 
+function getTeamInitials(teamName: string) {
+  const words = teamName
+    .replace(/[^a-zA-Z0-9 ]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+
+  if (words.length >= 2) {
+    const first = words[0]?.[0] ?? "";
+    const second = words[1]?.[0] ?? "";
+    return (first + second).toUpperCase() || "CC";
+  }
+
+  if (words.length === 1) return (words[0]?.slice(0, 2) ?? "CC").toUpperCase();
+  return "CC";
+}
+
+function svgToDataUri(svg: string) {
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+}
+
+function createTeamPlaceholderLogo(team: Pick<Team, "name" | "colors">) {
+  const primary = team.colors?.primary || "#111827";
+  const secondary = team.colors?.secondary || "#3b82f6";
+  const initials = getTeamInitials(team.name);
+
+  const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="${primary}"/>
+      <stop offset="1" stop-color="${secondary}"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="url(#g)"/>
+  <rect x="16" y="16" width="224" height="224" rx="40" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="8"/>
+  <text x="128" y="140" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="88" font-weight="900" fill="rgba(255,255,255,0.95)" letter-spacing="2">${initials}</text>
+</svg>`;
+
+  return svgToDataUri(svg);
+}
+
 export const teams: Team[] = baseTeams.map((team) => {
   const mp = maxprepsTeamData[team.id] ?? {};
 
+  const mergedImage = mp.schoolMascotUrl ?? team.image;
+  const image =
+    !mergedImage || mergedImage === GENERIC_LOGO ? createTeamPlaceholderLogo(team) : mergedImage;
+
   return {
     ...team,
-    image: mp.schoolMascotUrl ?? team.image,
+    image,
     socials: {
       ...team.socials,
       maxpreps: mp.maxprepsUrl ?? team.socials?.maxpreps,

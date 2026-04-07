@@ -171,11 +171,11 @@ export function Players() {
                 className="group relative bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-zinc-800 transition-all duration-500 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/10 active:scale-[0.98] cursor-pointer"
               >
                 {/* Image Section */}
-                <div className="relative h-72 overflow-hidden">
+                <div className="relative h-72 overflow-hidden bg-zinc-950">
                   <ImageWithFallback
-                    src={player.image}
-                    alt={player.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src={team?.image}
+                    alt={team?.name ? `${team.name} logo` : player.name}
+                    className="w-full h-full object-contain p-10 transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent"></div>
 
@@ -309,8 +309,8 @@ export function Players() {
               <div className="grid md:grid-cols-2">
                 <div className="relative h-80 md:h-auto">
                   <ImageWithFallback
-                    src={activePlayer.image}
-                    className="w-full h-full object-cover"
+                    src={teamById.get(activePlayer.team)?.image}
+                    className="w-full h-full object-contain bg-zinc-950 p-12"
                     alt=""
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />

@@ -1,34 +1,3 @@
-export type GameVideoProvider = "nfhs" | "youtube" | "hudl" | "maxpreps" | "other";
-
-export interface GameVideo {
-  provider: GameVideoProvider;
-  /** URL suitable for embedding in an <iframe> (for NFHS this is typically an embed URL). */
-  embedUrl: string;
-  /** Optional canonical page URL to open in a new tab (e.g. NFHS event page). */
-  pageUrl?: string;
-}
-
-export interface Game {
-  id: string;
-  homeTeam: string;
-  awayTeam: string;
-  homeScore: number;
-  awayScore: number;
-  date: string;
-  time: string;
-  stadium: string;
-  status: "live" | "upcoming" | "final";
-  level: "Varsity" | "JV" | "Freshman";
-  dataSource?: string;
-  quarter?: string;
-  timeRemaining?: string;
-  /** @deprecated Prefer `video.embedUrl` */
-  videoUrl?: string;
-  video?: GameVideo;
-  highlights?: string[];
-  attendance?: number;
-}
-
 import { games2004 } from "./games/2004";
 import { games2005 } from "./games/2005";
 import { games2006 } from "./games/2006";
@@ -53,6 +22,40 @@ import { games2024 } from "./games/2024";
 import { games2025 } from "./games/2025";
 import { games2026 } from "./games/2026";
 
+export type GameVideoProvider = "nfhs" | "youtube" | "hudl" | "maxpreps" | "other";
+
+export interface GameVideo {
+  provider: GameVideoProvider;
+  /** URL suitable for embedding in an <iframe> (for NFHS this is typically an embed URL). */
+  embedUrl: string;
+  /** Optional canonical page URL to open in a new tab (e.g. NFHS event page). */
+  pageUrl?: string;
+}
+
+export interface Game {
+  id: string;
+  homeTeam: string;
+  awayTeam: string;
+  homeTeamName?: string;
+  awayTeamName?: string;
+  homeScore: number;
+  awayScore: number;
+  date: string;
+  time: string;
+  stadium: string;
+  status: "live" | "upcoming" | "final";
+  level: "Varsity" | "JV" | "Freshman";
+  dataSource?: string;
+  sourceUrl?: string;
+  quarter?: string;
+  timeRemaining?: string;
+  /** @deprecated Prefer `video.embedUrl` */
+  videoUrl?: string;
+  video?: GameVideo;
+  highlights?: string[];
+  attendance?: number;
+}
+
 export const GAME_YEARS = [
   2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
   2020, 2021, 2022, 2023, 2024, 2025, 2026,
@@ -64,6 +67,18 @@ export const DEFAULT_GAMES_YEAR: GameYear = 2025;
 
 export function seasonLabel(year: number) {
   return `${year}-${String(year + 1).slice(-2)}`;
+}
+
+export function gamesDataUrl(year: GameYear) {
+  return `${import.meta.env.BASE_URL}data/games/${year}.json`;
+}
+
+export function parseGameYearFromId(gameId: string): GameYear | null {
+  const m = gameId.match(/(?:^|-)20\d{2}(?:-|$)/);
+  if (!m) return null;
+
+  const y = Number(m[0].replace(/-/g, ""));
+  return (GAME_YEARS as readonly number[]).includes(y) ? (y as GameYear) : null;
 }
 
 export const gamesByYear: Record<GameYear, Game[]> = {

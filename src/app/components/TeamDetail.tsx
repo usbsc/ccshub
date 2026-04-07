@@ -316,9 +316,9 @@ export function TeamDetail() {
               >
                 <div className="w-full h-48 overflow-hidden rounded-lg mb-3">
                   <ImageWithFallback
-                    src={player.image}
+                    src={team.image}
                     alt={player.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain bg-zinc-950 p-6"
                   />
                 </div>
                 <div className="font-bold text-lg">

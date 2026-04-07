@@ -129,6 +129,11 @@ async function discoverMaxprepsFootballUrl(team) {
   return { url: footballUrl, confidence: bestScore };
 }
 
+function extractSchoolMascotUrl(nextData) {
+  const url = nextData?.props?.pageProps?.teamContext?.data?.schoolMascotUrl;
+  return typeof url === "string" && url.startsWith("http") ? url : undefined;
+}
+
 function extractCaliforniaStateRank(nextData) {
   const rankings = nextData?.props?.pageProps?.teamContext?.rankingsData?.data;
   if (!Array.isArray(rankings)) return undefined;
@@ -216,7 +221,7 @@ function renderTs(teamData, generatedAt) {
 
   const body =
     `export const MAXPREPS_TEAMS_GENERATED_AT = ${JSON.stringify(generatedAt)};\n\n` +
-    `export type MaxprepsTeamData = {\n  maxprepsUrl?: string;\n  stateRank?: number;\n  record?: { wins: number; losses: number };\n  pointsFor?: number;\n  pointsAgainst?: number;\n  streak?: string;\n  lastUpdated?: string;\n};\n\n` +
+    `export type MaxprepsTeamData = {\n  maxprepsUrl?: string;\n  schoolMascotUrl?: string;\n  stateRank?: number;\n  record?: { wins: number; losses: number };\n  pointsFor?: number;\n  pointsAgainst?: number;\n  streak?: string;\n  lastUpdated?: string;\n};\n\n` +
     `export const maxprepsTeamData: Record<string, MaxprepsTeamData> = ${JSON.stringify(teamData, null, 2)};\n`;
 
   return header + body;
@@ -232,7 +237,7 @@ async function main() {
 
   console.log(`Found ${teams.length} teams`);
 
-  /** @type {Record<string, {maxprepsUrl?:string,stateRank?:number,record?:{wins:number,losses:number},pointsFor?:number,pointsAgainst?:number,streak?:string,lastUpdated?:string}>} */
+  /** @type {Record<string, {maxprepsUrl?:string,schoolMascotUrl?:string,stateRank?:number,record?:{wins:number,losses:number},pointsFor?:number,pointsAgainst?:number,streak?:string,lastUpdated?:string}>} */
   const out = {};
 
   const generatedAt = new Date().toISOString();
@@ -265,6 +270,7 @@ async function main() {
     process.stdout.write(`Fetching rank/record: ${team.id} ... `);
     try {
       const next = await fetchJsonWithRetry(maxprepsUrl);
+      const schoolMascotUrl = extractSchoolMascotUrl(next);
       const stateRank = extractCaliforniaStateRank(next);
       const record = extractOverallRecord(next);
       const { pointsFor, pointsAgainst } = extractPointsForAgainst(next);
@@ -272,6 +278,7 @@ async function main() {
 
       out[team.id] = {
         maxprepsUrl,
+        schoolMascotUrl,
         stateRank,
         record,
         pointsFor,

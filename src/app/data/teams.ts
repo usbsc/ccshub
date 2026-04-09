@@ -62,7 +62,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#8B0000", description: "Gold jersey (rare)" },
     },
     league: "West Catholic Athletic League",
-    division: "Division I",
+    division: "Bay Foothill League - Division I",
     record: {
       wins: 0,
       losses: 0,
@@ -116,7 +116,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#333333", description: "Gold jersey" },
     },
     league: "West Catholic Athletic League",
-    division: "Division I",
+    division: "Bay Foothill League - Division I",
     record: {
       wins: 8,
       losses: 6,
@@ -170,7 +170,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#999999", secondary: "#003399", description: "Gray alternate" },
     },
     league: "West Catholic Athletic League",
-    division: "Division I",
+    division: "Bay Foothill League - Division I",
     record: {
       wins: 5,
       losses: 6,
@@ -224,7 +224,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFFF00", secondary: "#990033", description: "Gold jersey" },
     },
     league: "West Catholic Athletic League",
-    division: "Division I",
+    division: "Bay Foothill League - Division I",
     record: {
       wins: 0,
       losses: 0,
@@ -278,7 +278,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF6600", description: "Black jersey" },
     },
     league: "West Catholic Athletic League",
-    division: "Division I",
+    division: "Bay Foothill League - Division I",
     record: {
       wins: 0,
       losses: 0,
@@ -336,7 +336,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#0066CC", description: "Gold alternate" },
     },
     league: "West Catholic Athletic League",
-    division: "Division I",
+    division: "Bay Foothill League - Division I",
     record: {
       wins: 0,
       losses: 0,
@@ -390,7 +390,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#8B0000", description: "Gold jersey" },
     },
     league: "West Catholic Athletic League",
-    division: "Division I",
+    division: "Bay Foothill League - Division I",
     record: {
       wins: 0,
       losses: 0,
@@ -444,7 +444,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#8B0000", description: "Gold jersey" },
     },
     league: "West Catholic Athletic League",
-    division: "Division II",
+    division: "Bay Foothill League - Division I",
     record: {
       wins: 0,
       losses: 0,
@@ -499,7 +499,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FF9900", secondary: "#003366", description: "Orange alternate" },
     },
     league: "Peninsula Athletic League - Bay",
-    division: "Division I",
+    division: "Peninsula Athletic League - Bay",
     record: {
       wins: 11,
       losses: 3,
@@ -550,7 +550,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#000066", description: "Gold alternate" },
     },
     league: "Peninsula Athletic League - Bay",
-    division: "Division II",
+    division: "Peninsula Athletic League - Bay",
     record: {
       wins: 0,
       losses: 0,
@@ -604,7 +604,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FF6600", secondary: "#003366", description: "Orange alternate" },
     },
     league: "Peninsula Athletic League - Bay",
-    division: "Division II",
+    division: "Peninsula Athletic League - Bay",
     record: {
       wins: 0,
       losses: 0,
@@ -658,7 +658,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#003366", description: "Gold jersey" },
     },
     league: "Peninsula Athletic League - Bay",
-    division: "Division I",
+    division: "Peninsula Athletic League - Bay",
     record: {
       wins: 0,
       losses: 0,
@@ -709,7 +709,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FF6600", secondary: "#003366", description: "Orange jersey" },
     },
     league: "BVAL - Mt. Hamilton",
-    division: "Division II",
+    division: "BVAL - Mt. Hamilton",
     record: {
       wins: 0,
       losses: 0,
@@ -760,7 +760,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF0000", description: "Black jersey" },
     },
     league: "BVAL - Mt. Hamilton",
-    division: "Division II",
+    division: "BVAL - Mt. Hamilton",
     record: {
       wins: 0,
       losses: 0,
@@ -809,7 +809,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#003366", description: "Gold jersey" },
     },
     league: "BVAL - Mt. Hamilton",
-    division: "Division III",
+    division: "BVAL - Mt. Hamilton",
     record: {
       wins: 0,
       losses: 0,
@@ -858,7 +858,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#228B22", description: "Gold jersey" },
     },
     league: "BVAL - Mt. Hamilton",
-    division: "Division III",
+    division: "BVAL - Mt. Hamilton",
     record: {
       wins: 0,
       losses: 0,
@@ -909,7 +909,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF4500", description: "Black jersey" },
     },
     league: "PCAL - Gabilan",
-    division: "Division I",
+    division: "PCAL - Gabilan",
     record: {
       wins: 0,
       losses: 0,
@@ -958,7 +958,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#CCCC00", secondary: "#336633", description: "Gold jersey" },
     },
     league: "PCAL - Gabilan",
-    division: "Division III",
+    division: "PCAL - Gabilan",
     record: {
       wins: 0,
       losses: 0,
@@ -1007,7 +1007,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#8B0000", description: "Gold jersey" },
     },
     league: "SCCAL",
-    division: "Division II",
+    division: "SCCAL",
     record: {
       wins: 0,
       losses: 0,
@@ -1056,7 +1056,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#8B0000", description: "Gold jersey" },
     },
     league: "PAL - Bay",
-    division: "Division II",
+    division: "PAL - Bay",
     record: {
       wins: 0,
       losses: 0,
@@ -1105,7 +1105,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF0000", description: "Black jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1150,7 +1150,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#003366", description: "Gold jersey" },
     },
     league: "BVAL - Santa Teresa",
-    division: "Division II",
+    division: "BVAL - Santa Teresa",
     record: {
       wins: 0,
       losses: 0,
@@ -1195,7 +1195,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000080", secondary: "#FF0000", description: "Navy jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1240,7 +1240,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#228B22", description: "Gold jersey" },
     },
     league: "BVAL - Santa Teresa",
-    division: "Division II",
+    division: "BVAL - Santa Teresa",
     record: {
       wins: 0,
       losses: 0,
@@ -1285,7 +1285,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF0000", description: "Black jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1330,7 +1330,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#008000", description: "Gold jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1375,7 +1375,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF0000", description: "Black jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1420,7 +1420,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#000080", description: "Gold jersey" },
     },
     league: "BVAL - Santa Teresa",
-    division: "Division II",
+    division: "BVAL - Santa Teresa",
     record: {
       wins: 0,
       losses: 0,
@@ -1465,7 +1465,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FF6600", secondary: "#003366", description: "Orange jersey" },
     },
     league: "BVAL - Mt. Hamilton",
-    division: "Division II",
+    division: "BVAL - Mt. Hamilton",
     record: {
       wins: 0,
       losses: 0,
@@ -1510,7 +1510,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF4500", description: "Black jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1555,7 +1555,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF0000", description: "Black jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1600,7 +1600,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#003366", description: "Gold jersey" },
     },
     league: "BVAL - Mt. Hamilton",
-    division: "Division II",
+    division: "BVAL - Mt. Hamilton",
     record: {
       wins: 0,
       losses: 0,
@@ -1645,7 +1645,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FF6600", secondary: "#003366", description: "Orange jersey" },
     },
     league: "BVAL - Santa Teresa",
-    division: "Division II",
+    division: "BVAL - Santa Teresa",
     record: {
       wins: 0,
       losses: 0,
@@ -1690,7 +1690,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#003366", description: "Gold jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1735,7 +1735,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF0000", description: "Black jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -1780,7 +1780,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#228B22", description: "Gold jersey" },
     },
     league: "BVAL - Mt. Hamilton",
-    division: "Division II",
+    division: "BVAL - Mt. Hamilton",
     record: {
       wins: 0,
       losses: 0,
@@ -1825,7 +1825,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#C0C0C0", description: "Black jersey" },
     },
     league: "BVAL - Mt. Hamilton",
-    division: "Division II",
+    division: "BVAL - Mt. Hamilton",
     record: {
       wins: 0,
       losses: 0,
@@ -1870,7 +1870,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#8B4513", description: "Gold jersey" },
     },
     league: "BVAL - Santa Teresa",
-    division: "Division II",
+    division: "BVAL - Santa Teresa",
     record: {
       wins: 0,
       losses: 0,
@@ -1915,7 +1915,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FF6600", secondary: "#003366", description: "Orange jersey" },
     },
     league: "BVAL - Santa Teresa",
-    division: "Division II",
+    division: "BVAL - Santa Teresa",
     record: {
       wins: 0,
       losses: 0,
@@ -1960,7 +1960,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF0000", description: "Black jersey" },
     },
     league: "BVAL - Santa Teresa",
-    division: "Division II",
+    division: "BVAL - Santa Teresa",
     record: {
       wins: 0,
       losses: 0,
@@ -2005,7 +2005,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#003366", description: "Gold jersey" },
     },
     league: "BVAL - West Valley",
-    division: "Division II",
+    division: "BVAL - West Valley",
     record: {
       wins: 0,
       losses: 0,
@@ -2050,7 +2050,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#0066CC", description: "Gold jersey" },
     },
     league: "SCVAL - El Camino",
-    division: "Division II",
+    division: "SCVAL - El Camino",
     record: {
       wins: 0,
       losses: 0,
@@ -2095,7 +2095,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#000000", secondary: "#FF6600", description: "Black jersey" },
     },
     league: "SCVAL - El Camino",
-    division: "Division II",
+    division: "SCVAL - El Camino",
     record: {
       wins: 0,
       losses: 0,
@@ -2140,7 +2140,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FF6600", secondary: "#003366", description: "Orange jersey" },
     },
     league: "SCVAL - El Camino",
-    division: "Division II",
+    division: "SCVAL - El Camino",
     record: {
       wins: 0,
       losses: 0,
@@ -2185,7 +2185,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#0066CC", description: "Gold jersey" },
     },
     league: "SCVAL - De Anza",
-    division: "Division II",
+    division: "SCVAL - De Anza",
     record: {
       wins: 0,
       losses: 0,
@@ -2230,7 +2230,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#8B0000", description: "Gold jersey" },
     },
     league: "SCVAL - De Anza",
-    division: "Division II",
+    division: "SCVAL - De Anza",
     record: {
       wins: 0,
       losses: 0,
@@ -2275,7 +2275,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#4B0082", description: "Gold jersey" },
     },
     league: "SCVAL - De Anza",
-    division: "Division II",
+    division: "SCVAL - De Anza",
     record: {
       wins: 0,
       losses: 0,
@@ -2320,7 +2320,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFCC00", secondary: "#003366", description: "Gold jersey" },
     },
     league: "PCAL - Gabilan",
-    division: "Division II",
+    division: "PCAL - Gabilan",
     record: {
       wins: 0,
       losses: 0,
@@ -2365,7 +2365,7 @@ export const baseTeams: Team[] = [
       alternate: { primary: "#FFD700", secondary: "#0066CC", description: "Gold jersey" },
     },
     league: "SCVAL - Santa Clara Valley Athletic League",
-    division: "Division I",
+    division: "SCVAL",
     record: {
       wins: 0,
       losses: 0,

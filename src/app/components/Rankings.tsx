@@ -196,7 +196,7 @@ export function Rankings() {
 
                   {/* Division (Desktop) */}
                   <div className="hidden md:block col-span-2 text-center">
-                    <span className="bg-zinc-800 text-zinc-400 px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest border border-zinc-700">
+                    <span className="bg-zinc-800 text-zinc-400 px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest border border-zinc-700 line-clamp-2 break-words">
                       {team.division}
                     </span>
                   </div>

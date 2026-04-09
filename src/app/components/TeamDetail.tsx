@@ -91,7 +91,7 @@ export function TeamDetail() {
                 {typeof team.stateRank === "number" ? (
                   <span className="text-zinc-300">CA #{team.stateRank}</span>
                 ) : null}
-                <span className="text-zinc-300 uppercase">{team.division}</span>
+                <span className="bg-green-700/70 px-3 py-1 rounded-full text-xs uppercase tracking-widest whitespace-normal line-clamp-2">{team.division}</span>
               </div>
 
               {team.socials && (
@@ -187,7 +187,7 @@ export function TeamDetail() {
               <stat.icon className="w-4 h-4 text-blue-400" />
               <span className="text-xs text-zinc-400 uppercase">{stat.label}</span>
             </div>
-            <div className="text-xl font-bold">{stat.value}</div>
+            <div className="text-xl font-bold break-words line-clamp-2">{stat.value}</div>
           </motion.div>
         ))}
       </div>

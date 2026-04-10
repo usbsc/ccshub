@@ -24,6 +24,7 @@ import {
 import { players } from "../data/players";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
+import { UniformShowcase } from "./UniformShowcase";
 import { googleMapsSearchUrl } from "../utils/maps";
 
 export function TeamDetail() {
@@ -191,6 +192,9 @@ export function TeamDetail() {
           </motion.div>
         ))}
       </div>
+
+      {/* Uniforms */}
+      <UniformShowcase team={team} />
 
       {/* Level Records */}
       <motion.div

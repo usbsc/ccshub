@@ -18,193 +18,214 @@ export function UniformShowcase({ team }: UniformShowcaseProps) {
     { key: "alternate", label: "Alternate" },
   ] as const;
 
+  // Uniform SVG component that renders a realistic football uniform
+  const UniformRenderer = ({
+    jerseyColor,
+    pantsColor,
+    helmetColor,
+    accentColor,
+  }: {
+    jerseyColor: string;
+    pantsColor: string;
+    helmetColor: string;
+    accentColor: string;
+  }) => (
+    <svg viewBox="0 0 120 200" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      {/* Head/Helmet */}
+      <circle cx="60" cy="35" r="18" fill={helmetColor} stroke="#1a1a1a" strokeWidth="0.5" />
+
+      {/* Helmet stripe */}
+      <rect x="58" y="18" width="4" height="34" fill={accentColor} />
+
+      {/* Facemask */}
+      <path
+        d="M 45 35 Q 45 50 60 52 Q 75 50 75 35"
+        fill="none"
+        stroke="#444"
+        strokeWidth="1.5"
+      />
+
+      {/* Jersey - main body */}
+      <path
+        d="M 35 55 L 40 55 L 42 75 L 78 75 L 80 55 L 85 55 L 85 110 Q 85 125 60 125 Q 35 125 35 110 Z"
+        fill={jerseyColor}
+        stroke="#1a1a1a"
+        strokeWidth="0.5"
+      />
+
+      {/* Jersey collar/neckline */}
+      <ellipse cx="60" cy="55" rx="12" ry="5" fill={helmetColor} opacity="0.3" />
+
+      {/* Jersey number - large and bold */}
+      <g>
+        <text
+          x="60"
+          y="95"
+          textAnchor="middle"
+          dominantBaseline="middle"
+          fontSize="32"
+          fontWeight="900"
+          fill={pantsColor}
+          stroke="#1a1a1a"
+          strokeWidth="0.5"
+          fontFamily="Arial, sans-serif"
+        >
+          23
+        </text>
+      </g>
+
+      {/* Sleeve stripe left */}
+      <rect x="32" y="60" width="3" height="35" fill={accentColor} opacity="0.8" />
+
+      {/* Sleeve stripe right */}
+      <rect x="85" y="60" width="3" height="35" fill={accentColor} opacity="0.8" />
+
+      {/* Arm bands */}
+      <rect x="35" y="58" width="8" height="2" fill={accentColor} opacity="0.6" />
+      <rect x="77" y="58" width="8" height="2" fill={accentColor} opacity="0.6" />
+
+      {/* Pants - main */}
+      <path
+        d="M 42 110 L 58 110 L 56 170 L 44 170 Z"
+        fill={pantsColor}
+        stroke="#1a1a1a"
+        strokeWidth="0.5"
+      />
+      <path
+        d="M 62 110 L 78 110 L 80 170 L 64 170 Z"
+        fill={pantsColor}
+        stroke="#1a1a1a"
+        strokeWidth="0.5"
+      />
+
+      {/* Pants stripes - center */}
+      <line x1="60" y1="110" x2="60" y2="170" stroke={accentColor} strokeWidth="1.5" />
+
+      {/* Pants side stripes */}
+      <line x1="45" y1="110" x2="43" y2="170" stroke={accentColor} strokeWidth="1" opacity="0.6" />
+      <line x1="75" y1="110" x2="77" y2="170" stroke={accentColor} strokeWidth="1" opacity="0.6" />
+
+      {/* Shoes */}
+      <ellipse cx="48" cy="172" rx="5" ry="3" fill="#222" />
+      <ellipse cx="72" cy="172" rx="5" ry="3" fill="#222" />
+
+      {/* Body outline for definition */}
+      <line x1="60" y1="55" x2="60" y2="125" stroke="#1a1a1a" strokeWidth="0.3" opacity="0.3" />
+    </svg>
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
-      className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+      className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800"
     >
       <div className="flex items-center gap-3 mb-8">
         <Shirt className="w-6 h-6 text-blue-400" />
         <h2 className="text-2xl font-bold">Uniforms</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {uniformTypes.map(({ key, label }) => {
-          const uniform = team.uniforms?.[key];
-          if (!uniform) return null;
-
-          return (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.15 }}
-              className="flex flex-col items-center"
-            >
-              {/* Uniform Card */}
-              <div className="w-full bg-gradient-to-b from-zinc-800 to-zinc-900 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-colors">
-                {/* Helmet */}
-                <div className="flex justify-center mb-4">
-                  <div className="relative w-16 h-16 flex items-center justify-center">
-                    <svg
-                      viewBox="0 0 100 100"
-                      className="w-full h-full"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      {/* Helmet shell */}
-                      <ellipse
-                        cx="50"
-                        cy="45"
-                        rx="35"
-                        ry="38"
-                        fill={uniform.primary}
-                        stroke="#000"
-                        strokeWidth="1"
-                      />
-                      {/* Facemask */}
-                      <path
-                        d="M 35 45 Q 35 70 50 75 Q 65 70 65 45"
-                        fill="none"
-                        stroke="#444"
-                        strokeWidth="2"
-                      />
-                      {/* Stripe/Logo accent */}
-                      <path
-                        d="M 48 20 L 52 20 L 52 60 L 48 60 Z"
-                        fill={uniform.secondary}
-                        opacity="0.8"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* Jersey & Pants */}
-                <div className="flex justify-center mb-6 h-32">
-                  <svg
-                    viewBox="0 0 80 160"
-                    className="w-20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    {/* Jersey */}
-                    <path
-                      d="M 20 20 L 30 20 L 30 40 L 50 40 L 50 20 L 60 20 L 60 80 Q 60 95 40 95 Q 20 95 20 80 Z"
-                      fill={uniform.primary}
-                      stroke="#000"
-                      strokeWidth="0.5"
-                    />
-
-                    {/* Jersey Number (styled) */}
-                    <text
-                      x="40"
-                      y="65"
-                      textAnchor="middle"
-                      fontSize="20"
-                      fontWeight="bold"
-                      fill={uniform.secondary}
-                      stroke="#000"
-                      strokeWidth="0.3"
-                    >
-                      23
-                    </text>
-
-                    {/* Sleeve accent */}
-                    <rect
-                      x="18"
-                      y="30"
-                      width="4"
-                      height="25"
-                      fill={uniform.secondary}
-                      opacity="0.6"
-                    />
-                    <rect
-                      x="58"
-                      y="30"
-                      width="4"
-                      height="25"
-                      fill={uniform.secondary}
-                      opacity="0.6"
-                    />
-
-                    {/* Pants */}
-                    <path
-                      d="M 28 90 L 52 90 L 50 150 L 30 150 Z"
-                      fill={uniform.secondary}
-                      stroke="#000"
-                      strokeWidth="0.5"
-                    />
-
-                    {/* Pants stripe */}
-                    <line
-                      x1="40"
-                      y1="90"
-                      x2="40"
-                      y2="150"
-                      stroke={uniform.primary}
-                      strokeWidth="2"
-                      opacity="0.7"
-                    />
-                  </svg>
-                </div>
-
-                {/* Label */}
-                <h3 className="text-center font-bold text-lg text-white mb-3">
+      {/* Wikipedia-style uniform table */}
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse">
+          <thead>
+            <tr>
+              {uniformTypes.map(({ label }) => (
+                <th
+                  key={label}
+                  className="border border-zinc-700 bg-zinc-800 p-4 text-center font-bold text-white"
+                >
                   {label}
-                </h3>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {/* Uniform graphics row */}
+            <tr>
+              {uniformTypes.map(({ key }) => {
+                const uniform = team.uniforms?.[key];
+                if (!uniform) return <td key={key} className="border border-zinc-700 bg-zinc-900" />;
 
-                {/* Colors */}
-                <div className="space-y-3 border-t border-zinc-700 pt-4">
-                  {/* Primary Color */}
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="w-10 h-10 rounded-lg border-2 border-zinc-600 shadow-lg flex-shrink-0"
-                      style={{ backgroundColor: uniform.primary }}
-                      title="Jersey color"
-                    />
-                    <div className="text-sm">
-                      <div className="text-xs text-zinc-500">Jersey</div>
-                      <div className="font-mono text-white text-xs">
-                        {uniform.primary}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Secondary Color */}
-                  {uniform.secondary && uniform.secondary !== uniform.primary && (
-                    <div className="flex items-center gap-3">
-                      <div
-                        className="w-10 h-10 rounded-lg border-2 border-zinc-600 shadow-lg flex-shrink-0"
-                        style={{ backgroundColor: uniform.secondary }}
-                        title="Pants/accent color"
+                return (
+                  <td key={key} className="border border-zinc-700 bg-gradient-to-b from-zinc-900 to-zinc-950 p-6">
+                    <div className="h-48 w-24 mx-auto">
+                      <UniformRenderer
+                        jerseyColor={uniform.primary}
+                        pantsColor={uniform.secondary}
+                        helmetColor={uniform.primary}
+                        accentColor={uniform.secondary}
                       />
-                      <div className="text-sm">
-                        <div className="text-xs text-zinc-500">Pants/Accent</div>
-                        <div className="font-mono text-white text-xs">
-                          {uniform.secondary}
+                    </div>
+                  </td>
+                );
+              })}
+            </tr>
+
+            {/* Colors row */}
+            <tr>
+              {uniformTypes.map(({ key }) => {
+                const uniform = team.uniforms?.[key];
+                if (!uniform) return <td key={key} className="border border-zinc-700 bg-zinc-900" />;
+
+                return (
+                  <td key={key} className="border border-zinc-700 bg-zinc-900 p-4">
+                    <div className="space-y-3 text-sm">
+                      {/* Jersey Color */}
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="w-12 h-12 rounded border border-zinc-600 shadow-md flex-shrink-0"
+                          style={{ backgroundColor: uniform.primary }}
+                          title="Jersey color"
+                        />
+                        <div>
+                          <div className="text-xs text-zinc-400 uppercase tracking-wide">
+                            Jersey
+                          </div>
+                          <div className="font-mono text-white font-bold">
+                            {uniform.primary}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )}
-                </div>
 
-                {/* Description */}
-                {uniform.description && (
-                  <p className="text-xs text-zinc-400 italic mt-4 pt-4 border-t border-zinc-700">
-                    {uniform.description}
-                  </p>
-                )}
-              </div>
-            </motion.div>
-          );
-        })}
+                      {/* Pants/Accent Color */}
+                      {uniform.secondary && uniform.secondary !== uniform.primary && (
+                        <div className="flex items-center gap-3">
+                          <div
+                            className="w-12 h-12 rounded border border-zinc-600 shadow-md flex-shrink-0"
+                            style={{ backgroundColor: uniform.secondary }}
+                            title="Pants/accent color"
+                          />
+                          <div>
+                            <div className="text-xs text-zinc-400 uppercase tracking-wide">
+                              Pants
+                            </div>
+                            <div className="font-mono text-white font-bold">
+                              {uniform.secondary}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Description */}
+                      {uniform.description && (
+                        <p className="text-xs text-zinc-400 italic pt-2 border-t border-zinc-700">
+                          {uniform.description}
+                        </p>
+                      )}
+                    </div>
+                  </td>
+                );
+              })}
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       {/* Legend */}
-      <div className="mt-8 pt-6 border-t border-zinc-800 text-xs text-zinc-400">
-        <p className="text-center">
-          Uniform designs show jersey colors, pants, helmet, and accent stripes based on team color schemes.
-        </p>
+      <div className="mt-6 pt-4 border-t border-zinc-800 text-xs text-zinc-500 text-center">
+        <p>Uniform designs shown with helmet, jersey number, and pants. Colors indicate primary and secondary uniform colors.</p>
       </div>
     </motion.div>
   );

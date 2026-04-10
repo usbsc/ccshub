@@ -69,7 +69,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 1,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/7/c/0/7c0500a1-8d07-4e31-9252-87063d898492.gif",
+      "/logos/riordan.png",
     stadium: "Mayer Family Field",
     headCoach: "Adhir Ravipati",
     offensiveCoordinator: "Steve Nicoletti",
@@ -123,7 +123,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 2,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/f/d/4/fd407484-95cb-4351-a188-466d6d7e974e.gif",
+      "/logos/serra.png",
     stadium: "Brady Family Stadium",
     headCoach: "Patrick Walsh",
     offensiveCoordinator: "Mike Crist",
@@ -177,7 +177,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 4,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/c/8/c/c8cf2438-517f-4458-97f3-181588691f16.gif",
+      "/logos/st-francis.png",
     stadium: "Ron Calcagno Stadium",
     headCoach: "Greg Calcagno",
     offensiveCoordinator: "Brandon Gamble",
@@ -285,7 +285,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 6,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/5/5/3/553381a1-94d9-4d37-8e6d-e46538968492.gif",
+      "/logos/mitty.png",
     stadium: "Mitty Field",
     headCoach: "Danny Sullivan",
     offensiveCoordinator: "N/A",
@@ -343,7 +343,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 10,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/c/4/c/c4c6e9a1-067a-4d37-8e6d-e46538968492.gif",
+      "/logos/valley-christian.png",
     stadium: "Valley Christian Stadium",
     headCoach: "Mike Machado",
     offensiveCoordinator: "N/A",
@@ -397,7 +397,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 16,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/2/8/0/280049a1-77d9-4d37-8e6d-e46538968492.gif",
+      "/logos/bellarmine.png",
     stadium: "Memorial Field",
     headCoach: "Jalal Beauchman",
     offensiveCoordinator: "N/A",
@@ -451,7 +451,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 8,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/b/9/a/b9af99a1-8f7a-4d37-8e6d-e46538968492.gif",
+      "/logos/sacred-heart.png",
     stadium: "Kezar Stadium",
     headCoach: "Antoine Evans",
     offensiveCoordinator: "N/A",
@@ -506,7 +506,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 3,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/5/8/4/584f2438-517f-4458-97f3-181588691f16.gif",
+      "/logos/los-gatos.png",
     stadium: "Helm Field",
     headCoach: "Mark Krail",
     offensiveCoordinator: "N/A",
@@ -557,7 +557,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 13,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/6/8/4/684f2438-517f-4458-97f3-181588691f16.gif",
+      "/logos/wilcox.png",
     stadium: "Wilcox High Stadium",
     headCoach: "Paul Rosa",
     offensiveCoordinator: "N/A",
@@ -611,7 +611,7 @@ export const baseTeams: Team[] = [
     },
     ranking: 31,
     image:
-      "https://dw3jhbqsbya58.cloudfront.net/fit-in/256x256/school-mascot/7/8/4/784f2438-517f-4458-97f3-181588691f16.gif",
+      "/logos/palo-alto.png",
     stadium: "Viking Stadium",
     headCoach: "Danny Sullivan",
     offensiveCoordinator: "N/A",

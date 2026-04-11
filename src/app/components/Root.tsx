@@ -1,22 +1,21 @@
 import { Outlet, Link, NavLink } from "react-router";
 import { Bell, Award, Calendar, Users, BarChart3, Settings } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
 import { EXTERNAL_URLS } from "../constants";
 import { homeTeamStorage } from "../services/storage";
+import { useTheme } from "../context/ThemeContext";
 
 export function Root() {
   const [homeTeam, setHomeTeam] = useState<string | null>(homeTeamStorage.get());
   const [showSettings, setShowSettings] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-    if (homeTeam) {
-      homeTeamStorage.set(homeTeam);
-    } else {
-      homeTeamStorage.remove();
-    }
-  }, [homeTeam]);
+  if (homeTeam) {
+    homeTeamStorage.set(homeTeam);
+  } else {
+    homeTeamStorage.remove();
+  }
 
   const navItems = [
     { path: "/", label: "Broadcasts", icon: Award },
@@ -114,44 +113,89 @@ export function Root() {
         {/* Settings Panel */}
         {showSettings && (
           <div className="bg-zinc-900 border-t border-zinc-800 animate-in fade-in slide-in-from-top-4 duration-200">
-            <div className="max-w-2xl mx-auto px-4 py-6">
-              <h3 className="font-bold text-lg mb-1 flex items-center gap-2 text-white">
-                <Bell className="w-5 h-5 text-blue-400" />
-                Personalize Your Experience
-              </h3>
-              <p className="text-zinc-400 text-sm mb-4">
-                Select your home team to prioritize their games and news.
-              </p>
+            <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
+              {/* Home Team Section */}
+              <div>
+                <h3 className="font-bold text-lg mb-1 flex items-center gap-2 text-white">
+                  <Bell className="w-5 h-5 text-blue-400" />
+                  Home Team
+                </h3>
+                <p className="text-zinc-400 text-sm mb-4">
+                  Select your home team to prioritize their games and news.
+                </p>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <select
-                  value={homeTeam || ""}
-                  onChange={(e) => setHomeTeam(e.target.value || null)}
-                  className="flex-1 bg-zinc-950 text-white border border-zinc-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer appearance-none"
-                >
-                  <option value="">No team selected</option>
-                  <optgroup label="WCAL">
-                    <option value="riordan">Archbishop Riordan</option>
-                    <option value="st-francis">St. Francis High School</option>
-                    <option value="valley-christian">Valley Christian</option>
-                    <option value="mitty">Archbishop Mitty</option>
-                    <option value="serra">Serra High School</option>
-                    <option value="sacred-heart">Sacred Heart Cathedral</option>
-                  </optgroup>
-                  <optgroup label="Other Leagues">
-                    <option value="los-gatos">Los Gatos High School</option>
-                    <option value="wilcox">Adrian C. Wilcox</option>
-                  </optgroup>
-                </select>
-
-                {homeTeam && (
-                  <button
-                    onClick={() => setHomeTeam(null)}
-                    className="px-4 py-2 text-sm text-zinc-500 hover:text-red-400 transition-colors"
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <select
+                    value={homeTeam || ""}
+                    onChange={(e) => setHomeTeam(e.target.value || null)}
+                    className="flex-1 bg-zinc-950 text-white border border-zinc-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer appearance-none"
                   >
-                    Clear Selection
-                  </button>
-                )}
+                    <option value="">No team selected</option>
+                    <optgroup label="WCAL">
+                      <option value="riordan">Archbishop Riordan</option>
+                      <option value="st-francis">St. Francis High School</option>
+                      <option value="valley-christian">Valley Christian</option>
+                      <option value="mitty">Archbishop Mitty</option>
+                      <option value="serra">Serra High School</option>
+                      <option value="sacred-heart">Sacred Heart Cathedral</option>
+                    </optgroup>
+                    <optgroup label="Other Leagues">
+                      <option value="los-gatos">Los Gatos High School</option>
+                      <option value="wilcox">Adrian C. Wilcox</option>
+                    </optgroup>
+                  </select>
+
+                  {homeTeam && (
+                    <button
+                      onClick={() => setHomeTeam(null)}
+                      className="px-4 py-2 text-sm text-zinc-500 hover:text-red-400 transition-colors"
+                    >
+                      Clear Selection
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Theme Section */}
+              <div className="border-t border-zinc-800 pt-6">
+                <h3 className="font-bold text-lg mb-1 flex items-center gap-2 text-white">
+                  <Settings className="w-5 h-5 text-green-400" />
+                  Theme
+                </h3>
+                <p className="text-zinc-400 text-sm mb-4">
+                  Choose your preferred color theme.
+                </p>
+
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                  {(["light", "dark", "summer", "fall", "spring"] as const).map((t) => (
+                    <button
+                      key={t}
+                      onClick={() => setTheme(t)}
+                      className={`py-3 px-3 rounded-lg font-semibold text-xs uppercase tracking-wide transition-all border-2 ${
+                        theme === t
+                          ? "border-white bg-opacity-20 bg-white text-white shadow-lg"
+                          : "border-zinc-700 text-zinc-400 hover:text-white hover:border-zinc-600"
+                      }`}
+                    >
+                      <div className="flex flex-col items-center gap-1">
+                        <div
+                          className={`w-6 h-6 rounded-full border-2 ${
+                            t === "light"
+                              ? "bg-white border-black"
+                              : t === "dark"
+                                ? "bg-black border-white"
+                                : t === "summer"
+                                  ? "bg-gradient-to-br from-blue-400 to-orange-400"
+                                  : t === "fall"
+                                    ? "bg-gradient-to-br from-orange-600 to-red-800"
+                                    : "bg-gradient-to-br from-green-400 to-pink-400"
+                          }`}
+                        />
+                        {t}
+                      </div>
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

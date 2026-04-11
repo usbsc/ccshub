@@ -53,7 +53,8 @@ export function Schedule() {
     const m = new Map<string, string>();
     for (const p of players) {
       const prev = m.get(p.team) || "";
-      m.set(p.team, `${prev}|${p.name.toLowerCase()}`);
+      const searchableText = `${p.name.toLowerCase()}|${p.number}`;
+      m.set(p.team, `${prev}|${searchableText}`);
     }
     return m;
   }, []);

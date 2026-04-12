@@ -109,7 +109,7 @@ export function UniformShowcase({ team }: UniformShowcaseProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
-      className="bg-zinc-900 rounded-2xl p-4 border border-zinc-800"
+      className="bg-card rounded-2xl p-4 border border-border"
     >
       <div className="flex items-center gap-2 mb-4">
         <Shirt className="w-5 h-5 text-blue-400" />
@@ -123,8 +123,8 @@ export function UniformShowcase({ team }: UniformShowcaseProps) {
           if (!uniform) return null;
 
           return (
-            <div key={key} className="bg-zinc-800 rounded-lg p-3 text-center">
-              <div className="text-xs font-bold text-zinc-300 mb-2">{label}</div>
+            <div key={key} className="bg-secondary rounded-lg p-3 text-center">
+              <div className="text-xs font-bold text-foreground mb-2">{label}</div>
               <div className="h-24 w-12 mx-auto mb-2">
                 <UniformRenderer
                   jerseyColor={uniform.primary}
@@ -135,13 +135,13 @@ export function UniformShowcase({ team }: UniformShowcaseProps) {
               </div>
               <div className="flex gap-2 justify-center">
                 <div
-                  className="w-6 h-6 rounded border border-zinc-600 flex-shrink-0"
+                  className="w-6 h-6 rounded border border-border flex-shrink-0"
                   style={{ backgroundColor: uniform.primary }}
                   title="Jersey color"
                 />
                 {uniform.secondary && uniform.secondary !== uniform.primary && (
                   <div
-                    className="w-6 h-6 rounded border border-zinc-600 flex-shrink-0"
+                    className="w-6 h-6 rounded border border-border flex-shrink-0"
                     style={{ backgroundColor: uniform.secondary }}
                     title="Pants/accent color"
                   />

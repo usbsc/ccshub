@@ -64,7 +64,7 @@ export function TeamDetail() {
         animate={{ opacity: 1, y: 0 }}
         className="relative rounded-2xl overflow-hidden"
       >
-        <div className="relative h-80 bg-zinc-900">
+        <div className="relative h-80 bg-card">
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-10"></div>
           <div className="flex items-center justify-center h-full p-12">
             <ImageWithFallback
@@ -74,7 +74,7 @@ export function TeamDetail() {
             />
           </div>
           <div className="absolute top-4 left-4 z-20">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center font-bold text-3xl text-zinc-900 shadow-xl border-4 border-blue-600">
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center font-bold text-3xl text-foreground shadow-xl border-4 border-blue-600">
               {team.ranking}
             </div>
           </div>
@@ -85,11 +85,11 @@ export function TeamDetail() {
                 <span className="bg-blue-600 px-3 py-1 rounded-full uppercase tracking-widest">
                   {team.mascot}
                 </span>
-                <span className="text-zinc-300">
+                <span className="text-foreground">
                   {team.record.wins}-{team.record.losses}
                 </span>
                 {typeof team.stateRank === "number" ? (
-                  <span className="text-zinc-300">CA #{team.stateRank}</span>
+                  <span className="text-foreground">CA #{team.stateRank}</span>
                 ) : null}
                 <span className="bg-green-700/70 px-3 py-1 rounded-full text-xs uppercase tracking-widest whitespace-normal line-clamp-2">
                   {team.division}
@@ -103,9 +103,9 @@ export function TeamDetail() {
                       href={`https://twitter.com/${team.socials.twitter}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-zinc-800/80 hover:bg-blue-400/20 rounded-full transition-all group"
+                      className="p-2 bg-secondary/80 hover:bg-blue-400/20 rounded-full transition-all group"
                     >
-                      <Twitter className="w-5 h-5 text-zinc-300 group-hover:text-blue-400" />
+                      <Twitter className="w-5 h-5 text-foreground group-hover:text-blue-400" />
                     </a>
                   )}
                   {team.socials.instagram && (
@@ -113,9 +113,9 @@ export function TeamDetail() {
                       href={`https://instagram.com/${team.socials.instagram}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-zinc-800/80 hover:bg-pink-500/20 rounded-full transition-all group"
+                      className="p-2 bg-secondary/80 hover:bg-pink-500/20 rounded-full transition-all group"
                     >
-                      <Instagram className="w-5 h-5 text-zinc-300 group-hover:text-pink-500" />
+                      <Instagram className="w-5 h-5 text-foreground group-hover:text-pink-500" />
                     </a>
                   )}
                   {team.socials.maxpreps && (
@@ -123,9 +123,9 @@ export function TeamDetail() {
                       href={team.socials.maxpreps}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-zinc-800/80 hover:bg-green-500/20 rounded-full transition-all group"
+                      className="p-2 bg-secondary/80 hover:bg-green-500/20 rounded-full transition-all group"
                     >
-                      <ExternalLink className="w-5 h-5 text-zinc-300 group-hover:text-green-500" />
+                      <ExternalLink className="w-5 h-5 text-foreground group-hover:text-green-500" />
                     </a>
                   )}
                 </div>
@@ -183,11 +183,11 @@ export function TeamDetail() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.05 }}
-            className="bg-zinc-900 rounded-xl p-4 border border-zinc-800"
+            className="bg-card rounded-xl p-4 border border-border"
           >
             <div className="flex items-center gap-2 mb-2">
               <stat.icon className="w-4 h-4 text-blue-400" />
-              <span className="text-xs text-zinc-400 uppercase">{stat.label}</span>
+              <span className="text-xs text-muted-foreground uppercase">{stat.label}</span>
             </div>
             <div className="text-xl font-bold break-words line-clamp-2">{stat.value}</div>
           </motion.div>
@@ -204,7 +204,7 @@ export function TeamDetail() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+          className="bg-card rounded-2xl p-6 border border-border"
         >
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <Users className="w-6 h-6 text-blue-400" />
@@ -212,8 +212,8 @@ export function TeamDetail() {
           </h2>
           <div className="grid gap-3">
             {Object.entries(team.levels).map(([level, record]) => (
-              <div key={level} className="bg-zinc-800 rounded-xl p-3">
-                <div className="text-sm text-zinc-400 uppercase mb-1">{level}</div>
+              <div key={level} className="bg-secondary rounded-xl p-3">
+                <div className="text-sm text-muted-foreground uppercase mb-1">{level}</div>
                 <div className="text-xl font-bold">
                   {typeof record === "string" ? record : `${record.wins}-${record.losses}`}
                 </div>
@@ -230,7 +230,7 @@ export function TeamDetail() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+          className="bg-card rounded-2xl p-6 border border-border"
         >
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <Users className="w-6 h-6 text-blue-400" />
@@ -238,15 +238,15 @@ export function TeamDetail() {
           </h2>
           <div className="space-y-3">
             <div>
-              <div className="text-sm text-zinc-400">Head Coach</div>
+              <div className="text-sm text-muted-foreground">Head Coach</div>
               <div className="font-semibold text-lg">{team.headCoach}</div>
             </div>
             <div>
-              <div className="text-sm text-zinc-400">Offensive Coordinator</div>
+              <div className="text-sm text-muted-foreground">Offensive Coordinator</div>
               <div className="font-semibold">{team.offensiveCoordinator}</div>
             </div>
             <div>
-              <div className="text-sm text-zinc-400">Defensive Coordinator</div>
+              <div className="text-sm text-muted-foreground">Defensive Coordinator</div>
               <div className="font-semibold">{team.defensiveCoordinator}</div>
             </div>
           </div>
@@ -257,7 +257,7 @@ export function TeamDetail() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+          className="bg-card rounded-2xl p-6 border border-border"
         >
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <Zap className="w-6 h-6 text-yellow-400" />
@@ -265,11 +265,11 @@ export function TeamDetail() {
           </h2>
           <div className="space-y-3">
             <div>
-              <div className="text-sm text-zinc-400">Offensive System</div>
+              <div className="text-sm text-muted-foreground">Offensive System</div>
               <div className="font-semibold text-lg">{team.offensiveSystem}</div>
             </div>
             <div>
-              <div className="text-sm text-zinc-400">Defensive System</div>
+              <div className="text-sm text-muted-foreground">Defensive System</div>
               <div className="font-semibold text-lg">{team.defensiveSystem}</div>
             </div>
           </div>
@@ -281,7 +281,7 @@ export function TeamDetail() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+        className="bg-card rounded-2xl p-6 border border-border"
       >
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Target className="w-6 h-6 text-green-400" />
@@ -291,7 +291,7 @@ export function TeamDetail() {
           {team.commonPlays.map((play, idx) => (
             <span
               key={idx}
-              className="bg-zinc-800 px-4 py-2 rounded-full font-medium hover:bg-zinc-700 transition-colors"
+              className="bg-secondary px-4 py-2 rounded-full font-medium hover:bg-secondary transition-colors"
             >
               {play}
             </span>
@@ -304,7 +304,7 @@ export function TeamDetail() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.45 }}
-        className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+        className="bg-card rounded-2xl p-6 border border-border"
       >
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Shield className="w-6 h-6 text-red-400" />
@@ -347,11 +347,11 @@ export function TeamDetail() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-2xl font-bold">Schedule</h2>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-zinc-400">Season</span>
+          <span className="text-sm text-muted-foreground">Season</span>
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(Number(e.target.value) as GameYear)}
-            className="bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-sm text-zinc-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-card border border-border rounded-lg px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {GAME_YEARS.map((year) => (
               <option key={year} value={year}>
@@ -369,7 +369,7 @@ export function TeamDetail() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+            className="bg-card rounded-2xl p-6 border border-border"
           >
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
               <Calendar className="w-5 h-5 text-green-400" />
@@ -384,15 +384,15 @@ export function TeamDetail() {
                   <Link
                     key={game.id}
                     to={`/game/${game.id}`}
-                    className="block bg-zinc-800 rounded-lg p-3 hover:bg-zinc-700 transition-colors"
+                    className="block bg-secondary rounded-lg p-3 hover:bg-secondary transition-colors"
                   >
-                    <div className="text-xs text-zinc-400 mb-1">
+                    <div className="text-xs text-muted-foreground mb-1">
                       {new Date(game.date).toLocaleDateString()} • {game.time}
                     </div>
                     <div className="font-semibold">
                       {isHome ? "vs" : "@"} {opponentTeam?.name || "Opponent"}
                     </div>
-                    <div className="text-xs text-zinc-500">{game.stadium}</div>
+                    <div className="text-xs text-muted-foreground">{game.stadium}</div>
                   </Link>
                 );
               })}
@@ -405,7 +405,7 @@ export function TeamDetail() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+          className="bg-card rounded-2xl p-6 border border-border"
         >
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <Award className="w-5 h-5 text-blue-400" />
@@ -413,7 +413,7 @@ export function TeamDetail() {
           </h2>
           <div className="space-y-3">
             {recentGames.length === 0 ? (
-              <div className="text-sm text-zinc-400">No final scores loaded for this season.</div>
+              <div className="text-sm text-muted-foreground">No final scores loaded for this season.</div>
             ) : (
               recentGames.map((game) => {
                 const opponent = game.homeTeam === team.id ? game.awayTeam : game.homeTeam;
@@ -426,10 +426,10 @@ export function TeamDetail() {
                   <Link
                     key={game.id}
                     to={`/game/${game.id}`}
-                    className="block bg-zinc-800 rounded-lg p-3 hover:bg-zinc-700 transition-colors"
+                    className="block bg-secondary rounded-lg p-3 hover:bg-secondary transition-colors"
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs text-zinc-400">
+                      <span className="text-xs text-muted-foreground">
                         {new Date(game.date).toLocaleDateString()}
                       </span>
                       <span
@@ -441,7 +441,7 @@ export function TeamDetail() {
                     <div className="font-semibold">
                       {isHome ? "vs" : "@"} {opponentTeam?.name || "Opponent"}
                     </div>
-                    <div className="text-sm text-zinc-400">
+                    <div className="text-sm text-muted-foreground">
                       {teamScore} - {oppScore}
                     </div>
                   </Link>
@@ -457,15 +457,15 @@ export function TeamDetail() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.55 }}
-        className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+        className="bg-card rounded-2xl p-6 border border-border"
       >
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Image className="w-6 h-6 text-purple-400" />
           Photos
         </h2>
-        <div className="flex flex-col items-center justify-center py-12 px-6 rounded-lg border-2 border-dashed border-zinc-700">
+        <div className="flex flex-col items-center justify-center py-12 px-6 rounded-lg border-2 border-dashed border-border">
           <Image className="w-12 h-12 text-purple-400 mb-4" />
-          <p className="text-zinc-300 mb-4 text-center">View team photos on Adobe Lightroom</p>
+          <p className="text-foreground mb-4 text-center">View team photos on Adobe Lightroom</p>
           <a
             href="https://lightroom.adobe.com/shares/3af11b5819fb4d48a6d1b659dba92b74"
             target="_blank"

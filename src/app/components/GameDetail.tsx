@@ -35,9 +35,9 @@ export function GameDetail() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-zinc-800 shadow-2xl relative group"
+          className="bg-card rounded-[2.5rem] overflow-hidden border border-border shadow-2xl relative group"
         >
-          <div className="aspect-video w-full bg-zinc-950">
+          <div className="aspect-video w-full bg-background">
             <iframe
               src={video.embedUrl}
               title={`${away?.name ?? "Away"} vs ${home?.name ?? "Home"} video`}
@@ -57,8 +57,8 @@ export function GameDetail() {
             </div>
 
             {video.provider === "nfhs" ? (
-              <div className="bg-zinc-900/80 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/5">
-                <span className="text-[10px] font-bold text-zinc-100 uppercase tracking-tighter">
+              <div className="bg-card/80 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/5">
+                <span className="text-[10px] font-bold text-foreground uppercase tracking-tighter">
                   NFHS Network
                 </span>
               </div>
@@ -69,10 +69,10 @@ export function GameDetail() {
                 href={video.pageUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-zinc-900/80 hover:bg-zinc-900 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 border border-white/5"
+                className="bg-card/80 hover:bg-card backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 border border-white/5"
               >
-                <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
-                <span className="text-[10px] font-bold text-zinc-100 uppercase tracking-tighter">
+                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground" />
+                <span className="text-[10px] font-bold text-foreground uppercase tracking-tighter">
                   Open
                 </span>
               </a>
@@ -86,7 +86,7 @@ export function GameDetail() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl overflow-hidden border border-zinc-700"
+          className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl overflow-hidden border border-border"
         >
           <div className="relative h-64">
             <img
@@ -104,7 +104,7 @@ export function GameDetail() {
               </div>
             )}
             <div className="absolute bottom-4 left-4 right-4">
-              <div className="flex items-center gap-4 text-sm text-zinc-300 mb-2">
+              <div className="flex items-center gap-4 text-sm text-foreground mb-2">
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
                   <a
@@ -145,7 +145,7 @@ export function GameDetail() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800"
+        className="bg-card rounded-2xl p-8 border border-border"
       >
         <div className="grid grid-cols-3 gap-8 items-center">
           {/* Away Team */}
@@ -153,7 +153,7 @@ export function GameDetail() {
             to={`/team/${away?.id}`}
             className="text-center hover:opacity-80 transition-opacity"
           >
-            <div className="w-24 h-24 bg-zinc-800 rounded-full mx-auto mb-4 border-4 border-zinc-700 flex items-center justify-center p-4 overflow-hidden">
+            <div className="w-24 h-24 bg-secondary rounded-full mx-auto mb-4 border-4 border-border flex items-center justify-center p-4 overflow-hidden">
               <ImageWithFallback
                 src={away?.image}
                 alt={away?.name}
@@ -161,7 +161,7 @@ export function GameDetail() {
               />
             </div>
             <h3 className="font-bold text-xl mb-1">{away?.name || "Away Team"}</h3>
-            <p className="text-sm text-zinc-400">
+            <p className="text-sm text-muted-foreground">
               {away?.record ? `${away.record.wins}-${away.record.losses}` : "0-0"}
             </p>
           </Link>
@@ -170,7 +170,7 @@ export function GameDetail() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-6 mb-4">
               <div className="text-6xl font-black text-white">{game.awayScore}</div>
-              <div className="text-2xl font-black text-zinc-700">-</div>
+              <div className="text-2xl font-black text-foreground">-</div>
               <div className="text-6xl font-black text-white">{game.homeScore}</div>
             </div>
             {game.status === "live" && (
@@ -179,7 +179,7 @@ export function GameDetail() {
               </div>
             )}
             {game.status === "final" && (
-              <div className="text-lg font-black text-zinc-500 uppercase tracking-widest italic">
+              <div className="text-lg font-black text-muted-foreground uppercase tracking-widest italic">
                 Final
               </div>
             )}
@@ -195,7 +195,7 @@ export function GameDetail() {
             to={`/team/${home?.id}`}
             className="text-center hover:opacity-80 transition-opacity"
           >
-            <div className="w-24 h-24 bg-zinc-800 rounded-full mx-auto mb-4 border-4 border-zinc-700 flex items-center justify-center p-4 overflow-hidden">
+            <div className="w-24 h-24 bg-secondary rounded-full mx-auto mb-4 border-4 border-border flex items-center justify-center p-4 overflow-hidden">
               <ImageWithFallback
                 src={home?.image}
                 alt={home?.name}
@@ -203,7 +203,7 @@ export function GameDetail() {
               />
             </div>
             <h3 className="font-bold text-xl mb-1">{home?.name || "Home Team"}</h3>
-            <p className="text-sm text-zinc-400">
+            <p className="text-sm text-muted-foreground">
               {home?.record ? `${home.record.wins}-${home.record.losses}` : "0-0"}
             </p>
           </Link>
@@ -216,7 +216,7 @@ export function GameDetail() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+          className="bg-card rounded-2xl p-6 border border-border"
         >
           <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
             <Award className="w-6 h-6 text-yellow-500" />
@@ -226,7 +226,7 @@ export function GameDetail() {
             {game.highlights.map((highlight, idx) => (
               <li key={idx} className="flex items-start gap-3">
                 <TrendingUp className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span className="text-zinc-300">{highlight}</span>
+                <span className="text-foreground">{highlight}</span>
               </li>
             ))}
           </ul>
@@ -240,37 +240,37 @@ export function GameDetail() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+          className="bg-card rounded-2xl p-6 border border-border"
         >
           <h3 className="font-bold text-xl mb-4">{away?.name}</h3>
           <div className="space-y-3 text-sm">
             <div>
-              <span className="text-zinc-400">Head Coach:</span>{" "}
+              <span className="text-muted-foreground">Head Coach:</span>{" "}
               <span className="font-medium">{away?.headCoach}</span>
             </div>
             <div>
-              <span className="text-zinc-400">Offensive System:</span>{" "}
+              <span className="text-muted-foreground">Offensive System:</span>{" "}
               <span className="font-medium">{away?.offensiveSystem}</span>
             </div>
             <div>
-              <span className="text-zinc-400">Defensive System:</span>{" "}
+              <span className="text-muted-foreground">Defensive System:</span>{" "}
               <span className="font-medium">{away?.defensiveSystem}</span>
             </div>
             <div>
-              <span className="text-zinc-400">Common Plays:</span>
+              <span className="text-muted-foreground">Common Plays:</span>
               <div className="flex flex-wrap gap-2 mt-2">
                 {away?.commonPlays.map((play, idx) => (
-                  <span key={idx} className="bg-zinc-800 px-3 py-1 rounded-full text-xs">
+                  <span key={idx} className="bg-secondary px-3 py-1 rounded-full text-xs">
                     {play}
                   </span>
                 ))}
               </div>
             </div>
             <div>
-              <span className="text-zinc-400">Strengths:</span>
+              <span className="text-muted-foreground">Strengths:</span>
               <ul className="mt-2 space-y-1">
                 {away?.strengths.map((strength, idx) => (
-                  <li key={idx} className="text-zinc-300">
+                  <li key={idx} className="text-foreground">
                     • {strength}
                   </li>
                 ))}
@@ -284,37 +284,37 @@ export function GameDetail() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+          className="bg-card rounded-2xl p-6 border border-border"
         >
           <h3 className="font-bold text-xl mb-4">{home?.name}</h3>
           <div className="space-y-3 text-sm">
             <div>
-              <span className="text-zinc-400">Head Coach:</span>{" "}
+              <span className="text-muted-foreground">Head Coach:</span>{" "}
               <span className="font-medium">{home?.headCoach}</span>
             </div>
             <div>
-              <span className="text-zinc-400">Offensive System:</span>{" "}
+              <span className="text-muted-foreground">Offensive System:</span>{" "}
               <span className="font-medium">{home?.offensiveSystem}</span>
             </div>
             <div>
-              <span className="text-zinc-400">Defensive System:</span>{" "}
+              <span className="text-muted-foreground">Defensive System:</span>{" "}
               <span className="font-medium">{home?.defensiveSystem}</span>
             </div>
             <div>
-              <span className="text-zinc-400">Common Plays:</span>
+              <span className="text-muted-foreground">Common Plays:</span>
               <div className="flex flex-wrap gap-2 mt-2">
                 {home?.commonPlays.map((play, idx) => (
-                  <span key={idx} className="bg-zinc-800 px-3 py-1 rounded-full text-xs">
+                  <span key={idx} className="bg-secondary px-3 py-1 rounded-full text-xs">
                     {play}
                   </span>
                 ))}
               </div>
             </div>
             <div>
-              <span className="text-zinc-400">Strengths:</span>
+              <span className="text-muted-foreground">Strengths:</span>
               <ul className="mt-2 space-y-1">
                 {home?.strengths.map((strength, idx) => (
-                  <li key={idx} className="text-zinc-300">
+                  <li key={idx} className="text-foreground">
                     • {strength}
                   </li>
                 ))}

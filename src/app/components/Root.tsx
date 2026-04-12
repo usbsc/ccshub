@@ -25,9 +25,9 @@ export function Root() {
   ];
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-blue-500/30 font-sans">
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary/30 font-sans">
       {/* Header */}
-      <header className="bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50 sticky top-0 z-50 shadow-2xl">
+      <header className="bg-card/80 backdrop-blur-md border-b border-border sticky top-0 z-50 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between gap-4">
             <a
@@ -36,7 +36,7 @@ export function Root() {
               rel="noopener noreferrer"
               className="flex items-center gap-3 hover:opacity-80 transition-all active:scale-95 group"
             >
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/20 group-hover:rotate-3 transition-transform overflow-hidden p-0">
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 group-hover:rotate-3 transition-transform overflow-hidden p-0">
                 <img
                   src="/ccshub/logos/ccshub-banner.jpg"
                   alt="CCSHUB"
@@ -47,10 +47,10 @@ export function Root() {
                 />
               </div>
               <div>
-                <h1 className="text-xl font-black tracking-tight text-white leading-tight uppercase">
+                <h1 className="text-xl font-black tracking-tight text-foreground leading-tight uppercase">
                   CCS HUB
                 </h1>
-                <p className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
+                <p className="text-[10px] text-muted-foreground font-bold tracking-widest uppercase">
                   Central Coast Section
                 </p>
               </div>
@@ -61,13 +61,13 @@ export function Root() {
                 onClick={() => setShowSettings(!showSettings)}
                 className={`p-2.5 rounded-xl transition-all relative border ${
                   showSettings
-                    ? "bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20"
-                    : "bg-zinc-900 border-zinc-800 text-zinc-400 hover:bg-zinc-800 hover:text-white"
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                    : "bg-secondary border-border text-muted-foreground hover:bg-secondary/80 hover:text-foreground"
                 }`}
               >
                 <Settings className="w-5 h-5" />
                 {homeTeam && (
-                  <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 border-2 border-zinc-950 rounded-full"></span>
+                  <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 border-2 border-background rounded-full"></span>
                 )}
               </button>
             </div>
@@ -83,8 +83,8 @@ export function Root() {
                 className={({ isActive }) =>
                   `flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                     isActive
-                      ? "bg-zinc-100 text-zinc-950 shadow-lg"
-                      : "text-zinc-400 hover:text-white hover:bg-zinc-900"
+                      ? "bg-primary text-primary-foreground shadow-lg"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                   }`
                 }
               >
@@ -96,7 +96,7 @@ export function Root() {
         </div>
 
         {/* Mobile Navigation Bar (Scrollable) */}
-        <div className="md:hidden border-t border-zinc-900 px-2 py-2 flex gap-1 overflow-x-auto no-scrollbar">
+        <div className="md:hidden border-t border-border px-2 py-2 flex gap-1 overflow-x-auto no-scrollbar">
           {navItems.map(({ path, label, icon: Icon }) => (
             <NavLink
               key={path}
@@ -104,7 +104,7 @@ export function Root() {
               end={path === "/"}
               className={({ isActive }) =>
                 `flex items-center gap-2 px-4 py-2 rounded-lg font-bold text-xs whitespace-nowrap transition-all ${
-                  isActive ? "bg-blue-600 text-white shadow-lg" : "bg-zinc-900 text-zinc-400"
+                  isActive ? "bg-primary text-primary-foreground shadow-lg" : "bg-secondary text-muted-foreground"
                 }`
               }
             >
@@ -116,15 +116,15 @@ export function Root() {
 
         {/* Settings Panel */}
         {showSettings && (
-          <div className="bg-zinc-900 border-t border-zinc-800 animate-in fade-in slide-in-from-top-4 duration-200">
+          <div className="bg-card border-t border-border animate-in fade-in slide-in-from-top-4 duration-200">
             <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
               {/* Home Team Section */}
               <div>
-                <h3 className="font-bold text-lg mb-1 flex items-center gap-2 text-white">
-                  <Bell className="w-5 h-5 text-blue-400" />
+                <h3 className="font-bold text-lg mb-1 flex items-center gap-2 text-foreground">
+                  <Bell className="w-5 h-5 text-primary" />
                   Home Team
                 </h3>
-                <p className="text-zinc-400 text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4">
                   Select your home team to prioritize their games and news.
                 </p>
 
@@ -132,7 +132,7 @@ export function Root() {
                   <select
                     value={homeTeam || ""}
                     onChange={(e) => setHomeTeam(e.target.value || null)}
-                    className="flex-1 bg-zinc-950 text-white border border-zinc-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer appearance-none"
+                    className="flex-1 bg-secondary text-foreground border border-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary transition-all cursor-pointer appearance-none"
                   >
                     <option value="">No team selected</option>
                     <optgroup label="WCAL">
@@ -152,7 +152,7 @@ export function Root() {
                   {homeTeam && (
                     <button
                       onClick={() => setHomeTeam(null)}
-                      className="px-4 py-2 text-sm text-zinc-500 hover:text-red-400 transition-colors"
+                      className="px-4 py-2 text-sm text-destructive hover:text-destructive/80 transition-colors"
                     >
                       Clear Selection
                     </button>
@@ -161,12 +161,12 @@ export function Root() {
               </div>
 
               {/* Theme Section */}
-              <div className="border-t border-zinc-800 pt-6">
-                <h3 className="font-bold text-lg mb-1 flex items-center gap-2 text-white">
-                  <Settings className="w-5 h-5 text-green-400" />
+              <div className="border-t border-border pt-6">
+                <h3 className="font-bold text-lg mb-1 flex items-center gap-2 text-foreground">
+                  <Settings className="w-5 h-5 text-primary" />
                   Theme
                 </h3>
-                <p className="text-zinc-400 text-sm mb-4">Choose your preferred color theme.</p>
+                <p className="text-muted-foreground text-sm mb-4">Choose your preferred color theme.</p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                   {(["light", "dark", "summer", "fall", "spring"] as const).map((t) => (
@@ -175,8 +175,8 @@ export function Root() {
                       onClick={() => setTheme(t)}
                       className={`py-3 px-3 rounded-lg font-semibold text-xs uppercase tracking-wide transition-all border-2 ${
                         theme === t
-                          ? "border-white bg-opacity-20 bg-white text-white shadow-lg"
-                          : "border-zinc-700 text-zinc-400 hover:text-white hover:border-zinc-600"
+                          ? "border-foreground bg-primary/10 text-foreground shadow-lg shadow-primary/20"
+                          : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
                       }`}
                     >
                       <div className="flex flex-col items-center gap-1">
@@ -206,10 +206,10 @@ export function Root() {
 
       {/* Alert Banner for Home Team */}
       {homeTeam && (
-        <div className="bg-blue-600/10 border-b border-blue-500/20 py-2">
+        <div className="bg-primary/10 border-b border-primary/20 py-2">
           <div className="max-w-7xl mx-auto px-4">
-            <p className="text-center text-[11px] font-bold text-blue-400 tracking-wide flex items-center justify-center gap-2">
-              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span>
+            <p className="text-center text-[11px] font-bold text-primary tracking-wide flex items-center justify-center gap-2">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
               Priority alerts enabled for your home team
             </p>
           </div>
@@ -222,66 +222,66 @@ export function Root() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-zinc-950 border-t border-zinc-900 mt-20">
+      <footer className="bg-card border-t border-border mt-20">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center p-1">
                   <ImageWithFallback
                     src="https://www.cifccs.org/images/logo.png"
                     alt="CIF CCS"
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="font-black text-2xl text-white uppercase tracking-tighter">
+                <h3 className="font-black text-2xl text-foreground uppercase tracking-tighter">
                   CCSHUB
                 </h3>
               </div>
-              <p className="text-zinc-500 text-sm max-w-sm leading-relaxed font-medium">
+              <p className="text-muted-foreground text-sm max-w-sm leading-relaxed font-medium">
                 The premier digital destination for Central Coast Section athletics. Real-time
                 scores, in-depth rankings, and elite player spotlights.
               </p>
             </div>
 
             <div>
-              <h4 className="font-bold text-zinc-200 mb-4 text-sm uppercase tracking-wider">
+              <h4 className="font-bold text-foreground mb-4 text-sm uppercase tracking-wider">
                 Navigation
               </h4>
-              <ul className="text-zinc-500 text-sm space-y-3 font-medium">
+              <ul className="text-muted-foreground text-sm space-y-3 font-medium">
                 <li>
-                  <Link to="/rankings" className="hover:text-white transition-colors">
+                  <Link to="/rankings" className="hover:text-foreground transition-colors">
                     Rankings
                   </Link>
                 </li>
                 <li>
-                  <Link to="/schedule" className="hover:text-white transition-colors">
+                  <Link to="/schedule" className="hover:text-foreground transition-colors">
                     Schedule
                   </Link>
                 </li>
                 <li>
-                  <Link to="/scores" className="hover:text-white transition-colors">
+                  <Link to="/scores" className="hover:text-foreground transition-colors">
                     Scores
                   </Link>
                 </li>
                 <li>
-                  <Link to="/players" className="hover:text-white transition-colors">
+                  <Link to="/players" className="hover:text-foreground transition-colors">
                     Players
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-zinc-600 uppercase tracking-widest">
+          <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-muted-foreground uppercase tracking-widest">
             <div>© 2026 CCSHUB • Central Coast Section</div>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-zinc-400">
+              <a href="#" className="hover:text-foreground transition-colors">
                 Privacy
               </a>
-              <a href="#" className="hover:text-zinc-400">
+              <a href="#" className="hover:text-foreground transition-colors">
                 Terms
               </a>
-              <a href="#" className="hover:text-zinc-400">
+              <a href="#" className="hover:text-foreground transition-colors">
                 Contact
               </a>
             </div>

@@ -53,7 +53,7 @@ export function Rankings() {
   return (
     <div className="max-w-6xl mx-auto space-y-10 pb-20">
       {/* Header with Background */}
-      <div className="relative rounded-[2rem] overflow-hidden bg-zinc-900 border border-zinc-800 shadow-2xl">
+      <div className="relative rounded-[2rem] overflow-hidden bg-card border border-border shadow-2xl">
         <div className="absolute inset-0 opacity-20">
           <img
             src="https://images.unsplash.com/photo-1663563624897-de8972d7ce93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwc2Nob29sJTIwZm9vdGJhbGwlMjBnYW1lJTIwbmlnaHR8ZW58MXx8fHwxNzc0MDU1MjU3fDA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -72,20 +72,20 @@ export function Rankings() {
               CCS Power <br />
               <span className="text-blue-500 font-black">Index</span>
             </h1>
-            <p className="text-zinc-400 text-sm font-medium max-w-md">
+            <p className="text-muted-foreground text-sm font-medium max-w-md">
               Real-time performance metrics synchronized with official CIF and MaxPreps data.
             </p>
           </div>
 
           <div className="w-full md:w-auto">
             <div className="relative group">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-blue-500 transition-colors" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-blue-500 transition-colors" />
               <input
                 type="text"
                 placeholder="Search school or mascot..."
                 value={searchQuery}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full md:w-80 bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                className="w-full md:w-80 bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
               />
             </div>
           </div>
@@ -101,8 +101,8 @@ export function Rankings() {
               onClick={() => setSelectedDivision(division)}
               className={`px-6 py-2.5 rounded-xl font-bold text-xs tracking-wide transition-all whitespace-nowrap border ${
                 selectedDivision === division
-                  ? "bg-white text-zinc-950 border-white shadow-lg"
-                  : "bg-zinc-900 text-zinc-500 border-zinc-800 hover:text-zinc-300"
+                  ? "bg-white text-foreground border-white shadow-lg"
+                  : "bg-card text-muted-foreground border-border hover:text-foreground"
               }`}
             >
               {division === "all" ? "All Divisions" : division}
@@ -110,7 +110,7 @@ export function Rankings() {
           ))}
         </div>
 
-        <div className="text-[10px] font-black text-zinc-600 uppercase tracking-widest flex items-center gap-2">
+        <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2">
           <Filter className="w-3 h-3" /> Showing {sortedTeams.length} Teams
         </div>
       </div>
@@ -120,10 +120,10 @@ export function Rankings() {
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="bg-zinc-900/50 rounded-[2rem] overflow-hidden border border-zinc-800 shadow-xl"
+        className="bg-card/50 rounded-[2rem] overflow-hidden border border-border shadow-xl"
       >
         {/* Table Header */}
-        <div className="hidden md:grid grid-cols-12 gap-4 px-8 py-6 border-b border-zinc-800 text-[10px] font-black text-zinc-500 uppercase tracking-widest bg-zinc-900/80">
+        <div className="hidden md:grid grid-cols-12 gap-4 px-8 py-6 border-b border-border text-[10px] font-black text-muted-foreground uppercase tracking-widest bg-card/80">
           <div className="col-span-1">Rank</div>
           <div className="col-span-5">School Program</div>
           <div className="col-span-2 text-center">Record</div>
@@ -147,7 +147,7 @@ export function Rankings() {
                       className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-lg transition-all ${
                         team.ranking <= 3
                           ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30 rotate-3"
-                          : "bg-zinc-800 text-zinc-400 group-hover:bg-zinc-700"
+                          : "bg-secondary text-muted-foreground group-hover:bg-secondary"
                       }`}
                     >
                       {team.ranking}
@@ -160,9 +160,9 @@ export function Rankings() {
                       <ImageWithFallback
                         src={team.image}
                         alt={team.name}
-                        className="w-full h-full rounded-xl object-contain bg-zinc-800 p-2 border-2 border-zinc-800 group-hover:border-blue-500/50 transition-all shadow-md"
+                        className="w-full h-full rounded-xl object-contain bg-secondary p-2 border-2 border-border group-hover:border-blue-500/50 transition-all shadow-md"
                       />
-                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center">
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-card border border-border rounded-full flex items-center justify-center">
                         <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
                       </div>
                     </div>
@@ -170,10 +170,10 @@ export function Rankings() {
                       <div className="font-bold text-white group-hover:text-blue-400 transition-colors truncate tracking-tight uppercase">
                         {team.name}
                       </div>
-                      <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest truncate">
+                      <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest truncate">
                         {team.mascot} • {team.division}
                         {typeof team.stateRank === "number" ? (
-                          <span className="text-zinc-400"> • CA #{team.stateRank}</span>
+                          <span className="text-muted-foreground"> • CA #{team.stateRank}</span>
                         ) : null}
                       </div>
                     </div>
@@ -184,7 +184,7 @@ export function Rankings() {
                     <div className="font-black text-xl text-white tracking-tighter">
                       {team.record.wins}-{team.record.losses}
                     </div>
-                    <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-wide">
+                    <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-wide">
                       {(team.record.wins + team.record.losses > 0
                         ? (team.record.wins / (team.record.wins + team.record.losses)) * 100
                         : 0
@@ -195,7 +195,7 @@ export function Rankings() {
 
                   {/* Division (Desktop) */}
                   <div className="hidden md:block col-span-2 text-center">
-                    <span className="bg-zinc-800 text-zinc-400 px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest border border-zinc-700 line-clamp-2 break-words">
+                    <span className="bg-secondary text-muted-foreground px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest border border-border line-clamp-2 break-words">
                       {team.division}
                     </span>
                   </div>
@@ -219,14 +219,14 @@ export function Rankings() {
                       </div>
                     )}
                     {trend === "same" && (
-                      <div className="flex items-center gap-1.5 text-zinc-600">
+                      <div className="flex items-center gap-1.5 text-muted-foreground">
                         <Minus className="w-4 h-4" />
                         <span className="text-[10px] font-black uppercase hidden md:inline">
                           Steady
                         </span>
                       </div>
                     )}
-                    <ArrowRight className="w-4 h-4 text-zinc-800 group-hover:text-blue-500 group-hover:translate-x-1 transition-all mt-1" />
+                    <ArrowRight className="w-4 h-4 text-foreground group-hover:text-blue-500 group-hover:translate-x-1 transition-all mt-1" />
                   </div>
                 </Link>
               </div>
@@ -235,11 +235,11 @@ export function Rankings() {
 
           {sortedTeams.length === 0 && (
             <div className="p-20 text-center">
-              <Search className="w-12 h-12 text-zinc-800 mx-auto mb-4" />
+              <Search className="w-12 h-12 text-foreground mx-auto mb-4" />
               <h3 className="text-xl font-black text-white uppercase tracking-widest">
                 No matching teams
               </h3>
-              <p className="text-zinc-500 text-sm mt-2">
+              <p className="text-muted-foreground text-sm mt-2">
                 Try adjusting your search or division filters.
               </p>
             </div>
@@ -262,9 +262,9 @@ export function Rankings() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 + idx * 0.05 }}
-            className="bg-zinc-900/80 backdrop-blur-sm rounded-3xl p-6 border border-zinc-800 shadow-lg group hover:border-blue-500/30 transition-colors"
+            className="bg-card/80 backdrop-blur-sm rounded-3xl p-6 border border-border shadow-lg group hover:border-blue-500/30 transition-colors"
           >
-            <div className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-3 group-hover:text-blue-400 transition-colors">
+            <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-3 group-hover:text-blue-400 transition-colors">
               {stat.label}
             </div>
             <div className="text-4xl font-black text-white tracking-tighter">{stat.value}</div>

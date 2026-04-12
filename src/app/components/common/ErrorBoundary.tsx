@@ -32,16 +32,16 @@ export class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-zinc-950 text-zinc-100 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-zinc-900 rounded-lg p-6 border border-zinc-800">
+        <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-card rounded-lg p-6 border border-border">
             <h2 className="text-2xl font-bold text-red-500 mb-4">Something went wrong</h2>
-            <p className="text-zinc-400 mb-4">
+            <p className="text-muted-foreground mb-4">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             {this.state.error && (
-              <details className="text-sm text-zinc-500 mb-4">
-                <summary className="cursor-pointer hover:text-zinc-300">Error details</summary>
-                <pre className="mt-2 p-2 bg-zinc-950 rounded overflow-auto">
+              <details className="text-sm text-muted-foreground mb-4">
+                <summary className="cursor-pointer hover:text-foreground">Error details</summary>
+                <pre className="mt-2 p-2 bg-background rounded overflow-auto">
                   {this.state.error.toString()}
                 </pre>
               </details>

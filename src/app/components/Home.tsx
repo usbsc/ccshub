@@ -149,17 +149,17 @@ export function Home() {
               CCS <br />
               <span className="text-blue-500 italic font-black">HUB</span>
             </h2>
-            <div className="flex flex-wrap items-center gap-4 text-zinc-300 font-medium">
+            <div className="flex flex-wrap items-center gap-4 text-foreground font-medium">
               <span className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-blue-500" />
                 {currentTime.toLocaleDateString("en-US", { month: "long", day: "numeric" })}
               </span>
-              <span className="w-1.5 h-1.5 bg-zinc-700 rounded-full"></span>
+              <span className="w-1.5 h-1.5 bg-secondary rounded-full"></span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-blue-500" />
                 {currentTime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
               </span>
-              <span className="bg-zinc-800/80 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-blue-400 border border-zinc-700">
+              <span className="bg-secondary/80 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-blue-400 border border-border">
                 Off-Season
               </span>
             </div>
@@ -191,7 +191,7 @@ export function Home() {
                       <Link
                         key={game.id}
                         to={`/game/${game.id}`}
-                        className="bg-zinc-950/40 hover:bg-zinc-950/60 backdrop-blur-md rounded-2xl p-5 transition-all border border-white/10 group/card"
+                        className="bg-background/40 hover:bg-background/60 backdrop-blur-md rounded-2xl p-5 transition-all border border-white/10 group/card"
                       >
                         <div className="flex justify-between items-center mb-3">
                           <span className="text-[10px] font-bold text-blue-200 tracking-wide">
@@ -208,7 +208,7 @@ export function Home() {
                             />
                           </div>
                           <div>
-                            <p className="text-xs text-zinc-300 font-bold uppercase tracking-tight">
+                            <p className="text-xs text-foreground font-bold uppercase tracking-tight">
                               vs {opponent?.name}
                             </p>
                             <p className="text-2xl font-black text-white">
@@ -241,25 +241,25 @@ export function Home() {
               <MapPin className="w-6 h-6 text-green-400" />
               Games Near You
             </h2>
-            <p className="text-sm text-zinc-300">Find football games in your area</p>
+            <p className="text-sm text-foreground">Find football games in your area</p>
           </div>
 
           <div className="relative group">
-            <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-green-400 transition-colors" />
+            <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-green-400 transition-colors" />
             <input
               type="text"
               placeholder="Search by city or zip code..."
               value={userLocation}
               onChange={(e) => setUserLocation(e.target.value)}
-              className="w-full bg-zinc-950 border border-green-800/50 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+              className="w-full bg-background border border-green-800/50 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
               aria-label="Search games by location"
             />
           </div>
 
           {userLocation.trim().length > 0 && (
-            <div className="mt-6 text-sm text-zinc-400">
+            <div className="mt-6 text-sm text-muted-foreground">
               <p>Games near <span className="font-bold text-green-300">{userLocation}</span> would appear here</p>
-              <p className="text-xs mt-2 text-zinc-500">(Location-based filtering coming soon)</p>
+              <p className="text-xs mt-2 text-muted-foreground">(Location-based filtering coming soon)</p>
             </div>
           )}
         </div>
@@ -286,39 +286,39 @@ export function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div className="relative group">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-blue-500 transition-colors" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-blue-500 transition-colors" />
                 <input
                   type="text"
                   placeholder="Search team..."
                   value={teamQuery}
                   onChange={(e) => setTeamQuery(e.target.value)}
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                  className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
                   aria-label="Search broadcasts by team"
                 />
               </div>
               <div className="relative group">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-blue-500 transition-colors" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-blue-500 transition-colors" />
                 <input
                   type="text"
                   placeholder="Search division or league..."
                   value={divisionLeagueQuery}
                   onChange={(e) => setDivisionLeagueQuery(e.target.value)}
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                  className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
                   aria-label="Search broadcasts by division or league"
                 />
               </div>
             </div>
 
-            <div className="bg-zinc-900/50 rounded-2xl p-6 border border-zinc-800 mb-6">
+            <div className="bg-card/50 rounded-2xl p-6 border border-border mb-6">
               <div className="flex items-center justify-between gap-4 mb-4">
                 <div>
                   <div className="text-[10px] font-black text-blue-400 uppercase tracking-widest">
                     NFHS Network • CIFCCS
                   </div>
-                  <div className="text-sm font-bold text-zinc-200">Recent football broadcasts</div>
+                  <div className="text-sm font-bold text-foreground">Recent football broadcasts</div>
                 </div>
                 {nfhsLastUpdated ? (
-                  <div className="text-[10px] font-black text-zinc-600 uppercase tracking-widest">
+                  <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">
                     Updated{" "}
                     {nfhsLastUpdated.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                   </div>
@@ -326,13 +326,13 @@ export function Home() {
               </div>
 
               {nfhsLoading ? (
-                <div className="text-sm text-zinc-400">Loading NFHS broadcasts…</div>
+                <div className="text-sm text-muted-foreground">Loading NFHS broadcasts…</div>
               ) : nfhsError ? (
-                <div className="text-sm text-zinc-400">
+                <div className="text-sm text-muted-foreground">
                   NFHS broadcasts unavailable: {nfhsError}
                 </div>
               ) : filteredNfhsBroadcasts.length === 0 ? (
-                <div className="text-sm text-zinc-400">
+                <div className="text-sm text-muted-foreground">
                   No NFHS broadcasts found for your filters.
                 </div>
               ) : (
@@ -343,14 +343,14 @@ export function Home() {
                       href={b.pageUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="group rounded-2xl border border-zinc-800 bg-zinc-950/40 hover:bg-zinc-950/60 p-4 transition-colors"
+                      className="group rounded-2xl border border-border bg-background/40 hover:bg-background/60 p-4 transition-colors"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0">
                           <div className="font-black text-white uppercase tracking-tight truncate">
                             {b.title}
                           </div>
-                          <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mt-1">
+                          <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">
                             {new Date(b.startTime).toLocaleString("en-US", {
                               month: "short",
                               day: "numeric",
@@ -359,14 +359,14 @@ export function Home() {
                               minute: "2-digit",
                             })}
                             {b.publisherName ? (
-                              <span className="text-zinc-600"> • {b.publisherName}</span>
+                              <span className="text-muted-foreground"> • {b.publisherName}</span>
                             ) : null}
                           </div>
                         </div>
 
                         <div className="flex items-center gap-2 shrink-0">
                           {b.paymentRequired ? (
-                            <span className="bg-zinc-800 text-zinc-300 px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
+                            <span className="bg-secondary text-foreground px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
                               SUB
                             </span>
                           ) : null}
@@ -375,7 +375,7 @@ export function Home() {
                               LIVE
                             </span>
                           ) : null}
-                          <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-blue-400 transition-colors" />
+                          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-blue-400 transition-colors" />
                         </div>
                       </div>
                     </a>
@@ -384,7 +384,7 @@ export function Home() {
               )}
             </div>
 
-            <div className="text-[10px] font-black text-zinc-600 uppercase tracking-widest mb-6">
+            <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-6">
               Showing {broadcastGames.length} of {baseBroadcastGames.length}
             </div>
 
@@ -397,11 +397,11 @@ export function Home() {
                     <Link
                       key={game.id}
                       to={`/game/${game.id}`}
-                      className="group relative bg-zinc-900 hover:bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-800 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-[0.98]"
+                      className="group relative bg-card hover:bg-secondary rounded-3xl overflow-hidden border border-border transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-[0.98]"
                     >
                       <div className="p-6">
                         <div className="flex justify-between items-center mb-6">
-                          <span className="bg-zinc-800 text-zinc-400 px-3 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase">
+                          <span className="bg-secondary text-muted-foreground px-3 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase">
                             {game.level} • {game.time}
                           </span>
                           {game.status === "live" && (
@@ -415,14 +415,14 @@ export function Home() {
                         <div className="space-y-4">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-800 p-1">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-secondary p-1">
                                 <ImageWithFallback
                                   src={away?.image}
                                   className="w-full h-full object-contain"
                                   alt=""
                                 />
                               </div>
-                              <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">
+                              <span className="font-bold text-lg truncate pr-4 text-foreground uppercase tracking-tight">
                                 {away?.name || "Away Team"}
                               </span>
                             </div>
@@ -430,14 +430,14 @@ export function Home() {
                           </div>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-800 p-1">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-secondary p-1">
                                 <ImageWithFallback
                                   src={home?.image}
                                   className="w-full h-full object-contain"
                                   alt=""
                                 />
                               </div>
-                              <span className="font-bold text-lg truncate pr-4 text-zinc-100 uppercase tracking-tight">
+                              <span className="font-bold text-lg truncate pr-4 text-foreground uppercase tracking-tight">
                                 {home?.name || "Home Team"}
                               </span>
                             </div>
@@ -445,7 +445,7 @@ export function Home() {
                           </div>
                         </div>
 
-                        <div className="mt-6 pt-6 border-t border-zinc-800 flex items-center justify-between text-[10px] font-bold text-zinc-500 tracking-wide">
+                        <div className="mt-6 pt-6 border-t border-border flex items-center justify-between text-[10px] font-bold text-muted-foreground tracking-wide">
                           <span className="flex items-center gap-1.5 uppercase">
                             <MapPin className="w-3 h-3" />
                             <a
@@ -473,7 +473,7 @@ export function Home() {
           </section>
 
           {/* Featured Player Spotlight */}
-          <section className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800 overflow-hidden relative group">
+          <section className="bg-card rounded-3xl p-8 border border-border overflow-hidden relative group">
             <div className="absolute -right-4 -bottom-4 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl group-hover:bg-blue-600/10 transition-colors"></div>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-48 h-48 rounded-2xl overflow-hidden shadow-xl ring-4 ring-zinc-800 group-hover:ring-blue-600/20 transition-all">
@@ -490,13 +490,13 @@ export function Home() {
                 <h3 className="text-3xl font-black text-white mb-2 tracking-tighter uppercase">
                   Michael Mitchell Jr.
                 </h3>
-                <p className="text-zinc-400 text-sm mb-6 leading-relaxed font-medium">
+                <p className="text-muted-foreground text-sm mb-6 leading-relaxed font-medium">
                   The Archbishop Riordan standout quarterback led the Crusaders to a historic start,
                   demonstrating elite dual-threat capabilities and leadership on and off the field.
                 </p>
                 <Link
                   to="/players"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-white bg-zinc-800 hover:bg-blue-600 px-6 py-2.5 rounded-xl transition-all shadow-lg border border-white/5"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-white bg-secondary hover:bg-blue-600 px-6 py-2.5 rounded-xl transition-all shadow-lg border border-white/5"
                 >
                   View Player Profile
                 </Link>
@@ -513,18 +513,18 @@ export function Home() {
               <Award className="w-6 h-6 text-yellow-500" />
               Power Top 5
             </h2>
-            <div className="bg-zinc-900 rounded-3xl border border-zinc-800 overflow-hidden shadow-xl">
+            <div className="bg-card rounded-3xl border border-border overflow-hidden shadow-xl">
               {topRankedTeams.map((team, idx) => (
                 <Link
                   key={team.id}
                   to={`/team/${team.id}`}
-                  className="flex items-center gap-4 p-5 hover:bg-zinc-800/50 transition-all border-b border-zinc-800/50 last:border-0 group"
+                  className="flex items-center gap-4 p-5 hover:bg-secondary/50 transition-all border-b border-border/50 last:border-0 group"
                 >
-                  <div className="text-2xl font-black text-zinc-700 group-hover:text-blue-500 transition-colors w-6">
+                  <div className="text-2xl font-black text-foreground group-hover:text-blue-500 transition-colors w-6">
                     {idx + 1}
                   </div>
                   <div className="flex-1 min-w-0 flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg overflow-hidden bg-zinc-800 p-1 flex-shrink-0">
+                    <div className="w-8 h-8 rounded-lg overflow-hidden bg-secondary p-1 flex-shrink-0">
                       <ImageWithFallback
                         src={team.image}
                         className="w-full h-full object-contain"
@@ -535,19 +535,19 @@ export function Home() {
                       <div className="font-bold text-white group-hover:translate-x-1 transition-transform uppercase tracking-tight truncate">
                         {team.name}
                       </div>
-                      <div className="text-[10px] font-black text-zinc-500 uppercase tracking-widest truncate">
+                      <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest truncate">
                         <span className="line-clamp-1">
                           {team.record.wins}-{team.record.losses} • {team.division}
                         </span>
                       </div>
                     </div>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-zinc-700 group-hover:text-blue-500" />
+                  <ChevronRight className="w-4 h-4 text-foreground group-hover:text-blue-500" />
                 </Link>
               ))}
               <Link
                 to="/rankings"
-                className="block p-5 text-center text-[10px] font-black text-zinc-400 hover:text-white transition-colors bg-zinc-950/50 uppercase tracking-[0.2em]"
+                className="block p-5 text-center text-[10px] font-black text-muted-foreground hover:text-white transition-colors bg-background/50 uppercase tracking-[0.2em]"
               >
                 View Full Rankings
               </Link>

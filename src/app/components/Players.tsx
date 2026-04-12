@@ -44,7 +44,7 @@ export function Players() {
         <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white">
           Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Players</span>
         </h1>
-        <p className="text-zinc-400 text-lg max-w-2xl">
+        <p className="text-muted-foreground text-lg max-w-2xl">
           Discover the top athletes competing in the Central Coast Section.
         </p>
       </motion.div>
@@ -58,29 +58,29 @@ export function Players() {
       >
         {/* Search Bar */}
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
           <input
             type="text"
             placeholder="Search players by name or team..."
             value={searchQuery}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
+            className="w-full pl-12 pr-4 py-3 bg-card border border-border rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
           />
         </div>
 
         {/* Filter Controls */}
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
-            <label className="block text-sm font-semibold text-zinc-400 mb-2">
+            <label className="block text-sm font-semibold text-muted-foreground mb-2">
               Position
             </label>
             <select
               value={selectedPosition}
               onChange={(e) => setSelectedPosition(e.target.value)}
-              className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-all"
+              className="w-full px-4 py-2 bg-card border border-border rounded-lg text-white focus:outline-none focus:border-purple-500 transition-all"
             >
               {positions.map((pos) => (
-                <option key={pos} value={pos} className="bg-zinc-950">
+                <option key={pos} value={pos} className="bg-background">
                   {pos === "all" ? "All Positions" : pos}
                 </option>
               ))}
@@ -88,19 +88,19 @@ export function Players() {
           </div>
 
           <div className="flex-1">
-            <label className="block text-sm font-semibold text-zinc-400 mb-2">
+            <label className="block text-sm font-semibold text-muted-foreground mb-2">
               Team
             </label>
             <select
               value={selectedTeam}
               onChange={(e) => setSelectedTeam(e.target.value)}
-              className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-all"
+              className="w-full px-4 py-2 bg-card border border-border rounded-lg text-white focus:outline-none focus:border-purple-500 transition-all"
             >
-              <option value="all" className="bg-zinc-950">
+              <option value="all" className="bg-background">
                 All Teams
               </option>
               {teams.map((team) => (
-                <option key={team.id} value={team.id} className="bg-zinc-950">
+                <option key={team.id} value={team.id} className="bg-background">
                   {team.name}
                 </option>
               ))}
@@ -111,7 +111,7 @@ export function Players() {
 
       {/* Results */}
       <div className="space-y-4">
-        <p className="text-sm text-zinc-400">
+        <p className="text-sm text-muted-foreground">
           {filteredPlayers.length} {filteredPlayers.length === 1 ? "player" : "players"} found
         </p>
 
@@ -131,7 +131,7 @@ export function Players() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ delay: idx * 0.05 }}
                   onClick={() => setActivePlayer(activePlayer?.id === player.id ? null : player)}
-                  className="bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700 hover:border-purple-500 rounded-xl p-4 cursor-pointer transition-all hover:shadow-lg hover:shadow-purple-500/10 group"
+                  className="bg-gradient-to-br from-zinc-800 to-zinc-900 border border-border hover:border-purple-500 rounded-xl p-4 cursor-pointer transition-all hover:shadow-lg hover:shadow-purple-500/10 group"
                 >
                   <div className="space-y-3">
                     {/* Header */}
@@ -153,7 +153,7 @@ export function Players() {
 
                     {/* Team Info */}
                     {team && (
-                      <div className="flex items-center gap-2 pt-2 border-t border-zinc-700">
+                      <div className="flex items-center gap-2 pt-2 border-t border-border">
                         {team.image && (
                           <ImageWithFallback
                             src={team.image}
@@ -161,7 +161,7 @@ export function Players() {
                             className="w-6 h-6 rounded"
                           />
                         )}
-                        <span className="text-sm text-zinc-400">{team.name}</span>
+                        <span className="text-sm text-muted-foreground">{team.name}</span>
                       </div>
                     )}
 
@@ -172,23 +172,23 @@ export function Players() {
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
-                          className="space-y-2 pt-3 border-t border-zinc-700"
+                          className="space-y-2 pt-3 border-t border-border"
                         >
                           {player.grade && (
                             <div className="flex justify-between text-sm">
-                              <span className="text-zinc-500">Grade:</span>
+                              <span className="text-muted-foreground">Grade:</span>
                               <span className="text-white font-medium">{player.grade}</span>
                             </div>
                           )}
                           {player.height && (
                             <div className="flex justify-between text-sm">
-                              <span className="text-zinc-500">Height:</span>
+                              <span className="text-muted-foreground">Height:</span>
                               <span className="text-white font-medium">{player.height}</span>
                             </div>
                           )}
                           {player.weight && (
                             <div className="flex justify-between text-sm">
-                              <span className="text-zinc-500">Weight:</span>
+                              <span className="text-muted-foreground">Weight:</span>
                               <span className="text-white font-medium">{player.weight} lbs</span>
                             </div>
                           )}
@@ -209,7 +209,7 @@ export function Players() {
             className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-800/30 rounded-2xl p-12 text-center"
           >
             <Award className="w-12 h-12 text-purple-400 mx-auto mb-3 opacity-50" />
-            <p className="text-zinc-400">
+            <p className="text-muted-foreground">
               No players match your search criteria.
             </p>
           </motion.div>

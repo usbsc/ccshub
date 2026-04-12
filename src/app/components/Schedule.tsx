@@ -107,7 +107,7 @@ export function Schedule() {
   return (
     <div className="max-w-6xl mx-auto space-y-12 pb-20">
       {/* Header */}
-      <div className="relative rounded-[2.5rem] overflow-hidden bg-zinc-900 border border-zinc-800 shadow-2xl">
+      <div className="relative rounded-[2.5rem] overflow-hidden bg-card border border-border shadow-2xl">
         <div className="absolute inset-0 opacity-20">
           <img
             src="https://images.unsplash.com/photo-1581588535512-4dbe198fbbee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb290YmFsbCUyMHN0YWRpdW0lMjBsaWdodHN8ZW58MXx8fHwxNzc0MDExODExfDA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -125,7 +125,7 @@ export function Schedule() {
             Game <br />
             <span className="text-green-500 font-black">Plan</span>
           </h1>
-          <p className="text-zinc-400 text-sm font-medium max-w-sm">
+          <p className="text-muted-foreground text-sm font-medium max-w-sm">
             Complete broadcast schedule and stadium locations for all CCS competition levels.
           </p>
         </div>
@@ -140,8 +140,8 @@ export function Schedule() {
               onClick={() => setSelectedLevel(level)}
               className={`px-6 py-2.5 rounded-xl font-bold text-xs tracking-wide transition-all whitespace-nowrap border ${
                 selectedLevel === level
-                  ? "bg-white text-zinc-950 border-white shadow-lg"
-                  : "bg-zinc-900 text-zinc-500 border-zinc-800 hover:text-zinc-300"
+                  ? "bg-white text-foreground border-white shadow-lg"
+                  : "bg-card text-muted-foreground border-border hover:text-foreground"
               }`}
             >
               {level === "all" ? "All Levels" : level}
@@ -153,7 +153,7 @@ export function Schedule() {
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(Number(e.target.value) as GameYear)}
-            className="bg-zinc-900 text-zinc-300 border border-zinc-800 rounded-xl px-4 py-2 text-xs font-bold"
+            className="bg-card text-foreground border border-border rounded-xl px-4 py-2 text-xs font-bold"
             aria-label="Select season"
           >
             {[...GAME_YEARS].reverse().map((y) => (
@@ -163,7 +163,7 @@ export function Schedule() {
             ))}
           </select>
 
-          <div className="text-[10px] font-black text-zinc-600 uppercase tracking-widest flex items-center gap-2">
+          <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2">
             <Filter className="w-3 h-3" /> Showing {liveGames.length} Live • {upcomingGames.length}{" "}
             Upcoming
           </div>
@@ -173,32 +173,32 @@ export function Schedule() {
       {/* Broadcast Search */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="relative group">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-green-500 transition-colors" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-green-500 transition-colors" />
           <input
             type="text"
             placeholder="Search team..."
             value={teamQuery}
             onChange={(e) => setTeamQuery(e.target.value)}
-            className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+            className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
             aria-label="Search broadcasts by team"
           />
         </div>
 
         <div className="relative group">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500 group-focus-within:text-green-500 transition-colors" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-green-500 transition-colors" />
           <input
             type="text"
             placeholder="Search division or league..."
             value={divisionLeagueQuery}
             onChange={(e) => setDivisionLeagueQuery(e.target.value)}
-            className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+            className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
             aria-label="Search broadcasts by division or league"
           />
         </div>
       </div>
 
       {/* NFHS Network */}
-      <section className="bg-zinc-900/40 rounded-[2rem] border border-zinc-800 p-8">
+      <section className="bg-card/40 rounded-[2rem] border border-border p-8">
         <div className="flex items-center justify-between gap-4 mb-6">
           <div>
             <div className="text-[10px] font-black text-green-400 uppercase tracking-widest">
@@ -208,7 +208,7 @@ export function Schedule() {
               Broadcasts
             </h2>
           </div>
-          <div className="text-[10px] font-black text-zinc-600 uppercase tracking-widest">
+          <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">
             {nfhsLoading
               ? "Loading…"
               : nfhsError
@@ -218,9 +218,9 @@ export function Schedule() {
         </div>
 
         {nfhsError ? (
-          <div className="text-sm text-zinc-400">NFHS broadcasts unavailable: {nfhsError}</div>
+          <div className="text-sm text-muted-foreground">NFHS broadcasts unavailable: {nfhsError}</div>
         ) : filteredNfhsBroadcasts.length === 0 ? (
-          <div className="text-sm text-zinc-400">
+          <div className="text-sm text-muted-foreground">
             No NFHS broadcasts found for your current filters.
           </div>
         ) : (
@@ -231,14 +231,14 @@ export function Schedule() {
                 href={b.pageUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-zinc-800 bg-zinc-950/40 hover:bg-zinc-950/60 p-5 transition-colors"
+                className="group rounded-2xl border border-border bg-background/40 hover:bg-background/60 p-5 transition-colors"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="font-black text-white uppercase tracking-tight truncate">
                       {b.title}
                     </div>
-                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mt-1">
+                    <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">
                       {new Date(b.startTime).toLocaleString("en-US", {
                         month: "short",
                         day: "numeric",
@@ -247,14 +247,14 @@ export function Schedule() {
                         minute: "2-digit",
                       })}
                       {b.publisherName ? (
-                        <span className="text-zinc-600"> • {b.publisherName}</span>
+                        <span className="text-muted-foreground"> • {b.publisherName}</span>
                       ) : null}
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2 shrink-0">
                     {b.paymentRequired ? (
-                      <span className="bg-zinc-800 text-zinc-300 px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
+                      <span className="bg-secondary text-foreground px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
                         SUB
                       </span>
                     ) : null}
@@ -263,7 +263,7 @@ export function Schedule() {
                         LIVE
                       </span>
                     ) : null}
-                    <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-green-400 transition-colors" />
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-green-400 transition-colors" />
                   </div>
                 </div>
               </a>
@@ -289,21 +289,21 @@ export function Schedule() {
                 <Link
                   key={game.id}
                   to={`/game/${game.id}`}
-                  className="group relative bg-zinc-900 rounded-[2rem] border-2 border-red-600/50 p-8 hover:bg-zinc-800 transition-all shadow-2xl shadow-red-900/10"
+                  className="group relative bg-card rounded-[2rem] border-2 border-red-600/50 p-8 hover:bg-secondary transition-all shadow-2xl shadow-red-900/10"
                 >
                   <div className="flex justify-between items-center mb-8">
                     <span className="bg-red-600 text-white px-3 py-1 rounded-full text-[10px] font-black tracking-widest uppercase flex items-center gap-2">
                       <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                       Broadcast Live
                     </span>
-                    <div className="flex items-center gap-2 text-[10px] font-black text-zinc-500 tracking-widest uppercase">
+                    <div className="flex items-center gap-2 text-[10px] font-black text-muted-foreground tracking-widest uppercase">
                       {game.quarter} • {game.timeRemaining}
                     </div>
                   </div>
 
                   <div className="grid grid-cols-[1fr,auto,1fr] items-center gap-4 mb-8">
                     <div className="flex flex-col items-end gap-3 text-right">
-                      <div className="w-16 h-16 bg-zinc-800 rounded-2xl flex items-center justify-center p-2 border-2 border-zinc-700 overflow-hidden">
+                      <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center p-2 border-2 border-border overflow-hidden">
                         <ImageWithFallback
                           src={away?.image}
                           className="w-full h-full object-contain"
@@ -314,16 +314,16 @@ export function Schedule() {
                         <div className="font-black text-2xl text-white uppercase tracking-tight leading-none mb-1">
                           {away?.name}
                         </div>
-                        <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
+                        <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
                           {away?.mascot}
                         </div>
                       </div>
                     </div>
-                    <div className="px-4 py-2 bg-zinc-950 rounded-xl font-black text-xl text-red-500 border border-zinc-800 tracking-tighter">
+                    <div className="px-4 py-2 bg-background rounded-xl font-black text-xl text-red-500 border border-border tracking-tighter">
                       VS
                     </div>
                     <div className="flex flex-col items-start gap-3 text-left">
-                      <div className="w-16 h-16 bg-zinc-800 rounded-2xl flex items-center justify-center p-2 border-2 border-zinc-700 overflow-hidden">
+                      <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center p-2 border-2 border-border overflow-hidden">
                         <ImageWithFallback
                           src={home?.image}
                           className="w-full h-full object-contain"
@@ -334,15 +334,15 @@ export function Schedule() {
                         <div className="font-black text-2xl text-white uppercase tracking-tight leading-none mb-1">
                           {home?.name}
                         </div>
-                        <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
+                        <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
                           {home?.mascot}
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-zinc-800 flex justify-between items-center">
-                    <div className="flex items-center gap-2 text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
+                  <div className="pt-6 border-t border-border flex justify-between items-center">
+                    <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
                       <MapPin className="w-3 h-3 text-red-500" />
                       <a
                         href={googleMapsSearchUrl(
@@ -356,7 +356,7 @@ export function Schedule() {
                         {game.stadium}
                       </a>
                     </div>
-                    <ChevronRight className="w-5 h-5 text-zinc-700 group-hover:text-red-500 group-hover:translate-x-1 transition-all" />
+                    <ChevronRight className="w-5 h-5 text-foreground group-hover:text-red-500 group-hover:translate-x-1 transition-all" />
                   </div>
                 </Link>
               );
@@ -373,7 +373,7 @@ export function Schedule() {
               <h3 className="text-sm font-black text-blue-500 uppercase tracking-widest whitespace-nowrap">
                 {date}
               </h3>
-              <div className="h-[1px] w-full bg-zinc-800/50"></div>
+              <div className="h-[1px] w-full bg-secondary/50"></div>
             </div>
 
             <div className="grid gap-4">
@@ -384,14 +384,14 @@ export function Schedule() {
                   <Link
                     key={game.id}
                     to={`/game/${game.id}`}
-                    className="group flex flex-col md:flex-row md:items-center gap-6 p-6 bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800 rounded-[1.5rem] transition-all"
+                    className="group flex flex-col md:flex-row md:items-center gap-6 p-6 bg-card/50 hover:bg-card border border-border rounded-[1.5rem] transition-all"
                   >
                     {/* Time & Level */}
                     <div className="md:w-32 shrink-0">
-                      <div className="flex items-center gap-2 text-zinc-100 font-black tracking-tight">
+                      <div className="flex items-center gap-2 text-foreground font-black tracking-tight">
                         <Clock className="w-4 h-4 text-green-500" /> {game.time}
                       </div>
-                      <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mt-1">
+                      <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">
                         {game.level}
                       </div>
                     </div>
@@ -399,7 +399,7 @@ export function Schedule() {
                     {/* Matchup */}
                     <div className="flex-1 flex items-center gap-6">
                       <div className="flex items-center gap-4 flex-1">
-                        <div className="w-10 h-10 rounded-lg overflow-hidden border border-zinc-800">
+                        <div className="w-10 h-10 rounded-lg overflow-hidden border border-border">
                           <ImageWithFallback
                             src={away?.image}
                             className="w-full h-full object-contain"
@@ -410,13 +410,13 @@ export function Schedule() {
                           <div className="font-black text-white uppercase tracking-tight truncate">
                             {away?.name || "Away"}
                           </div>
-                          <div className="text-[10px] font-bold text-zinc-500 uppercase">
+                          <div className="text-[10px] font-bold text-muted-foreground uppercase">
                             {away?.record ? `${away.record.wins}-${away.record.losses}` : "0-0"}
                           </div>
                         </div>
                       </div>
 
-                      <div className="text-[10px] font-black text-zinc-700 uppercase italic">
+                      <div className="text-[10px] font-black text-foreground uppercase italic">
                         at
                       </div>
 
@@ -425,11 +425,11 @@ export function Schedule() {
                           <div className="font-black text-white uppercase tracking-tight truncate">
                             {home?.name || "Home"}
                           </div>
-                          <div className="text-[10px] font-bold text-zinc-500 uppercase">
+                          <div className="text-[10px] font-bold text-muted-foreground uppercase">
                             {home?.record ? `${home.record.wins}-${home.record.losses}` : "0-0"}
                           </div>
                         </div>
-                        <div className="w-10 h-10 rounded-lg overflow-hidden border border-zinc-800">
+                        <div className="w-10 h-10 rounded-lg overflow-hidden border border-border">
                           <ImageWithFallback
                             src={home?.image}
                             className="w-full h-full object-contain"
@@ -441,7 +441,7 @@ export function Schedule() {
 
                     {/* Stadium */}
                     <div className="md:w-48 flex items-center justify-between md:justify-end gap-4 shrink-0">
-                      <div className="flex items-center gap-2 text-[10px] font-black text-zinc-500 uppercase tracking-widest truncate max-w-[120px]">
+                      <div className="flex items-center gap-2 text-[10px] font-black text-muted-foreground uppercase tracking-widest truncate max-w-[120px]">
                         <MapPin className="w-3 h-3" />
                         <a
                           href={googleMapsSearchUrl(
@@ -455,8 +455,8 @@ export function Schedule() {
                           {game.stadium}
                         </a>
                       </div>
-                      <div className="w-8 h-8 rounded-full bg-zinc-800 group-hover:bg-green-600 flex items-center justify-center transition-all">
-                        <ChevronRight className="w-4 h-4 text-zinc-500 group-hover:text-white" />
+                      <div className="w-8 h-8 rounded-full bg-secondary group-hover:bg-green-600 flex items-center justify-center transition-all">
+                        <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-white" />
                       </div>
                     </div>
                   </Link>

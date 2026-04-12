@@ -87,7 +87,7 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
                           </span>
                         )}
                         {game.status === "final" && (
-                          <span className="bg-zinc-600 text-white px-2 py-1 rounded text-xs font-bold">
+                          <span className="bg-secondary text-white px-2 py-1 rounded text-xs font-bold">
                             FINAL
                           </span>
                         )}
@@ -104,7 +104,7 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
 
                     <div className="grid grid-cols-2 gap-4 mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-white rounded flex items-center justify-center p-1 overflow-hidden border border-zinc-700">
+                        <div className="w-8 h-8 bg-white rounded flex items-center justify-center p-1 overflow-hidden border border-border">
                           <ImageWithFallback
                             src={away?.image}
                             alt={away?.name}
@@ -122,7 +122,7 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-white rounded flex items-center justify-center p-1 overflow-hidden border border-zinc-700">
+                        <div className="w-8 h-8 bg-white rounded flex items-center justify-center p-1 overflow-hidden border border-border">
                           <ImageWithFallback
                             src={home?.image}
                             alt={home?.name}

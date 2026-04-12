@@ -322,7 +322,7 @@ export function TeamDetail() {
         </div>
       </motion.div>
 
-      {/* Strengths */}
+      {/* Team Strengths */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -343,33 +343,7 @@ export function TeamDetail() {
         </ul>
       </motion.div>
 
-      {/* Photos Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.55 }}
-        className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
-      >
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Image className="w-6 h-6 text-purple-400" />
-          Photos
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {[...Array(8)].map((_, idx) => (
-            <div
-              key={idx}
-              className="aspect-square bg-zinc-800 rounded-lg border border-zinc-700 flex items-center justify-center hover:border-purple-500 hover:bg-zinc-700/50 transition-all cursor-pointer group"
-            >
-              <div className="text-center">
-                <Image className="w-8 h-8 text-zinc-600 mx-auto mb-2 group-hover:text-purple-400 transition-colors" />
-                <p className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">Coming Soon</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Schedule */}
+      {/* Schedule Section - Moved Up */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-2xl font-bold">Schedule</h2>
         <div className="flex items-center gap-2">
@@ -477,6 +451,45 @@ export function TeamDetail() {
           </div>
         </motion.div>
       </div>
+
+      {/* Photos Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.55 }}
+        className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800"
+      >
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-bold flex items-center gap-2">
+            <Image className="w-6 h-6 text-purple-400" />
+            Photos
+          </h2>
+          <a
+            href="https://lightroom.adobe.com/shares/3af11b5819fb4d48a6d1b659dba92b74"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm px-3 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors flex items-center gap-2"
+          >
+            View Gallery <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[...Array(8)].map((_, idx) => (
+            <a
+              key={idx}
+              href="https://lightroom.adobe.com/shares/3af11b5819fb4d48a6d1b659dba92b74"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-square bg-zinc-800 rounded-lg border border-zinc-700 flex items-center justify-center hover:border-purple-500 hover:bg-zinc-700/50 transition-all cursor-pointer group"
+            >
+              <div className="text-center">
+                <Image className="w-8 h-8 text-zinc-600 mx-auto mb-2 group-hover:text-purple-400 transition-colors" />
+                <p className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors">View Gallery</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }

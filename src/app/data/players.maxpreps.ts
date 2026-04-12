@@ -21,7 +21,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "riordan-1",
@@ -31,7 +31,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "riordan-2",
@@ -41,7 +41,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "riordan-3",
@@ -51,7 +51,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "riordan-4",
@@ -61,7 +61,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "riordan-5",
@@ -71,7 +71,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "riordan-6",
@@ -81,7 +81,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "riordan-7",
@@ -91,7 +91,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "riordan-8",
@@ -101,7 +101,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "riordan-9",
@@ -111,7 +111,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "riordan-10",
@@ -121,7 +121,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "riordan-11",
@@ -131,7 +131,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "riordan-12",
@@ -141,7 +141,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "riordan-13",
@@ -151,7 +151,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "riordan-14",
@@ -161,7 +161,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "riordan-15",
@@ -171,7 +171,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "riordan-16",
@@ -181,7 +181,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "riordan-17",
@@ -191,7 +191,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Fr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "riordan-18",
@@ -201,7 +201,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "riordan-19",
@@ -211,7 +211,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "riordan-20",
@@ -221,7 +221,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "riordan-21",
@@ -231,7 +231,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "riordan-22",
@@ -241,7 +241,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "riordan-23",
@@ -251,7 +251,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "riordan-24",
@@ -261,7 +261,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "riordan-25",
@@ -271,7 +271,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "riordan-26",
@@ -281,7 +281,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "riordan-27",
@@ -291,7 +291,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Fr.",
     "height": "5'11\"",
-    "weight": "146 lbs"
+    "weight": "146"
   },
   {
     "id": "riordan-28",
@@ -301,7 +301,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "riordan-29",
@@ -311,7 +311,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "riordan-30",
@@ -321,7 +321,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "riordan-31",
@@ -331,7 +331,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "riordan-32",
@@ -341,7 +341,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "riordan-33",
@@ -351,7 +351,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "riordan-34",
@@ -361,7 +361,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "riordan-35",
@@ -371,7 +371,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "riordan-36",
@@ -381,7 +381,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "riordan-37",
@@ -391,7 +391,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "riordan-38",
@@ -401,7 +401,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "riordan-39",
@@ -411,7 +411,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "riordan-40",
@@ -421,7 +421,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "riordan-41",
@@ -431,7 +431,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "6'3\"",
-    "weight": "275 lbs"
+    "weight": "275"
   },
   {
     "id": "riordan-42",
@@ -441,7 +441,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "riordan-43",
@@ -451,7 +451,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Fr.",
     "height": "5'11\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "riordan-44",
@@ -461,7 +461,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "285 lbs"
+    "weight": "285"
   },
   {
     "id": "riordan-45",
@@ -471,7 +471,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Fr.",
     "height": "6'0\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "riordan-46",
@@ -481,7 +481,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'5\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "riordan-47",
@@ -491,7 +491,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "riordan-48",
@@ -501,7 +501,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "riordan-49",
@@ -511,7 +511,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "riordan-50",
@@ -521,7 +521,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Fr.",
     "height": "6'5\"",
-    "weight": "350 lbs"
+    "weight": "350"
   },
   {
     "id": "riordan-51",
@@ -531,7 +531,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "riordan-52",
@@ -541,7 +541,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "6'4\"",
-    "weight": "320 lbs"
+    "weight": "320"
   },
   {
     "id": "riordan-53",
@@ -551,7 +551,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'7\"",
-    "weight": "340 lbs"
+    "weight": "340"
   },
   {
     "id": "riordan-54",
@@ -561,7 +561,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "riordan-55",
@@ -571,7 +571,7 @@ export const players: Player[] = [
     "team": "riordan",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "serra-0",
@@ -581,7 +581,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "serra-1",
@@ -591,7 +591,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "serra-2",
@@ -601,7 +601,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "serra-3",
@@ -611,7 +611,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "serra-4",
@@ -621,7 +621,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "serra-5",
@@ -631,7 +631,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Fr.",
     "height": "6'2\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "serra-6",
@@ -641,7 +641,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "serra-7",
@@ -651,7 +651,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "serra-8",
@@ -661,7 +661,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "serra-9",
@@ -671,7 +671,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "serra-10",
@@ -681,7 +681,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "serra-11",
@@ -691,7 +691,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "serra-12",
@@ -701,7 +701,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "serra-13",
@@ -711,7 +711,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "serra-14",
@@ -721,7 +721,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "serra-15",
@@ -731,7 +731,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "serra-16",
@@ -741,7 +741,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "serra-17",
@@ -751,7 +751,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "serra-18",
@@ -761,7 +761,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "serra-19",
@@ -771,7 +771,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "serra-20",
@@ -781,7 +781,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "serra-21",
@@ -791,7 +791,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "serra-22",
@@ -801,7 +801,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "serra-23",
@@ -811,7 +811,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "serra-24",
@@ -821,7 +821,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "serra-25",
@@ -831,7 +831,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "serra-26",
@@ -841,7 +841,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "serra-27",
@@ -851,7 +851,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "serra-28",
@@ -861,7 +861,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "serra-29",
@@ -871,7 +871,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Fr.",
     "height": "5'11\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "serra-30",
@@ -881,7 +881,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "serra-31",
@@ -891,7 +891,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "serra-32",
@@ -901,7 +901,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "serra-33",
@@ -911,7 +911,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "serra-34",
@@ -921,7 +921,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "serra-35",
@@ -931,7 +931,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "115 lbs"
+    "weight": "115"
   },
   {
     "id": "serra-36",
@@ -941,7 +941,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "serra-37",
@@ -951,7 +951,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "serra-38",
@@ -961,7 +961,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "serra-39",
@@ -971,7 +971,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "serra-40",
@@ -981,7 +981,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "serra-41",
@@ -991,7 +991,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "serra-42",
@@ -1001,7 +1001,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "serra-43",
@@ -1011,7 +1011,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "serra-44",
@@ -1021,7 +1021,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "serra-45",
@@ -1031,7 +1031,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "serra-46",
@@ -1041,7 +1041,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "serra-47",
@@ -1051,7 +1051,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "serra-48",
@@ -1061,7 +1061,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "serra-49",
@@ -1071,7 +1071,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "serra-50",
@@ -1081,7 +1081,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "serra-51",
@@ -1091,7 +1091,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "serra-52",
@@ -1101,7 +1101,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "226 lbs"
+    "weight": "226"
   },
   {
     "id": "serra-53",
@@ -1111,7 +1111,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "285 lbs"
+    "weight": "285"
   },
   {
     "id": "serra-54",
@@ -1121,7 +1121,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "serra-55",
@@ -1131,7 +1131,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "serra-56",
@@ -1141,7 +1141,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "310 lbs"
+    "weight": "310"
   },
   {
     "id": "serra-57",
@@ -1151,7 +1151,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "serra-58",
@@ -1161,7 +1161,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "345 lbs"
+    "weight": "345"
   },
   {
     "id": "serra-59",
@@ -1171,7 +1171,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "serra-60",
@@ -1181,7 +1181,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "105 lbs"
+    "weight": "105"
   },
   {
     "id": "serra-61",
@@ -1191,7 +1191,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "So.",
     "height": "6'4\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "serra-62",
@@ -1201,7 +1201,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "130 lbs"
+    "weight": "130"
   },
   {
     "id": "serra-63",
@@ -1211,7 +1211,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "serra-64",
@@ -1221,7 +1221,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "serra-65",
@@ -1231,7 +1231,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "serra-66",
@@ -1241,7 +1241,7 @@ export const players: Player[] = [
     "team": "serra",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "st-francis-0",
@@ -1251,7 +1251,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-francis-1",
@@ -1261,7 +1261,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-francis-2",
@@ -1271,7 +1271,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "st-francis-3",
@@ -1281,7 +1281,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "st-francis-4",
@@ -1291,7 +1291,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-francis-5",
@@ -1301,7 +1301,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Fr.",
     "height": "5'11\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-francis-6",
@@ -1311,7 +1311,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-francis-7",
@@ -1321,7 +1321,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-francis-8",
@@ -1331,7 +1331,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-francis-9",
@@ -1341,7 +1341,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-francis-10",
@@ -1351,7 +1351,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "st-francis-11",
@@ -1361,7 +1361,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Fr.",
     "height": "6'1\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-francis-12",
@@ -1371,7 +1371,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-francis-13",
@@ -1381,7 +1381,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-francis-14",
@@ -1391,7 +1391,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "st-francis-15",
@@ -1401,7 +1401,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "st-francis-16",
@@ -1411,7 +1411,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-francis-17",
@@ -1421,7 +1421,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "st-francis-18",
@@ -1431,7 +1431,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'3\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-francis-19",
@@ -1441,7 +1441,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-francis-20",
@@ -1451,7 +1451,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-francis-21",
@@ -1461,7 +1461,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-francis-22",
@@ -1471,7 +1471,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-23",
@@ -1481,7 +1481,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Fr.",
     "height": "6'0\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-24",
@@ -1491,7 +1491,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "st-francis-25",
@@ -1501,7 +1501,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "st-francis-26",
@@ -1511,7 +1511,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-27",
@@ -1521,7 +1521,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-francis-28",
@@ -1531,7 +1531,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "st-francis-29",
@@ -1541,7 +1541,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-francis-30",
@@ -1551,7 +1551,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-francis-31",
@@ -1561,7 +1561,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-francis-32",
@@ -1571,7 +1571,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "st-francis-33",
@@ -1581,7 +1581,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "st-francis-34",
@@ -1591,7 +1591,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-francis-35",
@@ -1601,7 +1601,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-francis-36",
@@ -1611,7 +1611,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "st-francis-37",
@@ -1621,7 +1621,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-francis-38",
@@ -1631,7 +1631,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-francis-39",
@@ -1641,7 +1641,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-40",
@@ -1651,7 +1651,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-francis-41",
@@ -1661,7 +1661,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-francis-42",
@@ -1671,7 +1671,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-francis-43",
@@ -1681,7 +1681,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Fr.",
     "height": "5'11\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "st-francis-44",
@@ -1691,7 +1691,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "179 lbs"
+    "weight": "179"
   },
   {
     "id": "st-francis-45",
@@ -1701,7 +1701,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "178 lbs"
+    "weight": "178"
   },
   {
     "id": "st-francis-46",
@@ -1711,7 +1711,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "st-francis-47",
@@ -1721,7 +1721,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-48",
@@ -1731,7 +1731,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "st-francis-49",
@@ -1741,7 +1741,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-francis-50",
@@ -1751,7 +1751,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "st-francis-51",
@@ -1761,7 +1761,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-52",
@@ -1771,7 +1771,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "st-francis-53",
@@ -1781,7 +1781,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-francis-54",
@@ -1791,7 +1791,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-francis-55",
@@ -1801,7 +1801,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "st-francis-56",
@@ -1811,7 +1811,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-francis-57",
@@ -1821,7 +1821,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-francis-58",
@@ -1831,7 +1831,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "st-francis-59",
@@ -1841,7 +1841,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "st-francis-60",
@@ -1851,7 +1851,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-francis-61",
@@ -1861,7 +1861,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "st-francis-62",
@@ -1871,7 +1871,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "st-francis-63",
@@ -1881,7 +1881,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "st-francis-64",
@@ -1891,7 +1891,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-francis-65",
@@ -1901,7 +1901,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "st-francis-66",
@@ -1911,7 +1911,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "st-francis-67",
@@ -1921,7 +1921,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "275 lbs"
+    "weight": "275"
   },
   {
     "id": "st-francis-68",
@@ -1931,7 +1931,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "st-francis-69",
@@ -1941,7 +1941,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "st-francis-70",
@@ -1951,7 +1951,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-francis-71",
@@ -1961,7 +1961,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-francis-72",
@@ -1971,7 +1971,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "st-francis-73",
@@ -1981,7 +1981,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "350 lbs"
+    "weight": "350"
   },
   {
     "id": "st-francis-74",
@@ -1991,7 +1991,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "st-francis-75",
@@ -2001,7 +2001,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "st-francis-76",
@@ -2011,7 +2011,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'6\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "st-francis-77",
@@ -2021,7 +2021,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-francis-78",
@@ -2031,7 +2031,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'6\"",
-    "weight": "355 lbs"
+    "weight": "355"
   },
   {
     "id": "st-francis-79",
@@ -2041,7 +2041,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'3\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-francis-80",
@@ -2051,7 +2051,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "255 lbs"
+    "weight": "255"
   },
   {
     "id": "st-francis-81",
@@ -2061,7 +2061,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-francis-82",
@@ -2071,7 +2071,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-francis-83",
@@ -2081,7 +2081,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-84",
@@ -2091,7 +2091,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-85",
@@ -2101,7 +2101,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "130 lbs"
+    "weight": "130"
   },
   {
     "id": "st-francis-86",
@@ -2111,7 +2111,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-francis-87",
@@ -2121,7 +2121,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Fr.",
     "height": "6'3\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-francis-88",
@@ -2131,7 +2131,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-francis-89",
@@ -2141,7 +2141,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "st-francis-90",
@@ -2151,7 +2151,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'3\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "st-francis-91",
@@ -2161,7 +2161,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-francis-92",
@@ -2171,7 +2171,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "st-francis-93",
@@ -2181,7 +2181,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-francis-94",
@@ -2191,7 +2191,7 @@ export const players: Player[] = [
     "team": "st-francis",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "st-ignatius-0",
@@ -2201,7 +2201,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-ignatius-1",
@@ -2211,7 +2211,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "st-ignatius-2",
@@ -2221,7 +2221,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-ignatius-3",
@@ -2231,7 +2231,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "st-ignatius-4",
@@ -2241,7 +2241,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-ignatius-5",
@@ -2251,7 +2251,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-ignatius-6",
@@ -2261,7 +2261,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-ignatius-7",
@@ -2271,7 +2271,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-ignatius-8",
@@ -2281,7 +2281,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-ignatius-9",
@@ -2291,7 +2291,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-ignatius-10",
@@ -2301,7 +2301,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-ignatius-11",
@@ -2311,7 +2311,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-ignatius-12",
@@ -2321,7 +2321,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-ignatius-13",
@@ -2331,7 +2331,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-ignatius-14",
@@ -2341,7 +2341,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "191 lbs"
+    "weight": "191"
   },
   {
     "id": "st-ignatius-15",
@@ -2351,7 +2351,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-ignatius-16",
@@ -2361,7 +2361,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-ignatius-17",
@@ -2371,7 +2371,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-ignatius-18",
@@ -2381,7 +2381,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "st-ignatius-19",
@@ -2391,7 +2391,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "st-ignatius-20",
@@ -2401,7 +2401,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "st-ignatius-21",
@@ -2411,7 +2411,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "st-ignatius-22",
@@ -2421,7 +2421,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-ignatius-23",
@@ -2431,7 +2431,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-ignatius-24",
@@ -2441,7 +2441,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "st-ignatius-25",
@@ -2451,7 +2451,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "st-ignatius-26",
@@ -2461,7 +2461,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Fr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-ignatius-27",
@@ -2471,7 +2471,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-ignatius-28",
@@ -2481,7 +2481,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-ignatius-29",
@@ -2491,7 +2491,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-ignatius-30",
@@ -2501,7 +2501,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "189 lbs"
+    "weight": "189"
   },
   {
     "id": "st-ignatius-31",
@@ -2511,7 +2511,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "st-ignatius-32",
@@ -2521,7 +2521,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-ignatius-33",
@@ -2531,7 +2531,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'5\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "st-ignatius-34",
@@ -2541,7 +2541,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-ignatius-35",
@@ -2551,7 +2551,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-ignatius-36",
@@ -2561,7 +2561,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "st-ignatius-37",
@@ -2571,7 +2571,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-ignatius-38",
@@ -2581,7 +2581,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "st-ignatius-39",
@@ -2591,7 +2591,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-ignatius-40",
@@ -2601,7 +2601,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-ignatius-41",
@@ -2611,7 +2611,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-ignatius-42",
@@ -2621,7 +2621,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-ignatius-43",
@@ -2631,7 +2631,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "st-ignatius-44",
@@ -2641,7 +2641,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-ignatius-45",
@@ -2651,7 +2651,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "st-ignatius-46",
@@ -2661,7 +2661,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "st-ignatius-47",
@@ -2671,7 +2671,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-ignatius-48",
@@ -2681,7 +2681,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-ignatius-49",
@@ -2691,7 +2691,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "st-ignatius-50",
@@ -2701,7 +2701,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "350 lbs"
+    "weight": "350"
   },
   {
     "id": "st-ignatius-51",
@@ -2711,7 +2711,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "st-ignatius-52",
@@ -2721,7 +2721,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "st-ignatius-53",
@@ -2731,7 +2731,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "st-ignatius-54",
@@ -2741,7 +2741,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "st-ignatius-55",
@@ -2751,7 +2751,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "st-ignatius-56",
@@ -2761,7 +2761,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "st-ignatius-57",
@@ -2771,7 +2771,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "st-ignatius-58",
@@ -2781,7 +2781,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "st-ignatius-59",
@@ -2791,7 +2791,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "st-ignatius-60",
@@ -2801,7 +2801,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "st-ignatius-61",
@@ -2811,7 +2811,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "st-ignatius-62",
@@ -2821,7 +2821,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "st-ignatius-63",
@@ -2831,7 +2831,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "st-ignatius-64",
@@ -2841,7 +2841,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "6'5\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "st-ignatius-65",
@@ -2851,7 +2851,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "315 lbs"
+    "weight": "315"
   },
   {
     "id": "st-ignatius-66",
@@ -2861,7 +2861,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "340 lbs"
+    "weight": "340"
   },
   {
     "id": "st-ignatius-67",
@@ -2871,7 +2871,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "st-ignatius-68",
@@ -2881,7 +2881,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "st-ignatius-69",
@@ -2891,7 +2891,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "st-ignatius-70",
@@ -2901,7 +2901,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "120 lbs"
+    "weight": "120"
   },
   {
     "id": "st-ignatius-71",
@@ -2911,7 +2911,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'5\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "st-ignatius-72",
@@ -2921,7 +2921,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "st-ignatius-73",
@@ -2931,7 +2931,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "st-ignatius-74",
@@ -2941,7 +2941,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Fr.",
     "height": "5'9\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "st-ignatius-75",
@@ -2951,7 +2951,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "st-ignatius-76",
@@ -2961,7 +2961,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "st-ignatius-77",
@@ -2971,7 +2971,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "st-ignatius-78",
@@ -2981,7 +2981,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "st-ignatius-79",
@@ -2991,7 +2991,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "st-ignatius-80",
@@ -3001,7 +3001,7 @@ export const players: Player[] = [
     "team": "st-ignatius",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "mitty-0",
@@ -3431,7 +3431,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "valley-christian-1",
@@ -3441,7 +3441,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "valley-christian-2",
@@ -3451,7 +3451,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "valley-christian-3",
@@ -3461,7 +3461,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "valley-christian-4",
@@ -3471,7 +3471,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "valley-christian-5",
@@ -3501,7 +3501,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "valley-christian-8",
@@ -3531,7 +3531,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "valley-christian-11",
@@ -3541,7 +3541,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "valley-christian-12",
@@ -3551,7 +3551,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "valley-christian-13",
@@ -3561,7 +3561,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "So.",
     "height": "5'8\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "valley-christian-14",
@@ -3641,7 +3641,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "valley-christian-22",
@@ -3661,7 +3661,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "valley-christian-25",
@@ -3671,7 +3671,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "valley-christian-26",
@@ -3761,7 +3761,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "115 lbs"
+    "weight": "115"
   },
   {
     "id": "valley-christian-35",
@@ -3801,7 +3801,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "valley-christian-40",
@@ -3831,7 +3831,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "valley-christian-43",
@@ -3861,7 +3861,7 @@ export const players: Player[] = [
     "team": "valley-christian",
     "grade": "Sr.",
     "height": "6'6\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "valley-christian-46",
@@ -3901,7 +3901,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "bellarmine-1",
@@ -3911,7 +3911,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "bellarmine-2",
@@ -3921,7 +3921,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "bellarmine-3",
@@ -3931,7 +3931,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "bellarmine-4",
@@ -3941,7 +3941,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "bellarmine-5",
@@ -3951,7 +3951,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "bellarmine-6",
@@ -3961,7 +3961,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "bellarmine-7",
@@ -3971,7 +3971,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "bellarmine-8",
@@ -3981,7 +3981,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "bellarmine-9",
@@ -3991,7 +3991,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "bellarmine-10",
@@ -4001,7 +4001,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "bellarmine-11",
@@ -4011,7 +4011,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "bellarmine-12",
@@ -4021,7 +4021,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "bellarmine-13",
@@ -4031,7 +4031,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "bellarmine-14",
@@ -4041,7 +4041,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "bellarmine-15",
@@ -4051,7 +4051,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "So.",
     "height": "6'3\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "bellarmine-16",
@@ -4061,7 +4061,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "bellarmine-17",
@@ -4071,7 +4071,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "bellarmine-18",
@@ -4081,7 +4081,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "bellarmine-19",
@@ -4091,7 +4091,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "bellarmine-20",
@@ -4101,7 +4101,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "bellarmine-21",
@@ -4111,7 +4111,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "bellarmine-22",
@@ -4121,7 +4121,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "bellarmine-23",
@@ -4131,7 +4131,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "bellarmine-24",
@@ -4141,7 +4141,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "bellarmine-25",
@@ -4151,7 +4151,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "bellarmine-26",
@@ -4161,7 +4161,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "bellarmine-27",
@@ -4171,7 +4171,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "bellarmine-28",
@@ -4181,7 +4181,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Fr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "bellarmine-29",
@@ -4191,7 +4191,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "bellarmine-30",
@@ -4201,7 +4201,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "bellarmine-31",
@@ -4211,7 +4211,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "bellarmine-32",
@@ -4221,7 +4221,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "bellarmine-33",
@@ -4231,7 +4231,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "bellarmine-34",
@@ -4241,7 +4241,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "bellarmine-35",
@@ -4251,7 +4251,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "bellarmine-36",
@@ -4261,7 +4261,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "bellarmine-37",
@@ -4271,7 +4271,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "bellarmine-38",
@@ -4281,7 +4281,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "218 lbs"
+    "weight": "218"
   },
   {
     "id": "bellarmine-39",
@@ -4291,7 +4291,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "So.",
     "height": "6'3\"",
-    "weight": "315 lbs"
+    "weight": "315"
   },
   {
     "id": "bellarmine-40",
@@ -4301,7 +4301,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "bellarmine-41",
@@ -4311,7 +4311,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "bellarmine-42",
@@ -4321,7 +4321,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "bellarmine-43",
@@ -4331,7 +4331,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "bellarmine-44",
@@ -4341,7 +4341,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "bellarmine-45",
@@ -4351,7 +4351,7 @@ export const players: Player[] = [
     "team": "bellarmine",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "los-gatos-0",
@@ -4361,7 +4361,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "196 lbs"
+    "weight": "196"
   },
   {
     "id": "los-gatos-1",
@@ -4371,7 +4371,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "los-gatos-2",
@@ -4381,7 +4381,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "137 lbs"
+    "weight": "137"
   },
   {
     "id": "los-gatos-3",
@@ -4391,7 +4391,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "los-gatos-4",
@@ -4401,7 +4401,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "194 lbs"
+    "weight": "194"
   },
   {
     "id": "los-gatos-5",
@@ -4411,7 +4411,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "184 lbs"
+    "weight": "184"
   },
   {
     "id": "los-gatos-6",
@@ -4421,7 +4421,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "los-gatos-7",
@@ -4431,7 +4431,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "los-gatos-8",
@@ -4441,7 +4441,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "197 lbs"
+    "weight": "197"
   },
   {
     "id": "los-gatos-9",
@@ -4451,7 +4451,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "183 lbs"
+    "weight": "183"
   },
   {
     "id": "los-gatos-10",
@@ -4461,7 +4461,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "183 lbs"
+    "weight": "183"
   },
   {
     "id": "los-gatos-11",
@@ -4471,7 +4471,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "los-gatos-12",
@@ -4481,7 +4481,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "194 lbs"
+    "weight": "194"
   },
   {
     "id": "los-gatos-13",
@@ -4491,7 +4491,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "los-gatos-14",
@@ -4501,7 +4501,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "203 lbs"
+    "weight": "203"
   },
   {
     "id": "los-gatos-15",
@@ -4511,7 +4511,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "los-gatos-16",
@@ -4521,7 +4521,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "188 lbs"
+    "weight": "188"
   },
   {
     "id": "los-gatos-17",
@@ -4531,7 +4531,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "6'5\"",
-    "weight": "194 lbs"
+    "weight": "194"
   },
   {
     "id": "los-gatos-18",
@@ -4541,7 +4541,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "los-gatos-19",
@@ -4551,7 +4551,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "los-gatos-20",
@@ -4561,7 +4561,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "los-gatos-21",
@@ -4571,7 +4571,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "los-gatos-22",
@@ -4581,7 +4581,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "los-gatos-23",
@@ -4591,7 +4591,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "167 lbs"
+    "weight": "167"
   },
   {
     "id": "los-gatos-24",
@@ -4601,7 +4601,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "los-gatos-25",
@@ -4611,7 +4611,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "156 lbs"
+    "weight": "156"
   },
   {
     "id": "los-gatos-26",
@@ -4621,7 +4621,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "177 lbs"
+    "weight": "177"
   },
   {
     "id": "los-gatos-27",
@@ -4631,7 +4631,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "161 lbs"
+    "weight": "161"
   },
   {
     "id": "los-gatos-28",
@@ -4641,7 +4641,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "5'8\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "los-gatos-29",
@@ -4651,7 +4651,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "los-gatos-30",
@@ -4661,7 +4661,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "164 lbs"
+    "weight": "164"
   },
   {
     "id": "los-gatos-31",
@@ -4671,7 +4671,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "157 lbs"
+    "weight": "157"
   },
   {
     "id": "los-gatos-32",
@@ -4681,7 +4681,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "159 lbs"
+    "weight": "159"
   },
   {
     "id": "los-gatos-33",
@@ -4691,7 +4691,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "los-gatos-34",
@@ -4701,7 +4701,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "167 lbs"
+    "weight": "167"
   },
   {
     "id": "los-gatos-35",
@@ -4711,7 +4711,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "132 lbs"
+    "weight": "132"
   },
   {
     "id": "los-gatos-36",
@@ -4721,7 +4721,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "los-gatos-37",
@@ -4731,7 +4731,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "176 lbs"
+    "weight": "176"
   },
   {
     "id": "los-gatos-38",
@@ -4741,7 +4741,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "168 lbs"
+    "weight": "168"
   },
   {
     "id": "los-gatos-39",
@@ -4751,7 +4751,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "146 lbs"
+    "weight": "146"
   },
   {
     "id": "los-gatos-40",
@@ -4761,7 +4761,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "147 lbs"
+    "weight": "147"
   },
   {
     "id": "los-gatos-41",
@@ -4771,7 +4771,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "178 lbs"
+    "weight": "178"
   },
   {
     "id": "los-gatos-42",
@@ -4781,7 +4781,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "los-gatos-43",
@@ -4791,7 +4791,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "154 lbs"
+    "weight": "154"
   },
   {
     "id": "los-gatos-44",
@@ -4801,7 +4801,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "146 lbs"
+    "weight": "146"
   },
   {
     "id": "los-gatos-45",
@@ -4811,7 +4811,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "163 lbs"
+    "weight": "163"
   },
   {
     "id": "los-gatos-46",
@@ -4821,7 +4821,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "166 lbs"
+    "weight": "166"
   },
   {
     "id": "los-gatos-47",
@@ -4831,7 +4831,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "138 lbs"
+    "weight": "138"
   },
   {
     "id": "los-gatos-48",
@@ -4841,7 +4841,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "193 lbs"
+    "weight": "193"
   },
   {
     "id": "los-gatos-49",
@@ -4851,7 +4851,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "los-gatos-50",
@@ -4861,7 +4861,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "los-gatos-51",
@@ -4871,7 +4871,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "182 lbs"
+    "weight": "182"
   },
   {
     "id": "los-gatos-52",
@@ -4881,7 +4881,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "179 lbs"
+    "weight": "179"
   },
   {
     "id": "los-gatos-53",
@@ -4891,7 +4891,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Fr.",
     "height": "6'0\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "los-gatos-54",
@@ -4901,7 +4901,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "238 lbs"
+    "weight": "238"
   },
   {
     "id": "los-gatos-55",
@@ -4911,7 +4911,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "los-gatos-56",
@@ -4921,7 +4921,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "los-gatos-57",
@@ -4931,7 +4931,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "222 lbs"
+    "weight": "222"
   },
   {
     "id": "los-gatos-58",
@@ -4941,7 +4941,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "209 lbs"
+    "weight": "209"
   },
   {
     "id": "los-gatos-59",
@@ -4951,7 +4951,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "los-gatos-60",
@@ -4961,7 +4961,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "los-gatos-61",
@@ -4971,7 +4971,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "191 lbs"
+    "weight": "191"
   },
   {
     "id": "los-gatos-62",
@@ -4981,7 +4981,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "237 lbs"
+    "weight": "237"
   },
   {
     "id": "los-gatos-63",
@@ -4991,7 +4991,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "218 lbs"
+    "weight": "218"
   },
   {
     "id": "los-gatos-64",
@@ -5001,7 +5001,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "196 lbs"
+    "weight": "196"
   },
   {
     "id": "los-gatos-65",
@@ -5011,7 +5011,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "232 lbs"
+    "weight": "232"
   },
   {
     "id": "los-gatos-66",
@@ -5021,7 +5021,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "246 lbs"
+    "weight": "246"
   },
   {
     "id": "los-gatos-67",
@@ -5031,7 +5031,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "163 lbs"
+    "weight": "163"
   },
   {
     "id": "los-gatos-68",
@@ -5041,7 +5041,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "5'8\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "los-gatos-69",
@@ -5051,7 +5051,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "los-gatos-70",
@@ -5061,7 +5061,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "los-gatos-71",
@@ -5071,7 +5071,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "253 lbs"
+    "weight": "253"
   },
   {
     "id": "los-gatos-72",
@@ -5081,7 +5081,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Fr.",
     "height": "6'3\"",
-    "weight": "300 lbs"
+    "weight": "300"
   },
   {
     "id": "los-gatos-73",
@@ -5091,7 +5091,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "192 lbs"
+    "weight": "192"
   },
   {
     "id": "los-gatos-74",
@@ -5101,7 +5101,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "168 lbs"
+    "weight": "168"
   },
   {
     "id": "los-gatos-75",
@@ -5111,7 +5111,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "163 lbs"
+    "weight": "163"
   },
   {
     "id": "los-gatos-76",
@@ -5121,7 +5121,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "198 lbs"
+    "weight": "198"
   },
   {
     "id": "los-gatos-77",
@@ -5131,7 +5131,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "los-gatos-78",
@@ -5141,7 +5141,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "los-gatos-79",
@@ -5151,7 +5151,7 @@ export const players: Player[] = [
     "team": "los-gatos",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "169 lbs"
+    "weight": "169"
   },
   {
     "id": "wilcox-0",
@@ -5181,7 +5181,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "148 lbs"
+    "weight": "148"
   },
   {
     "id": "wilcox-3",
@@ -5191,7 +5191,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "wilcox-4",
@@ -5201,7 +5201,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "wilcox-5",
@@ -5231,7 +5231,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "wilcox-10",
@@ -5251,7 +5251,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "wilcox-12",
@@ -5301,7 +5301,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "wilcox-17",
@@ -5331,7 +5331,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "wilcox-21",
@@ -5431,7 +5431,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "wilcox-36",
@@ -5441,7 +5441,7 @@ export const players: Player[] = [
     "team": "wilcox",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "246 lbs"
+    "weight": "246"
   },
   {
     "id": "wilcox-38",
@@ -5541,7 +5541,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "palo-alto-1",
@@ -5551,7 +5551,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "palo-alto-2",
@@ -5561,7 +5561,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "palo-alto-3",
@@ -5571,7 +5571,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "palo-alto-4",
@@ -5581,7 +5581,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "palo-alto-5",
@@ -5591,7 +5591,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "palo-alto-6",
@@ -5601,7 +5601,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "palo-alto-7",
@@ -5611,7 +5611,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "palo-alto-8",
@@ -5621,7 +5621,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "palo-alto-9",
@@ -5631,7 +5631,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "palo-alto-10",
@@ -5641,7 +5641,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "palo-alto-11",
@@ -5651,7 +5651,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "palo-alto-12",
@@ -5661,7 +5661,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "palo-alto-13",
@@ -5671,7 +5671,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "palo-alto-14",
@@ -5681,7 +5681,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "palo-alto-15",
@@ -5691,7 +5691,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "5'4\"",
-    "weight": "120 lbs"
+    "weight": "120"
   },
   {
     "id": "palo-alto-16",
@@ -5701,7 +5701,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "palo-alto-17",
@@ -5711,7 +5711,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "palo-alto-18",
@@ -5721,7 +5721,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "palo-alto-19",
@@ -5731,7 +5731,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "palo-alto-20",
@@ -5741,7 +5741,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "palo-alto-21",
@@ -5751,7 +5751,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "palo-alto-22",
@@ -5761,7 +5761,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "palo-alto-23",
@@ -5771,7 +5771,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "palo-alto-24",
@@ -5781,7 +5781,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "palo-alto-25",
@@ -5791,7 +5791,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "palo-alto-26",
@@ -5801,7 +5801,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "palo-alto-27",
@@ -5811,7 +5811,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "palo-alto-28",
@@ -5821,7 +5821,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "palo-alto-29",
@@ -5831,7 +5831,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "palo-alto-30",
@@ -5841,7 +5841,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "palo-alto-31",
@@ -5851,7 +5851,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "palo-alto-32",
@@ -5861,7 +5861,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "palo-alto-33",
@@ -5871,7 +5871,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "255 lbs"
+    "weight": "255"
   },
   {
     "id": "palo-alto-34",
@@ -5881,7 +5881,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "255 lbs"
+    "weight": "255"
   },
   {
     "id": "palo-alto-35",
@@ -5891,7 +5891,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "palo-alto-36",
@@ -5901,7 +5901,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "320 lbs"
+    "weight": "320"
   },
   {
     "id": "palo-alto-37",
@@ -5911,7 +5911,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "palo-alto-38",
@@ -5921,7 +5921,7 @@ export const players: Player[] = [
     "team": "palo-alto",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "menlo-atherton-0",
@@ -5931,7 +5931,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "menlo-atherton-1",
@@ -5941,7 +5941,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "menlo-atherton-2",
@@ -5951,7 +5951,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "menlo-atherton-3",
@@ -5961,7 +5961,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "menlo-atherton-4",
@@ -5971,7 +5971,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "menlo-atherton-5",
@@ -5981,7 +5981,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "menlo-atherton-6",
@@ -5991,7 +5991,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "menlo-atherton-7",
@@ -6001,7 +6001,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "menlo-atherton-8",
@@ -6011,7 +6011,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "menlo-atherton-9",
@@ -6021,7 +6021,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "menlo-atherton-10",
@@ -6031,7 +6031,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "menlo-atherton-11",
@@ -6041,7 +6041,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "menlo-atherton-12",
@@ -6051,7 +6051,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "menlo-atherton-13",
@@ -6061,7 +6061,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "menlo-atherton-14",
@@ -6071,7 +6071,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "menlo-atherton-15",
@@ -6081,7 +6081,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "menlo-atherton-16",
@@ -6091,7 +6091,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "menlo-atherton-17",
@@ -6101,7 +6101,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "menlo-atherton-18",
@@ -6111,7 +6111,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "menlo-atherton-19",
@@ -6121,7 +6121,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "menlo-atherton-20",
@@ -6131,7 +6131,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "menlo-atherton-21",
@@ -6141,7 +6141,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "199 lbs"
+    "weight": "199"
   },
   {
     "id": "menlo-atherton-22",
@@ -6151,7 +6151,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Fr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "menlo-atherton-23",
@@ -6161,7 +6161,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "menlo-atherton-24",
@@ -6171,7 +6171,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "menlo-atherton-25",
@@ -6181,7 +6181,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "menlo-atherton-26",
@@ -6191,7 +6191,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "menlo-atherton-27",
@@ -6201,7 +6201,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "menlo-atherton-28",
@@ -6211,7 +6211,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "menlo-atherton-29",
@@ -6221,7 +6221,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "222 lbs"
+    "weight": "222"
   },
   {
     "id": "menlo-atherton-30",
@@ -6231,7 +6231,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "menlo-atherton-31",
@@ -6241,7 +6241,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "277 lbs"
+    "weight": "277"
   },
   {
     "id": "menlo-atherton-32",
@@ -6251,7 +6251,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "menlo-atherton-33",
@@ -6261,7 +6261,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "menlo-atherton-34",
@@ -6271,7 +6271,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "menlo-atherton-36",
@@ -6281,7 +6281,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "menlo-atherton-37",
@@ -6291,7 +6291,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "315 lbs"
+    "weight": "315"
   },
   {
     "id": "menlo-atherton-38",
@@ -6301,7 +6301,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "menlo-atherton-39",
@@ -6311,7 +6311,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "menlo-atherton-40",
@@ -6321,7 +6321,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "menlo-atherton-41",
@@ -6331,7 +6331,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "menlo-atherton-42",
@@ -6341,7 +6341,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "360 lbs"
+    "weight": "360"
   },
   {
     "id": "menlo-atherton-43",
@@ -6351,7 +6351,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "6'6\"",
-    "weight": "212 lbs"
+    "weight": "212"
   },
   {
     "id": "menlo-atherton-44",
@@ -6361,7 +6361,7 @@ export const players: Player[] = [
     "team": "menlo-atherton",
     "grade": "Jr.",
     "height": "6'5\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "christopher-3",
@@ -6371,7 +6371,7 @@ export const players: Player[] = [
     "team": "christopher",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "christopher-4",
@@ -6381,7 +6381,7 @@ export const players: Player[] = [
     "team": "christopher",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "christopher-8",
@@ -6391,7 +6391,7 @@ export const players: Player[] = [
     "team": "christopher",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "christopher-9",
@@ -6411,7 +6411,7 @@ export const players: Player[] = [
     "team": "christopher",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "christopher-12",
@@ -6441,7 +6441,7 @@ export const players: Player[] = [
     "team": "christopher",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "christopher-19",
@@ -6461,7 +6461,7 @@ export const players: Player[] = [
     "team": "christopher",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "146 lbs"
+    "weight": "146"
   },
   {
     "id": "christopher-29",
@@ -6561,7 +6561,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "leigh-1",
@@ -6571,7 +6571,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "leigh-2",
@@ -6581,7 +6581,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "leigh-3",
@@ -6591,7 +6591,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "leigh-4",
@@ -6601,7 +6601,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "leigh-5",
@@ -6611,7 +6611,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "leigh-6",
@@ -6621,7 +6621,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "leigh-7",
@@ -6631,7 +6631,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "leigh-8",
@@ -6641,7 +6641,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "leigh-9",
@@ -6651,7 +6651,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "leigh-10",
@@ -6661,7 +6661,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "leigh-11",
@@ -6671,7 +6671,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "leigh-12",
@@ -6681,7 +6681,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "leigh-13",
@@ -6691,7 +6691,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "leigh-14",
@@ -6701,7 +6701,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "leigh-15",
@@ -6711,7 +6711,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "leigh-16",
@@ -6721,7 +6721,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "leigh-17",
@@ -6731,7 +6731,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "leigh-18",
@@ -6741,7 +6741,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "leigh-19",
@@ -6751,7 +6751,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "leigh-20",
@@ -6761,7 +6761,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "leigh-21",
@@ -6771,7 +6771,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "leigh-22",
@@ -6781,7 +6781,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "leigh-23",
@@ -6791,7 +6791,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "leigh-24",
@@ -6801,7 +6801,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "leigh-25",
@@ -6811,7 +6811,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "leigh-26",
@@ -6821,7 +6821,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "leigh-27",
@@ -6831,7 +6831,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "leigh-28",
@@ -6841,7 +6841,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "leigh-29",
@@ -6851,7 +6851,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "leigh-30",
@@ -6861,7 +6861,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "leigh-31",
@@ -6871,7 +6871,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "leigh-32",
@@ -6881,7 +6881,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "leigh-33",
@@ -6891,7 +6891,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "320 lbs"
+    "weight": "320"
   },
   {
     "id": "leigh-34",
@@ -6901,7 +6901,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "leigh-35",
@@ -6911,7 +6911,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "leigh-36",
@@ -6921,7 +6921,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "289 lbs"
+    "weight": "289"
   },
   {
     "id": "leigh-37",
@@ -6931,7 +6931,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "leigh-38",
@@ -6941,7 +6941,7 @@ export const players: Player[] = [
     "team": "leigh",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "oak-grove-0",
@@ -7441,7 +7441,7 @@ export const players: Player[] = [
     "team": "salinas",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "176 lbs"
+    "weight": "176"
   },
   {
     "id": "salinas-12",
@@ -7631,7 +7631,7 @@ export const players: Player[] = [
     "team": "salinas",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "salinas-31",
@@ -7721,7 +7721,7 @@ export const players: Player[] = [
     "team": "salinas",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "salinas-40",
@@ -7831,7 +7831,7 @@ export const players: Player[] = [
     "team": "salinas",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "193 lbs"
+    "weight": "193"
   },
   {
     "id": "salinas-51",
@@ -7861,7 +7861,7 @@ export const players: Player[] = [
     "team": "salinas",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "salinas-54",
@@ -7961,7 +7961,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "palma-1",
@@ -7991,7 +7991,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "palma-4",
@@ -8001,7 +8001,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "palma-5",
@@ -8031,7 +8031,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "palma-8",
@@ -8071,7 +8071,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "palma-12",
@@ -8101,7 +8101,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "palma-15",
@@ -8191,7 +8191,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "palma-24",
@@ -8281,7 +8281,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "palma-33",
@@ -8341,7 +8341,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "255 lbs"
+    "weight": "255"
   },
   {
     "id": "palma-39",
@@ -8351,7 +8351,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "palma-40",
@@ -8381,7 +8381,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "palma-43",
@@ -8391,7 +8391,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "palma-44",
@@ -8421,7 +8421,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "278 lbs"
+    "weight": "278"
   },
   {
     "id": "palma-47",
@@ -8441,7 +8441,7 @@ export const players: Player[] = [
     "team": "palma",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "palma-49",
@@ -8461,7 +8461,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sacred-heart-prep-1",
@@ -8471,7 +8471,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sacred-heart-prep-2",
@@ -8481,7 +8481,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "sacred-heart-prep-3",
@@ -8491,7 +8491,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sacred-heart-prep-4",
@@ -8501,7 +8501,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "sacred-heart-prep-5",
@@ -8511,7 +8511,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "sacred-heart-prep-6",
@@ -8521,7 +8521,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "sacred-heart-prep-7",
@@ -8531,7 +8531,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "sacred-heart-prep-8",
@@ -8541,7 +8541,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "sacred-heart-prep-9",
@@ -8551,7 +8551,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'5\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "sacred-heart-prep-10",
@@ -8561,7 +8561,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "sacred-heart-prep-11",
@@ -8571,7 +8571,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "sacred-heart-prep-12",
@@ -8581,7 +8581,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "sacred-heart-prep-13",
@@ -8591,7 +8591,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "sacred-heart-prep-14",
@@ -8601,7 +8601,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "sacred-heart-prep-15",
@@ -8611,7 +8611,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "sacred-heart-prep-16",
@@ -8621,7 +8621,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "sacred-heart-prep-17",
@@ -8631,7 +8631,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "sacred-heart-prep-18",
@@ -8641,7 +8641,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "sacred-heart-prep-19",
@@ -8651,7 +8651,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "sacred-heart-prep-20",
@@ -8661,7 +8661,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "sacred-heart-prep-21",
@@ -8671,7 +8671,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "sacred-heart-prep-22",
@@ -8681,7 +8681,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "sacred-heart-prep-23",
@@ -8691,7 +8691,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sacred-heart-prep-24",
@@ -8701,7 +8701,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "sacred-heart-prep-25",
@@ -8711,7 +8711,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "sacred-heart-prep-26",
@@ -8721,7 +8721,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "sacred-heart-prep-27",
@@ -8731,7 +8731,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "sacred-heart-prep-28",
@@ -8741,7 +8741,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "sacred-heart-prep-29",
@@ -8761,7 +8761,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "sacred-heart-prep-31",
@@ -8781,7 +8781,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "sacred-heart-prep-33",
@@ -8791,7 +8791,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "sacred-heart-prep-34",
@@ -8821,7 +8821,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "sacred-heart-prep-37",
@@ -8841,7 +8841,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "So.",
     "height": "6'4\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "sacred-heart-prep-39",
@@ -8851,7 +8851,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "sacred-heart-prep-40",
@@ -8861,7 +8861,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "sacred-heart-prep-41",
@@ -8891,7 +8891,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "sacred-heart-prep-44",
@@ -8911,7 +8911,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "sacred-heart-prep-46",
@@ -8921,7 +8921,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "sacred-heart-prep-47",
@@ -8941,7 +8941,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "sacred-heart-prep-49",
@@ -8951,7 +8951,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "sacred-heart-prep-50",
@@ -8971,7 +8971,7 @@ export const players: Player[] = [
     "team": "sacred-heart-prep",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "sacred-heart-prep-52",
@@ -9001,7 +9001,7 @@ export const players: Player[] = [
     "team": "branham",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "branham-1",
@@ -9041,7 +9041,7 @@ export const players: Player[] = [
     "team": "branham",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "branham-5",
@@ -9071,7 +9071,7 @@ export const players: Player[] = [
     "team": "branham",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "branham-8",
@@ -9111,7 +9111,7 @@ export const players: Player[] = [
     "team": "branham",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "branham-12",
@@ -9271,7 +9271,7 @@ export const players: Player[] = [
     "team": "branham",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "branham-28",
@@ -9291,7 +9291,7 @@ export const players: Player[] = [
     "team": "branham",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "branham-30",
@@ -9331,7 +9331,7 @@ export const players: Player[] = [
     "team": "branham",
     "grade": "So.",
     "height": "6'3\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "branham-34",
@@ -9341,7 +9341,7 @@ export const players: Player[] = [
     "team": "branham",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "branham-35",
@@ -9471,7 +9471,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "del-mar-5",
@@ -9491,7 +9491,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "del-mar-10",
@@ -9521,7 +9521,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "del-mar-15",
@@ -9581,7 +9581,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "del-mar-24",
@@ -9611,7 +9611,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "251 lbs"
+    "weight": "251"
   },
   {
     "id": "del-mar-28",
@@ -9621,7 +9621,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "del-mar-29",
@@ -9641,7 +9641,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "275 lbs"
+    "weight": "275"
   },
   {
     "id": "del-mar-32",
@@ -9651,7 +9651,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "del-mar-37",
@@ -9661,7 +9661,7 @@ export const players: Player[] = [
     "team": "del-mar",
     "grade": "Sr.",
     "height": "6'5\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "del-mar-38",
@@ -9681,7 +9681,7 @@ export const players: Player[] = [
     "team": "evergreen-valley",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "evergreen-valley-5",
@@ -9701,7 +9701,7 @@ export const players: Player[] = [
     "team": "evergreen-valley",
     "grade": "Sr.",
     "height": "5'5\"",
-    "weight": "120 lbs"
+    "weight": "120"
   },
   {
     "id": "evergreen-valley-7",
@@ -9721,7 +9721,7 @@ export const players: Player[] = [
     "team": "evergreen-valley",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "evergreen-valley-9",
@@ -9731,7 +9731,7 @@ export const players: Player[] = [
     "team": "evergreen-valley",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "evergreen-valley-14",
@@ -9751,7 +9751,7 @@ export const players: Player[] = [
     "team": "evergreen-valley",
     "grade": "7th",
     "height": "6'6\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "evergreen-valley-16",
@@ -9761,7 +9761,7 @@ export const players: Player[] = [
     "team": "evergreen-valley",
     "grade": "7th",
     "height": "6'6\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "evergreen-valley-19",
@@ -9781,7 +9781,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "6'0",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "gunderson-1",
@@ -9791,7 +9791,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "gunderson-2",
@@ -9801,7 +9801,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "gunderson-3",
@@ -9811,7 +9811,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "gunderson-4",
@@ -9821,7 +9821,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "gunderson-5",
@@ -9851,7 +9851,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "gunderson-8",
@@ -9861,7 +9861,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Jr.",
     "height": "6'0",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "gunderson-9",
@@ -9881,7 +9881,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Jr.",
     "height": "6'0",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "gunderson-11",
@@ -9891,7 +9891,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "gunderson-12",
@@ -9911,7 +9911,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "gunderson-14",
@@ -9921,7 +9921,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Fr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "gunderson-15",
@@ -9931,7 +9931,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "130 lbs"
+    "weight": "130"
   },
   {
     "id": "gunderson-16",
@@ -9941,7 +9941,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "gunderson-17",
@@ -9951,7 +9951,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "5'3\"",
-    "weight": "125 lbs"
+    "weight": "125"
   },
   {
     "id": "gunderson-18",
@@ -9961,7 +9961,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "So.",
     "height": "5'8\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "gunderson-19",
@@ -9971,7 +9971,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "gunderson-20",
@@ -9981,7 +9981,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "gunderson-21",
@@ -9991,7 +9991,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "gunderson-22",
@@ -10001,7 +10001,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "gunderson-23",
@@ -10011,7 +10011,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "gunderson-24",
@@ -10021,7 +10021,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "295 lbs"
+    "weight": "295"
   },
   {
     "id": "gunderson-25",
@@ -10031,7 +10031,7 @@ export const players: Player[] = [
     "team": "gunderson",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "300 lbs"
+    "weight": "300"
   },
   {
     "id": "independence-0",
@@ -10041,7 +10041,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "independence-1",
@@ -10051,7 +10051,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "independence-2",
@@ -10061,7 +10061,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "independence-3",
@@ -10071,7 +10071,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "independence-4",
@@ -10081,7 +10081,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "independence-5",
@@ -10091,7 +10091,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "independence-6",
@@ -10101,7 +10101,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "independence-7",
@@ -10111,7 +10111,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "independence-8",
@@ -10121,7 +10121,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "6'0",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "independence-9",
@@ -10131,7 +10131,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "independence-10",
@@ -10141,7 +10141,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "independence-11",
@@ -10151,7 +10151,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "163 lbs"
+    "weight": "163"
   },
   {
     "id": "independence-12",
@@ -10161,7 +10161,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "6'0",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "independence-13",
@@ -10171,7 +10171,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "independence-14",
@@ -10181,7 +10181,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "independence-15",
@@ -10191,7 +10191,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "independence-16",
@@ -10201,7 +10201,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "independence-17",
@@ -10211,7 +10211,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "independence-18",
@@ -10221,7 +10221,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "independence-19",
@@ -10231,7 +10231,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "independence-20",
@@ -10241,7 +10241,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "independence-21",
@@ -10251,7 +10251,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "independence-22",
@@ -10261,7 +10261,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "independence-23",
@@ -10271,7 +10271,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "independence-24",
@@ -10281,7 +10281,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "218 lbs"
+    "weight": "218"
   },
   {
     "id": "independence-25",
@@ -10291,7 +10291,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "independence-26",
@@ -10301,7 +10301,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "independence-27",
@@ -10311,7 +10311,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "independence-28",
@@ -10321,7 +10321,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "229 lbs"
+    "weight": "229"
   },
   {
     "id": "independence-29",
@@ -10331,7 +10331,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "independence-30",
@@ -10341,7 +10341,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "independence-31",
@@ -10351,7 +10351,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "independence-32",
@@ -10361,7 +10361,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "independence-33",
@@ -10371,7 +10371,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "independence-34",
@@ -10381,7 +10381,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "independence-35",
@@ -10391,7 +10391,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "independence-36",
@@ -10401,7 +10401,7 @@ export const players: Player[] = [
     "team": "independence",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "james-lick-0",
@@ -10441,7 +10441,7 @@ export const players: Player[] = [
     "team": "james-lick",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "james-lick-6",
@@ -10491,7 +10491,7 @@ export const players: Player[] = [
     "team": "james-lick",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "255 lbs"
+    "weight": "255"
   },
   {
     "id": "james-lick-18",
@@ -10511,7 +10511,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "lincoln-1",
@@ -10521,7 +10521,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "lincoln-2",
@@ -10531,7 +10531,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "lincoln-3",
@@ -10541,7 +10541,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "lincoln-4",
@@ -10551,7 +10551,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "lincoln-5",
@@ -10561,7 +10561,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'2\"",
-    "weight": "125 lbs"
+    "weight": "125"
   },
   {
     "id": "lincoln-6",
@@ -10571,7 +10571,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "lincoln-7",
@@ -10581,7 +10581,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "lincoln-8",
@@ -10591,7 +10591,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "lincoln-9",
@@ -10601,7 +10601,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "lincoln-10",
@@ -10611,7 +10611,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "lincoln-11",
@@ -10621,7 +10621,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "lincoln-12",
@@ -10631,7 +10631,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "lincoln-13",
@@ -10641,7 +10641,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "lincoln-14",
@@ -10651,7 +10651,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "So.",
     "height": "6'4\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "lincoln-15",
@@ -10661,7 +10661,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "lincoln-16",
@@ -10671,7 +10671,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "lincoln-17",
@@ -10681,7 +10681,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "lincoln-18",
@@ -10691,7 +10691,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "lincoln-19",
@@ -10701,7 +10701,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "lincoln-20",
@@ -10711,7 +10711,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "lincoln-21",
@@ -10721,7 +10721,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "lincoln-22",
@@ -10731,7 +10731,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "lincoln-23",
@@ -10741,7 +10741,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "lincoln-24",
@@ -10751,7 +10751,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "lincoln-25",
@@ -10761,7 +10761,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "lincoln-26",
@@ -10771,7 +10771,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "lincoln-27",
@@ -10781,7 +10781,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "lincoln-28",
@@ -10791,7 +10791,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "lincoln-29",
@@ -10801,7 +10801,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "lincoln-30",
@@ -10811,7 +10811,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "lincoln-31",
@@ -10821,7 +10821,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "lincoln-32",
@@ -10831,7 +10831,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "lincoln-33",
@@ -10841,7 +10841,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "lincoln-34",
@@ -10851,7 +10851,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "lincoln-35",
@@ -10861,7 +10861,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "lincoln-36",
@@ -10871,7 +10871,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "lincoln-37",
@@ -10881,7 +10881,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "lincoln-38",
@@ -10891,7 +10891,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "lincoln-39",
@@ -10901,7 +10901,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "lincoln-40",
@@ -10911,7 +10911,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "lincoln-41",
@@ -10921,7 +10921,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "lincoln-42",
@@ -10931,7 +10931,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "So.",
     "height": "5'5\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "lincoln-43",
@@ -10941,7 +10941,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "lincoln-44",
@@ -10951,7 +10951,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "350 lbs"
+    "weight": "350"
   },
   {
     "id": "lincoln-45",
@@ -10961,7 +10961,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "lincoln-46",
@@ -10971,7 +10971,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "lincoln-47",
@@ -10981,7 +10981,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "lincoln-48",
@@ -10991,7 +10991,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "lincoln-49",
@@ -11001,7 +11001,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "lincoln-50",
@@ -11011,7 +11011,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "lincoln-51",
@@ -11021,7 +11021,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "270 lbs"
+    "weight": "270"
   },
   {
     "id": "lincoln-52",
@@ -11031,7 +11031,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "lincoln-53",
@@ -11041,7 +11041,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "lincoln-54",
@@ -11051,7 +11051,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "lincoln-55",
@@ -11061,7 +11061,7 @@ export const players: Player[] = [
     "team": "lincoln",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "live-oak-0",
@@ -11291,7 +11291,7 @@ export const players: Player[] = [
     "team": "live-oak",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "live-oak-23",
@@ -11321,7 +11321,7 @@ export const players: Player[] = [
     "team": "live-oak",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "live-oak-26",
@@ -11741,7 +11741,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "piedmont-hills-1",
@@ -11751,7 +11751,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "piedmont-hills-2",
@@ -11761,7 +11761,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "piedmont-hills-3",
@@ -11771,7 +11771,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "piedmont-hills-4",
@@ -11781,7 +11781,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "piedmont-hills-5",
@@ -11791,7 +11791,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "piedmont-hills-6",
@@ -11801,7 +11801,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "piedmont-hills-7",
@@ -11811,7 +11811,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "piedmont-hills-8",
@@ -11821,7 +11821,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "piedmont-hills-9",
@@ -11831,7 +11831,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "piedmont-hills-10",
@@ -11841,7 +11841,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "piedmont-hills-11",
@@ -11851,7 +11851,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "piedmont-hills-12",
@@ -11861,7 +11861,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "piedmont-hills-13",
@@ -11871,7 +11871,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "So.",
     "height": "5'6\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "piedmont-hills-14",
@@ -11881,7 +11881,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "piedmont-hills-15",
@@ -11891,7 +11891,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "piedmont-hills-16",
@@ -11901,7 +11901,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "piedmont-hills-17",
@@ -11911,7 +11911,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "piedmont-hills-18",
@@ -11921,7 +11921,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "piedmont-hills-19",
@@ -11931,7 +11931,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "piedmont-hills-20",
@@ -11941,7 +11941,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "piedmont-hills-21",
@@ -11951,7 +11951,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Fr.",
     "height": "5'7\"",
-    "weight": "130 lbs"
+    "weight": "130"
   },
   {
     "id": "piedmont-hills-22",
@@ -11961,7 +11961,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "piedmont-hills-23",
@@ -11971,7 +11971,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "piedmont-hills-24",
@@ -11981,7 +11981,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'4\"",
-    "weight": "110 lbs"
+    "weight": "110"
   },
   {
     "id": "piedmont-hills-25",
@@ -11991,7 +11991,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Fr.",
     "height": "5'11\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "piedmont-hills-26",
@@ -12001,7 +12001,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "piedmont-hills-27",
@@ -12011,7 +12011,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Fr.",
     "height": "5'5\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "piedmont-hills-28",
@@ -12021,7 +12021,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "So.",
     "height": "5'10\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "piedmont-hills-29",
@@ -12031,7 +12031,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Fr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "piedmont-hills-30",
@@ -12041,7 +12041,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "piedmont-hills-31",
@@ -12051,7 +12051,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "piedmont-hills-32",
@@ -12061,7 +12061,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Fr.",
     "height": "6'0\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "piedmont-hills-33",
@@ -12071,7 +12071,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "piedmont-hills-34",
@@ -12081,7 +12081,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "piedmont-hills-35",
@@ -12091,7 +12091,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "piedmont-hills-36",
@@ -12101,7 +12101,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "piedmont-hills-37",
@@ -12111,7 +12111,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "piedmont-hills-38",
@@ -12121,7 +12121,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Fr.",
     "height": "5'10\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "piedmont-hills-39",
@@ -12131,7 +12131,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "piedmont-hills-40",
@@ -12141,7 +12141,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "piedmont-hills-41",
@@ -12151,7 +12151,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "piedmont-hills-42",
@@ -12161,7 +12161,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "piedmont-hills-43",
@@ -12171,7 +12171,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Fr.",
     "height": "6'4\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "piedmont-hills-44",
@@ -12181,7 +12181,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "275 lbs"
+    "weight": "275"
   },
   {
     "id": "piedmont-hills-45",
@@ -12191,7 +12191,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "piedmont-hills-46",
@@ -12201,7 +12201,7 @@ export const players: Player[] = [
     "team": "piedmont-hills",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "pioneer-0",
@@ -12211,7 +12211,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "pioneer-1",
@@ -12221,7 +12221,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "pioneer-2",
@@ -12231,7 +12231,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "pioneer-3",
@@ -12241,7 +12241,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "pioneer-4",
@@ -12251,7 +12251,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "pioneer-5",
@@ -12261,7 +12261,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "pioneer-8",
@@ -12271,7 +12271,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "pioneer-9",
@@ -12291,7 +12291,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "pioneer-11",
@@ -12301,7 +12301,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "pioneer-12",
@@ -12321,7 +12321,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "pioneer-15",
@@ -12331,7 +12331,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "pioneer-16",
@@ -12341,7 +12341,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "pioneer-17",
@@ -12351,7 +12351,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "pioneer-18",
@@ -12361,7 +12361,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "pioneer-19",
@@ -12371,7 +12371,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "pioneer-22",
@@ -12381,7 +12381,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "pioneer-26",
@@ -12391,7 +12391,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "pioneer-27",
@@ -12401,7 +12401,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "pioneer-28",
@@ -12411,7 +12411,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "pioneer-33",
@@ -12431,7 +12431,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "pioneer-36",
@@ -12441,7 +12441,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "255 lbs"
+    "weight": "255"
   },
   {
     "id": "pioneer-37",
@@ -12451,7 +12451,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "pioneer-38",
@@ -12461,7 +12461,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "pioneer-39",
@@ -12471,7 +12471,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "pioneer-40",
@@ -12481,7 +12481,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "pioneer-41",
@@ -12491,7 +12491,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "pioneer-44",
@@ -12501,7 +12501,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "pioneer-47",
@@ -12511,7 +12511,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "pioneer-50",
@@ -12521,7 +12521,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "pioneer-51",
@@ -12531,7 +12531,7 @@ export const players: Player[] = [
     "team": "pioneer",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "prospect-0",
@@ -13061,7 +13061,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "san-jose-1",
@@ -13071,7 +13071,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "san-jose-2",
@@ -13081,7 +13081,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "san-jose-3",
@@ -13121,7 +13121,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "san-jose-7",
@@ -13131,7 +13131,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "san-jose-8",
@@ -13141,7 +13141,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "san-jose-9",
@@ -13241,7 +13241,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "san-jose-20",
@@ -13301,7 +13301,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "san-jose-28",
@@ -13331,7 +13331,7 @@ export const players: Player[] = [
     "team": "san-jose",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "san-jose-31",
@@ -13381,7 +13381,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "santa-teresa-2",
@@ -13401,7 +13401,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "santa-teresa-4",
@@ -13411,7 +13411,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "santa-teresa-5",
@@ -13431,7 +13431,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "santa-teresa-7",
@@ -13441,7 +13441,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "141 lbs"
+    "weight": "141"
   },
   {
     "id": "santa-teresa-8",
@@ -13451,7 +13451,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "santa-teresa-9",
@@ -13461,7 +13461,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "santa-teresa-10",
@@ -13471,7 +13471,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "santa-teresa-11",
@@ -13481,7 +13481,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "santa-teresa-12",
@@ -13491,7 +13491,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Fr.",
     "height": "6'1\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "santa-teresa-13",
@@ -13551,7 +13551,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "santa-teresa-20",
@@ -13561,7 +13561,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "santa-teresa-21",
@@ -13571,7 +13571,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "161 lbs"
+    "weight": "161"
   },
   {
     "id": "santa-teresa-23",
@@ -13611,7 +13611,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "santa-teresa-27",
@@ -13711,7 +13711,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "290 lbs"
+    "weight": "290"
   },
   {
     "id": "santa-teresa-40",
@@ -13731,7 +13731,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "santa-teresa-42",
@@ -13751,7 +13751,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "santa-teresa-44",
@@ -13771,7 +13771,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "310 lbs"
+    "weight": "310"
   },
   {
     "id": "santa-teresa-46",
@@ -13781,7 +13781,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "santa-teresa-47",
@@ -13791,7 +13791,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "275 lbs"
+    "weight": "275"
   },
   {
     "id": "santa-teresa-48",
@@ -13801,7 +13801,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "santa-teresa-49",
@@ -13811,7 +13811,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "santa-teresa-50",
@@ -13821,7 +13821,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "santa-teresa-51",
@@ -13831,7 +13831,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "290 lbs"
+    "weight": "290"
   },
   {
     "id": "santa-teresa-52",
@@ -13851,7 +13851,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "santa-teresa-54",
@@ -13871,7 +13871,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "285 lbs"
+    "weight": "285"
   },
   {
     "id": "santa-teresa-56",
@@ -13941,7 +13941,7 @@ export const players: Player[] = [
     "team": "santa-teresa",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "santa-teresa-63",
@@ -14011,7 +14011,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "silver-creek-1",
@@ -14021,7 +14021,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'5\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "silver-creek-2",
@@ -14031,7 +14031,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "silver-creek-3",
@@ -14041,7 +14041,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "silver-creek-4",
@@ -14051,7 +14051,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "silver-creek-5",
@@ -14061,7 +14061,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "silver-creek-6",
@@ -14071,7 +14071,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'4\"",
-    "weight": "130 lbs"
+    "weight": "130"
   },
   {
     "id": "silver-creek-7",
@@ -14081,7 +14081,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "silver-creek-8",
@@ -14091,7 +14091,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "silver-creek-9",
@@ -14101,7 +14101,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "silver-creek-10",
@@ -14111,7 +14111,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "silver-creek-11",
@@ -14121,7 +14121,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "silver-creek-12",
@@ -14131,7 +14131,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "silver-creek-13",
@@ -14141,7 +14141,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "silver-creek-14",
@@ -14151,7 +14151,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "silver-creek-15",
@@ -14161,7 +14161,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "silver-creek-16",
@@ -14171,7 +14171,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "silver-creek-17",
@@ -14181,7 +14181,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "silver-creek-18",
@@ -14191,7 +14191,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "130 lbs"
+    "weight": "130"
   },
   {
     "id": "silver-creek-19",
@@ -14201,7 +14201,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "silver-creek-20",
@@ -14211,7 +14211,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "silver-creek-21",
@@ -14221,7 +14221,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "silver-creek-22",
@@ -14231,7 +14231,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "silver-creek-23",
@@ -14241,7 +14241,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "silver-creek-24",
@@ -14251,7 +14251,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "silver-creek-25",
@@ -14261,7 +14261,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "silver-creek-26",
@@ -14271,7 +14271,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "silver-creek-27",
@@ -14281,7 +14281,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "275 lbs"
+    "weight": "275"
   },
   {
     "id": "silver-creek-28",
@@ -14291,7 +14291,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "silver-creek-29",
@@ -14301,7 +14301,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "275 lbs"
+    "weight": "275"
   },
   {
     "id": "silver-creek-30",
@@ -14311,7 +14311,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "silver-creek-31",
@@ -14321,7 +14321,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "265 lbs"
+    "weight": "265"
   },
   {
     "id": "silver-creek-32",
@@ -14331,7 +14331,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "So.",
     "height": "6'2\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "silver-creek-33",
@@ -14341,7 +14341,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "silver-creek-34",
@@ -14351,7 +14351,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "255 lbs"
+    "weight": "255"
   },
   {
     "id": "silver-creek-35",
@@ -14361,7 +14361,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "silver-creek-36",
@@ -14371,7 +14371,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "silver-creek-37",
@@ -14381,7 +14381,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Jr.",
     "height": "5'6\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "silver-creek-38",
@@ -14391,7 +14391,7 @@ export const players: Player[] = [
     "team": "silver-creek",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "sobrato-0",
@@ -14401,7 +14401,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "sobrato-1",
@@ -14411,7 +14411,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "sobrato-2",
@@ -14421,7 +14421,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "sobrato-3",
@@ -14431,7 +14431,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "sobrato-4",
@@ -14441,7 +14441,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "sobrato-5",
@@ -14451,7 +14451,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sobrato-6",
@@ -14461,7 +14461,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Fr.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "sobrato-7",
@@ -14471,7 +14471,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sobrato-8",
@@ -14481,7 +14481,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "sobrato-9",
@@ -14491,7 +14491,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "sobrato-10",
@@ -14501,7 +14501,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "sobrato-11",
@@ -14511,7 +14511,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "sobrato-12",
@@ -14521,7 +14521,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "sobrato-13",
@@ -14531,7 +14531,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "sobrato-14",
@@ -14541,7 +14541,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sobrato-15",
@@ -14551,7 +14551,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sobrato-16",
@@ -14561,7 +14561,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "sobrato-17",
@@ -14571,7 +14571,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "sobrato-18",
@@ -14581,7 +14581,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "sobrato-19",
@@ -14591,7 +14591,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "sobrato-20",
@@ -14601,7 +14601,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "sobrato-21",
@@ -14611,7 +14611,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "sobrato-22",
@@ -14621,7 +14621,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sobrato-23",
@@ -14631,7 +14631,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "sobrato-24",
@@ -14641,7 +14641,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "sobrato-25",
@@ -14651,7 +14651,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "sobrato-26",
@@ -14661,7 +14661,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "sobrato-27",
@@ -14671,7 +14671,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "sobrato-28",
@@ -14681,7 +14681,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "sobrato-29",
@@ -14691,7 +14691,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "sobrato-30",
@@ -14701,7 +14701,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "sobrato-31",
@@ -14711,7 +14711,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "sobrato-32",
@@ -14721,7 +14721,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "sobrato-33",
@@ -14731,7 +14731,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "220 lbs"
+    "weight": "220"
   },
   {
     "id": "sobrato-34",
@@ -14741,7 +14741,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "sobrato-35",
@@ -14751,7 +14751,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "sobrato-36",
@@ -14761,7 +14761,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "sobrato-37",
@@ -14771,7 +14771,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "sobrato-38",
@@ -14781,7 +14781,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "sobrato-39",
@@ -14791,7 +14791,7 @@ export const players: Player[] = [
     "team": "sobrato",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "westmont-0",
@@ -14801,7 +14801,7 @@ export const players: Player[] = [
     "team": "westmont",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "westmont-1",
@@ -14821,7 +14821,7 @@ export const players: Player[] = [
     "team": "westmont",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "westmont-3",
@@ -14841,7 +14841,7 @@ export const players: Player[] = [
     "team": "westmont",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "130 lbs"
+    "weight": "130"
   },
   {
     "id": "westmont-5",
@@ -14861,7 +14861,7 @@ export const players: Player[] = [
     "team": "westmont",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "westmont-7",
@@ -14871,7 +14871,7 @@ export const players: Player[] = [
     "team": "westmont",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "westmont-8",
@@ -14901,7 +14901,7 @@ export const players: Player[] = [
     "team": "westmont",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "westmont-11",
@@ -14991,7 +14991,7 @@ export const players: Player[] = [
     "team": "westmont",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "westmont-20",
@@ -15101,7 +15101,7 @@ export const players: Player[] = [
     "team": "westmont",
     "grade": "Jr.",
     "height": "6'3\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "westmont-31",
@@ -15351,7 +15351,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "willow-glen-12",
@@ -15361,7 +15361,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "willow-glen-13",
@@ -15371,7 +15371,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "willow-glen-14",
@@ -15401,7 +15401,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "willow-glen-19",
@@ -15411,7 +15411,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "172 lbs"
+    "weight": "172"
   },
   {
     "id": "willow-glen-20",
@@ -15421,7 +15421,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "willow-glen-26",
@@ -15441,7 +15441,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "willow-glen-31",
@@ -15451,7 +15451,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "164 lbs"
+    "weight": "164"
   },
   {
     "id": "willow-glen-32",
@@ -15471,7 +15471,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "willow-glen-37",
@@ -15491,7 +15491,7 @@ export const players: Player[] = [
     "team": "willow-glen",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "willow-glen-47",
@@ -15511,7 +15511,7 @@ export const players: Player[] = [
     "team": "yerba-buena",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "yerba-buena-1",
@@ -15521,7 +15521,7 @@ export const players: Player[] = [
     "team": "yerba-buena",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "yerba-buena-2",
@@ -15531,7 +15531,7 @@ export const players: Player[] = [
     "team": "yerba-buena",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "yerba-buena-3",
@@ -15541,7 +15541,7 @@ export const players: Player[] = [
     "team": "yerba-buena",
     "grade": "So.",
     "height": "5'8\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "yerba-buena-4",
@@ -15581,7 +15581,7 @@ export const players: Player[] = [
     "team": "yerba-buena",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "yerba-buena-8",
@@ -15601,7 +15601,7 @@ export const players: Player[] = [
     "team": "yerba-buena",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "yerba-buena-10",
@@ -15641,7 +15641,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "cupertino-7",
@@ -15651,7 +15651,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "cupertino-10",
@@ -15671,7 +15671,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "cupertino-12",
@@ -15681,7 +15681,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "cupertino-13",
@@ -15691,7 +15691,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "So.",
     "height": "5'9\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "cupertino-14",
@@ -15701,7 +15701,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "cupertino-15",
@@ -15711,7 +15711,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "cupertino-16",
@@ -15721,7 +15721,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "cupertino-17",
@@ -15731,7 +15731,7 @@ export const players: Player[] = [
     "team": "cupertino",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "fremont-0",
@@ -15741,7 +15741,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "6'4\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "fremont-1",
@@ -15751,7 +15751,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "fremont-2",
@@ -15761,7 +15761,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "fremont-3",
@@ -15771,7 +15771,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "fremont-4",
@@ -15781,7 +15781,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "fremont-5",
@@ -15791,7 +15791,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "fremont-6",
@@ -15801,7 +15801,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "fremont-7",
@@ -15811,7 +15811,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "fremont-8",
@@ -15821,7 +15821,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "6'4\"",
-    "weight": "230 lbs"
+    "weight": "230"
   },
   {
     "id": "fremont-9",
@@ -15831,7 +15831,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "So.",
     "height": "6'0\"",
-    "weight": "155 lbs"
+    "weight": "155"
   },
   {
     "id": "fremont-10",
@@ -15841,7 +15841,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "130 lbs"
+    "weight": "130"
   },
   {
     "id": "fremont-11",
@@ -15861,7 +15861,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "fremont-13",
@@ -15871,7 +15871,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "fremont-14",
@@ -15881,7 +15881,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "fremont-15",
@@ -15901,7 +15901,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "fremont-17",
@@ -15921,7 +15921,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "fremont-19",
@@ -15931,7 +15931,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "fremont-20",
@@ -15961,7 +15961,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "fremont-23",
@@ -15981,7 +15981,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "fremont-25",
@@ -15991,7 +15991,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "fremont-26",
@@ -16011,7 +16011,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "fremont-28",
@@ -16021,7 +16021,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "fremont-29",
@@ -16031,7 +16031,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "So.",
     "height": "6'7\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "fremont-30",
@@ -16041,7 +16041,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "fremont-32",
@@ -16051,7 +16051,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "232 lbs"
+    "weight": "232"
   },
   {
     "id": "fremont-33",
@@ -16071,7 +16071,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "245 lbs"
+    "weight": "245"
   },
   {
     "id": "fremont-35",
@@ -16081,7 +16081,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "200 lbs"
+    "weight": "200"
   },
   {
     "id": "fremont-36",
@@ -16091,7 +16091,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "fremont-37",
@@ -16101,7 +16101,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "280 lbs"
+    "weight": "280"
   },
   {
     "id": "fremont-38",
@@ -16111,7 +16111,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "So.",
     "height": "5'11\"",
-    "weight": "260 lbs"
+    "weight": "260"
   },
   {
     "id": "fremont-39",
@@ -16121,7 +16121,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "255 lbs"
+    "weight": "255"
   },
   {
     "id": "fremont-40",
@@ -16131,7 +16131,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "215 lbs"
+    "weight": "215"
   },
   {
     "id": "fremont-41",
@@ -16141,7 +16141,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "So.",
     "height": "6'1\"",
-    "weight": "300 lbs"
+    "weight": "300"
   },
   {
     "id": "fremont-42",
@@ -16151,7 +16151,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "fremont-43",
@@ -16161,7 +16161,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "300 lbs"
+    "weight": "300"
   },
   {
     "id": "fremont-44",
@@ -16171,7 +16171,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "250 lbs"
+    "weight": "250"
   },
   {
     "id": "fremont-45",
@@ -16181,7 +16181,7 @@ export const players: Player[] = [
     "team": "fremont",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "fremont-46",
@@ -16211,7 +16211,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "149 lbs"
+    "weight": "149"
   },
   {
     "id": "gunn-2",
@@ -16221,7 +16221,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "gunn-3",
@@ -16231,7 +16231,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "gunn-4",
@@ -16241,7 +16241,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Sr.",
     "height": "6'3\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "gunn-5",
@@ -16271,7 +16271,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "gunn-8",
@@ -16281,7 +16281,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "172 lbs"
+    "weight": "172"
   },
   {
     "id": "gunn-9",
@@ -16311,7 +16311,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "gunn-12",
@@ -16321,7 +16321,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "gunn-13",
@@ -16361,7 +16361,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Sr.",
     "height": "5'5\"",
-    "weight": "140 lbs"
+    "weight": "140"
   },
   {
     "id": "gunn-17",
@@ -16371,7 +16371,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "177 lbs"
+    "weight": "177"
   },
   {
     "id": "gunn-18",
@@ -16381,7 +16381,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "175 lbs"
+    "weight": "175"
   },
   {
     "id": "gunn-19",
@@ -16401,7 +16401,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Sr.",
     "height": "5'7\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "gunn-21",
@@ -16431,7 +16431,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "gunn-24",
@@ -16441,7 +16441,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "6'0\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "gunn-25",
@@ -16491,7 +16491,7 @@ export const players: Player[] = [
     "team": "gunn",
     "grade": "Jr.",
     "height": "5'7\"",
-    "weight": "195 lbs"
+    "weight": "195"
   },
   {
     "id": "gunn-30",
@@ -16521,7 +16521,7 @@ export const players: Player[] = [
     "team": "homestead",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "homestead-1",
@@ -16561,7 +16561,7 @@ export const players: Player[] = [
     "team": "homestead",
     "grade": "Jr.",
     "height": "6'1\"",
-    "weight": "179 lbs"
+    "weight": "179"
   },
   {
     "id": "homestead-5",
@@ -16591,7 +16591,7 @@ export const players: Player[] = [
     "team": "homestead",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "homestead-8",
@@ -16721,7 +16721,7 @@ export const players: Player[] = [
     "team": "homestead",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "homestead-22",
@@ -16901,7 +16901,7 @@ export const players: Player[] = [
     "team": "los-altos",
     "grade": "Jr.",
     "height": "5'8\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "los-altos-2",
@@ -16931,7 +16931,7 @@ export const players: Player[] = [
     "team": "los-altos",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "los-altos-5",
@@ -17001,7 +17001,7 @@ export const players: Player[] = [
     "team": "los-altos",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "los-altos-12",
@@ -17141,7 +17141,7 @@ export const players: Player[] = [
     "team": "los-altos",
     "grade": "So.",
     "height": "5'8\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "los-altos-26",
@@ -17181,7 +17181,7 @@ export const players: Player[] = [
     "team": "los-altos",
     "grade": "Jr.",
     "height": "6'2\"",
-    "weight": "251 lbs"
+    "weight": "251"
   },
   {
     "id": "los-altos-30",
@@ -17191,7 +17191,7 @@ export const players: Player[] = [
     "team": "los-altos",
     "grade": "Jr.",
     "height": "5'10\"",
-    "weight": "224 lbs"
+    "weight": "224"
   },
   {
     "id": "los-altos-31",
@@ -17251,7 +17251,7 @@ export const players: Player[] = [
     "team": "monta-vista",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "monta-vista-1",
@@ -17281,7 +17281,7 @@ export const players: Player[] = [
     "team": "monta-vista",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "185 lbs"
+    "weight": "185"
   },
   {
     "id": "monta-vista-9",
@@ -17291,7 +17291,7 @@ export const players: Player[] = [
     "team": "monta-vista",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "monta-vista-12",
@@ -17301,7 +17301,7 @@ export const players: Player[] = [
     "team": "monta-vista",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "monta-vista-14",
@@ -17331,7 +17331,7 @@ export const players: Player[] = [
     "team": "monta-vista",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "monta-vista-21",
@@ -17341,7 +17341,7 @@ export const players: Player[] = [
     "team": "monta-vista",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "190 lbs"
+    "weight": "190"
   },
   {
     "id": "monta-vista-22",
@@ -17371,7 +17371,7 @@ export const players: Player[] = [
     "team": "north-salinas",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "north-salinas-2",
@@ -17461,7 +17461,7 @@ export const players: Player[] = [
     "team": "north-salinas",
     "grade": "Sr.",
     "height": "6'1\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "north-salinas-12",
@@ -17521,7 +17521,7 @@ export const players: Player[] = [
     "team": "north-salinas",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "234 lbs"
+    "weight": "234"
   },
   {
     "id": "north-salinas-19",
@@ -17591,7 +17591,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "santa-clara-high-2",
@@ -17611,7 +17611,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "6'2\"",
-    "weight": "165 lbs"
+    "weight": "165"
   },
   {
     "id": "santa-clara-high-4",
@@ -17641,7 +17641,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Jr.",
     "height": "5'9\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "santa-clara-high-7",
@@ -17651,7 +17651,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "5'6\"",
-    "weight": "125 lbs"
+    "weight": "125"
   },
   {
     "id": "santa-clara-high-8",
@@ -17671,7 +17671,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "135 lbs"
+    "weight": "135"
   },
   {
     "id": "santa-clara-high-10",
@@ -17711,7 +17711,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "150 lbs"
+    "weight": "150"
   },
   {
     "id": "santa-clara-high-16",
@@ -17731,7 +17731,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "5'10\"",
-    "weight": "170 lbs"
+    "weight": "170"
   },
   {
     "id": "santa-clara-high-19",
@@ -17741,7 +17741,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "180 lbs"
+    "weight": "180"
   },
   {
     "id": "santa-clara-high-21",
@@ -17771,7 +17771,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "5'11\"",
-    "weight": "240 lbs"
+    "weight": "240"
   },
   {
     "id": "santa-clara-high-27",
@@ -17791,7 +17791,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Jr.",
     "height": "5'11\"",
-    "weight": "235 lbs"
+    "weight": "235"
   },
   {
     "id": "santa-clara-high-29",
@@ -17831,7 +17831,7 @@ export const players: Player[] = [
     "team": "santa-clara-high",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "160 lbs"
+    "weight": "160"
   },
   {
     "id": "gilroy-0",
@@ -17981,7 +17981,7 @@ export const players: Player[] = [
     "team": "gilroy",
     "grade": "So.",
     "height": "5'7\"",
-    "weight": "145 lbs"
+    "weight": "145"
   },
   {
     "id": "gilroy-16",
@@ -18001,7 +18001,7 @@ export const players: Player[] = [
     "team": "gilroy",
     "grade": "Jr.",
     "height": "5'5\"",
-    "weight": "142 lbs"
+    "weight": "142"
   },
   {
     "id": "gilroy-18",
@@ -18041,7 +18041,7 @@ export const players: Player[] = [
     "team": "gilroy",
     "grade": "Sr.",
     "height": "6'0\"",
-    "weight": "225 lbs"
+    "weight": "225"
   },
   {
     "id": "gilroy-27",
@@ -18061,7 +18061,7 @@ export const players: Player[] = [
     "team": "gilroy",
     "grade": "Sr.",
     "height": "5'8\"",
-    "weight": "205 lbs"
+    "weight": "205"
   },
   {
     "id": "gilroy-29",
@@ -18091,7 +18091,7 @@ export const players: Player[] = [
     "team": "gilroy",
     "grade": "Sr.",
     "height": "5'9\"",
-    "weight": "210 lbs"
+    "weight": "210"
   },
   {
     "id": "gilroy-34",

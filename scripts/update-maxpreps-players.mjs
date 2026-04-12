@@ -7,6 +7,11 @@ const OUT_PATH = path.join(
   "src/app/data/players.maxpreps.ts"
 );
 
+function cleanWeight(text) {
+  if (!text) return null;
+  return text.replace(/\s*(lbs?|pounds?)\s*/i, "").trim() || null;
+}
+
 async function fetchRoster(maxprepsUrl, teamId) {
   try {
     const rosterUrl = maxprepsUrl.replace(/\/$/, "") + "/roster/";
@@ -40,7 +45,8 @@ async function fetchRoster(maxprepsUrl, teamId) {
       const grade = cells.eq(2).text().trim() || null;
       const position = cells.eq(3).text().trim();
       const height = cells.eq(4).text().trim() || null;
-      const weight = cells.eq(5).text().trim() || null;
+      const weightText = cells.eq(5).text().trim();
+      const weight = cleanWeight(weightText);
       
       if (name && position && position !== "--") {
         const number = numberText && numberText !== "#" ? parseInt(numberText) : null;

@@ -2314,7 +2314,7 @@ export const baseTeams: Team[] = [
     defensiveCoordinator: "TBD",
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
-    commonPlays: ["Outside Zone", "Play Action Pass", "Screen Pass", "Slant Run"],
+    commonPlays: ["Outside Zone", "Play Action Pass", "Screen Pass", "Mesh Concept"],
     commonDefensivePlay: ["Gap Assignment", "Man Coverage", "Linebacker Blitz", "Safety Rotation"],
     strengths: ["Disciplined execution", "Fast tempo", "Ball control"],
     keyPlayers: [],

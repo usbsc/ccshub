@@ -1,5 +1,3 @@
-import { maxprepsPlayers } from "./players.maxpreps.generated";
-
 export interface Player {
   id: string;
   name: string;
@@ -20,15 +18,9 @@ export interface Player {
   maxprepsUrl?: string;
 }
 
-const GENERIC_PLAYER = "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=400&q=80";
-
 export const manualPlayers: Player[] = [];
 
-export const players: Player[] = (() => {
-  return maxprepsPlayers.sort((a, b) =>
-    (a.team + a.name).localeCompare(b.team + b.name)
-  );
-})();
+export const players: Player[] = [];
 
 function normalizePlayerName(name: string) {
   return (name || "")
@@ -36,10 +28,6 @@ function normalizePlayerName(name: string) {
     .replace(/&/g, " and ")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
-}
-
-function playerKey(player: Player) {
-  return `${player.team}/${normalizePlayerName(player.name)}`;
 }
 
 export function getPlayersByTeam(team: string) {

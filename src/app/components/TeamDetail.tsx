@@ -299,7 +299,7 @@ export function TeamDetail() {
         </div>
       </motion.div>
 
-      {/* Common Defensive Plays */}
+      {/* Common Defensive Tendencies */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -308,10 +308,10 @@ export function TeamDetail() {
       >
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Shield className="w-6 h-6 text-red-400" />
-          Common Defensive Plays
+          Common Defensive Tendencies
         </h2>
         <div className="flex flex-wrap gap-3">
-          {team.commonDefensivePlay.map((play, idx) => (
+          {team.commonDefensiveTendencies.map((play, idx) => (
             <span
               key={idx}
               className="bg-red-900/30 px-4 py-2 rounded-full font-medium border border-red-800 hover:bg-red-900/50 transition-colors text-red-200"

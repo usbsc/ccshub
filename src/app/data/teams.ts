@@ -26,7 +26,7 @@ export interface Team {
   offensiveSystem: string;
   defensiveSystem: string;
   commonPlays: string[];
-  commonDefensivePlay: string[];
+  commonDefensiveTendencies: string[];
   strengths: string[];
   keyPlayers: string[];
   levels: {
@@ -85,7 +85,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Pro-Style Offense",
     defensiveSystem: "4-3 Defense",
     commonPlays: ["Power Run", "Deep Post", "Screen Pass", "Boot Action"],
-    commonDefensivePlay: ["Gap Control", "Cover 2", "Blitz Package", "Linebacker Scrape"],
+    commonDefensiveTendencies: ["Gap Control", "Cover 2", "Blitz Package", "Linebacker Scrape"],
     strengths: ["Tough defense", "Physical play", "Elite skill players"],
     keyPlayers: ["QB Michael Mitchell Jr. #10", "WR Wesley Winn #1", "WR Chris Lawson #2"],
     levels: {
@@ -143,7 +143,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Multiple Offense",
     defensiveSystem: "3-3-5 Defense",
     commonPlays: ["Pistol Formation", "Jet Sweep", "Curl Route", "Draw Play"],
-    commonDefensivePlay: ["Cornerback Blitz", "Safety Roll", "Gap Control", "Linebacker Read"],
+    commonDefensiveTendencies: ["Cornerback Blitz", "Safety Roll", "Gap Control", "Linebacker Read"],
     strengths: ["Versatile schemes", "Fast linebackers", "Red zone efficiency"],
     keyPlayers: ["RB Iziah Singleton #22", "TE Jace Cannon #88", "WR Jaiden Tinson #1"],
     levels: {
@@ -201,7 +201,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Pro-Style Offense",
     defensiveSystem: "3-4 Defense",
     commonPlays: ["Power Run", "Deep Post", "Screen Pass", "Boot Action"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Physical run game", "Strong defensive line", "Special teams excellence"],
     keyPlayers: ["RB Kingston Keanaaina #22", "OL John Fifita #77", "QB Trent Knight #12"],
     levels: {
@@ -256,7 +256,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "4-2-5",
     commonPlays: ["Inside Zone", "RPO"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Balanced attack", "Strong line play"],
     keyPlayers: ["QB Soren Hummel #18", "RB Jarious Hogan #6", "OLB Daniel Leupold #7"],
     levels: {
@@ -310,7 +310,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Multiple",
     defensiveSystem: "4-3",
     commonPlays: ["Inside Zone", "Power"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Disciplined execution", "Strong tradition"],
     keyPlayers: [
       "RB Lazaro Faraj-Washington #21",
@@ -372,7 +372,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Multiple",
     defensiveSystem: "4-2-5",
     commonPlays: ["Power", "Counter"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Physicality", "Strong defense"],
     keyPlayers: ["OL Champ Taulealea #75", "TE/DE Colton Hider #88", "RB/DB Micah Mosley #5"],
     levels: {
@@ -426,7 +426,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "4-3",
     commonPlays: ["Zone Read", "Slant"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Passing game", "Athleticism"],
     keyPlayers: ["QB Dominic Sotelo #7", "LB/RB Nico Tatom #4", "OT Richard Steele #77"],
     levels: {
@@ -480,7 +480,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "4-3",
     commonPlays: ["RPO", "Bubble Screen"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Speed", "Athleticism"],
     keyPlayers: ["QB Michael Sargent #15", "RB/SS Legend Williams #6", "DE/TE Mickey Williams #8"],
     levels: {
@@ -535,7 +535,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "West Coast",
     defensiveSystem: "4-3",
     commonPlays: ["Quick Slant", "Sprint Out"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Precision", "Tradition"],
     keyPlayers: ["RB Grayson Doslak #24", "WR Max Thomas #8", "QB Luca Salimi #10"],
     levels: {
@@ -590,7 +590,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Double Wing",
     defensiveSystem: "5-2",
     commonPlays: ["Power", "Counter"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Run game", "Physicality"],
     keyPlayers: ["RB/FS Brayden Rosa #2", "CB/WR Jeremiah Arevalos #8", "QB Kai Imahara #11"],
     levels: {
@@ -644,7 +644,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "4-3",
     commonPlays: ["Inside Zone", "Slant"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Balanced attack", "Strong secondary"],
     keyPlayers: ["QB Justin Fung #2", "WR Kacey Washington #3", "TE Malcolm Phillips #22"],
     levels: {
@@ -699,7 +699,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "N/A",
     commonPlays: ["Zone Read", "Deep Post"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Athleticism", "Speed"],
     keyPlayers: ["QB Teddy Dacey #10", "WR Jacob Roeder #2", "RB Monty Turner #33"],
     levels: {
@@ -751,7 +751,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "4-3",
     commonPlays: ["Inside Zone", "Bubble Screen"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Athletic playmakers", "Strong defense"],
     keyPlayers: ["QB John Schalesky #12", "MLB Josiah Orta #8", "OLB Aiden Swann #4"],
     levels: {
@@ -802,7 +802,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "4-3",
     commonPlays: ["Zone Read"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Speed", "Versatility"],
     keyPlayers: ["N/A"],
     levels: {
@@ -849,7 +849,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "4-3",
     commonPlays: ["Pass-heavy"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Quarterback play"],
     keyPlayers: ["N/A"],
     levels: {
@@ -897,7 +897,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Power Run",
     defensiveSystem: "N/A",
     commonPlays: ["Power", "Blast"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Physicality", "Tradition"],
     keyPlayers: ["QB Jordan McCoy #5", "RB Aaron Wiley #7", "RB Kaleb Fries #10"],
     levels: {
@@ -945,7 +945,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Multiple",
     defensiveSystem: "N/A",
     commonPlays: ["Balanced"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Strong program", "Physical play"],
     keyPlayers: ["N/A"],
     levels: {
@@ -995,7 +995,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Power Run",
     defensiveSystem: "4-3",
     commonPlays: ["Power", "Toss"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Discipline", "Physical line play"],
     keyPlayers: ["N/A"],
     levels: {
@@ -1045,7 +1045,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Wing-T",
     defensiveSystem: "4-3",
     commonPlays: ["Buck Sweep", "Trap"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Precision", "Run game"],
     keyPlayers: ["N/A"],
     levels: {
@@ -1095,7 +1095,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "3-4",
     commonPlays: ["Inside Zone"],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: ["Coaching", "Execution"],
     keyPlayers: ["N/A"],
     levels: {
@@ -1142,7 +1142,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Power Run",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1188,7 +1188,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1231,7 +1231,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Pro-Style Offense",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1274,7 +1274,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Multiple Formations",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1317,7 +1317,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Air Raid",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1360,7 +1360,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Run-Heavy",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1403,7 +1403,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Balanced",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1449,7 +1449,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Uptempo Spread",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1492,7 +1492,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Wing-T",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1535,7 +1535,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Wishbone",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1578,7 +1578,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Power Run",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1621,7 +1621,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1664,7 +1664,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Pro-Style Offense",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1707,7 +1707,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Multiple Formations",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1750,7 +1750,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Air Raid",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1793,7 +1793,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Run-Heavy",
     defensiveSystem: "Cover 3",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1836,7 +1836,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Balanced",
     defensiveSystem: "Base Defense",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1882,7 +1882,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Uptempo Spread",
     defensiveSystem: "Goal-Line Defense",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1925,7 +1925,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Wing-T",
     defensiveSystem: "Dime Package",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -1968,7 +1968,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Wishbone",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2011,7 +2011,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Power Run",
     defensiveSystem: "4-3 Defense",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2054,7 +2054,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "3-4 Defense",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2097,7 +2097,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Pro-Style Offense",
     defensiveSystem: "5-2 Defense",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2140,7 +2140,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Multiple Formations",
     defensiveSystem: "Nickel Defense",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2183,7 +2183,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Air Raid",
     defensiveSystem: "Cover 2",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2226,7 +2226,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Run-Heavy",
     defensiveSystem: "Cover 3",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2269,7 +2269,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Balanced",
     defensiveSystem: "Base Defense",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2315,7 +2315,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "Spread",
     defensiveSystem: "3-3-5/3-4",
     commonPlays: ["Outside Zone", "Play Action Pass", "Screen Pass", "Mesh Concept"],
-    commonDefensivePlay: ["Gap Assignment", "Man Coverage", "Linebacker Blitz", "Safety Rotation"],
+    commonDefensiveTendencies: ["Gap Assignment", "Man Coverage", "Linebacker Blitz", "Safety Rotation"],
     strengths: ["Disciplined execution", "Fast tempo", "Ball control"],
     keyPlayers: [],
     levels: {
@@ -2366,7 +2366,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2414,7 +2414,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2465,7 +2465,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2524,7 +2524,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2583,7 +2583,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2634,7 +2634,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2688,7 +2688,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2742,7 +2742,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2796,7 +2796,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2858,7 +2858,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2912,7 +2912,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -2966,7 +2966,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3020,7 +3020,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3074,7 +3074,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3128,7 +3128,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3182,7 +3182,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3236,7 +3236,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3298,7 +3298,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3352,7 +3352,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3406,7 +3406,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3460,7 +3460,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3514,7 +3514,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3568,7 +3568,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3622,7 +3622,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3676,7 +3676,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3738,7 +3738,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3792,7 +3792,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3846,7 +3846,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3900,7 +3900,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "TBD",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {
@@ -3954,7 +3954,7 @@ export const baseTeams: Team[] = [
     offensiveSystem: "TBD",
     defensiveSystem: "N/A",
     commonPlays: [],
-    commonDefensivePlay: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
+    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
     strengths: [],
     keyPlayers: [],
     levels: {

@@ -851,7 +851,7 @@ export const baseTeams: Team[] = [
       wins: 3,
       losses: 7,
     },
-    ranking: 79,
+    ranking: 50,
     image: "https://vcloud.blueframe.com/secure/image/628153",
     stadium: "Leland High Stadium",
     headCoach: "Marcus Johnson",

@@ -1,141 +1,130 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { load } from "cheerio";
 
 const OUT_PATH = path.join(
   process.cwd(),
   "src/app/data/players.maxpreps.ts"
 );
 
-async function fetchPlayerRoster(maxprepsUrl) {
+async function fetchRoster(maxprepsUrl, teamId) {
   try {
-    const res = await fetch(maxprepsUrl, {
+    const rosterUrl = maxprepsUrl.replace(/\/$/, "") + "/roster/";
+    console.log("Fetching: " + rosterUrl);
+    
+    const res = await fetch(rosterUrl, {
       headers: {
-        "user-agent": "ccshub-maxpreps-import/1.0",
-        accept: "text/html,*/*",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
       },
     });
 
-    if (!res.ok) return null;
+    if (!res.ok) {
+      console.log("Status " + res.status + " for " + teamId);
+      return [];
+    }
+
     const html = await res.text();
+    const $ = load(html);
 
-    // Extract roster data from the page
-    // MaxPreps embeds roster data in __NEXT_DATA__ JSON
-    const nextDataMatch = html.match(
-      /<script[^>]+id="__NEXT_DATA__"[^>]*>(.*?)<\/script>/s
-    );
-    if (!nextDataMatch) return null;
+    const players = [];
+    const rows = $("table tbody tr").toArray();
+    
+    console.log("Found " + rows.length + " rows");
 
-    try {
-      const nextData = JSON.parse(nextDataMatch[1]);
-      // Navigate through NextData structure to find roster
-      // This varies by page, but typically lives in props > pageProps > teams or players
-      return extractRosterFromNextData(nextData);
-    } catch {
-      return null;
-    }
-  } catch {
-    return null;
-  }
-}
-
-function extractRosterFromNextData(nextData) {
-  try {
-    // Navigate the typical NextJS data structure
-    const props = nextData?.props?.pageProps;
-    if (!props) return null;
-
-    // Look for roster arrays in common locations
-    const rosters = [];
-
-    // Check various possible locations for roster data
-    if (props.team?.roster) {
-      rosters.push(...props.team.roster);
-    }
-    if (props.roster) {
-      rosters.push(...props.roster);
-    }
-    if (props.players) {
-      rosters.push(...props.players);
-    }
-
-    // Also check dehydratedState for React Query data
-    if (props.dehydratedState?.queries) {
-      for (const query of props.dehydratedState.queries) {
-        if (query.state?.data?.roster) {
-          rosters.push(...query.state.data.roster);
-        }
-        if (query.state?.data?.players) {
-          rosters.push(...query.state.data.players);
-        }
+    rows.forEach((row, idx) => {
+      const cells = $(row).find("td");
+      if (cells.length < 4) return;
+      
+      const numberText = cells.eq(0).text().trim();
+      const name = cells.eq(1).text().trim();
+      const grade = cells.eq(2).text().trim() || null;
+      const position = cells.eq(3).text().trim();
+      const height = cells.eq(4).text().trim() || null;
+      const weight = cells.eq(5).text().trim() || null;
+      
+      if (name && position && position !== "--") {
+        const number = numberText && numberText !== "#" ? parseInt(numberText) : null;
+        players.push({
+          id: teamId + "-" + idx,
+          name: name,
+          position: position,
+          number: number,
+          team: teamId,
+          grade: grade,
+          height: height,
+          weight: weight,
+        });
       }
-    }
+    });
 
-    return rosters.length > 0 ? rosters : null;
-  } catch {
-    return null;
+    if (players.length > 0) {
+      console.log("Extracted " + players.length + " players");
+    }
+    return players;
+  } catch (err) {
+    console.log("Error: " + err.message);
+    return [];
   }
 }
 
 async function main() {
-  console.log("Fetching MaxPreps player rosters...");
+  console.log("Fetching MaxPreps player rosters...\n");
 
   const teamsMaxpreps = await fs.readFile(
     path.join(process.cwd(), "src/app/data/teams.maxpreps.generated.ts"),
     "utf-8"
   );
 
-  // Extract all maxprepsUrl values
-  const urls = teamsMaxpreps.match(/maxprepsUrl:\s*"([^"]+)"/g) || [];
-  const players = [];
-  let count = 0;
+  const teams = [];
+  const lines = teamsMaxpreps.split("\n");
+  let currentTeamId = null;
 
-  console.log("Found " + urls.length + " team MaxPreps URLs");
-
-  for (const urlMatch of urls) {
-    const urlParts = urlMatch.match(/"([^"]+)"/);
-    if (!urlParts) continue;
-    
-    const url = urlParts[1];
-    console.log("Fetching: " + url);
-
-    const roster = await fetchPlayerRoster(url);
-    if (roster && roster.length > 0) {
-      // Extract team ID from URL to match rosters to teams
-      const teamMatch = url.match(/\/([a-z0-9-]+)\//);
-      const teamId = teamMatch ? teamMatch[1] : "unknown";
-
-      for (const player of roster) {
-        const firstName = player.firstName || "";
-        const lastName = player.lastName || "";
-        const fullName = (firstName + " " + lastName).trim() || player.name || "Unknown";
-        
-        players.push({
-          id: teamId + "-" + (player.id || player.athleteId || fullName.replace(/\s+/g, "-").toLowerCase()),
-          name: fullName,
-          position: player.position || player.pos || "Unknown",
-          number: player.number || player.jerseyNumber || null,
-          team: teamId,
-          grade: player.grade || null,
-          height: player.height || null,
-          weight: player.weight || null,
-        });
-      }
-
-      count += roster.length;
+  for (const line of lines) {
+    const teamMatch = line.match(/^\s*("[\w-]+"|\w+):\s*\{/);
+    if (teamMatch) {
+      currentTeamId = teamMatch[1].replace(/"/g, "");
     }
-
-    // Rate limit: 500ms between requests
-    await new Promise((r) => setTimeout(r, 500));
+    
+    const urlMatch = line.match(/maxprepsUrl:\s*"([^"]+)"/);
+    if (urlMatch && currentTeamId) {
+      teams.push({ id: currentTeamId, url: urlMatch[1] });
+      currentTeamId = null;
+    }
   }
 
-  // Generate TypeScript file
-  const code = "// This file is auto-generated by scripts/update-maxpreps-players.mjs\n// Do not edit manually!\n\nexport interface Player {\n  id: string;\n  name: string;\n  position: string;\n  number: number | null;\n  team: string;\n  grade: string | null;\n  height: string | null;\n  weight: string | null;\n}\n\nexport const players: Player[] = " + JSON.stringify(players, null, 2) + ";\n";
+  console.log("Found " + teams.length + " teams\n");
+
+  const allPlayers = [];
+
+  for (const team of teams) {
+    const roster = await fetchRoster(team.url, team.id);
+    allPlayers.push(...roster);
+    await new Promise((r) => setTimeout(r, 800));
+  }
+
+  const playerJson = JSON.stringify(allPlayers, null, 2);
+  const code = `// This file is auto-generated by scripts/update-maxpreps-players.mjs
+// Do not edit manually!
+
+export interface Player {
+  id: string;
+  name: string;
+  position: string;
+  number: number | null;
+  team: string;
+  grade: string | null;
+  height: string | null;
+  weight: string | null;
+}
+
+export const players: Player[] = ${playerJson};
+`;
 
   await fs.writeFile(OUT_PATH, code);
-  console.log("Generated players.maxpreps.ts with " + count + " players");
+  console.log("\n✓ Generated players.maxpreps.ts with " + allPlayers.length + " total players");
 }
 
 main().catch((err) => {
-  console.error("Error:", err.message);
+  console.error("Fatal error: " + err.message);
   process.exit(1);
 });

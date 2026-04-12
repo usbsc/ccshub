@@ -2306,11 +2306,14 @@ export const baseTeams: Team[] = [
     ranking: 49,
     image: "/logos/santa-clara.png",
     stadium: "Fremont High School",
-    headCoach: "Patrick Walsh",
-    offensiveCoordinator: "David Garcia",
-    defensiveCoordinator: "Marcus Johnson",
-    offensiveSystem: "Spread Offense",
-    defensiveSystem: "4-3 Defense",
+    // Note: Coaching data below is from baseTeams (manual) and may not be current.
+    // Real-time stats (record, streak, ranking) come from MaxPreps.
+    // To update coaches, check MaxPreps page or verify with school athletics.
+    headCoach: "TBD",
+    offensiveCoordinator: "TBD",
+    defensiveCoordinator: "TBD",
+    offensiveSystem: "TBD",
+    defensiveSystem: "TBD",
     commonPlays: ["Outside Zone", "Play Action Pass", "Screen Pass", "Slant Run"],
     commonDefensivePlay: ["Gap Assignment", "Man Coverage", "Linebacker Blitz", "Safety Rotation"],
     strengths: ["Disciplined execution", "Fast tempo", "Ball control"],

@@ -31,8 +31,10 @@ export function Root() {
       <header className="bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50 sticky top-0 z-50 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between gap-4">
-            <Link
-              to="/"
+            <a
+              href="https://x.com/CCSHUBOFFICIAL"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 hover:opacity-80 transition-all active:scale-95 group"
             >
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/20 group-hover:rotate-3 transition-transform overflow-hidden p-1">
@@ -50,7 +52,7 @@ export function Root() {
                   Central Coast Section
                 </p>
               </div>
-            </Link>
+            </a>
 
             <div className="flex items-center gap-2">
               <button

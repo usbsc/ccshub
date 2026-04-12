@@ -39,8 +39,8 @@ export function Root() {
             >
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/20 group-hover:rotate-3 transition-transform overflow-hidden p-1">
                 <ImageWithFallback
-                  src="/ccshub/logos/ccshub.svg"
-                  alt="CCSHUB"
+                  src="https://nitter.net/CCSHUBOFFICIAL/pic"
+                  alt="CCSHUB X Profile"
                   className="w-full h-full object-contain"
                 />
               </div>

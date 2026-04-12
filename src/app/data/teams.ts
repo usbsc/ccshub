@@ -2286,7 +2286,7 @@ export const baseTeams: Team[] = [
   },
   {
     id: "santa-clara-high",
-    name: "Santa Clara High",
+    name: "Santa Clara",
     mascot: "Bruins",
     colors: {
       primary: "Blue",

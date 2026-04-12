@@ -49,7 +49,7 @@ export function Root() {
               </div>
               <div>
                 <h1 className="text-xl font-black tracking-tight text-white leading-tight uppercase">
-                  CCSHUB
+                  CCS HUB
                 </h1>
                 <p className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
                   Central Coast Section

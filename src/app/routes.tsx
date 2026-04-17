@@ -8,6 +8,9 @@ import { Scores } from "./components/Scores";
 import { Players } from "./components/Players";
 import { GameDetail } from "./components/GameDetail";
 import { NotFound } from "./components/NotFound";
+import { Teams } from "./components/Teams";
+import { Broadcasts } from "./components/Broadcasts";
+import { Photos } from "./components/Photos";
 
 export const router = createBrowserRouter(
   [
@@ -16,10 +19,13 @@ export const router = createBrowserRouter(
       Component: Root,
       children: [
         { index: true, Component: Home },
-        { path: "rankings", Component: Rankings },
         { path: "schedule", Component: Schedule },
-        { path: "scores", Component: Scores },
+        { path: "teams", Component: Teams },
         { path: "players", Component: Players },
+        { path: "rankings", Component: Rankings },
+        { path: "broadcasts", Component: Broadcasts },
+        { path: "photos", Component: Photos },
+        { path: "scores", Component: Scores },
         { path: "team/:teamId", Component: TeamDetail },
         { path: "game/:gameId", Component: GameDetail },
         { path: "*", Component: NotFound },

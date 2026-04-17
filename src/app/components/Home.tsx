@@ -241,25 +241,89 @@ export function Home() {
               <MapPin className="w-6 h-6 text-green-400" />
               Games Near You
             </h2>
-            <p className="text-sm text-foreground">Find football games in your area</p>
+            <p className="text-sm text-foreground">Find football games by selecting your school or location</p>
           </div>
 
-          <div className="relative group">
-            <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-green-400 transition-colors" />
-            <input
-              type="text"
-              placeholder="Search by city or zip code..."
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* School Selector */}
+            <select
               value={userLocation}
               onChange={(e) => setUserLocation(e.target.value)}
-              className="w-full bg-background border border-green-800/50 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white dark:text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
-              aria-label="Search games by location"
-            />
+              className="bg-background border border-green-800/50 rounded-2xl py-4 px-4 text-sm font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl cursor-pointer appearance-none"
+              aria-label="Select your school"
+            >
+              <option value="">Select your school...</option>
+              {teams.map((team) => (
+                <option key={team.id} value={team.id}>
+                  {team.name} • {team.league}
+                </option>
+              ))}
+            </select>
+
+            {/* Zip Code Input */}
+            <div className="relative group">
+              <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-green-400 transition-colors" />
+              <input
+                type="text"
+                placeholder="Or search by zip code..."
+                className="w-full bg-background border border-green-800/50 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+                aria-label="Search games by zip code"
+              />
+            </div>
           </div>
 
           {userLocation.trim().length > 0 && (
-            <div className="mt-6 text-sm text-muted-foreground">
-              <p>Games near <span className="font-bold text-green-300">{userLocation}</span> would appear here</p>
-              <p className="text-xs mt-2 text-muted-foreground">(Location-based filtering coming soon)</p>
+            <div className="mt-6 space-y-4">
+              {(() => {
+                const selectedTeamId = userLocation;
+                const selectedTeamObj = teams.find((t) => t.id === selectedTeamId);
+                if (selectedTeamObj) {
+                  const nearbyGames = games.filter(
+                    (g) =>
+                      g.homeTeam === selectedTeamId ||
+                      g.awayTeam === selectedTeamId
+                  );
+                  return (
+                    <>
+                      <p className="text-sm text-foreground">
+                        Games for <span className="font-bold text-green-300">{selectedTeamObj.name}</span>:
+                      </p>
+                      {nearbyGames.length > 0 ? (
+                        <div className="grid sm:grid-cols-2 gap-3">
+                          {nearbyGames.slice(0, 4).map((game) => {
+                            const opponent = teamById.get(
+                              game.homeTeam === selectedTeamId
+                                ? game.awayTeam
+                                : game.homeTeam
+                            );
+                            return (
+                              <div
+                                key={game.id}
+                                className="bg-background/40 rounded-xl p-3 border border-green-700/30"
+                              >
+                                <p className="text-xs font-bold text-green-300 mb-1">
+                                  {game.status === "live" ? "LIVE" : new Date(game.date).toLocaleDateString()}
+                                </p>
+                                <p className="text-sm font-bold text-foreground">
+                                  vs {opponent?.name || "Unknown"}
+                                </p>
+                                <p className="text-xs text-muted-foreground">
+                                  {game.stadium}
+                                </p>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      ) : (
+                        <p className="text-xs text-muted-foreground">
+                          No upcoming games found for this team.
+                        </p>
+                      )}
+                    </>
+                  );
+                }
+                return null;
+              })()}
             </div>
           )}
         </div>
@@ -503,6 +567,41 @@ export function Home() {
               </div>
             </div>
           </section>
+
+          {/* Returning Players Section */}
+          <section>
+            <h2 className="text-2xl font-black mb-8 tracking-tight flex items-center gap-2">
+              <Users className="w-6 h-6 text-purple-500" />
+              2026 Key Returners
+            </h2>
+            <div className="space-y-4">
+              {topRankedTeams.slice(0, 3).map((team) => (
+                <Link
+                  key={`returners-${team.id}`}
+                  to={`/team/${team.id}`}
+                  className="bg-card rounded-2xl p-4 hover:bg-secondary/50 transition-all border border-border group"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-secondary p-1 flex-shrink-0">
+                      <ImageWithFallback
+                        src={team.image}
+                        className="w-full h-full object-contain"
+                        alt=""
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold text-white dark:text-foreground uppercase tracking-tight text-sm group-hover:text-purple-400 transition-colors">
+                        {team.name}
+                      </div>
+                      <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mt-1">
+                        {team.keyPlayers?.slice(0, 2).join(", ") || "Key players returning"}
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
         </div>
 
         {/* Sidebar Column */}
@@ -554,21 +653,55 @@ export function Home() {
             </div>
           </section>
 
+          {/* CCS League Alignments */}
+          <section>
+            <h2 className="text-2xl font-black mb-8 tracking-tight flex items-center gap-2">
+              <MapPin className="w-6 h-6 text-green-500" />
+              League Structure
+            </h2>
+            <div className="space-y-3">
+              {["West Catholic Athletic League", "Bay Foothill League", "Santa Cruz Coast Athletic League"].map((league) => (
+                <div key={league} className="bg-card rounded-2xl p-4 border border-border hover:border-green-500/50 transition-colors">
+                  <div className="font-bold text-white dark:text-foreground text-sm uppercase tracking-tight">
+                    {league}
+                  </div>
+                  <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mt-1">
+                    {league === "West Catholic Athletic League" && "6 Teams • Division I & II"}
+                    {league === "Bay Foothill League" && "8 Teams • Division I, II & III"}
+                    {league === "Santa Cruz Coast Athletic League" && "5 Teams • All Divisions"}
+                  </div>
+                </div>
+              ))}
+              <Link
+                to="/teams"
+                className="block p-4 text-center text-[10px] font-black text-muted-foreground hover:text-white dark:hover:text-slate-300 transition-colors bg-background/50 uppercase tracking-[0.2em] rounded-2xl border border-border hover:border-green-500/50"
+              >
+                View All Teams & Leagues
+              </Link>
+            </div>
+          </section>
+
           {/* Quick Stats */}
           <section className="bg-blue-600 rounded-3xl p-6 shadow-xl shadow-blue-900/20 border border-white/10">
-            <h3 className="text-white dark:text-foreground font-black text-lg mb-4 tracking-tight">SEASON RECAP</h3>
+            <h3 className="text-white dark:text-foreground font-black text-lg mb-4 tracking-tight">2026 SEASON PREVIEW</h3>
             <div className="space-y-4">
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-4">
                 <p className="text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">
-                  Total Games Played
+                  Teams Competing
                 </p>
-                <p className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">482</p>
+                <p className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">12+</p>
               </div>
               <div className="bg-white dark:bg-slate-700 rounded-2xl p-4">
                 <p className="text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">
-                  Average PPG
+                  Leagues Active
                 </p>
-                <p className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">32.4</p>
+                <p className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">6</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-4">
+                <p className="text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">
+                  Preseason Status
+                </p>
+                <p className="text-sm font-black text-white dark:text-foreground dark:text-foreground">Preparations Underway</p>
               </div>
             </div>
           </section>

@@ -41,7 +41,7 @@ export function Players() {
         animate={{ opacity: 1, y: 0 }}
         className="space-y-4"
       >
-        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white">
+        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white dark:text-foreground">
           Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Players</span>
         </h1>
         <p className="text-muted-foreground text-lg max-w-2xl">
@@ -64,7 +64,7 @@ export function Players() {
             placeholder="Search players by name or team..."
             value={searchQuery}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 bg-card border border-border rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
+            className="w-full pl-12 pr-4 py-3 bg-card border border-border rounded-xl text-white dark:text-foreground placeholder-zinc-500 dark:placeholder-slate-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
           />
         </div>
 
@@ -77,7 +77,7 @@ export function Players() {
             <select
               value={selectedPosition}
               onChange={(e) => setSelectedPosition(e.target.value)}
-              className="w-full px-4 py-2 bg-card border border-border rounded-lg text-white focus:outline-none focus:border-purple-500 transition-all"
+              className="w-full px-4 py-2 bg-card border border-border rounded-lg text-white dark:text-foreground focus:outline-none focus:border-purple-500 transition-all"
             >
               {positions.map((pos) => (
                 <option key={pos} value={pos} className="bg-background">
@@ -94,7 +94,7 @@ export function Players() {
             <select
               value={selectedTeam}
               onChange={(e) => setSelectedTeam(e.target.value)}
-              className="w-full px-4 py-2 bg-card border border-border rounded-lg text-white focus:outline-none focus:border-purple-500 transition-all"
+              className="w-full px-4 py-2 bg-card border border-border rounded-lg text-white dark:text-foreground focus:outline-none focus:border-purple-500 transition-all"
             >
               <option value="all" className="bg-background">
                 All Teams
@@ -137,7 +137,7 @@ export function Players() {
                     {/* Header */}
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <h3 className="font-bold text-white group-hover:text-purple-400 transition-colors">
+                        <h3 className="font-bold text-white dark:text-foreground group-hover:text-purple-400 transition-colors">
                           {player.name}
                         </h3>
                         <p className="text-sm text-purple-400 font-semibold">
@@ -177,19 +177,19 @@ export function Players() {
                           {player.grade && (
                             <div className="flex justify-between text-sm">
                               <span className="text-muted-foreground">Grade:</span>
-                              <span className="text-white font-medium">{player.grade}</span>
+                              <span className="text-white dark:text-foreground font-medium">{player.grade}</span>
                             </div>
                           )}
                           {player.height && (
                             <div className="flex justify-between text-sm">
                               <span className="text-muted-foreground">Height:</span>
-                              <span className="text-white font-medium">{player.height}</span>
+                              <span className="text-white dark:text-foreground font-medium">{player.height}</span>
                             </div>
                           )}
                           {player.weight && (
                             <div className="flex justify-between text-sm">
                               <span className="text-muted-foreground">Weight:</span>
-                              <span className="text-white font-medium">{player.weight} lbs</span>
+                              <span className="text-white dark:text-foreground font-medium">{player.weight} lbs</span>
                             </div>
                           )}
                         </motion.div>

@@ -46,7 +46,7 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
               placeholder="Search games by team, stadium, level, or status..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-blue-900 text-white border border-blue-600 rounded-lg pl-11 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-blue-300"
+              className="w-full bg-blue-900 dark:bg-slate-950 text-white dark:text-foreground border border-blue-600 dark:border-slate-700 rounded-lg pl-11 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-blue-300 dark:placeholder-slate-500"
               autoFocus
             />
           </div>
@@ -55,13 +55,13 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
           </button>
         </div>
 
-        <div className="bg-blue-900 rounded-lg max-h-96 overflow-y-auto">
+        <div className="bg-blue-900 dark:bg-slate-950 rounded-lg max-h-96 overflow-y-auto">
           {filteredGames.length === 0 ? (
-            <div className="p-8 text-center text-blue-300">
+            <div className="p-8 text-center text-blue-300 dark:text-slate-400">
               No games found matching your search.
             </div>
           ) : (
-            <div className="divide-y divide-blue-800">
+            <div className="divide-y divide-blue-800 dark:divide-slate-700">
               {filteredGames.map((game) => {
                 const home = getTeam(game.homeTeam);
                 const away = getTeam(game.awayTeam);
@@ -76,18 +76,18 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-3">
                         {game.status === "live" && (
-                          <span className="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
-                            <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                          <span className="bg-red-600 text-white dark:text-foreground px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
+                            <span className="w-1.5 h-1.5 bg-white dark:bg-slate-300 rounded-full animate-pulse"></span>
                             LIVE
                           </span>
                         )}
                         {game.status === "upcoming" && (
-                          <span className="bg-green-600 text-white px-2 py-1 rounded text-xs font-bold">
+                          <span className="bg-green-600 text-white dark:text-foreground px-2 py-1 rounded text-xs font-bold">
                             UPCOMING
                           </span>
                         )}
                         {game.status === "final" && (
-                          <span className="bg-secondary text-white px-2 py-1 rounded text-xs font-bold">
+                          <span className="bg-secondary dark:bg-slate-800 text-white dark:text-foreground px-2 py-1 rounded text-xs font-bold">
                             FINAL
                           </span>
                         )}
@@ -104,7 +104,7 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
 
                     <div className="grid grid-cols-2 gap-4 mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-white rounded flex items-center justify-center p-1 overflow-hidden border border-border">
+                        <div className="w-8 h-8 bg-white dark:bg-slate-900 rounded flex items-center justify-center p-1 overflow-hidden border border-border dark:border-slate-700">
                           <ImageWithFallback
                             src={away?.image}
                             alt={away?.name}
@@ -116,13 +116,13 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
                             {away?.name}
                           </div>
                           {game.status !== "upcoming" && (
-                            <div className="text-lg font-black text-white">{game.awayScore}</div>
+                            <div className="text-lg font-black text-white dark:text-foreground">{game.awayScore}</div>
                           )}
                         </div>
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-white rounded flex items-center justify-center p-1 overflow-hidden border border-border">
+                        <div className="w-8 h-8 bg-white dark:bg-slate-900 rounded flex items-center justify-center p-1 overflow-hidden border border-border dark:border-slate-700">
                           <ImageWithFallback
                             src={home?.image}
                             alt={home?.name}
@@ -134,7 +134,7 @@ export function GameSearchMenu({ onClose }: GameSearchMenuProps) {
                             {home?.name}
                           </div>
                           {game.status !== "upcoming" && (
-                            <div className="text-lg font-black text-white">{game.homeScore}</div>
+                            <div className="text-lg font-black text-white dark:text-foreground">{game.homeScore}</div>
                           )}
                         </div>
                       </div>

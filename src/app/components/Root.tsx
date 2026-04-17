@@ -1,5 +1,5 @@
 import { Outlet, Link, NavLink } from "react-router";
-import { Bell, Award, Calendar, Users, BarChart3, Settings } from "lucide-react";
+import { Bell, Award, Calendar, Users, BarChart3, Settings, Sun, Moon, Home, Image } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
 import { homeTeamStorage } from "../services/storage";
@@ -17,11 +17,13 @@ export function Root() {
   }
 
   const navItems = [
-    { path: "/", label: "Broadcasts", icon: Award },
-    { path: "/rankings", label: "Rankings", icon: BarChart3 },
+    { path: "/", label: "Home", icon: Home },
     { path: "/schedule", label: "Schedule", icon: Calendar },
-    { path: "/scores", label: "Scores", icon: Award },
+    { path: "/teams", label: "Teams", icon: Users },
     { path: "/players", label: "Players", icon: Users },
+    { path: "/rankings", label: "Rankings", icon: BarChart3 },
+    { path: "/broadcasts", label: "Broadcasts", icon: Award },
+    { path: "/photos", label: "Photos", icon: Image },
   ];
 
   return (
@@ -36,7 +38,7 @@ export function Root() {
               rel="noopener noreferrer"
               className="flex items-center gap-3 hover:opacity-80 transition-all active:scale-95 group"
             >
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 group-hover:rotate-3 transition-transform overflow-hidden p-0">
+              <div className="w-12 h-12 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 group-hover:rotate-3 transition-transform overflow-hidden p-0">
                 <img
                   src="/ccshub/logos/ccshub-banner.jpg"
                   alt="CCSHUB"
@@ -57,6 +59,13 @@ export function Root() {
             </a>
 
             <div className="flex items-center gap-2">
+              <button
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                className="p-2.5 rounded-xl transition-all border bg-secondary border-border text-muted-foreground hover:bg-secondary/80 hover:text-foreground"
+                title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+              >
+                {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+              </button>
               <button
                 onClick={() => setShowSettings(!showSettings)}
                 className={`p-2.5 rounded-xl transition-all relative border ${

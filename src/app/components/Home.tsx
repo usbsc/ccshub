@@ -137,7 +137,7 @@ export function Home() {
         <div className="absolute top-6 left-6 right-6 flex justify-between items-start">
           <div className="bg-blue-600/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-lg border border-white/10">
             <Zap className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-            <span className="text-[10px] font-bold tracking-widest text-white uppercase">
+            <span className="text-[10px] font-bold tracking-widest text-white dark:text-foreground uppercase">
               Season 2025-26 Countdown
             </span>
           </div>
@@ -145,7 +145,7 @@ export function Home() {
 
         <div className="absolute bottom-0 left-0 right-0 p-10 md:p-16">
           <motion.div variants={itemVariants} className="max-w-2xl">
-            <h2 className="text-5xl md:text-7xl font-black mb-4 text-white leading-[0.85] tracking-tighter uppercase">
+            <h2 className="text-5xl md:text-7xl font-black mb-4 text-white dark:text-foreground leading-[0.85] tracking-tighter uppercase">
               CCS <br />
               <span className="text-blue-500 italic font-black">HUB</span>
             </h2>
@@ -172,12 +172,12 @@ export function Home() {
         <motion.section variants={itemVariants} className="relative">
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 shadow-xl shadow-blue-900/20 overflow-hidden group">
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform duration-500">
-              <Star className="w-32 h-32 text-white" />
+              <Star className="w-32 h-32 text-white dark:text-foreground" />
             </div>
             <div className="relative z-10">
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white tracking-tight">
-                <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
-                  <TrendingUp className="w-5 h-5 text-white" />
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white dark:text-foreground tracking-tight">
+                <div className="p-2 bg-white dark:bg-slate-700 rounded-lg backdrop-blur-sm">
+                  <TrendingUp className="w-5 h-5 text-white dark:text-foreground" />
                 </div>
                 Your Team Portal: {getTeam(homeTeam)?.name}
               </h2>
@@ -197,10 +197,10 @@ export function Home() {
                           <span className="text-[10px] font-bold text-blue-200 tracking-wide">
                             {game.status} • {game.level}
                           </span>
-                          <ChevronRight className="w-4 h-4 text-white/40 group-hover/card:translate-x-1 transition-transform" />
+                          <ChevronRight className="w-4 h-4 text-white dark:text-slate-400 group-hover/card:translate-x-1 transition-transform" />
                         </div>
                         <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-2 overflow-hidden border-2 border-white/20">
+                          <div className="w-12 h-12 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center p-2 overflow-hidden border-2 border-white dark:border-slate-700">
                             <ImageWithFallback
                               src={opponent?.image}
                               className="w-full h-full object-contain"
@@ -208,10 +208,10 @@ export function Home() {
                             />
                           </div>
                           <div>
-                            <p className="text-xs text-foreground font-bold uppercase tracking-tight">
+                            <p className="text-xs text-foreground dark:text-slate-300 font-bold uppercase tracking-tight">
                               vs {opponent?.name}
                             </p>
-                            <p className="text-2xl font-black text-white">
+                            <p className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">
                               {game.homeScore} - {game.awayScore}
                             </p>
                           </div>
@@ -237,7 +237,7 @@ export function Home() {
       >
         <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl p-8 border border-green-800/50 backdrop-blur-sm">
           <div className="mb-6">
-            <h2 className="text-2xl font-black mb-2 flex items-center gap-3 text-white">
+            <h2 className="text-2xl font-black mb-2 flex items-center gap-3 text-white dark:text-foreground">
               <MapPin className="w-6 h-6 text-green-400" />
               Games Near You
             </h2>
@@ -251,7 +251,7 @@ export function Home() {
               placeholder="Search by city or zip code..."
               value={userLocation}
               onChange={(e) => setUserLocation(e.target.value)}
-              className="w-full bg-background border border-green-800/50 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+              className="w-full bg-background border border-green-800/50 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white dark:text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
               aria-label="Search games by location"
             />
           </div>
@@ -292,7 +292,7 @@ export function Home() {
                   placeholder="Search team..."
                   value={teamQuery}
                   onChange={(e) => setTeamQuery(e.target.value)}
-                  className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                  className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white dark:text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
                   aria-label="Search broadcasts by team"
                 />
               </div>
@@ -303,7 +303,7 @@ export function Home() {
                   placeholder="Search division or league..."
                   value={divisionLeagueQuery}
                   onChange={(e) => setDivisionLeagueQuery(e.target.value)}
-                  className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                  className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white dark:text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
                   aria-label="Search broadcasts by division or league"
                 />
               </div>
@@ -347,7 +347,7 @@ export function Home() {
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0">
-                          <div className="font-black text-white uppercase tracking-tight truncate">
+                          <div className="font-black text-white dark:text-foreground dark:text-foreground uppercase tracking-tight truncate">
                             {b.title}
                           </div>
                           <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">
@@ -371,7 +371,7 @@ export function Home() {
                             </span>
                           ) : null}
                           {b.status === "live" ? (
-                            <span className="bg-red-600 text-white px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
+                            <span className="bg-red-600 text-white dark:text-foreground px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
                               LIVE
                             </span>
                           ) : null}
@@ -426,7 +426,7 @@ export function Home() {
                                 {away?.name || "Away Team"}
                               </span>
                             </div>
-                            <span className="text-2xl font-black text-white">{game.awayScore}</span>
+                            <span className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">{game.awayScore}</span>
                           </div>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
@@ -441,7 +441,7 @@ export function Home() {
                                 {home?.name || "Home Team"}
                               </span>
                             </div>
-                            <span className="text-2xl font-black text-white">{game.homeScore}</span>
+                            <span className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">{game.homeScore}</span>
                           </div>
                         </div>
 
@@ -487,7 +487,7 @@ export function Home() {
                 <div className="inline-flex items-center gap-2 bg-blue-600/10 text-blue-400 px-3 py-1 rounded-lg text-[10px] font-black mb-4 tracking-tight">
                   <Star className="w-3 h-3 fill-blue-400" /> Player of the Week
                 </div>
-                <h3 className="text-3xl font-black text-white mb-2 tracking-tighter uppercase">
+                <h3 className="text-3xl font-black text-white dark:text-foreground dark:text-foreground mb-2 tracking-tighter uppercase">
                   Michael Mitchell Jr.
                 </h3>
                 <p className="text-muted-foreground text-sm mb-6 leading-relaxed font-medium">
@@ -496,7 +496,7 @@ export function Home() {
                 </p>
                 <Link
                   to="/players"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-white bg-secondary hover:bg-blue-600 px-6 py-2.5 rounded-xl transition-all shadow-lg border border-white/5"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-white dark:text-foreground bg-secondary dark:bg-slate-800 hover:bg-blue-600 px-6 py-2.5 rounded-xl transition-all shadow-lg border border-white/5"
                 >
                   View Player Profile
                 </Link>
@@ -532,7 +532,7 @@ export function Home() {
                       />
                     </div>
                     <div>
-                      <div className="font-bold text-white group-hover:translate-x-1 transition-transform uppercase tracking-tight truncate">
+                      <div className="font-bold text-white dark:text-foreground group-hover:translate-x-1 transition-transform uppercase tracking-tight truncate">
                         {team.name}
                       </div>
                       <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest truncate">
@@ -547,7 +547,7 @@ export function Home() {
               ))}
               <Link
                 to="/rankings"
-                className="block p-5 text-center text-[10px] font-black text-muted-foreground hover:text-white transition-colors bg-background/50 uppercase tracking-[0.2em]"
+                className="block p-5 text-center text-[10px] font-black text-muted-foreground hover:text-white dark:hover:text-slate-300 transition-colors bg-background/50 uppercase tracking-[0.2em]"
               >
                 View Full Rankings
               </Link>
@@ -556,19 +556,19 @@ export function Home() {
 
           {/* Quick Stats */}
           <section className="bg-blue-600 rounded-3xl p-6 shadow-xl shadow-blue-900/20 border border-white/10">
-            <h3 className="text-white font-black text-lg mb-4 tracking-tight">SEASON RECAP</h3>
+            <h3 className="text-white dark:text-foreground font-black text-lg mb-4 tracking-tight">SEASON RECAP</h3>
             <div className="space-y-4">
-              <div className="bg-white/10 rounded-2xl p-4">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-4">
                 <p className="text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">
                   Total Games Played
                 </p>
-                <p className="text-2xl font-black text-white">482</p>
+                <p className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">482</p>
               </div>
-              <div className="bg-white/10 rounded-2xl p-4">
+              <div className="bg-white dark:bg-slate-700 rounded-2xl p-4">
                 <p className="text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">
                   Average PPG
                 </p>
-                <p className="text-2xl font-black text-white">32.4</p>
+                <p className="text-2xl font-black text-white dark:text-foreground dark:text-foreground">32.4</p>
               </div>
             </div>
           </section>

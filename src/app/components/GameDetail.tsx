@@ -47,35 +47,34 @@ export function GameDetail() {
             ></iframe>
           </div>
           <div className="absolute top-6 left-6 flex items-center gap-3">
-            <div className="bg-red-600 px-4 py-1.5 rounded-full flex items-center gap-2 shadow-xl border border-white/10">
+            <div className="bg-red-600 px-4 py-1.5 rounded-full flex items-center gap-2 shadow-xl border border-white/10 dark:border-white/20">
               {game.status === "live" ? (
-                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-white dark:bg-white rounded-full animate-pulse"></div>
               ) : null}
-              <span className="text-xs font-black tracking-widest text-white uppercase">
+              <span className="text-xs font-black tracking-widest text-white dark:text-white uppercase">
                 {game.status === "live" ? "Live" : "Video"}
               </span>
             </div>
-
-            {video.provider === "nfhs" ? (
-              <div className="bg-card/80 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/5">
-                <span className="text-[10px] font-bold text-foreground uppercase tracking-tighter">
-                  NFHS Network
-                </span>
-              </div>
-            ) : null}
 
             {video.pageUrl ? (
               <a
                 href={video.pageUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-card/80 hover:bg-card backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 border border-white/5"
+                className="bg-card/80 hover:bg-card backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 border border-white/5 dark:border-white/10"
               >
                 <ExternalLink className="w-3.5 h-3.5 text-muted-foreground" />
                 <span className="text-[10px] font-bold text-foreground uppercase tracking-tighter">
                   Open
                 </span>
               </a>
+            ) : null}
+            {video.provider === "nfhs" ? (
+              <div className="bg-card/80 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/5 dark:border-white/10">
+                <span className="text-[10px] font-bold text-foreground uppercase tracking-tighter">
+                  NFHS Network
+                </span>
+              </div>
             ) : null}
           </div>
         </motion.div>
@@ -169,9 +168,9 @@ export function GameDetail() {
           {/* Score */}
           <div className="text-center">
             <div className="flex items-center justify-center gap-6 mb-4">
-              <div className="text-6xl font-black text-white">{game.awayScore}</div>
+              <div className="text-6xl font-black text-foreground dark:text-white">{game.awayScore}</div>
               <div className="text-2xl font-black text-foreground">-</div>
-              <div className="text-6xl font-black text-white">{game.homeScore}</div>
+              <div className="text-6xl font-black text-foreground dark:text-white">{game.homeScore}</div>
             </div>
             {game.status === "live" && (
               <div className="text-lg font-black text-red-500 uppercase tracking-widest">

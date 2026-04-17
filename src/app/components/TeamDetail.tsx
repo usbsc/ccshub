@@ -37,7 +37,7 @@ export function TeamDetail() {
     return (
       <div className="text-center py-20">
         <h2 className="text-2xl font-bold mb-2">Team Not Found</h2>
-        <Link to="/" className="text-blue-400 hover:underline">
+        <Link to="/" className="text-blue-400 dark:text-blue-300 hover:underline">
           Back to Home
         </Link>
       </div>
@@ -75,7 +75,7 @@ export function TeamDetail() {
             />
           </div>
           <div className="absolute top-4 left-4 z-20">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center font-bold text-3xl text-foreground shadow-xl border-4 border-blue-600">
+            <div className="w-16 h-16 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center font-bold text-3xl text-foreground dark:text-white shadow-xl border-4 border-blue-600">
               {team.ranking}
             </div>
           </div>
@@ -106,7 +106,7 @@ export function TeamDetail() {
                       rel="noopener noreferrer"
                       className="p-2 bg-secondary/80 hover:bg-blue-400/20 rounded-full transition-all group"
                     >
-                      <Twitter className="w-5 h-5 text-foreground group-hover:text-blue-400" />
+                      <Twitter className="w-5 h-5 text-foreground group-hover:text-blue-400 dark:text-blue-300" />
                     </a>
                   )}
                   {team.socials.instagram && (
@@ -187,7 +187,7 @@ export function TeamDetail() {
             className="bg-card rounded-xl p-4 border border-border"
           >
             <div className="flex items-center gap-2 mb-2">
-              <stat.icon className="w-4 h-4 text-blue-400" />
+              <stat.icon className="w-4 h-4 text-blue-400 dark:text-blue-300" />
               <span className="text-xs text-muted-foreground uppercase">{stat.label}</span>
             </div>
             <div className="text-xl font-bold break-words line-clamp-2">{stat.value}</div>
@@ -208,7 +208,7 @@ export function TeamDetail() {
           className="bg-card rounded-2xl p-6 border border-border"
         >
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Users className="w-6 h-6 text-blue-400" />
+            <Users className="w-6 h-6 text-blue-400 dark:text-blue-300" />
             All Levels
           </h2>
           <div className="grid gap-3">
@@ -234,7 +234,7 @@ export function TeamDetail() {
           className="bg-card rounded-2xl p-6 border border-border"
         >
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Users className="w-6 h-6 text-blue-400" />
+            <Users className="w-6 h-6 text-blue-400 dark:text-blue-300" />
             Coaching Staff
           </h2>
           <div className="space-y-3">
@@ -354,7 +354,7 @@ export function TeamDetail() {
         className="bg-card rounded-2xl p-6 border border-border"
       >
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Target className="w-6 h-6 text-green-400" />
+          <Target className="w-6 h-6 text-green-400 dark:text-green-300" />
           Common Plays
         </h2>
         <div className="flex flex-wrap gap-3">
@@ -377,14 +377,14 @@ export function TeamDetail() {
         className="bg-card rounded-2xl p-6 border border-border"
       >
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Shield className="w-6 h-6 text-red-400" />
+          <Shield className="w-6 h-6 text-red-400 dark:text-red-300" />
           Common Defensive Tendencies
         </h2>
         <div className="flex flex-wrap gap-3">
           {team.commonDefensiveTendencies.map((play, idx) => (
             <span
               key={idx}
-              className="bg-red-900/30 px-4 py-2 rounded-full font-medium border border-red-800 hover:bg-red-900/50 transition-colors text-red-200"
+              className="bg-red-900/30 px-4 py-2 rounded-full font-medium border border-red-800 hover:bg-red-900/50 transition-colors text-red-200 dark:text-red-300"
             >
               {play}
             </span>
@@ -400,13 +400,13 @@ export function TeamDetail() {
         className="bg-gradient-to-br from-blue-900/30 to-blue-800/30 rounded-2xl p-6 border border-blue-700"
       >
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Award className="w-6 h-6 text-blue-400" />
+          <Award className="w-6 h-6 text-blue-400 dark:text-blue-300" />
           Team Strengths
         </h2>
         <ul className="grid md:grid-cols-2 gap-3">
           {team.strengths.map((strength, idx) => (
             <li key={idx} className="flex items-start gap-3">
-              <span className="text-blue-400 mt-1">✓</span>
+              <span className="text-blue-400 dark:text-blue-300 mt-1">✓</span>
               <span>{strength}</span>
             </li>
           ))}
@@ -442,7 +442,7 @@ export function TeamDetail() {
             className="bg-card rounded-2xl p-6 border border-border"
           >
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-green-400" />
+              <Calendar className="w-5 h-5 text-green-400 dark:text-green-300" />
               Upcoming Games
             </h2>
             <div className="space-y-3">
@@ -478,7 +478,7 @@ export function TeamDetail() {
           className="bg-card rounded-2xl p-6 border border-border"
         >
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-            <Award className="w-5 h-5 text-blue-400" />
+            <Award className="w-5 h-5 text-blue-400 dark:text-blue-300" />
             Recent Results
           </h2>
           <div className="space-y-3">
@@ -503,7 +503,7 @@ export function TeamDetail() {
                         {new Date(game.date).toLocaleDateString()}
                       </span>
                       <span
-                        className={`text-xs font-bold ${won ? "text-green-400" : "text-red-400"}`}
+                        className={`text-xs font-bold ${won ? "text-green-400 dark:text-green-300" : "text-red-400 dark:text-red-300"}`}
                       >
                         {won ? "W" : "L"}
                       </span>

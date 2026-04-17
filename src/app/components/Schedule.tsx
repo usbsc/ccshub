@@ -118,10 +118,10 @@ export function Schedule() {
         </div>
 
         <div className="relative p-10 md:p-16">
-          <div className="inline-flex items-center gap-2 bg-green-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-white mb-4">
+          <div className="inline-flex items-center gap-2 bg-green-600 dark:bg-green-700 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-white dark:text-foreground mb-4">
             <Calendar className="w-3 h-3 fill-white" /> {seasonLabel(selectedYear)} Season Schedule
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight leading-[0.85] mb-4">
+          <h1 className="text-5xl md:text-6xl font-black text-white dark:text-foreground tracking-tight leading-[0.85] mb-4">
             Game <br />
             <span className="text-green-500 font-black">Plan</span>
           </h1>
@@ -140,7 +140,7 @@ export function Schedule() {
               onClick={() => setSelectedLevel(level)}
               className={`px-6 py-2.5 rounded-xl font-bold text-xs tracking-wide transition-all whitespace-nowrap border ${
                 selectedLevel === level
-                  ? "bg-white text-foreground border-white shadow-lg"
+                  ? "bg-white dark:bg-slate-800 text-foreground border-white dark:border-slate-700 shadow-lg"
                   : "bg-card text-muted-foreground border-border hover:text-foreground"
               }`}
             >
@@ -179,7 +179,7 @@ export function Schedule() {
             placeholder="Search team..."
             value={teamQuery}
             onChange={(e) => setTeamQuery(e.target.value)}
-            className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+            className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white dark:text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
             aria-label="Search broadcasts by team"
           />
         </div>
@@ -191,7 +191,7 @@ export function Schedule() {
             placeholder="Search division or league..."
             value={divisionLeagueQuery}
             onChange={(e) => setDivisionLeagueQuery(e.target.value)}
-            className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
+            className="w-full bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white dark:text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all shadow-xl"
             aria-label="Search broadcasts by division or league"
           />
         </div>
@@ -204,7 +204,7 @@ export function Schedule() {
             <div className="text-[10px] font-black text-green-400 uppercase tracking-widest">
               NFHS Network • CIFCCS
             </div>
-            <h2 className="text-2xl font-black tracking-tighter text-white uppercase">
+            <h2 className="text-2xl font-black tracking-tighter text-white dark:text-foreground uppercase">
               Broadcasts
             </h2>
           </div>
@@ -235,7 +235,7 @@ export function Schedule() {
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
-                    <div className="font-black text-white uppercase tracking-tight truncate">
+                    <div className="font-black text-white dark:text-foreground uppercase tracking-tight truncate">
                       {b.title}
                     </div>
                     <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">
@@ -259,7 +259,7 @@ export function Schedule() {
                       </span>
                     ) : null}
                     {b.status === "live" ? (
-                      <span className="bg-red-600 text-white px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
+                      <span className="bg-red-600 text-white dark:text-foreground px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
                         LIVE
                       </span>
                     ) : null}
@@ -277,7 +277,7 @@ export function Schedule() {
         <section>
           <div className="flex items-center gap-3 mb-8">
             <span className="w-2 h-8 bg-red-600 rounded-full"></span>
-            <h2 className="text-3xl font-black tracking-tighter text-white uppercase">
+            <h2 className="text-3xl font-black tracking-tighter text-white dark:text-foreground uppercase">
               Live Broadcasts
             </h2>
           </div>
@@ -292,8 +292,8 @@ export function Schedule() {
                   className="group relative bg-card rounded-[2rem] border-2 border-red-600/50 p-8 hover:bg-secondary transition-all shadow-2xl shadow-red-900/10"
                 >
                   <div className="flex justify-between items-center mb-8">
-                    <span className="bg-red-600 text-white px-3 py-1 rounded-full text-[10px] font-black tracking-widest uppercase flex items-center gap-2">
-                      <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    <span className="bg-red-600 dark:bg-red-700 text-white dark:text-foreground px-3 py-1 rounded-full text-[10px] font-black tracking-widest uppercase flex items-center gap-2">
+                      <span className="w-2 h-2 bg-white dark:bg-slate-300 rounded-full animate-pulse"></span>
                       Broadcast Live
                     </span>
                     <div className="flex items-center gap-2 text-[10px] font-black text-muted-foreground tracking-widest uppercase">
@@ -311,7 +311,7 @@ export function Schedule() {
                         />
                       </div>
                       <div>
-                        <div className="font-black text-2xl text-white uppercase tracking-tight leading-none mb-1">
+                        <div className="font-black text-2xl text-white dark:text-foreground uppercase tracking-tight leading-none mb-1">
                           {away?.name}
                         </div>
                         <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
@@ -319,7 +319,7 @@ export function Schedule() {
                         </div>
                       </div>
                     </div>
-                    <div className="px-4 py-2 bg-background rounded-xl font-black text-xl text-red-500 border border-border tracking-tighter">
+                    <div className="px-4 py-2 bg-background rounded-xl font-black text-xl text-red-500 dark:text-red-400 border border-border dark:border-slate-700 tracking-tighter">
                       VS
                     </div>
                     <div className="flex flex-col items-start gap-3 text-left">
@@ -331,7 +331,7 @@ export function Schedule() {
                         />
                       </div>
                       <div>
-                        <div className="font-black text-2xl text-white uppercase tracking-tight leading-none mb-1">
+                        <div className="font-black text-2xl text-white dark:text-foreground uppercase tracking-tight leading-none mb-1">
                           {home?.name}
                         </div>
                         <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
@@ -407,7 +407,7 @@ export function Schedule() {
                           />
                         </div>
                         <div className="min-w-0">
-                          <div className="font-black text-white uppercase tracking-tight truncate">
+                          <div className="font-black text-white dark:text-foreground uppercase tracking-tight truncate">
                             {away?.name || "Away"}
                           </div>
                           <div className="text-[10px] font-bold text-muted-foreground uppercase">
@@ -422,7 +422,7 @@ export function Schedule() {
 
                       <div className="flex items-center gap-4 flex-1 justify-end text-right">
                         <div className="min-w-0">
-                          <div className="font-black text-white uppercase tracking-tight truncate">
+                          <div className="font-black text-white dark:text-foreground uppercase tracking-tight truncate">
                             {home?.name || "Home"}
                           </div>
                           <div className="text-[10px] font-bold text-muted-foreground uppercase">
@@ -456,7 +456,7 @@ export function Schedule() {
                         </a>
                       </div>
                       <div className="w-8 h-8 rounded-full bg-secondary group-hover:bg-green-600 flex items-center justify-center transition-all">
-                        <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-white" />
+                        <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-white dark:group-hover:text-slate-300" />
                       </div>
                     </div>
                   </Link>

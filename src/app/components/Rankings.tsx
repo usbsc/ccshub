@@ -65,10 +65,10 @@ export function Rankings() {
 
         <div className="relative p-8 md:p-12 flex flex-col md:flex-row justify-between items-end gap-8">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 bg-blue-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-white mb-2">
+            <div className="inline-flex items-center gap-2 bg-blue-600 dark:bg-blue-700 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-white dark:text-foreground mb-2">
               <Award className="w-3 h-3 fill-white" /> 2025-2026 Rankings
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-none">
+            <h1 className="text-4xl md:text-5xl font-black text-white dark:text-foreground tracking-tight leading-none">
               CCS Power <br />
               <span className="text-blue-500 font-black">Index</span>
             </h1>
@@ -85,7 +85,7 @@ export function Rankings() {
                 placeholder="Search school or mascot..."
                 value={searchQuery}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full md:w-80 bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
+                className="w-full md:w-80 bg-background border border-border rounded-2xl py-4 pl-12 pr-4 text-sm font-bold text-white dark:text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-xl"
               />
             </div>
           </div>
@@ -101,7 +101,7 @@ export function Rankings() {
               onClick={() => setSelectedDivision(division)}
               className={`px-6 py-2.5 rounded-xl font-bold text-xs tracking-wide transition-all whitespace-nowrap border ${
                 selectedDivision === division
-                  ? "bg-white text-foreground border-white shadow-lg"
+                  ? "bg-white dark:bg-slate-800 text-foreground border-white dark:border-slate-700 shadow-lg"
                   : "bg-card text-muted-foreground border-border hover:text-foreground"
               }`}
             >
@@ -146,7 +146,7 @@ export function Rankings() {
                     <div
                       className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-lg transition-all ${
                         team.ranking <= 3
-                          ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30 rotate-3"
+                          ? "bg-blue-600 dark:bg-blue-700 text-white dark:text-foreground shadow-lg shadow-blue-600 dark:shadow-blue-700/30 rotate-3"
                           : "bg-secondary text-muted-foreground group-hover:bg-secondary"
                       }`}
                     >
@@ -167,7 +167,7 @@ export function Rankings() {
                       </div>
                     </div>
                     <div className="min-w-0">
-                      <div className="font-bold text-white group-hover:text-blue-400 transition-colors truncate tracking-tight uppercase">
+                      <div className="font-bold text-white dark:text-foreground group-hover:text-blue-400 transition-colors truncate tracking-tight uppercase">
                         {team.name}
                       </div>
                       <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest truncate">
@@ -181,7 +181,7 @@ export function Rankings() {
 
                   {/* Record (Desktop) */}
                   <div className="hidden md:block col-span-2 text-center">
-                    <div className="font-black text-xl text-white tracking-tighter">
+                    <div className="font-black text-xl text-white dark:text-foreground tracking-tighter">
                       {team.record.wins}-{team.record.losses}
                     </div>
                     <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-wide">
@@ -236,7 +236,7 @@ export function Rankings() {
           {sortedTeams.length === 0 && (
             <div className="p-20 text-center">
               <Search className="w-12 h-12 text-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-black text-white uppercase tracking-widest">
+              <h3 className="text-xl font-black text-white dark:text-foreground uppercase tracking-widest">
                 No matching teams
               </h3>
               <p className="text-muted-foreground text-sm mt-2">
@@ -267,7 +267,7 @@ export function Rankings() {
             <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-3 group-hover:text-blue-400 transition-colors">
               {stat.label}
             </div>
-            <div className="text-4xl font-black text-white tracking-tighter">{stat.value}</div>
+            <div className="text-4xl font-black text-white dark:text-foreground tracking-tighter">{stat.value}</div>
           </motion.div>
         ))}
       </div>

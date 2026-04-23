@@ -22,6 +22,7 @@ import { ImageWithFallback } from "./common/ImageWithFallback";
 import { UPDATE_INTERVALS, DISPLAY_LIMITS } from "../constants";
 import { homeTeamStorage } from "../services/storage";
 import { googleMapsSearchUrl } from "../utils/maps";
+import { PlaysOfTheWeek } from "./PlaysOfTheWeek";
 
 export function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -328,6 +329,9 @@ export function Home() {
           )}
         </div>
       </motion.section>
+
+      {/* Plays of the Week */}
+      <PlaysOfTheWeek />
 
       <div className="grid lg:grid-cols-3 gap-8">
         {/* Main Feed Column */}

@@ -23,6 +23,7 @@ export function Root() {
     { path: "/players", label: "Players", icon: Users },
     { path: "/rankings", label: "Rankings", icon: BarChart3 },
     { path: "/broadcasts", label: "Broadcasts", icon: Award },
+    { path: "/plays", label: "Plays", icon: Award },
     { path: "/photos", label: "Photos", icon: Image },
   ];
 

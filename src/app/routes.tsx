@@ -11,6 +11,7 @@ import { NotFound } from "./components/NotFound";
 import { Teams } from "./components/Teams";
 import { Broadcasts } from "./components/Broadcasts";
 import { Photos } from "./components/Photos";
+import { PlaysOfTheWeekPage } from "./components/PlaysOfTheWeekPage";
 
 export const router = createBrowserRouter(
   [
@@ -25,6 +26,7 @@ export const router = createBrowserRouter(
         { path: "rankings", Component: Rankings },
         { path: "broadcasts", Component: Broadcasts },
         { path: "photos", Component: Photos },
+        { path: "plays", Component: PlaysOfTheWeekPage },
         { path: "scores", Component: Scores },
         { path: "team/:teamId", Component: TeamDetail },
         { path: "game/:gameId", Component: GameDetail },

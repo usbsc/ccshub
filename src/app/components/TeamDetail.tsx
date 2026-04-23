@@ -25,7 +25,6 @@ import {
 } from "../data/games";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
-import { UniformShowcase } from "./UniformShowcase";
 import { googleMapsSearchUrl } from "../utils/maps";
 
 export function TeamDetail() {
@@ -195,34 +194,28 @@ export function TeamDetail() {
         ))}
       </div>
 
-      {/* Uniforms & Levels */}
-      <div className="grid md:grid-cols-2 gap-6">
-        {/* Uniforms */}
-        <UniformShowcase team={team} />
-
-        {/* Level Records */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-card rounded-2xl p-6 border border-border"
-        >
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Users className="w-6 h-6 text-blue-400 dark:text-blue-300" />
-            All Levels
-          </h2>
-          <div className="grid gap-3">
-            {Object.entries(team.levels).map(([level, record]) => (
-              <div key={level} className="bg-secondary rounded-xl p-3">
-                <div className="text-sm text-muted-foreground uppercase mb-1">{level}</div>
-                <div className="text-xl font-bold">
-                  {typeof record === "string" ? record : `${record.wins}-${record.losses}`}
-                </div>
+      {/* Level Records */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="bg-card rounded-2xl p-6 border border-border"
+      >
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <Users className="w-6 h-6 text-blue-400 dark:text-blue-300" />
+          All Levels
+        </h2>
+        <div className="grid gap-3">
+          {Object.entries(team.levels).map(([level, record]) => (
+            <div key={level} className="bg-secondary rounded-xl p-3">
+              <div className="text-sm text-muted-foreground uppercase mb-1">{level}</div>
+              <div className="text-xl font-bold">
+                {typeof record === "string" ? record : `${record.wins}-${record.losses}`}
               </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
 
       {/* Coaching Staff & System */}
       <div className="grid md:grid-cols-2 gap-6">

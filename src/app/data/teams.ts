@@ -11,11 +11,6 @@ export interface SchoolInfo {
 }
 
 export interface Team {
-  uniforms?: {
-    home?: { primary: string; secondary: string; description?: string };
-    away?: { primary: string; secondary: string; description?: string };
-    alternate?: { primary: string; secondary: string; description?: string };
-  };
   id: string;
   name: string;
   mascot: string;
@@ -68,19 +63,6 @@ export const baseTeams: Team[] = [
       primary: "#8B0000",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: {
-        primary: "#8B0000",
-        secondary: "#FFD700",
-        description: "Red jersey with gold accents",
-      },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#000000",
-        description: "White jersey with maroon trim",
-      },
-      alternate: { primary: "#FFD700", secondary: "#8B0000", description: "Gold jersey (rare)" },
-    },
     league: "West Catholic Athletic League",
     division: "Bay Foothill League - Division I",
     record: {
@@ -129,15 +111,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#000080",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#004B87", secondary: "#FFFFFF", description: "Dark gray jersey with gold" },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#004B87",
-        description: "White jersey with gray trim",
-      },
-      alternate: { primary: "#FFFFFF", secondary: "#004B87", description: "Gold jersey" },
     },
     league: "West Catholic Athletic League",
     division: "Bay Foothill League - Division I",
@@ -188,15 +161,6 @@ export const baseTeams: Team[] = [
       primary: "#0033A0",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#0033A0", secondary: "#FFFFFF", description: "Blue jersey with white" },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#0033A0",
-        description: "White jersey with blue trim",
-      },
-      alternate: { primary: "#FFFFFF", secondary: "#0033A0", description: "Gray alternate" },
-    },
     league: "West Catholic Athletic League",
     division: "Bay Foothill League - Division I",
     record: {
@@ -245,11 +209,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#990033",
       secondary: "#FFCC00",
-    },
-    uniforms: {
-      home: { primary: "#990033", secondary: "#FFCC00", description: "Maroon jersey with gold" },
-      away: { primary: "#FFFFFF", secondary: "#990033", description: "White jersey with maroon" },
-      alternate: { primary: "#FFCC00", secondary: "#990033", description: "Gold jersey" },
     },
     league: "West Catholic Athletic League",
     division: "Bay Foothill League - Division I",
@@ -300,11 +259,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#FF6600",
       secondary: "#000000",
-    },
-    uniforms: {
-      home: { primary: "#FF6600", secondary: "#000000", description: "Orange jersey with black" },
-      away: { primary: "#FFFFFF", secondary: "#FF6600", description: "White jersey with orange" },
-      alternate: { primary: "#000000", secondary: "#FF6600", description: "Black jersey" },
     },
     league: "West Catholic Athletic League",
     division: "Bay Foothill League - Division I",
@@ -359,15 +313,6 @@ export const baseTeams: Team[] = [
       primary: "#0066CC",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#0066CC", secondary: "#FFFFFF", description: "Blue jersey with white" },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#0066CC",
-        description: "White jersey with blue trim",
-      },
-      alternate: { primary: "#FFFFFF", secondary: "#0066CC", description: "Gold alternate" },
-    },
     league: "West Catholic Athletic League",
     division: "Bay Foothill League - Division I",
     record: {
@@ -417,11 +362,6 @@ export const baseTeams: Team[] = [
       primary: "#003366",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFFFFF", description: "Maroon jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "White with maroon trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#8B0000", description: "Gold jersey" },
-    },
     league: "West Catholic Athletic League",
     division: "Bay Foothill League - Division I",
     record: {
@@ -470,11 +410,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#228B22",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFCC00", description: "Red jersey with gold" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "White with red trim" },
-      alternate: { primary: "#FFCC00", secondary: "#8B0000", description: "Gold jersey" },
     },
     league: "West Catholic Athletic League",
     division: "Bay Foothill League - Division I",
@@ -526,11 +461,6 @@ export const baseTeams: Team[] = [
       primary: "#003366",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFFFFF", description: "Dark blue with white" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with blue trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#003366", description: "Orange alternate" },
-    },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",
     record: {
@@ -576,15 +506,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#000066",
       secondary: "#FFCC00",
-    },
-    uniforms: {
-      home: { primary: "#000066", secondary: "#FFCC00", description: "Navy jersey with gold" },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#000066",
-        description: "White jersey with navy trim",
-      },
-      alternate: { primary: "#FFCC00", secondary: "#000066", description: "Gold alternate" },
     },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",
@@ -635,11 +556,6 @@ export const baseTeams: Team[] = [
       primary: "#003366",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFFFFF", description: "Navy jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#003366", description: "Orange alternate" },
-    },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",
     record: {
@@ -689,11 +605,6 @@ export const baseTeams: Team[] = [
       primary: "#003366",
       secondary: "#FFCC00",
     },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFCC00", description: "Navy with gold" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy" },
-      alternate: { primary: "#FFCC00", secondary: "#003366", description: "Gold jersey" },
-    },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",
     record: {
@@ -740,11 +651,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#000080",
       secondary: "#00BFFF",
-    },
-    uniforms: {
-      home: { primary: "#0066CC", secondary: "#FFFFFF", description: "Navy jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#0066CC", description: "White with navy" },
-      alternate: { primary: "#FFFFFF", secondary: "#0066CC", description: "Orange jersey" },
     },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
@@ -793,11 +699,6 @@ export const baseTeams: Team[] = [
       primary: "#8B4513",
       secondary: "#FFA500",
     },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Red jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with red trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Black jersey" },
-    },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
     record: {
@@ -840,11 +741,6 @@ export const baseTeams: Team[] = [
       primary: "#000080",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFD700", description: "Navy with gold" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy" },
-      alternate: { primary: "#FFD700", secondary: "#003366", description: "Gold jersey" },
-    },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
     record: {
@@ -886,11 +782,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#000080",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#228B22", secondary: "#FFFFFF", description: "Forest green with white" },
-      away: { primary: "#FFFFFF", secondary: "#228B22", description: "White with green trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#228B22", description: "Gold jersey" },
     },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
@@ -935,11 +826,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#8B0000",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Orange-red with black" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with orange trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Black jersey" },
     },
     league: "PCAL - Gabilan",
     division: "PCAL - Gabilan",
@@ -986,11 +872,6 @@ export const baseTeams: Team[] = [
       primary: "#8B0000",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#228B22", secondary: "#FFD700", description: "Green jersey with gold" },
-      away: { primary: "#FFFFFF", secondary: "#228B22", description: "White jersey with green" },
-      alternate: { primary: "#FFD700", secondary: "#228B22", description: "Gold jersey" },
-    },
     league: "PCAL - Gabilan",
     division: "PCAL - Gabilan",
     record: {
@@ -1035,11 +916,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#000080",
       secondary: "#FFFFFF",
-    },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFFFFF", description: "Maroon with white" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "White with maroon" },
-      alternate: { primary: "#FFFFFF", secondary: "#8B0000", description: "Gold jersey" },
     },
     league: "SCCAL",
     division: "SCCAL",
@@ -1086,11 +962,6 @@ export const baseTeams: Team[] = [
       primary: "#006400",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFCC00", description: "Red jersey with gold" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "White with red trim" },
-      alternate: { primary: "#FFCC00", secondary: "#8B0000", description: "Gold jersey" },
-    },
     league: "PAL - Bay",
     division: "PAL - Bay",
     record: {
@@ -1133,11 +1004,6 @@ export const baseTeams: Team[] = [
       primary: "Blue",
       secondary: "Gold",
     },
-    uniforms: {
-      home: { primary: "#8B3A00", secondary: "#FFFFFF", description: "Navy with gold" },
-      away: { primary: "#FFFFFF", secondary: "#8B3A00", description: "White with navy" },
-      alternate: { primary: "#FFFFFF", secondary: "#8B3A00", description: "Gold jersey" },
-    },
     league: "BVAL - Santa Teresa",
     division: "BVAL - Santa Teresa",
     record: {
@@ -1179,11 +1045,6 @@ export const baseTeams: Team[] = [
       primary: "Blue",
       secondary: "Gold",
     },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Red jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with red trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Navy jersey" },
-    },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
     record: {
@@ -1221,11 +1082,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Green",
       secondary: "Gold",
-    },
-    uniforms: {
-      home: { primary: "#228B22", secondary: "#FFFFFF", description: "Green jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#228B22", description: "White with green trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#228B22", description: "Gold jersey" },
     },
     league: "BVAL - Santa Teresa",
     division: "BVAL - Santa Teresa",
@@ -1265,11 +1121,6 @@ export const baseTeams: Team[] = [
       primary: "Green",
       secondary: "White",
     },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Red jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with red trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Black jersey" },
-    },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
     record: {
@@ -1307,11 +1158,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Red",
       secondary: "Blue",
-    },
-    uniforms: {
-      home: { primary: "#228B22", secondary: "#FFFFFF", description: "Green jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#228B22", description: "White with green trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#228B22", description: "Gold jersey" },
     },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
@@ -1351,11 +1197,6 @@ export const baseTeams: Team[] = [
       primary: "Orange",
       secondary: "Black",
     },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Red jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with red trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Black jersey" },
-    },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
     record: {
@@ -1393,11 +1234,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Blue",
       secondary: "Gold",
-    },
-    uniforms: {
-      home: { primary: "#000066", secondary: "#FFCC00", description: "Navy with gold" },
-      away: { primary: "#FFFFFF", secondary: "#000066", description: "White with navy" },
-      alternate: { primary: "#FFCC00", secondary: "#000066", description: "Gold jersey" },
     },
     league: "BVAL - Santa Teresa",
     division: "BVAL - Santa Teresa",
@@ -1440,11 +1276,6 @@ export const baseTeams: Team[] = [
       primary: "Green",
       secondary: "Gold",
     },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Navy jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with navy" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Orange jersey" },
-    },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
     record: {
@@ -1482,11 +1313,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Red",
       secondary: "White",
-    },
-    uniforms: {
-      home: { primary: "#FF6600", secondary: "#FFFFFF", description: "Orange-red with white" },
-      away: { primary: "#FFFFFF", secondary: "#FF6600", description: "White with orange trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#FF6600", description: "Black jersey" },
     },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
@@ -1526,11 +1352,6 @@ export const baseTeams: Team[] = [
       primary: "Blue",
       secondary: "Gold",
     },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Red jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with red trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Black jersey" },
-    },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
     record: {
@@ -1568,11 +1389,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Maroon",
       secondary: "Gold",
-    },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFD700", description: "Navy with gold" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy" },
-      alternate: { primary: "#FFD700", secondary: "#003366", description: "Gold jersey" },
     },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
@@ -1612,11 +1428,6 @@ export const baseTeams: Team[] = [
       primary: "Blue",
       secondary: "Gold",
     },
-    uniforms: {
-      home: { primary: "#0066CC", secondary: "#FFFFFF", description: "Navy jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#0066CC", description: "White with navy" },
-      alternate: { primary: "#FFFFFF", secondary: "#0066CC", description: "Orange jersey" },
-    },
     league: "BVAL - Santa Teresa",
     division: "BVAL - Santa Teresa",
     record: {
@@ -1654,11 +1465,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Blue",
       secondary: "Gold",
-    },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFD700", description: "Navy with gold" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy" },
-      alternate: { primary: "#FFD700", secondary: "#003366", description: "Gold jersey" },
     },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
@@ -1698,11 +1504,6 @@ export const baseTeams: Team[] = [
       primary: "Red",
       secondary: "White",
     },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Red jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with red trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Black jersey" },
-    },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
     record: {
@@ -1740,11 +1541,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Blue",
       secondary: "Gold",
-    },
-    uniforms: {
-      home: { primary: "#2D5016", secondary: "#FFD700", description: "Green with gold" },
-      away: { primary: "#FFFFFF", secondary: "#2D5016", description: "White with green" },
-      alternate: { primary: "#FFD700", secondary: "#2D5016", description: "Gold jersey" },
     },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
@@ -1784,11 +1580,6 @@ export const baseTeams: Team[] = [
       primary: "Silver",
       secondary: "Blue",
     },
-    uniforms: {
-      home: { primary: "#C0C0C0", secondary: "#000000", description: "Silver with black" },
-      away: { primary: "#FFFFFF", secondary: "#C0C0C0", description: "White with silver" },
-      alternate: { primary: "#000000", secondary: "#C0C0C0", description: "Black jersey" },
-    },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
     record: {
@@ -1826,11 +1617,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Maroon",
       secondary: "White",
-    },
-    uniforms: {
-      home: { primary: "#8B4513", secondary: "#FFFFFF", description: "Brown with white" },
-      away: { primary: "#FFFFFF", secondary: "#8B4513", description: "White with brown" },
-      alternate: { primary: "#FFFFFF", secondary: "#8B4513", description: "Gold jersey" },
     },
     league: "BVAL - Santa Teresa",
     division: "BVAL - Santa Teresa",
@@ -1873,11 +1659,6 @@ export const baseTeams: Team[] = [
       primary: "Red",
       secondary: "Blue",
     },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFFFFF", description: "Navy jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy" },
-      alternate: { primary: "#FFFFFF", secondary: "#003366", description: "Orange jersey" },
-    },
     league: "BVAL - Santa Teresa",
     division: "BVAL - Santa Teresa",
     record: {
@@ -1915,11 +1696,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Red",
       secondary: "Gold",
-    },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Red jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "White with red trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#CC0000", description: "Black jersey" },
     },
     league: "BVAL - Santa Teresa",
     division: "BVAL - Santa Teresa",
@@ -1959,11 +1735,6 @@ export const baseTeams: Team[] = [
       primary: "Blue",
       secondary: "Gold",
     },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFD700", description: "Navy with gold" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy" },
-      alternate: { primary: "#FFD700", secondary: "#003366", description: "Gold jersey" },
-    },
     league: "BVAL - West Valley",
     division: "BVAL - West Valley",
     record: {
@@ -2001,11 +1772,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Red",
       secondary: "White",
-    },
-    uniforms: {
-      home: { primary: "#0066CC", secondary: "#FFFFFF", description: "Blue jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#0066CC", description: "White with blue trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#0066CC", description: "Gold jersey" },
     },
     league: "SCVAL - El Camino",
     division: "SCVAL - El Camino",
@@ -2045,11 +1811,6 @@ export const baseTeams: Team[] = [
       primary: "Red",
       secondary: "White",
     },
-    uniforms: {
-      home: { primary: "#FF6600", secondary: "#000000", description: "Orange with black" },
-      away: { primary: "#FFFFFF", secondary: "#FF6600", description: "White with orange" },
-      alternate: { primary: "#000000", secondary: "#FF6600", description: "Black jersey" },
-    },
     league: "SCVAL - El Camino",
     division: "SCVAL - El Camino",
     record: {
@@ -2087,11 +1848,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Red",
       secondary: "Black",
-    },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFFFFF", description: "Navy jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy" },
-      alternate: { primary: "#FFFFFF", secondary: "#003366", description: "Orange jersey" },
     },
     league: "SCVAL - El Camino",
     division: "SCVAL - El Camino",
@@ -2131,11 +1887,6 @@ export const baseTeams: Team[] = [
       primary: "Green",
       secondary: "White",
     },
-    uniforms: {
-      home: { primary: "#0066CC", secondary: "#FFFFFF", description: "Blue jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#0066CC", description: "White with blue trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#0066CC", description: "Gold jersey" },
-    },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
     record: {
@@ -2173,11 +1924,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Blue",
       secondary: "Gold",
-    },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFFFFF", description: "Maroon with white" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "White with maroon" },
-      alternate: { primary: "#FFFFFF", secondary: "#8B0000", description: "Gold jersey" },
     },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
@@ -2217,11 +1963,6 @@ export const baseTeams: Team[] = [
       primary: "Green",
       secondary: "White",
     },
-    uniforms: {
-      home: { primary: "#4B0082", secondary: "#FFFFFF", description: "Purple jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#4B0082", description: "White with purple trim" },
-      alternate: { primary: "#FFFFFF", secondary: "#4B0082", description: "Gold jersey" },
-    },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
     record: {
@@ -2260,11 +2001,6 @@ export const baseTeams: Team[] = [
       primary: "Purple",
       secondary: "White",
     },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFFFFF", description: "Navy with gold" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "White with navy" },
-      alternate: { primary: "#FFFFFF", secondary: "#003366", description: "Gold jersey" },
-    },
     league: "PCAL - Gabilan",
     division: "PCAL - Gabilan",
     record: {
@@ -2302,11 +2038,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "Blue",
       secondary: "Gold",
-    },
-    uniforms: {
-      home: { primary: "#0066CC", secondary: "#FFFFFF", description: "Blue jersey with white" },
-      away: { primary: "#FFFFFF", secondary: "#0066CC", description: "White with blue trim" },
-      alternate: { primary: "#FFD700", secondary: "#0066CC", description: "Gold jersey with blue trim" },
     },
     league: "SCVAL - Santa Clara Valley Athletic League",
     division: "SCVAL",
@@ -2352,15 +2083,6 @@ export const baseTeams: Team[] = [
       primary: "#FF0000",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#CC0000", secondary: "#FFFFFF", description: "Gilroy home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#CC0000", description: "Gilroy away uniform" },
-      alternate: {
-        primary: "#FFFFFF",
-        secondary: "#CC0000",
-        description: "Gilroy alternate uniform",
-      },
-    },
     league: "PCAL - Cypress",
     division: "PCAL - Cypress",
     record: {
@@ -2399,15 +2121,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#003366",
       secondary: "#FFFFFF",
-    },
-    uniforms: {
-      home: { primary: "#003366", secondary: "#FFFFFF", description: "Morgan Hill home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003366", description: "Morgan Hill away uniform" },
-      alternate: {
-        primary: "#FFFFFF",
-        secondary: "#003366",
-        description: "Morgan Hill alternate uniform",
-      },
     },
     league: "PCAL - Cypress",
     division: "PCAL - Cypress",
@@ -2451,15 +2164,6 @@ export const baseTeams: Team[] = [
       primary: "#2E7D32",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#2D5016", secondary: "#FFFFFF", description: "San Martin home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#2D5016", description: "San Martin away uniform" },
-      alternate: {
-        primary: "#FFFFFF",
-        secondary: "#2D5016",
-        description: "San Martin alternate uniform",
-      },
-    },
     league: "PCAL - Cypress",
     division: "PCAL - Cypress",
     record: {
@@ -2501,23 +2205,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#FFD700",
       secondary: "#000000",
-    },
-    uniforms: {
-      home: {
-        primary: "#FFD700",
-        secondary: "#000000",
-        description: "Tennessee Williams home uniform",
-      },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#FFD700",
-        description: "Tennessee Williams away uniform",
-      },
-      alternate: {
-        primary: "#000000",
-        secondary: "#FFD700",
-        description: "Tennessee Williams alternate uniform",
-      },
     },
     league: "PCAL - Cypress",
     division: "PCAL - Cypress",
@@ -2561,23 +2248,6 @@ export const baseTeams: Team[] = [
       primary: "#8B0000",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: {
-        primary: "#8B0000",
-        secondary: "#FFD700",
-        description: "East Palo Alto home uniform",
-      },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#8B0000",
-        description: "East Palo Alto away uniform",
-      },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "East Palo Alto alternate uniform",
-      },
-    },
     league: "PAL",
     division: "PAL",
     record: {
@@ -2619,15 +2289,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#003D99",
       secondary: "#FFFFFF",
-    },
-    uniforms: {
-      home: { primary: "#003D99", secondary: "#FFFFFF", description: "Livermore home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003D99", description: "Livermore away uniform" },
-      alternate: {
-        primary: "#FFFFFF",
-        secondary: "#003D99",
-        description: "Livermore alternate uniform",
-      },
     },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
@@ -2674,15 +2335,6 @@ export const baseTeams: Team[] = [
       primary: "#2E7D32",
       secondary: "#FFFFFF",
     },
-    uniforms: {
-      home: { primary: "#2E7D32", secondary: "#FFFFFF", description: "Granada home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#2E7D32", description: "Granada away uniform" },
-      alternate: {
-        primary: "#FFFFFF",
-        secondary: "#2E7D32",
-        description: "Granada alternate uniform",
-      },
-    },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
     record: {
@@ -2727,15 +2379,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#8B0000",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFD700", description: "Foothill home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "Foothill away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Foothill alternate uniform",
-      },
     },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
@@ -2782,15 +2425,6 @@ export const baseTeams: Team[] = [
       primary: "#003D99",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#003D99", secondary: "#FFD700", description: "Amador Valley home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003D99", description: "Amador Valley away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#003D99",
-        description: "Amador Valley alternate uniform",
-      },
-    },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
     record: {
@@ -2835,23 +2469,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#8B0000",
       secondary: "#000000",
-    },
-    uniforms: {
-      home: {
-        primary: "#8B0000",
-        secondary: "#000000",
-        description: "San Ramon Valley home uniform",
-      },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#8B0000",
-        description: "San Ramon Valley away uniform",
-      },
-      alternate: {
-        primary: "#000000",
-        secondary: "#8B0000",
-        description: "San Ramon Valley alternate uniform",
-      },
     },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
@@ -2898,15 +2515,6 @@ export const baseTeams: Team[] = [
       primary: "#8B0000",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFD700", description: "Monte Vista home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "Monte Vista away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Monte Vista alternate uniform",
-      },
-    },
     league: "BVAL - Mt. Hamilton",
     division: "BVAL - Mt. Hamilton",
     record: {
@@ -2951,15 +2559,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#003D99",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#003D99", secondary: "#FFD700", description: "Mountain View home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003D99", description: "Mountain View away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#003D99",
-        description: "Mountain View alternate uniform",
-      },
     },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",
@@ -3006,15 +2605,6 @@ export const baseTeams: Team[] = [
       primary: "#2E7D32",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#2E7D32", secondary: "#FFD700", description: "Half Moon Bay home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#2E7D32", description: "Half Moon Bay away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#2E7D32",
-        description: "Half Moon Bay alternate uniform",
-      },
-    },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",
     record: {
@@ -3059,15 +2649,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#8B0000",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFD700", description: "Pajaro Valley home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "Pajaro Valley away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Pajaro Valley alternate uniform",
-      },
     },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
@@ -3114,15 +2695,6 @@ export const baseTeams: Team[] = [
       primary: "#003D99",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#003D99", secondary: "#FFD700", description: "Harbor home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003D99", description: "Harbor away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#003D99",
-        description: "Harbor alternate uniform",
-      },
-    },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
     record: {
@@ -3167,15 +2739,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#000000",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#000000", secondary: "#FFD700", description: "Watsonville home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#000000", description: "Watsonville away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#000000",
-        description: "Watsonville alternate uniform",
-      },
     },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
@@ -3222,15 +2785,6 @@ export const baseTeams: Team[] = [
       primary: "#003D99",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#003D99", secondary: "#FFD700", description: "Hollister home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003D99", description: "Hollister away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#003D99",
-        description: "Hollister alternate uniform",
-      },
-    },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
     record: {
@@ -3275,23 +2829,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#8B0000",
       secondary: "#FFFFFF",
-    },
-    uniforms: {
-      home: {
-        primary: "#8B0000",
-        secondary: "#FFFFFF",
-        description: "Archbishop Alemany home uniform",
-      },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#8B0000",
-        description: "Archbishop Alemany away uniform",
-      },
-      alternate: {
-        primary: "#FFFFFF",
-        secondary: "#8B0000",
-        description: "Archbishop Alemany alternate uniform",
-      },
     },
     league: "West Catholic Athletic League",
     division: "West Catholic Athletic League",
@@ -3338,15 +2875,6 @@ export const baseTeams: Team[] = [
       primary: "#003D99",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#003D99", secondary: "#FFD700", description: "Alisal home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003D99", description: "Alisal away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#003D99",
-        description: "Alisal alternate uniform",
-      },
-    },
     league: "PCAL - Gabilan",
     division: "PCAL - Gabilan",
     record: {
@@ -3391,15 +2919,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#FF8B00",
       secondary: "#000000",
-    },
-    uniforms: {
-      home: { primary: "#FF8B00", secondary: "#000000", description: "Gonzales home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#FF8B00", description: "Gonzales away uniform" },
-      alternate: {
-        primary: "#000000",
-        secondary: "#FF8B00",
-        description: "Gonzales alternate uniform",
-      },
     },
     league: "PCAL - Gabilan",
     division: "PCAL - Gabilan",
@@ -3446,15 +2965,6 @@ export const baseTeams: Team[] = [
       primary: "#8B0000",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFD700", description: "Greenfield home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "Greenfield away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Greenfield alternate uniform",
-      },
-    },
     league: "PCAL - Gabilan",
     division: "PCAL - Gabilan",
     record: {
@@ -3499,15 +3009,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#2E7D32",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#2E7D32", secondary: "#FFD700", description: "San Benito home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#2E7D32", description: "San Benito away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#2E7D32",
-        description: "San Benito alternate uniform",
-      },
     },
     league: "PCAL - Cypress",
     division: "PCAL - Cypress",
@@ -3554,15 +3055,6 @@ export const baseTeams: Team[] = [
       primary: "#003D99",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#003D99", secondary: "#FFD700", description: "Sequoia home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003D99", description: "Sequoia away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#003D99",
-        description: "Sequoia alternate uniform",
-      },
-    },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",
     record: {
@@ -3607,15 +3099,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#8B0000",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFD700", description: "Woodside home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "Woodside away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Woodside alternate uniform",
-      },
     },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",
@@ -3662,15 +3145,6 @@ export const baseTeams: Team[] = [
       primary: "#FF8B00",
       secondary: "#000000",
     },
-    uniforms: {
-      home: { primary: "#FF8B00", secondary: "#000000", description: "Lynbrook home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#FF8B00", description: "Lynbrook away uniform" },
-      alternate: {
-        primary: "#000000",
-        secondary: "#FF8B00",
-        description: "Lynbrook alternate uniform",
-      },
-    },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
     record: {
@@ -3715,23 +3189,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#8B0000",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: {
-        primary: "#8B0000",
-        secondary: "#FFD700",
-        description: "Charles S. Buchser home uniform",
-      },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#8B0000",
-        description: "Charles S. Buchser away uniform",
-      },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Charles S. Buchser alternate uniform",
-      },
     },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
@@ -3778,15 +3235,6 @@ export const baseTeams: Team[] = [
       primary: "#8B0000",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFD700", description: "Soquel home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "Soquel away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Soquel alternate uniform",
-      },
-    },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
     record: {
@@ -3831,15 +3279,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#8B0000",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFD700", description: "Santa Cruz home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "Santa Cruz away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Santa Cruz alternate uniform",
-      },
     },
     league: "SCVAL - De Anza",
     division: "SCVAL - De Anza",
@@ -3886,15 +3325,6 @@ export const baseTeams: Team[] = [
       primary: "#8B0000",
       secondary: "#FFD700",
     },
-    uniforms: {
-      home: { primary: "#8B0000", secondary: "#FFD700", description: "Piedmont home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#8B0000", description: "Piedmont away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Piedmont alternate uniform",
-      },
-    },
     league: "Bay Valley Athletic League",
     division: "Bay Valley Athletic League",
     record: {
@@ -3939,15 +3369,6 @@ export const baseTeams: Team[] = [
     colors: {
       primary: "#003D99",
       secondary: "#FFD700",
-    },
-    uniforms: {
-      home: { primary: "#003D99", secondary: "#FFD700", description: "Carlmont home uniform" },
-      away: { primary: "#FFFFFF", secondary: "#003D99", description: "Carlmont away uniform" },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#003D99",
-        description: "Carlmont alternate uniform",
-      },
     },
     league: "Peninsula Athletic League - Bay",
     division: "Peninsula Athletic League - Bay",

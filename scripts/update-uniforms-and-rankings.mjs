@@ -5,23 +5,48 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load MaxPreps data
+// Load MaxPreps data - strip out all TypeScript and exports
 const maxprepsPath = path.join(__dirname, "../src/app/data/teams.maxpreps.generated.ts");
-const maxprepsContent = fs.readFileSync(maxprepsPath, "utf8");
+let maxprepsContent = fs.readFileSync(maxprepsPath, "utf8");
 
-// Extract maxprepsTeamData object using a simple regex
-const dataMatch = maxprepsContent.match(/export const maxprepsTeamData[:\s\w]*=\s*({[\s\S]*?});/);
-if (!dataMatch) {
-  console.error("Could not extract maxprepsTeamData");
-  process.exit(1);
+// Remove the type definition line by line approach is more reliable
+// Just keep what we need: the constants and data object
+const maxprepsLines = maxprepsContent.split("\n");
+let inTypeDefinition = false;
+let cleanedLines = [];
+
+for (const line of maxprepsLines) {
+  // Skip type definition
+  if (line.includes("export type MaxprepsTeamData")) {
+    inTypeDefinition = true;
+    continue;
+  }
+  if (inTypeDefinition && line.trim() === "};") {
+    inTypeDefinition = false;
+    continue;
+  }
+  if (inTypeDefinition) {
+    continue;
+  }
+  
+  // Convert exports to regular const and remove type annotations
+  let cleanedLine = line
+    .replace(/export const/g, "const")
+    .replace(/: Record<string, MaxprepsTeamData>/g, "");
+  
+  cleanedLines.push(cleanedLine);
 }
 
-// Create a valid JS object by replacing TypeScript types
-const dataStr = dataMatch[1]
-  .replace(/Record<string, MaxprepsTeamData>/g, "")
-  .replace(/MaxprepsTeamData/g, "");
+let maxprepsContent2 = cleanedLines.join("\n");
 
-const maxprepsTeamData = eval(`(${dataStr})`);
+// Now eval the cleaned content
+let maxprepsTeamData = {};
+try {
+  eval(maxprepsContent2);
+} catch (err) {
+  console.error("Failed to parse maxprepsTeamData:", err.message);
+  process.exit(1);
+}
 
 // Load teams.ts
 const teamsPath = path.join(__dirname, "../src/app/data/teams.ts");
@@ -81,7 +106,7 @@ for (let i = 0; i < lines.length; i++) {
       const newRanking = rankingMap[teamId];
 
       // Replace ranking line
-      const rankingIdx = i;
+      let rankingIdx = i;
       while (rankingIdx < lines.length && !lines[rankingIdx].includes("ranking:")) {
         rankingIdx++;
       }
@@ -90,7 +115,7 @@ for (let i = 0; i < lines.length; i++) {
       }
 
       // Also update stateRank
-      const stateRankIdx = i;
+      let stateRankIdx = i;
       while (stateRankIdx < lines.length && !lines[stateRankIdx].includes("stateRank")) {
         stateRankIdx++;
       }

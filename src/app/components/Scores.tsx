@@ -148,7 +148,7 @@ export function Scores() {
               {dateGames.map((game, gameIdx) => {
                 const home = getTeam(game.homeTeam);
                 const away = getTeam(game.awayTeam);
-                const awayWon = game.awayScore > game.homeScore;
+                const awayWon = game.awayScore !== null && game.homeScore !== null && game.awayScore > game.homeScore;
                 return (
                   <motion.div
                     key={game.id}

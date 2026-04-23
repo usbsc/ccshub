@@ -38,12 +38,12 @@ export interface Game {
   awayTeam: string;
   homeTeamName?: string;
   awayTeamName?: string;
-  homeScore: number;
-  awayScore: number;
+  homeScore: number | null;
+  awayScore: number | null;
   date: string;
   time: string;
   stadium: string;
-  status: "live" | "upcoming" | "final";
+  status: "live" | "upcoming" | "final" | "pending";
   level: "Varsity" | "JV" | "Freshman";
   dataSource?: string;
   sourceUrl?: string;

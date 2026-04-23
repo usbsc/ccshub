@@ -9,8 +9,8 @@ import {
   Calendar,
   Award,
   TrendingUp,
-  Twitter,
-  Instagram,
+  X,
+  Camera as InstagramIcon,
   ExternalLink,
   Image,
   History,
@@ -106,7 +106,7 @@ export function TeamDetail() {
                       rel="noopener noreferrer"
                       className="p-2 bg-secondary/80 hover:bg-blue-400/20 rounded-full transition-all group"
                     >
-                      <Twitter className="w-5 h-5 text-foreground group-hover:text-blue-400 dark:text-blue-300" />
+                      <X className="w-5 h-5 text-foreground group-hover:text-blue-400 dark:text-blue-300" />
                     </a>
                   )}
                   {team.socials.instagram && (
@@ -116,7 +116,7 @@ export function TeamDetail() {
                       rel="noopener noreferrer"
                       className="p-2 bg-secondary/80 hover:bg-pink-500/20 rounded-full transition-all group"
                     >
-                      <Instagram className="w-5 h-5 text-foreground group-hover:text-pink-500" />
+                      <InstagramIcon className="w-5 h-5 text-foreground group-hover:text-pink-500" />
                     </a>
                   )}
                   {team.socials.maxpreps && (
@@ -491,7 +491,7 @@ export function TeamDetail() {
                 const opponentTeam = teams.find((t) => t.id === opponent);
                 const teamScore = isHome ? game.homeScore : game.awayScore;
                 const oppScore = isHome ? game.awayScore : game.homeScore;
-                const won = teamScore > oppScore;
+                const won = teamScore !== null && oppScore !== null && teamScore > oppScore;
                 return (
                   <Link
                     key={game.id}

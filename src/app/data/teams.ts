@@ -2052,7 +2052,7 @@ export const baseTeams: Team[] = [
     // Real-time stats (record, streak, ranking) come from MaxPreps.
     // To update coaches, check MaxPreps page or verify with school athletics.
     headCoach: "Nelson Gifford",
-    offensiveCoordinator: "TBD",
+    offensiveCoordinator: "Adrian Castillo Jr.",
     defensiveCoordinator: "Detrick Wright",
     offensiveSystem: "Spread",
     defensiveSystem: "3-3-5/3-4",

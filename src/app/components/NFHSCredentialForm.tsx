@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Eye, EyeOff, Lock } from "lucide-react";
 
 interface NFHSCredentialFormProps {
-  onSubmit: (username: string, password: string) => Promise<void>;
+  onSubmit: (email: string, password: string) => Promise<void>;
   isLoading?: boolean;
   error?: string;
 }
@@ -13,24 +13,30 @@ export function NFHSCredentialForm({
   isLoading = false,
   error,
 }: NFHSCredentialFormProps) {
-  const [username, setUsername] = useState("");
+  // Email input state
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [localError, setLocalError] = useState<string | null>(null);
+
+  // Hide this form on the public GitHub Pages site to avoid exposing credential UI to end users
+  const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
+  const isGithubPages = hostname.includes('github.io');
+  if (isGithubPages) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLocalError(null);
 
-    if (!username.trim() || !password.trim()) {
-      setLocalError("Please enter both username and password");
+    if (!email.trim() || !password.trim()) {
+      setLocalError("Please enter both email and password");
       return;
     }
 
     try {
-      await onSubmit(username, password);
+      await onSubmit(email, password);
       // Clear on success
-      setUsername("");
+      setEmail("");
       setPassword("");
     } catch (err) {
       setLocalError(
@@ -59,14 +65,14 @@ export function NFHSCredentialForm({
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Username */}
+          {/* Email input field. Changed from Username to Email for clarity. */}
           <div>
-            <label className="block text-sm font-medium mb-2">Username</label>
+            <label className="block text-sm font-medium mb-2">Email</label>
             <input
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="your.nfhs.username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="email@example.com"
               disabled={isLoading}
               className="w-full px-4 py-2 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
             />
@@ -114,7 +120,7 @@ export function NFHSCredentialForm({
           {/* Submit Button */}
           <button
             type="submit"
-            disabled={isLoading || !username.trim() || !password.trim()}
+            disabled={isLoading || !email.trim() || !password.trim()}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold rounded-lg transition-colors disabled:cursor-not-allowed"
           >
             {isLoading ? (

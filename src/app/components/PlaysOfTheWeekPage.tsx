@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router";
 import { motion } from "motion/react";
 import {
   Play,
@@ -7,24 +8,13 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { useNFHS } from "../context/NFHSContext";
-import { NFHSCredentialForm } from "./NFHSCredentialForm";
 import { PlayCard } from "./PlayCard";
 import type { Play as PlayType } from "../services/nfhs";
 
 export function PlaysOfTheWeekPage() {
-  const { isAuthenticated, plays, isLoading, error, authenticate } = useNFHS();
-  const [submitting, setSubmitting] = useState(false);
+  const { isAuthenticated, plays, isLoading, error } = useNFHS();
   const [selectedTeam, setSelectedTeam] = useState<string | null>(null);
   const [selectedPlayType, setSelectedPlayType] = useState<PlayType["playType"] | null>(null);
-
-  const handleAuth = async (username: string, password: string) => {
-    setSubmitting(true);
-    try {
-      await authenticate(username, password);
-    } finally {
-      setSubmitting(false);
-    }
-  };
 
   // Filter plays
   const filteredPlays = useMemo(() => {
@@ -78,12 +68,15 @@ export function PlaysOfTheWeekPage() {
           </p>
         </div>
 
-        <div className="max-w-md">
-          <NFHSCredentialForm
-            onSubmit={handleAuth}
-            isLoading={submitting}
-            error={error || undefined}
-          />
+        <div className="max-w-md p-6 bg-card rounded-2xl border border-border">
+          <h3 className="font-bold mb-2">NFHS Access (Admin only)</h3>
+          <p className="text-sm text-muted-foreground mb-4">
+            NFHS login is restricted to site administrators. If you're an admin,
+            connect via the admin panel.
+          </p>
+          <Link to="/admin/nfhs" className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg">
+            Go to NFHS Admin
+          </Link>
         </div>
       </div>
     );

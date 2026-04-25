@@ -6,7 +6,7 @@
  */
 
 export interface NFHSCredentials {
-  username: string;
+  email: string;
   password: string;
 }
 
@@ -49,19 +49,19 @@ class NFHSService {
   /**
    * Authenticate with NFHS
    */
-  async authenticate(username: string, password: string): Promise<boolean> {
+  async authenticate(email: string, password: string): Promise<boolean> {
     try {
       // Store credentials in memory (never logged or persisted)
-      this.credentials = { username, password };
+      this.credentials = { email, password };
 
-      // Attempt authentication with NFHS API
+      // Attempt authentication with NFHS API — send email field
       const response = await fetch(`${this.NFHS_BASE_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          username,
+          email,
           password,
         }),
       });

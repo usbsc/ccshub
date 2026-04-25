@@ -23,7 +23,7 @@ const projectRoot = path.resolve(__dirname, "..");
 // Configuration
 const SCRIPTS = [
   { name: "Update Teams", script: "update-maxpreps-teams.mjs", required: true },
-  { name: "Update Rosters", script: "update-maxpreps-rosters.mjs", required: false },
+  { name: "Update Rosters", script: "update-maxpreps-players.mjs", required: false },
   { name: "Update Games", script: "update-maxpreps-games.mjs", required: false },
   { name: "Update Logos", script: "update-team-logos.mjs", required: false },
   { name: "Update Uniforms", script: "update-uniforms-and-rankings.mjs", required: false },

@@ -239,7 +239,7 @@ export function Root() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center p-1">
                   <ImageWithFallback
-                    src="https://www.cifccs.org/images/logo.png"
+                    src="/ccshub/logos/x-logo.svg"
                     alt="CIF CCS"
                     className="w-full h-full object-contain"
                   />

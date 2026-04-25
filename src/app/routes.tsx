@@ -13,6 +13,7 @@ import { Broadcasts } from "./components/Broadcasts";
 import { Photos } from "./components/Photos";
 import { PlaysOfTheWeekPage } from "./components/PlaysOfTheWeekPage";
 import { MaxPrepsPreview } from "./components/Admin";
+import { NFHSAdmin } from "./components/Admin/NFHSAdmin";
 
 export const router = createBrowserRouter(
   [
@@ -29,6 +30,7 @@ export const router = createBrowserRouter(
         { path: "photos", Component: Photos },
         { path: "plays", Component: PlaysOfTheWeekPage },
         { path: "admin/maxpreps-preview", Component: MaxPrepsPreview },
+            { path: "admin/nfhs", Component: NFHSAdmin },
         { path: "scores", Component: Scores },
         { path: "team/:teamId", Component: TeamDetail },
         { path: "game/:gameId", Component: GameDetail },

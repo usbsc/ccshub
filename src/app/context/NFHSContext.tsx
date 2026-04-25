@@ -13,7 +13,7 @@ interface NFHSContextType {
   plays: Play[];
   isLoading: boolean;
   error: string | null;
-  authenticate: (username: string, password: string) => Promise<void>;
+  authenticate: (email: string, password: string) => Promise<void>;
   fetchPlays: () => Promise<void>;
   logout: () => void;
   pollingActive: boolean;
@@ -70,12 +70,12 @@ export function NFHSProvider({ children }: { children: React.ReactNode }) {
   }, [fetchPlays]);
 
   const authenticate = useCallback(
-    async (username: string, password: string) => {
+    async (email: string, password: string) => {
       setIsLoading(true);
       setError(null);
 
       try {
-        await nfhsService.authenticate(username, password);
+        await nfhsService.authenticate(email, password);
         setIsAuthenticated(true);
 
         // Fetch initial plays

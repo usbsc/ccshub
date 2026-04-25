@@ -19,11 +19,12 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router'],
-          'ui-vendor': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          'motion': ['motion'],
-          'charts': ['recharts'],
+        manualChunks(id) {
+          if (!id || !id.includes('node_modules')) return;
+          if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('react-router')) return 'react-vendor';
+          if (id.includes('@radix-ui')) return 'ui-vendor';
+          if (id.includes('motion')) return 'motion';
+          if (id.includes('recharts')) return 'charts';
         },
       },
     },
@@ -32,5 +33,13 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true,
+    proxy: {
+      // Proxy API calls to helper server to avoid CORS and host mismatch during dev
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
 });

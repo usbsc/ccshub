@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchAllForSlug } from '../../services/maxpreps';
+
 
 export function MaxPrepsPreview() {
   const [slug, setSlug] = useState('santa-clara-high-school');
@@ -15,10 +15,18 @@ export function MaxPrepsPreview() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetchAllForSlug(slug);
-      setData(res);
+      // Try to load preview file produced by CLI at /.session/maxpreps_preview/<slug>.json
+      const previewUrl = `/session/maxpreps_preview/${slug}.json`;
+      const resp = await fetch(previewUrl);
+      if (!resp.ok) {
+        setError(`Preview file not found. Run scripts/maxpreps_sync_cli.ts locally to generate a preview.`);
+        setData(null);
+      } else {
+        const res = await resp.json();
+        setData(res);
+      }
     } catch (e: any) {
-      setError(e.message || 'Failed to fetch');
+      setError(e.message || 'Failed to fetch preview');
     } finally {
       setLoading(false);
     }

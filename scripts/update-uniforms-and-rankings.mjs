@@ -5,47 +5,32 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load MaxPreps data - strip out all TypeScript and exports
+// Load MaxPreps data
 const maxprepsPath = path.join(__dirname, "../src/app/data/teams.maxpreps.generated.ts");
-let maxprepsContent = fs.readFileSync(maxprepsPath, "utf8");
+const maxprepsContent = fs.readFileSync(maxprepsPath, "utf8");
 
-// Remove the type definition line by line approach is more reliable
-// Just keep what we need: the constants and data object
-const maxprepsLines = maxprepsContent.split("\n");
-let inTypeDefinition = false;
-let cleanedLines = [];
-
-for (const line of maxprepsLines) {
-  // Skip type definition
-  if (line.includes("export type MaxprepsTeamData")) {
-    inTypeDefinition = true;
-    continue;
-  }
-  if (inTypeDefinition && line.trim() === "};") {
-    inTypeDefinition = false;
-    continue;
-  }
-  if (inTypeDefinition) {
-    continue;
-  }
-  
-  // Convert exports to regular const and remove type annotations
-  let cleanedLine = line
-    .replace(/export const/g, "const")
-    .replace(/: Record<string, MaxprepsTeamData>/g, "");
-  
-  cleanedLines.push(cleanedLine);
+const dataMatch = maxprepsContent.match(/export const maxprepsTeamData: Record<string, MaxprepsTeamData> = ({[\s\S]*?});/);
+if (!dataMatch) {
+  console.error("Failed to find maxprepsTeamData in teams.maxpreps.generated.ts");
+  process.exit(1);
 }
 
-let maxprepsContent2 = cleanedLines.join("\n");
-
-// Now eval the cleaned content
 let maxprepsTeamData = {};
 try {
-  eval(maxprepsContent2);
+  // Use a safer way to parse the object literal
+  // Since it's generated with JSON.stringify, it should be valid JSON except for the trailing semicolon
+  maxprepsTeamData = JSON.parse(dataMatch[1]);
 } catch (err) {
   console.error("Failed to parse maxprepsTeamData:", err.message);
-  process.exit(1);
+  // Fallback to a simpler regex if JSON.parse fails (it might have unquoted keys if manually edited)
+  try {
+     // If it's not perfect JSON, we can try to evaluate it in a controlled way
+     const evalFn = new Function(`return ${dataMatch[1]}`);
+     maxprepsTeamData = evalFn();
+  } catch (err2) {
+     console.error("Fallback parsing also failed:", err2.message);
+     process.exit(1);
+  }
 }
 
 // Load teams.ts
@@ -85,55 +70,81 @@ teamIds.slice(0, 10).forEach((id, i) => {
 });
 
 // Update team entries with new rankings and add uniform stubs
-let inBaseTeams = false;
-let braceDepth = 0;
-let teamStartIdx = -1;
 const lines = updatedContent.split("\n");
-const result = [];
+let inBaseTeams = false;
+let currentTeamId = null;
+let currentTeamStartIdx = -1;
+let braceDepth = 0;
 
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
 
   if (line.includes("export const baseTeams:")) {
     inBaseTeams = true;
+    continue;
   }
 
-  if (inBaseTeams && line.includes("id:")) {
-    // Extract team ID
-    const idMatch = line.match(/id:\s*"([^"]+)"/);
-    if (idMatch) {
-      const teamId = idMatch[1];
-      const newRanking = rankingMap[teamId];
+  // Stop when we reach the end of baseTeams
+  if (inBaseTeams && line.trim() === "];") {
+    inBaseTeams = false;
+    break;
+  }
 
-      // Replace ranking line
-      let rankingIdx = i;
-      while (rankingIdx < lines.length && !lines[rankingIdx].includes("ranking:")) {
-        rankingIdx++;
-      }
-      if (rankingIdx < lines.length && lines[rankingIdx].includes("ranking:")) {
-        lines[rankingIdx] = lines[rankingIdx].replace(/ranking:\s*\d+/, `ranking: ${newRanking}`);
-      }
+  if (!inBaseTeams) continue;
 
-      // Also update stateRank
-      let stateRankIdx = i;
-      while (stateRankIdx < lines.length && !lines[stateRankIdx].includes("stateRank")) {
-        stateRankIdx++;
-      }
-      if (stateRankIdx < lines.length) {
-        lines[stateRankIdx] = `    stateRank: ${maxprepsTeamData[teamId]?.stateRank || "undefined"},`;
-      } else {
-        // Insert stateRank after ranking if missing
-        const afterRankIdx = rankingIdx + 1;
-        if (afterRankIdx < lines.length) {
-          lines.splice(
-            afterRankIdx,
-            0,
-            `    stateRank: ${maxprepsTeamData[teamId]?.stateRank || "undefined"},`
-          );
-        }
-      }
+  // Track brace depth within baseTeams
+  const openers = (line.match(/{/g) || []).length;
+  const closers = (line.match(/}/g) || []).length;
+  
+  const oldDepth = braceDepth;
+  braceDepth += openers - closers;
 
-      console.log(`Updated ${teamId}: ranking ${newRanking}, stateRank ${maxprepsTeamData[teamId]?.stateRank || "undefined"}`);
+  // Detect start of a team object (at depth 0 -> 1)
+  if (oldDepth === 0 && braceDepth > 0 && line.includes("{")) {
+     currentTeamStartIdx = i;
+     // Look ahead for id:
+     for (let j = i + 1; j < Math.min(i + 5, lines.length); j++) {
+       const idMatch = lines[j].match(/id:\s*"([^"]+)"/);
+       if (idMatch) {
+         currentTeamId = idMatch[1];
+         break;
+       }
+     }
+  }
+
+  // If we are inside a team object, look for ranking and stateRank
+  if (currentTeamId) {
+    const newRanking = rankingMap[currentTeamId];
+    const newStateRank = maxprepsTeamData[currentTeamId]?.stateRank;
+
+    if (line.includes("ranking:") && !line.includes("stateRank:")) {
+      if (newRanking !== undefined) {
+        lines[i] = line.replace(/ranking:\s*\d+/, `ranking: ${newRanking}`);
+      }
+    }
+
+    if (line.includes("stateRank:")) {
+      lines[i] = `    stateRank: ${newStateRank || "undefined"},`;
+    }
+
+    // Detect end of a team object (at depth 1 -> 0)
+    if (oldDepth >= 1 && braceDepth === 0) {
+      // If we didn't find stateRank, insert it before image: or ranking: or colors:
+      const teamBlock = lines.slice(currentTeamStartIdx, i + 1);
+      const hasStateRank = teamBlock.some(l => l.includes("stateRank:"));
+      
+      if (!hasStateRank && newStateRank !== undefined) {
+         // Find ranking line to insert after
+         for (let j = currentTeamStartIdx; j <= i; j++) {
+           if (lines[j].includes("ranking:") && !lines[j].includes("stateRank:")) {
+             lines.splice(j + 1, 0, `    stateRank: ${newStateRank},`);
+             i++; // Adjust outer loop index
+             break;
+           }
+         }
+      }
+      currentTeamId = null;
+      currentTeamStartIdx = -1;
     }
   }
 }

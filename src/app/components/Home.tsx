@@ -585,8 +585,8 @@ export function Home() {
                   to={`/team/${team.id}`}
                   className="bg-card rounded-2xl p-4 hover:bg-secondary/50 transition-all border border-border group"
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg overflow-hidden bg-secondary p-1 flex-shrink-0">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-lg overflow-hidden bg-secondary p-2 flex-shrink-0">
                       <ImageWithFallback
                         src={team.image}
                         className="w-full h-full object-contain"
@@ -594,10 +594,10 @@ export function Home() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="font-bold text-white dark:text-foreground uppercase tracking-tight text-sm group-hover:text-purple-400 transition-colors">
+                      <div className="font-bold text-white dark:text-foreground uppercase tracking-tight text-lg group-hover:text-purple-400 transition-colors">
                         {team.name}
                       </div>
-                      <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mt-1">
+                      <div className="text-sm text-muted-foreground mt-1 truncate">
                         {team.keyPlayers?.slice(0, 2).join(", ") || "Key players returning"}
                       </div>
                     </div>

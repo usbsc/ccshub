@@ -12,65 +12,77 @@ function cleanWeight(text) {
   return text.replace(/\s*(lbs?|pounds?)\s*/i, "").trim() || null;
 }
 
-async function fetchRoster(maxprepsUrl, teamId) {
-  try {
-    const rosterUrl = maxprepsUrl.replace(/\/$/, "") + "/roster/";
-    console.log("Fetching: " + rosterUrl);
-    
-    const res = await fetch(rosterUrl, {
-      headers: {
-        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
-      },
-    });
+async function sleep(ms) {
+  await new Promise((r) => setTimeout(r, ms));
+}
 
-    if (!res.ok) {
-      console.log("Status " + res.status + " for " + teamId);
-      return [];
-    }
-
-    const html = await res.text();
-    const $ = load(html);
-
-    const players = [];
-    const rows = $("table tbody tr").toArray();
-    
-    console.log("Found " + rows.length + " rows");
-
-    rows.forEach((row, idx) => {
-      const cells = $(row).find("td");
-      if (cells.length < 4) return;
+async function fetchRosterWithRetry(maxprepsUrl, teamId, tries = 3) {
+  const rosterUrl = maxprepsUrl.replace(/\/$/, "") + "/roster/";
+  
+  for (let i = 0; i < tries; i++) {
+    try {
+      console.log(`Fetching (${i+1}/${tries}): ${rosterUrl}`);
       
-      const numberText = cells.eq(0).text().trim();
-      const name = cells.eq(1).text().trim();
-      const grade = cells.eq(2).text().trim() || null;
-      const position = cells.eq(3).text().trim();
-      const height = cells.eq(4).text().trim() || null;
-      const weightText = cells.eq(5).text().trim();
-      const weight = cleanWeight(weightText);
-      
-      if (name && position && position !== "--") {
-        const number = numberText && numberText !== "#" ? parseInt(numberText) : null;
-        players.push({
-          id: teamId + "-" + idx,
-          name: name,
-          position: position,
-          number: number,
-          team: teamId,
-          grade: grade,
-          height: height,
-          weight: weight,
-        });
+      const res = await fetch(rosterUrl, {
+        headers: {
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
+        },
+      });
+
+      if (res.status === 429 || res.status === 403) {
+        const waitTime = 5000 * (i + 1);
+        console.warn(`  Rate limited (${res.status}). Waiting ${waitTime}ms...`);
+        await sleep(waitTime);
+        continue;
       }
-    });
 
-    if (players.length > 0) {
-      console.log("Extracted " + players.length + " players");
+      if (!res.ok) {
+        console.log("Status " + res.status + " for " + teamId);
+        return [];
+      }
+
+      const html = await res.text();
+      const $ = load(html);
+
+      const players = [];
+      const rows = $("table tbody tr").toArray();
+      
+      rows.forEach((row, idx) => {
+        const cells = $(row).find("td");
+        if (cells.length < 4) return;
+        
+        const numberText = cells.eq(0).text().trim();
+        const name = cells.eq(1).text().trim();
+        const grade = cells.eq(2).text().trim() || null;
+        const position = cells.eq(3).text().trim();
+        const height = cells.eq(4).text().trim() || null;
+        const weightText = cells.eq(5).text().trim();
+        const weight = cleanWeight(weightText);
+        
+        if (name && position && position !== "--") {
+          const number = numberText && numberText !== "#" ? parseInt(numberText) : null;
+          players.push({
+            id: teamId + "-" + idx,
+            name: name,
+            position: position,
+            number: number,
+            team: teamId,
+            grade: grade,
+            height: height,
+            weight: weight,
+          });
+        }
+      });
+
+      return players;
+    } catch (err) {
+      console.log("Error: " + err.message);
+      if (i < tries - 1) {
+        await sleep(1000 * (i + 1));
+      }
     }
-    return players;
-  } catch (err) {
-    console.log("Error: " + err.message);
-    return [];
   }
+  return [];
 }
 
 async function main() {
@@ -103,9 +115,12 @@ async function main() {
   const allPlayers = [];
 
   for (const team of teams) {
-    const roster = await fetchRoster(team.url, team.id);
+    const roster = await fetchRosterWithRetry(team.url, team.id);
     allPlayers.push(...roster);
-    await new Promise((r) => setTimeout(r, 800));
+    if (roster.length > 0) {
+      console.log(`Extracted ${roster.length} players for ${team.id}`);
+    }
+    await sleep(1000); // 1s sleep between teams
   }
 
   const playerJson = JSON.stringify(allPlayers, null, 2);

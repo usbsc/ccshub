@@ -70,7 +70,7 @@ async function fetchJson(url) {
   return next;
 }
 
-async function fetchJsonWithRetry(url, tries = 2) {
+async function fetchJsonWithRetry(url, tries = 3) {
   let lastErr;
   for (let i = 0; i < tries; i += 1) {
     try {
@@ -78,8 +78,14 @@ async function fetchJsonWithRetry(url, tries = 2) {
       return await fetchJson(url);
     } catch (e) {
       lastErr = e;
-      // eslint-disable-next-line no-await-in-loop
-      await sleep(500);
+      const isRateLimit = e.message.includes("429") || e.message.includes("403");
+      const waitTime = isRateLimit ? 5000 * (i + 1) : 1000 * (i + 1);
+      
+      if (i < tries - 1) {
+        console.warn(`  Retrying in ${waitTime}ms... (${e.message})`);
+        // eslint-disable-next-line no-await-in-loop
+        await sleep(waitTime);
+      }
     }
   }
   throw lastErr;
@@ -238,7 +244,23 @@ async function sleep(ms) {
 
 async function main() {
   const tsText = await fs.readFile(TEAMS_PATH, "utf8");
-  const teams = parseBaseTeams(tsText);
+  let teams = parseBaseTeams(tsText);
+
+  // Support optional CLI arg to limit to specific team ids:
+  //   node scripts/update-maxpreps-teams.mjs --teams=soquel,carlmont
+  const args = process.argv.slice(2);
+  const teamsArg = args.find((a) => a.startsWith("--teams=") || a.startsWith("--ids="));
+  let filteredIds = null;
+  if (teamsArg) {
+    filteredIds = new Set(
+      teamsArg.split("=")[1]
+        .split(",")
+        .map((s) => s.trim().toLowerCase())
+        .filter(Boolean)
+    );
+    teams = teams.filter((t) => filteredIds.has(t.id.toLowerCase()));
+    console.log(`Filtering to ${teams.length} team(s): ${Array.from(filteredIds).join(", ")}`);
+  }
 
   console.log(`Found ${teams.length} teams`);
 
@@ -258,7 +280,6 @@ async function main() {
         maxprepsUrl = found.url;
 
         if (!maxprepsUrl) {
-          const fallbackQuery = team.name;
           const foundFallback = await discoverMaxprepsFootballUrl({ ...team, mascot: "" });
           maxprepsUrl = foundFallback.url;
         }
@@ -267,7 +288,7 @@ async function main() {
       } catch {
         console.log("error");
       }
-      await sleep(250);
+      await sleep(1000); // Wait between discovery calls
     }
 
     if (!maxprepsUrl) continue;
@@ -308,7 +329,7 @@ async function main() {
       console.log("error (kept URL)");
     }
 
-    await sleep(250);
+    await sleep(1000); // Increased base sleep between teams to 1s
   }
 
   const outText = renderTs(out, generatedAt);

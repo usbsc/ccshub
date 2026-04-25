@@ -1,23 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Play, ArrowRight, AlertCircle } from "lucide-react";
 import { useNFHS } from "../context/NFHSContext";
-import { NFHSCredentialForm } from "./NFHSCredentialForm";
 import { PlayCard } from "./PlayCard";
 
 export function PlaysOfTheWeek() {
-  const { isAuthenticated, plays, isLoading, error, authenticate } = useNFHS();
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleAuth = async (username: string, password: string) => {
-    setSubmitting(true);
-    try {
-      await authenticate(username, password);
-    } finally {
-      setSubmitting(false);
-    }
-  };
+  const { isAuthenticated, plays, isLoading, error } = useNFHS();
 
   if (!isAuthenticated) {
     return (
@@ -36,11 +24,15 @@ export function PlaysOfTheWeek() {
           </p>
         </div>
 
-        <NFHSCredentialForm
-          onSubmit={handleAuth}
-          isLoading={submitting}
-          error={error || undefined}
-        />
+        <div className="p-6 bg-card rounded-2xl border border-border max-w-md">
+          <h3 className="font-bold mb-2">NFHS Access (Admin only)</h3>
+          <p className="text-sm text-muted-foreground mb-4">
+            NFHS login is restricted to site administrators. Use the admin panel to connect.
+          </p>
+          <Link to="/admin/nfhs" className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg">
+            Go to NFHS Admin
+          </Link>
+        </div>
       </motion.div>
     );
   }

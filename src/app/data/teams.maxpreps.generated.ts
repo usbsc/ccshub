@@ -2,7 +2,7 @@
 // Source: MaxPreps team pages
 // Generated at: 2026-04-26T01:10:16.660Z
 
-export const MAXPREPS_TEAMS_GENERATED_AT = "2026-04-26T20:32:30.308Z";
+export const MAXPREPS_TEAMS_GENERATED_AT = "2026-04-26T21:43:48.524Z";
 
 export type MaxprepsTeamData = {
   maxprepsUrl?: string;
@@ -832,5 +832,122 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
     "maxprepsUrl": "TBD",
     "lastUpdated": "2026-04-26T01:10:16.660Z",
     "schoolMascotUrl": "/logos/maxpreps/carlmont.svg"
+  },
+  "archbishop-mitty": {
+    "schoolMascotUrl": "/logos/maxpreps/archbishop-mitty.svg"
+  },
+  "junipero-serra": {
+    "schoolMascotUrl": "/logos/maxpreps/junipero-serra.svg"
+  },
+  "sacred-heart-cathedral": {
+    "schoolMascotUrl": "/logos/maxpreps/sacred-heart-cathedral.svg"
+  },
+  "aragon": {
+    "schoolMascotUrl": "/logos/maxpreps/aragon.svg"
+  },
+  "burlingame": {
+    "schoolMascotUrl": "/logos/maxpreps/burlingame.svg"
+  },
+  "capuchino": {
+    "schoolMascotUrl": "/logos/maxpreps/capuchino.svg"
+  },
+  "el-camino": {
+    "schoolMascotUrl": "/logos/maxpreps/el-camino.svg"
+  },
+  "hillsdale": {
+    "schoolMascotUrl": "/logos/maxpreps/hillsdale.svg"
+  },
+  "mills": {
+    "schoolMascotUrl": "/logos/maxpreps/mills.svg"
+  },
+  "san-mateo": {
+    "schoolMascotUrl": "/logos/maxpreps/san-mateo.svg"
+  },
+  "terra-nova": {
+    "schoolMascotUrl": "/logos/maxpreps/terra-nova.svg"
+  },
+  "menlo-school": {
+    "schoolMascotUrl": "/logos/maxpreps/menlo-school.svg"
+  },
+  "notre-dame-belmont": {
+    "schoolMascotUrl": "/logos/maxpreps/notre-dame-belmont.svg"
+  },
+  "pinewood": {
+    "schoolMascotUrl": "/logos/maxpreps/pinewood.svg"
+  },
+  "harker": {
+    "schoolMascotUrl": "/logos/maxpreps/harker.svg"
+  },
+  "king-s-academy": {
+    "schoolMascotUrl": "/logos/maxpreps/king-s-academy.svg"
+  },
+  "priory": {
+    "schoolMascotUrl": "/logos/maxpreps/priory.svg"
+  },
+  "saratoga": {
+    "schoolMascotUrl": "/logos/maxpreps/saratoga.svg"
+  },
+  "santa-clara": {
+    "schoolMascotUrl": "/logos/maxpreps/santa-clara.svg"
+  },
+  "milpitas": {
+    "schoolMascotUrl": "/logos/maxpreps/milpitas.svg"
+  },
+  "andrew-hill": {
+    "schoolMascotUrl": "/logos/maxpreps/andrew-hill.svg"
+  },
+  "lincoln-san-jose": {
+    "schoolMascotUrl": "/logos/maxpreps/lincoln-san-jose.svg"
+  },
+  "san-jose-high": {
+    "schoolMascotUrl": "/logos/maxpreps/san-jose-high.svg"
+  },
+  "alvarez": {
+    "schoolMascotUrl": "/logos/maxpreps/alvarez.svg"
+  },
+  "carmel": {
+    "schoolMascotUrl": "/logos/maxpreps/carmel.svg"
+  },
+  "king-city": {
+    "schoolMascotUrl": "/logos/maxpreps/king-city.svg"
+  },
+  "monterey": {
+    "schoolMascotUrl": "/logos/maxpreps/monterey.svg"
+  },
+  "north-monterey-county": {
+    "schoolMascotUrl": "/logos/maxpreps/north-monterey-county.svg"
+  },
+  "rancho-san-juan": {
+    "schoolMascotUrl": "/logos/maxpreps/rancho-san-juan.svg"
+  },
+  "seaside": {
+    "schoolMascotUrl": "/logos/maxpreps/seaside.svg"
+  },
+  "soledad": {
+    "schoolMascotUrl": "/logos/maxpreps/soledad.svg"
+  },
+  "stevenson": {
+    "schoolMascotUrl": "/logos/maxpreps/stevenson.svg"
+  },
+  "san-lorenzo-valley": {
+    "schoolMascotUrl": "/logos/maxpreps/san-lorenzo-valley.svg"
+  },
+  "scotts-valley": {
+    "schoolMascotUrl": "/logos/maxpreps/scotts-valley.svg"
+  },
+  "kipp-san-jose": {
+    "schoolMascotUrl": "/logos/maxpreps/kipp-san-jose.svg"
+  },
+  "cristo-rey-san-jose": {
+    "schoolMascotUrl": "/logos/maxpreps/cristo-rey-san-jose.svg"
+  },
+  "summit-shasta": {
+    "schoolMascotUrl": "/logos/maxpreps/summit-shasta.svg"
+  },
+  "summit-prep": {
+    "schoolMascotUrl": "/logos/maxpreps/summit-prep.svg"
+  },
+  "university-prep": {
+    "schoolMascotUrl": "/logos/maxpreps/university-prep.svg"
   }
 };

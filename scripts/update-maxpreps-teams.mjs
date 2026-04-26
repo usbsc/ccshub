@@ -66,8 +66,41 @@ async function fetchJson(url) {
 
   const html = await res.text();
   const next = extractNextData(html);
-  if (!next) throw new Error("Missing __NEXT_DATA__");
-  return next;
+  if (next) return next;
+
+  // Fallbacks when the __NEXT_DATA__ script isn't available or parseable.
+  // 1) Try to find a window.__NEXT_DATA__ assignment
+  const alt = html.match(/window\.__NEXT_DATA__\s*=\s*(\{.*?\})\s*;/s);
+  if (alt) {
+    try {
+      return JSON.parse(alt[1]);
+    } catch (e) {
+      // fall through to other fallback
+    }
+  }
+
+  // 2) As a last resort, try to find a canonical school football link in the HTML
+  const a = html.match(/href="(\/schools\/[^"]+\/football\/?)/i);
+  if (a) {
+    const canonical = a[1].startsWith('http') ? a[1] : `https://www.maxpreps.com${a[1]}`;
+    // Return a minimal shape that discoverMaxprepsFootballUrl can consume
+    return {
+      props: {
+        pageProps: {
+          initialSchoolResults: [
+            {
+              canonicalUrl: canonical,
+              name: '',
+              mascot: '',
+              state: 'CA',
+            },
+          ],
+        },
+      },
+    };
+  }
+
+  throw new Error("Missing __NEXT_DATA__ and no fallback link found");
 }
 
 async function fetchJsonWithRetry(url, tries = 3) {

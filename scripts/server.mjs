@@ -164,8 +164,8 @@ function extractPlaysFromText(title, description) {
 async function handleTempToken(req, res) {
   try {
     const body = await parseJSONBody(req);
-    const { email, username, password } = body || {};
-    const identity = email || username;
+    const { email, password } = body || {};
+    const identity = email;
     if (!identity || !password) return sendJSON(res, 400, { error: 'email and password required' });
 
     // initial GET to establish cookies
@@ -198,7 +198,7 @@ async function handleTempToken(req, res) {
         try {
           const token = await headlessLogin(identity, password);
           nfhsAuth.token = token;
-          nfhsAuth.username = username || identity;
+          nfhsAuth.username = identity;
           nfhsAuth.expiresAt = Date.now() + 5 * 60 * 1000;
           return sendJSON(res, 200, { ok: true, expiresAt: nfhsAuth.expiresAt, method: 'headless' });
         } catch (hlErr) {
@@ -249,7 +249,7 @@ async function handleTempToken(req, res) {
 
     const data = await resp.json().catch(() => ({}));
     nfhsAuth.token = data.token || data.access_token || null;
-    nfhsAuth.username = username;
+    nfhsAuth.username = identity;
     nfhsAuth.expiresAt = Date.now() + 5 * 60 * 1000;
     return sendJSON(res, 200, { ok: true, expiresAt: nfhsAuth.expiresAt });
   } catch (e) {

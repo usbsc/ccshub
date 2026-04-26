@@ -2,7 +2,7 @@
 // Source: MaxPreps team pages
 // Generated at: 2026-04-26T01:10:16.660Z
 
-export const MAXPREPS_TEAMS_GENERATED_AT = "2026-04-26T21:43:48.524Z";
+export const MAXPREPS_TEAMS_GENERATED_AT = "2026-04-26T23:22:13.749Z";
 
 export type MaxprepsTeamData = {
   maxprepsUrl?: string;
@@ -20,7 +20,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "riordan": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-francisco/archbishop-riordan-crusaders/football/",
     "leagueName": "West Catholic",
-    "schoolMascotUrl": "/logos/maxpreps/riordan.gif",
+    "schoolMascotUrl": "/logos/maxpreps/riordan.svg",
     "stateRank": 10,
     "record": {
       "wins": 12,
@@ -34,7 +34,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "serra": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-mateo/junipero-serra-padres/football/",
     "leagueName": "West Catholic",
-    "schoolMascotUrl": "/logos/maxpreps/serra.gif",
+    "schoolMascotUrl": "/logos/maxpreps/serra.svg",
     "stateRank": 34,
     "record": {
       "wins": 8,
@@ -48,7 +48,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "st-francis": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/mountain-view/saint-francis-lancers/football/",
     "leagueName": "West Catholic",
-    "schoolMascotUrl": "/logos/maxpreps/st-francis.gif",
+    "schoolMascotUrl": "/logos/maxpreps/st-francis.svg",
     "stateRank": 66,
     "record": {
       "wins": 5,
@@ -62,7 +62,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "st-ignatius": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-francisco/st-ignatius-wildcats/football/",
     "leagueName": "West Catholic",
-    "schoolMascotUrl": "/logos/maxpreps/st-ignatius.gif",
+    "schoolMascotUrl": "/logos/maxpreps/st-ignatius.svg",
     "stateRank": 70,
     "record": {
       "wins": 9,
@@ -76,7 +76,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "mitty": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/archbishop-mitty-monarchs/football/",
     "leagueName": "West Catholic",
-    "schoolMascotUrl": "/logos/maxpreps/mitty.gif",
+    "schoolMascotUrl": "/logos/maxpreps/mitty.svg",
     "stateRank": 75,
     "record": {
       "wins": 6,
@@ -90,7 +90,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "valley-christian": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/valley-christian-warriors/football/",
     "leagueName": "West Catholic",
-    "schoolMascotUrl": "/logos/maxpreps/valley-christian.gif",
+    "schoolMascotUrl": "/logos/maxpreps/valley-christian.svg",
     "stateRank": 150,
     "record": {
       "wins": 3,
@@ -104,7 +104,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "bellarmine": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/bellarmine-college-prep-bells/football/",
     "leagueName": "West Catholic",
-    "schoolMascotUrl": "/logos/maxpreps/bellarmine.gif",
+    "schoolMascotUrl": "/logos/maxpreps/bellarmine.svg",
     "stateRank": 300,
     "record": {
       "wins": 2,
@@ -118,7 +118,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "sacred-heart": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-francisco/sacred-heart-cathedral-preparatory-fighting-irish/football/",
     "leagueName": "West Catholic",
-    "schoolMascotUrl": "/logos/maxpreps/sacred-heart.gif",
+    "schoolMascotUrl": "/logos/maxpreps/sacred-heart.svg",
     "stateRank": 101,
     "record": {
       "wins": 6,
@@ -132,7 +132,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "los-gatos": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/los-gatos/los-gatos-wildcats/football/",
     "leagueName": "Peninsula - Bay",
-    "schoolMascotUrl": "/logos/maxpreps/los-gatos.gif",
+    "schoolMascotUrl": "/logos/maxpreps/los-gatos.svg",
     "stateRank": 45,
     "record": {
       "wins": 9,
@@ -146,7 +146,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "wilcox": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/santa-clara/wilcox-chargers/football/",
     "leagueName": "Peninsula - Bay",
-    "schoolMascotUrl": "/logos/maxpreps/wilcox.gif",
+    "schoolMascotUrl": "/logos/maxpreps/wilcox.svg",
     "stateRank": 211,
     "record": {
       "wins": 6,
@@ -160,7 +160,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "palo-alto": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/palo-alto/palo-alto-vikings/football/",
     "leagueName": "Peninsula - Bay",
-    "schoolMascotUrl": "/logos/maxpreps/palo-alto.gif",
+    "schoolMascotUrl": "/logos/maxpreps/palo-alto.svg",
     "stateRank": 691,
     "record": {
       "wins": 0,
@@ -174,7 +174,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "menlo-atherton": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/atherton/menlo-atherton-bears/football/",
     "leagueName": "Peninsula - Bay",
-    "schoolMascotUrl": "/logos/maxpreps/menlo-atherton.gif",
+    "schoolMascotUrl": "/logos/maxpreps/menlo-atherton.svg",
     "stateRank": 200,
     "record": {
       "wins": 7,
@@ -188,7 +188,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "christopher": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/gilroy/christopher-cougars/football/",
     "leagueName": "Mount Hamilton",
-    "schoolMascotUrl": "/logos/maxpreps/christopher.gif",
+    "schoolMascotUrl": "/logos/maxpreps/christopher.svg",
     "stateRank": 432,
     "record": {
       "wins": 5,
@@ -202,7 +202,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "leigh": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/leigh-longhorns/football/",
     "leagueName": "Mount Hamilton",
-    "schoolMascotUrl": "/logos/maxpreps/leigh.gif",
+    "schoolMascotUrl": "/logos/maxpreps/leigh.svg",
     "stateRank": 356,
     "record": {
       "wins": 6,
@@ -216,7 +216,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "leland": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/leland-chargers/football/",
     "leagueName": "Santa Teresa - Valley",
-    "schoolMascotUrl": "/logos/maxpreps/leland.gif",
+    "schoolMascotUrl": "/logos/maxpreps/leland.svg",
     "stateRank": 738,
     "record": {
       "wins": 3,
@@ -230,7 +230,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "oak-grove": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/oak-grove-eagles/football/",
     "leagueName": "Santa Teresa - Foothill",
-    "schoolMascotUrl": "/logos/maxpreps/oak-grove.gif",
+    "schoolMascotUrl": "/logos/maxpreps/oak-grove.svg",
     "stateRank": 880,
     "record": {
       "wins": 1,
@@ -244,7 +244,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "salinas": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/salinas/salinas-cowboys/football/",
     "leagueName": "Pacific Coast - Gabilan",
-    "schoolMascotUrl": "/logos/maxpreps/salinas.gif",
+    "schoolMascotUrl": "/logos/maxpreps/salinas.svg",
     "stateRank": 136,
     "record": {
       "wins": 7,
@@ -258,7 +258,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "palma": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/salinas/palma-chieftains/football/",
     "leagueName": "Pacific Coast - Gabilan",
-    "schoolMascotUrl": "/logos/maxpreps/palma.gif",
+    "schoolMascotUrl": "/logos/maxpreps/palma.svg",
     "stateRank": 87,
     "record": {
       "wins": 11,
@@ -272,7 +272,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "aptos": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/aptos/aptos-mariners/football/",
     "leagueName": "Pacific Coast - Gabilan",
-    "schoolMascotUrl": "/logos/maxpreps/aptos.gif",
+    "schoolMascotUrl": "/logos/maxpreps/aptos.svg",
     "stateRank": 638,
     "record": {
       "wins": 1,
@@ -286,7 +286,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "sacred-heart-prep": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/atherton/sacred-heart-prep-gators/football/",
     "leagueName": "Peninsula - Bay",
-    "schoolMascotUrl": "/logos/maxpreps/sacred-heart-prep.gif",
+    "schoolMascotUrl": "/logos/maxpreps/sacred-heart-prep.svg",
     "stateRank": 335,
     "record": {
       "wins": 6,
@@ -300,7 +300,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "branham": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/branham-bruins/football/",
     "leagueName": "Mount Hamilton",
-    "schoolMascotUrl": "/logos/maxpreps/branham.gif",
+    "schoolMascotUrl": "/logos/maxpreps/branham.svg",
     "stateRank": 326,
     "record": {
       "wins": 7,
@@ -314,7 +314,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "del-mar": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/del-mar-dons/football/",
     "leagueName": "Santa Teresa - Foothill",
-    "schoolMascotUrl": "/logos/maxpreps/del-mar.gif",
+    "schoolMascotUrl": "/logos/maxpreps/del-mar.svg",
     "stateRank": 904,
     "record": {
       "wins": 2,
@@ -328,7 +328,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "evergreen-valley": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/evergreen-valley-cougars/football/",
     "leagueName": "West Valley",
-    "schoolMascotUrl": "/logos/maxpreps/evergreen-valley.gif",
+    "schoolMascotUrl": "/logos/maxpreps/evergreen-valley.svg",
     "stateRank": 935,
     "record": {
       "wins": 5,
@@ -342,7 +342,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "gunderson": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/gunderson-grizzlies/football/",
     "leagueName": "Santa Teresa - Valley",
-    "schoolMascotUrl": "/logos/maxpreps/gunderson.gif",
+    "schoolMascotUrl": "/logos/maxpreps/gunderson.svg",
     "stateRank": 599,
     "record": {
       "wins": 6,
@@ -356,7 +356,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "independence": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/independence-76ers/football/",
     "leagueName": "West Valley",
-    "schoolMascotUrl": "/logos/maxpreps/independence.gif",
+    "schoolMascotUrl": "/logos/maxpreps/independence.svg",
     "stateRank": 908,
     "record": {
       "wins": 5,
@@ -370,7 +370,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "james-lick": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/james-lick-comets/football/",
     "leagueName": "West Valley",
-    "schoolMascotUrl": "/logos/maxpreps/james-lick.gif",
+    "schoolMascotUrl": "/logos/maxpreps/james-lick.svg",
     "stateRank": 1021,
     "record": {
       "wins": 1,
@@ -384,7 +384,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "lincoln": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/lincoln-lions/football/",
     "leagueName": "Mount Hamilton",
-    "schoolMascotUrl": "/logos/maxpreps/lincoln.gif",
+    "schoolMascotUrl": "/logos/maxpreps/lincoln.svg",
     "stateRank": 233,
     "record": {
       "wins": 11,
@@ -398,7 +398,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "live-oak": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/morgan-hill/live-oak-acorns/football/",
     "leagueName": "Mount Hamilton",
-    "schoolMascotUrl": "/logos/maxpreps/live-oak.gif",
+    "schoolMascotUrl": "/logos/maxpreps/live-oak.svg",
     "stateRank": 258,
     "record": {
       "wins": 9,
@@ -412,7 +412,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "mt-pleasant": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/mt-pleasant-cardinals/football/",
     "leagueName": "West Valley",
-    "schoolMascotUrl": "/logos/maxpreps/mt-pleasant.gif",
+    "schoolMascotUrl": "/logos/maxpreps/mt-pleasant.svg",
     "stateRank": 1000,
     "record": {
       "wins": 2,
@@ -426,7 +426,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "overfelt": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/overfelt-overfelt-royals/football/",
     "leagueName": "Santa Teresa - Foothill",
-    "schoolMascotUrl": "/logos/maxpreps/overfelt.gif",
+    "schoolMascotUrl": "/logos/maxpreps/overfelt.svg",
     "stateRank": 668,
     "record": {
       "wins": 5,
@@ -440,7 +440,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "piedmont-hills": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/piedmont-hills-pirates/football/",
     "leagueName": "Santa Teresa - Foothill",
-    "schoolMascotUrl": "/logos/maxpreps/piedmont-hills.gif",
+    "schoolMascotUrl": "/logos/maxpreps/piedmont-hills.svg",
     "stateRank": 449,
     "record": {
       "wins": 10,
@@ -454,7 +454,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "pioneer": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/pioneer-mustangs/football/",
     "leagueName": "Santa Teresa - Foothill",
-    "schoolMascotUrl": "/logos/maxpreps/pioneer.gif",
+    "schoolMascotUrl": "/logos/maxpreps/pioneer.svg",
     "stateRank": 645,
     "record": {
       "wins": 6,
@@ -468,7 +468,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "prospect": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/saratoga/prospect-panthers/football/",
     "leagueName": "West Valley",
-    "schoolMascotUrl": "/logos/maxpreps/prospect.gif",
+    "schoolMascotUrl": "/logos/maxpreps/prospect.svg",
     "stateRank": 892,
     "record": {
       "wins": 5,
@@ -482,7 +482,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "san-jose": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/san-jose-bulldogs/football/",
     "leagueName": "West Valley",
-    "schoolMascotUrl": "/logos/maxpreps/san-jose.gif",
+    "schoolMascotUrl": "/logos/maxpreps/san-jose.svg",
     "stateRank": 812,
     "record": {
       "wins": 7,
@@ -496,7 +496,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "santa-teresa": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/santa-teresa-saints/football/",
     "leagueName": "Mount Hamilton",
-    "schoolMascotUrl": "/logos/maxpreps/santa-teresa.gif",
+    "schoolMascotUrl": "/logos/maxpreps/santa-teresa.svg",
     "stateRank": 175,
     "record": {
       "wins": 11,
@@ -510,7 +510,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "silver-creek": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/silver-creek-raiders/football/",
     "leagueName": "Santa Teresa - Foothill",
-    "schoolMascotUrl": "/logos/maxpreps/silver-creek.gif",
+    "schoolMascotUrl": "/logos/maxpreps/silver-creek.svg",
     "stateRank": 682,
     "record": {
       "wins": 5,
@@ -524,7 +524,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "sobrato": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/morgan-hill/ann-sobrato-bulldogs/football/",
     "leagueName": "Santa Teresa - Valley",
-    "schoolMascotUrl": "/logos/maxpreps/sobrato.gif",
+    "schoolMascotUrl": "/logos/maxpreps/sobrato.svg",
     "stateRank": 480,
     "record": {
       "wins": 8,
@@ -538,7 +538,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "westmont": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/campbell/westmont-warriors/football/",
     "leagueName": "Santa Teresa - Valley",
-    "schoolMascotUrl": "/logos/maxpreps/westmont.gif",
+    "schoolMascotUrl": "/logos/maxpreps/westmont.svg",
     "stateRank": 839,
     "record": {
       "wins": 3,
@@ -552,7 +552,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "willow-glen": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/willow-glen-rams/football/",
     "leagueName": "Santa Teresa - Valley",
-    "schoolMascotUrl": "/logos/maxpreps/willow-glen.gif",
+    "schoolMascotUrl": "/logos/maxpreps/willow-glen.svg",
     "stateRank": 340,
     "record": {
       "wins": 9,
@@ -566,7 +566,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "yerba-buena": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/san-jose/yerba-buena-warriors/football/",
     "leagueName": "West Valley",
-    "schoolMascotUrl": "/logos/maxpreps/yerba-buena.gif",
+    "schoolMascotUrl": "/logos/maxpreps/yerba-buena.svg",
     "stateRank": 854,
     "record": {
       "wins": 7,
@@ -580,7 +580,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "cupertino": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/cupertino/cupertino-pioneers/football/",
     "leagueName": "Peninsula - Lake",
-    "schoolMascotUrl": "/logos/maxpreps/cupertino.gif",
+    "schoolMascotUrl": "/logos/maxpreps/cupertino.svg",
     "stateRank": 1014,
     "record": {
       "wins": 0,
@@ -594,7 +594,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "fremont": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/sunnyvale/fremont-firebirds/football/",
     "leagueName": "Peninsula - El Camino",
-    "schoolMascotUrl": "/logos/maxpreps/fremont.gif",
+    "schoolMascotUrl": "/logos/maxpreps/fremont.svg",
     "stateRank": 868,
     "record": {
       "wins": 2,
@@ -608,7 +608,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "gunn": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/palo-alto/gunn-titans/football/",
     "leagueName": "Peninsula - El Camino",
-    "schoolMascotUrl": "/logos/maxpreps/gunn.gif",
+    "schoolMascotUrl": "/logos/maxpreps/gunn.svg",
     "stateRank": 938,
     "record": {
       "wins": 2,
@@ -622,7 +622,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "homestead": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/cupertino/homestead-mustangs/football/",
     "leagueName": "Peninsula - Lake",
-    "schoolMascotUrl": "/logos/maxpreps/homestead.gif",
+    "schoolMascotUrl": "/logos/maxpreps/homestead.svg",
     "stateRank": 602,
     "record": {
       "wins": 7,
@@ -636,7 +636,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "los-altos": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/los-altos/los-altos-eagles/football/",
     "leagueName": "Peninsula - El Camino",
-    "schoolMascotUrl": "/logos/maxpreps/los-altos.gif",
+    "schoolMascotUrl": "/logos/maxpreps/los-altos.svg",
     "stateRank": 817,
     "record": {
       "wins": 3,
@@ -650,7 +650,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "monta-vista": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/cupertino/monta-vista-matadors/football/",
     "leagueName": "Peninsula - Lake",
-    "schoolMascotUrl": "/logos/maxpreps/monta-vista.gif",
+    "schoolMascotUrl": "/logos/maxpreps/monta-vista.svg",
     "stateRank": 905,
     "record": {
       "wins": 4,
@@ -664,7 +664,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "north-salinas": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/salinas/north-salinas-vikings/football/",
     "leagueName": "Pacific Coast - Gabilan",
-    "schoolMascotUrl": "/logos/maxpreps/north-salinas.gif",
+    "schoolMascotUrl": "/logos/maxpreps/north-salinas.svg",
     "stateRank": 323,
     "record": {
       "wins": 5,
@@ -678,7 +678,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "santa-clara-high": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/santa-clara/santa-clara-bruins/football/",
     "leagueName": "Peninsula - El Camino",
-    "schoolMascotUrl": "/logos/maxpreps/santa-clara-high.gif",
+    "schoolMascotUrl": "/logos/maxpreps/santa-clara-high.svg",
     "stateRank": 832,
     "record": {
       "wins": 4,
@@ -692,7 +692,7 @@ export const maxprepsTeamData: Record<string, MaxprepsTeamData> = {
   "gilroy": {
     "maxprepsUrl": "https://www.maxpreps.com/ca/gilroy/gilroy-mustangs/football/",
     "leagueName": "Santa Teresa - Valley",
-    "schoolMascotUrl": "/logos/maxpreps/gilroy.gif",
+    "schoolMascotUrl": "/logos/maxpreps/gilroy.svg",
     "stateRank": 871,
     "record": {
       "wins": 2,

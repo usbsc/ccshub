@@ -45,44 +45,106 @@ class NFHSService {
   private cachedPlays: Play[] = [];
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
   private readonly NFHS_BASE_URL = "https://www.nfhsnetwork.com/api";
+  private readonly REQUEST_TIMEOUT = 10000; // ms
+  private readonly MAX_RETRIES = 3;
+
+  /**
+   * Perform fetch with timeout and retries for transient network errors / 5xx.
+   */
+  private async requestWithRetry(input: RequestInfo, init?: RequestInit): Promise<Response> {
+    let attempt = 0;
+    while (attempt < this.MAX_RETRIES) {
+      attempt++;
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), this.REQUEST_TIMEOUT);
+      try {
+        const response = await fetch(input, { ...(init || {}), signal: controller.signal });
+        clearTimeout(timeout);
+        // Retry on 5xx only (transient), otherwise return response (including 4xx)
+        if (response.ok || (response.status >= 400 && response.status < 500)) {
+          return response;
+        }
+        // 5xx - transient, retry
+        console.warn(`NFHS request attempt ${attempt} failed with status ${response.status}. Retrying...`);
+      } catch (err: any) {
+        clearTimeout(timeout);
+        // AbortError or network error - retry
+        const isAbort = err && (err.name === 'AbortError' || err.code === 'ETIMEDOUT');
+        console.warn(`NFHS request attempt ${attempt} network error: ${err?.message || err}. ${isAbort ? 'Timed out.' : ''}`);
+      }
+      // exponential backoff
+      const backoff = 200 * Math.pow(2, attempt - 1);
+      await new Promise((res) => setTimeout(res, backoff));
+    }
+    throw new Error('NFHS request failed after retries');
+  }
 
   /**
    * Authenticate with NFHS
    */
   async authenticate(email: string, password: string): Promise<boolean> {
-    try {
-      // Store credentials in memory (never logged or persisted)
-      this.credentials = { email, password };
+    // In browser UI, use local helper server to avoid CORS and CloudFront issues
+    if (typeof window !== 'undefined') {
+      try {
+        const resp = await fetch('/api/temp-nfhs-token', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        });
+        const j = await resp.json().catch(() => ({}));
+        if (!resp.ok) {
+          console.error('NFHS proxy auth failed', j);
+          return false;
+        }
+        // mark authenticated locally (server holds real token)
+        this.credentials = { email, password };
+        this.authToken = 'proxy';
+        console.warn('✓ Authenticated via local NFHS proxy');
+        return true;
+      } catch (e) {
+        console.error('NFHS proxy auth error:', e);
+        this.credentials = null;
+        this.authToken = null;
+        return false;
+      }
+    }
 
-      // Attempt authentication with NFHS API — send email field
-      const response = await fetch(`${this.NFHS_BASE_URL}/auth/login`, {
+    // Server-side direct NFHS auth (existing resilient flow)
+    try {
+      const payload = { email, password };
+      const response = await this.requestWithRetry(`${this.NFHS_BASE_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
-        throw new Error(
-          `NFHS authentication failed: ${response.status} ${response.statusText}`
-        );
+        if (response.status >= 400 && response.status < 500) {
+          const text = await response.text().catch(() => '');
+          console.error(`NFHS authentication failed: ${response.status} ${response.statusText} ${text}`);
+          return false;
+        }
+        throw new Error(`NFHS authentication failed with status ${response.status}`);
       }
 
-      const data = await response.json();
-      this.authToken = data.token || data.access_token;
+      const data = await response.json().catch(() => ({} as any));
+      this.authToken = data.token || data.access_token || null;
 
-      console.warn(
-        "✓ Successfully authenticated with NFHS (credentials in memory only)"
-      );
+      if (!this.authToken) {
+        console.error('NFHS authentication response did not contain a token.');
+        return false;
+      }
+
+      this.credentials = { email, password };
+      console.warn("✓ Successfully authenticated with NFHS (credentials in memory only)");
       return true;
     } catch (error) {
       this.credentials = null;
       this.authToken = null;
-      throw error;
+      console.error("NFHS authentication error:", error);
+      return false;
     }
   }
 
@@ -101,8 +163,24 @@ class NFHSService {
       throw new Error("Not authenticated with NFHS");
     }
 
+    // If running in browser, call local helper server to avoid CORS and CloudFront
+    if (typeof window !== 'undefined') {
+      try {
+        const resp = await fetch('/api/broadcasts/videos');
+        const j = await resp.json().catch(() => ({}));
+        if (!resp.ok) {
+          console.error('NFHS proxy videos fetch failed', j);
+          return [];
+        }
+        return j.videos || [];
+      } catch (e) {
+        console.error('NFHS proxy videos fetch error:', e);
+        return [];
+      }
+    }
+
     try {
-      const response = await fetch(`${this.NFHS_BASE_URL}/broadcasts/videos`, {
+      const response = await this.requestWithRetry(`${this.NFHS_BASE_URL}/broadcasts/videos`, {
         headers: {
           Authorization: `Bearer ${this.authToken}`,
           "Content-Type": "application/json",
@@ -110,10 +188,11 @@ class NFHSService {
       });
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch NFHS videos: ${response.status}`);
+        console.error(`Failed to fetch NFHS videos: ${response.status} ${response.statusText}`);
+        return [];
       }
 
-      const data = await response.json();
+      const data = await response.json().catch(() => ({} as any));
       return data.videos || [];
     } catch (error) {
       console.error("Error fetching NFHS videos:", error);

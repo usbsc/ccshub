@@ -25,6 +25,7 @@ import {
 } from "../data/games";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./common/ImageWithFallback";
+import PhotosGallery from "./PhotosGallery.tsx";
 import { googleMapsSearchUrl } from "../utils/maps";
 
 export function TeamDetail() {
@@ -526,18 +527,14 @@ export function TeamDetail() {
           <Image className="w-6 h-6 text-purple-400" />
           Photos
         </h2>
-        <div className="flex flex-col items-center justify-center py-12 px-6 rounded-lg border-2 border-dashed border-border">
-          <Image className="w-12 h-12 text-purple-400 mb-4" />
-          <p className="text-foreground mb-4 text-center">View team photos on Adobe Lightroom</p>
-          <a
-            href="https://lightroom.adobe.com/shares/3af11b5819fb4d48a6d1b659dba92b74"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors flex items-center gap-2"
-          >
-            Open Gallery <ExternalLink className="w-5 h-5" />
-          </a>
-        </div>
+        {import.meta.env.VITE_LIGHTROOM_API_URL ? (
+          <PhotosGallery teamId={team.id} />
+        ) : (
+          <div className="flex flex-col items-center justify-center py-12 px-6 rounded-lg border-2 border-dashed border-border">
+            <Image className="w-12 h-12 text-purple-400 mb-4" />
+            <p className="text-foreground mb-4 text-center">Photos will appear here when Lightroom integration is configured.</p>
+          </div>
+        )}
       </motion.div>
     </div>
   );

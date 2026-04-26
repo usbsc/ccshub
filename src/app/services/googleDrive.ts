@@ -9,7 +9,7 @@ export interface Photo {
   id: string; // Google Drive file ID
   url: string; // Public image URL
   name: string; // File name
-  folder: 'jv' | 'varsity'; // JV or Varsity folder
+  folder: 'jv' | 'varsity' | 'freshman'; // JV, Varsity, or Freshman folder
   team?: string; // Team association (optional)
   addedDate: Date; // Upload date from Drive
   mimeType?: string; // Image MIME type
@@ -19,6 +19,7 @@ class GoogleDriveService {
   private apiKey = 'AIzaSyBDjwKUEwU7J5-Pr-WvJxSrZs_9i7i_iZc'; // Public API key for Drive access
   private jvFolderId = 'YOUR_JV_FOLDER_ID'; // User will provide
   private varsityFolderId = 'YOUR_VARSITY_FOLDER_ID'; // User will provide
+  private freshmanFolderId = 'YOUR_FROSH_FOLDER_ID'; // Optional freshman/frosh folder
   private cachedPhotos: Photo[] = [];
   private lastFetchTime = 0;
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache
@@ -26,9 +27,10 @@ class GoogleDriveService {
   /**
    * Set folder IDs from user configuration
    */
-  setFolderIds(jvId: string, varsityId: string) {
+  setFolderIds(jvId: string, varsityId: string, freshmanId?: string) {
     this.jvFolderId = jvId;
     this.varsityFolderId = varsityId;
+    if (freshmanId) this.freshmanFolderId = freshmanId;
   }
 
   /**
@@ -36,14 +38,17 @@ class GoogleDriveService {
    * Returns photos paginated by specified limit
    */
   async fetchPhotosFromFolder(
-    folder: 'jv' | 'varsity',
+    folder: 'jv' | 'varsity' | 'freshman',
     pageSize = 12,
     pageToken?: string
   ): Promise<{
     photos: Photo[];
     nextPageToken?: string;
   }> {
-    const folderId = folder === 'jv' ? this.jvFolderId : this.varsityFolderId;
+    let folderId: string | undefined;
+    if (folder === 'jv') folderId = this.jvFolderId;
+    else if (folder === 'varsity') folderId = this.varsityFolderId;
+    else if (folder === 'freshman') folderId = this.freshmanFolderId;
 
     if (!folderId || folderId.includes('YOUR_')) {
       console.warn(`Google Drive folder ID not configured for ${folder} folder`);
@@ -104,12 +109,13 @@ class GoogleDriveService {
     }
 
     try {
-      const [jvResult, varsityResult] = await Promise.all([
+      const [jvResult, varsityResult, freshmanResult] = await Promise.all([
         this.fetchPhotosFromFolder('jv', 50),
         this.fetchPhotosFromFolder('varsity', 50),
+        this.fetchPhotosFromFolder('freshman', 50),
       ]);
 
-      const allPhotos = [...jvResult.photos, ...varsityResult.photos];
+      const allPhotos = [...jvResult.photos, ...varsityResult.photos, ...freshmanResult.photos];
 
       // Sort by date descending
       allPhotos.sort((a, b) => b.addedDate.getTime() - a.addedDate.getTime());
@@ -128,7 +134,7 @@ class GoogleDriveService {
   /**
    * Search photos by name or team
    */
-  searchPhotos(query: string, folder?: 'jv' | 'varsity'): Promise<Photo[]> {
+  searchPhotos(query: string, folder?: 'jv' | 'varsity' | 'freshman'): Promise<Photo[]> {
     return this.fetchAllPhotos().then((photos) => {
       let filtered = photos;
 
@@ -174,7 +180,7 @@ class GoogleDriveService {
   /**
    * Get photos by folder
    */
-  async getPhotosByFolder(folder: 'jv' | 'varsity'): Promise<Photo[]> {
+  async getPhotosByFolder(folder: 'jv' | 'varsity' | 'freshman'): Promise<Photo[]> {
     const allPhotos = await this.fetchAllPhotos();
     return allPhotos.filter((p) => p.folder === folder);
   }

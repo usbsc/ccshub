@@ -1,146 +1,39 @@
-import express from 'express';
-import bodyParser from 'body-parser';
+import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+import { URL } from 'url';
 
-const app = express();
-app.use(bodyParser.json({ limit: '5mb' }));
+// Minimal helper server using built-in http to avoid external deps (works in offline envs)
+// Provides endpoints used by Admin UI: POST /api/temp-nfhs-token, POST /api/generate-highlights, GET /api/broadcasts/videos
 
-// Allow CORS for local dev (Admin UI on different port). On production (GitHub Pages) admin UI is hidden.
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
-
-// In-memory NFHS auth
-let nfhsAuth = {
-  token: null,
-  username: null,
-  expiresAt: 0,
-};
-
+let nfhsAuth = { token: null, username: null, expiresAt: 0 };
 const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
 const HIGHLIGHTS_DIR = path.join(PUBLIC_DIR, 'highlights');
 const CLIPS_DIR = path.join(HIGHLIGHTS_DIR, 'clips');
 fs.mkdirSync(CLIPS_DIR, { recursive: true });
 
-app.post('/api/temp-nfhs-token', async (req, res) => {
-  const { email, username, password } = req.body || {};
-  const identity = email || username;
-  if (!identity || !password) return res.status(400).json({ error: 'email and password required' });
+function sendJSON(res, status, obj) {
+  const body = JSON.stringify(obj);
+  res.writeHead(status, { 'Content-Type': 'application/json' });
+  res.end(body);
+}
 
-  try {
-    // Perform an initial GET to establish cookies/session that CloudFront/WAF may require
-    const baseResp = await fetch('https://www.nfhsnetwork.com/', {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      },
-    });
-    let cookieHeader = '';
-    try {
-      const sc = baseResp.headers.get('set-cookie');
-      if (sc) cookieHeader = sc;
-    } catch (e) { /* ignore */ }
-
-    // Attempt JSON POST with cookies (closest to browser XHR)
-    let resp = await fetch('https://www.nfhsnetwork.com/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json, text/plain, */*',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Origin': 'https://www.nfhsnetwork.com',
-        'Referer': 'https://www.nfhsnetwork.com/',
-        ...(cookieHeader ? { Cookie: cookieHeader } : {}),
-      },
-      body: JSON.stringify({ email: identity, password }),
-    });
-
-    // If CloudFront rejects JSON POST (403), try a form-encoded POST with the same cookies
-    if (!resp.ok && resp.status === 403) {
-      console.warn('NFHS JSON login returned 403 — attempting form-encoded fallback');
-      const formBody = new URLSearchParams({ email: identity, password }).toString();
-      resp = await fetch('https://www.nfhsnetwork.com/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json, text/plain, */*',
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-          'Origin': 'https://www.nfhsnetwork.com',
-          'Referer': 'https://www.nfhsnetwork.com/',
-          'X-Requested-With': 'XMLHttpRequest',
-          ...(cookieHeader ? { Cookie: cookieHeader } : {}),
-        },
-        body: formBody,
-      });
-    }
-
-    // Handle non-OK upstream responses more verbosely
-    if (!resp.ok) {
-      // If configured, attempt a headless browser login (requires puppeteer and USE_HEADLESS_LOGIN=1)
-      if (resp.status === 403 && process.env.USE_HEADLESS_LOGIN === '1') {
-        try {
-          console.warn('Attempting headless browser login via puppeteer');
-          const puppeteer = await import('puppeteer');
-          const launchOpts = { args: ['--no-sandbox', '--disable-setuid-sandbox'] };
-          if (process.env.PUPPETEER_EXECUTABLE_PATH) launchOpts.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
-          const browser = await puppeteer.launch(launchOpts);
-          const page = await browser.newPage();
-          await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-          await page.goto('https://www.nfhsnetwork.com/login', { waitUntil: 'networkidle2', timeout: 30000 }).catch(() => {});
-          // Try to fill common selectors; site may differ.
-          try { await page.type('input[name="username"]', username, { delay: 50 }); } catch (e) {}
-          try { await page.type('input[name="password"]', password, { delay: 50 }); } catch (e) {}
-          try { await Promise.all([page.click('button[type="submit"]'), page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 15000 })]); } catch (e) {}
-          // Try to extract token from localStorage or cookies
-          const token = await page.evaluate(() => {
-            try { return localStorage.getItem('token') || localStorage.getItem('access_token') || null; } catch (e) { return null; }
-          });
-          const cookies = await page.cookies();
-          await browser.close();
-          if (token) {
-            nfhsAuth.token = token;
-            nfhsAuth.username = username;
-            nfhsAuth.expiresAt = Date.now() + 5 * 60 * 1000;
-            return res.json({ ok: true, expiresAt: nfhsAuth.expiresAt, method: 'headless-token' });
-          }
-          return res.status(502).json({ error: 'NFHS auth failed (headless attempt)', status: 502, cookies: cookies.map(c => ({ name: c.name, domain: c.domain })) });
-        } catch (e) {
-          console.error('Headless login failed', e);
-          // fall through to normal handling
-        }
+function parseJSONBody(req) {
+  return new Promise((resolve, reject) => {
+    let body = '';
+    req.on('data', (chunk) => (body += chunk));
+    req.on('end', () => {
+      if (!body) return resolve({});
+      try {
+        resolve(JSON.parse(body));
+      } catch (e) {
+        reject(e);
       }
-
-      const txt = await resp.text();
-      console.error('NFHS auth response status:', resp.status);
-      console.error('NFHS auth response body (truncated):', txt.slice(0, 1000));
-      const ct = resp.headers.get('content-type') || '';
-      if (ct.includes('application/json')) {
-        try {
-          const json = JSON.parse(txt);
-          return res.status(resp.status).json({ error: 'NFHS auth failed', status: resp.status, upstream: json });
-        } catch (e) {
-          return res.status(resp.status).json({ error: 'NFHS auth failed', status: resp.status, upstreamBodyPreview: txt.slice(0, 1000) });
-        }
-      }
-      return res.status(resp.status).json({ error: 'NFHS auth failed', status: resp.status, upstreamBodyPreview: txt.slice(0, 1000) });
-    }
-
-    const data = await resp.json();
-    nfhsAuth.token = data.token || data.access_token || null;
-    nfhsAuth.username = username;
-    nfhsAuth.expiresAt = Date.now() + 5 * 60 * 1000; // 5 minutes
-    return res.json({ ok: true, expiresAt: nfhsAuth.expiresAt });
-  } catch (e) {
-    console.error('auth error', e);
-    return res.status(500).json({ error: e.message || String(e) });
-  }
-});
+    });
+    req.on('error', reject);
+  });
+}
 
 function normalizePlayType(type) {
   const s = (type || '').toLowerCase();
@@ -150,7 +43,6 @@ function normalizePlayType(type) {
   if (s.includes('fumble')) return 'fumble';
   return 'other';
 }
-
 function parseTimestamp(timeStr) {
   if (!timeStr) return 0;
   const parts = timeStr.split(':').map(x => parseInt(x));
@@ -184,68 +76,178 @@ function extractPlaysFromText(title, description) {
   return plays;
 }
 
-app.post('/api/generate-highlights', async (req, res) => {
-  if (!nfhsAuth.token || nfhsAuth.expiresAt < Date.now()) {
-    return res.status(401).json({ error: 'Not authenticated or token expired' });
-  }
-
+async function handleTempToken(req, res) {
   try {
+    const body = await parseJSONBody(req);
+    const { email, username, password } = body || {};
+    const identity = email || username;
+    if (!identity || !password) return sendJSON(res, 400, { error: 'email and password required' });
+
+    // initial GET to establish cookies
+    const baseResp = await fetch('https://www.nfhsnetwork.com/', {
+      headers: { 'User-Agent': 'Mozilla/5.0', Accept: 'text/html' },
+    });
+    let cookieHeader = '';
+    try {
+      const sc = baseResp.headers.get('set-cookie');
+      if (sc) cookieHeader = sc;
+    } catch (e) {}
+
+    // Try JSON POST
+    let resp = await fetch('https://www.nfhsnetwork.com/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json, text/plain, */*',
+        'User-Agent': 'Mozilla/5.0',
+        'Origin': 'https://www.nfhsnetwork.com',
+        'Referer': 'https://www.nfhsnetwork.com/',
+        ...(cookieHeader ? { Cookie: cookieHeader } : {}),
+      },
+      body: JSON.stringify({ email: identity, password }),
+    });
+
+    if (!resp.ok && resp.status === 403) {
+      const formBody = new URLSearchParams({ email: identity, password }).toString();
+      resp = await fetch('https://www.nfhsnetwork.com/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json, text/plain, */*',
+          'User-Agent': 'Mozilla/5.0',
+          'Origin': 'https://www.nfhsnetwork.com',
+          'Referer': 'https://www.nfhsnetwork.com/',
+          'X-Requested-With': 'XMLHttpRequest',
+          ...(cookieHeader ? { Cookie: cookieHeader } : {}),
+        },
+        body: formBody,
+      });
+    }
+
+    if (!resp.ok) {
+      const txt = await resp.text().catch(() => '');
+      // CloudFront 403 - give actionable guidance for admin to run headless login locally
+      if (resp.status === 403 && /cloudfront/i.test(txt)) {
+        return sendJSON(res, 403, {
+          error: 'NFHS auth blocked by CloudFront (403). Use a local headless login to bypass.',
+          suggestion: 'Install Chrome and run: cd ccshub && npm install puppeteer --legacy-peer-deps && NODE_ENV=development USE_HEADLESS_LOGIN=1 node scripts/server.mjs',
+          upstreamBodyPreview: txt.slice(0, 1000),
+        });
+      }
+      const ct = resp.headers.get('content-type') || '';
+      if (ct.includes('application/json')) {
+        try {
+          const json = JSON.parse(txt);
+          return sendJSON(res, resp.status, { error: 'NFHS auth failed', status: resp.status, upstream: json });
+        } catch (e) {
+          return sendJSON(res, resp.status, { error: 'NFHS auth failed', status: resp.status, upstreamBodyPreview: txt.slice(0, 1000) });
+        }
+      }
+      return sendJSON(res, resp.status, { error: 'NFHS auth failed', status: resp.status, upstreamBodyPreview: txt.slice(0, 1000) });
+    }
+
+    const data = await resp.json().catch(() => ({}));
+    nfhsAuth.token = data.token || data.access_token || null;
+    nfhsAuth.username = username;
+    nfhsAuth.expiresAt = Date.now() + 5 * 60 * 1000;
+    return sendJSON(res, 200, { ok: true, expiresAt: nfhsAuth.expiresAt });
+  } catch (e) {
+    console.error('auth error', e);
+    return sendJSON(res, 500, { error: String(e) });
+  }
+}
+
+// Allow manual token paste from Admin UI: POST /api/set-token
+async function handleSetToken(req, res) {
+  try {
+    const body = await parseJSONBody(req);
+    const { token } = body || {};
+    if (!token) return sendJSON(res, 400, { error: 'token required' });
+    nfhsAuth.token = token;
+    nfhsAuth.username = 'manual';
+    nfhsAuth.expiresAt = Date.now() + 5 * 60 * 1000; // 5 minutes
+    return sendJSON(res, 200, { ok: true, expiresAt: nfhsAuth.expiresAt });
+  } catch (e) {
+    console.error('set token error', e);
+    return sendJSON(res, 500, { error: String(e) });
+  }
+}
+
+async function handleGenerate(req, res) {
+  try {
+    if (!nfhsAuth.token || nfhsAuth.expiresAt < Date.now()) return sendJSON(res, 401, { error: 'Not authenticated or token expired' });
     const videos = await fetchVideos();
     const plays = [];
     for (const v of videos) {
       const found = extractPlaysFromText(v.title, v.description);
       for (const f of found) {
-        plays.push({
-          id: `play-${v.id}-${f.timestamp}`,
-          videoId: v.id,
-          videoUrl: v.url,
-          title: v.title,
-          thumbnailUrl: v.thumbnailUrl,
-          date: v.date,
-          ...f,
-          duration: 10,
-        });
+        plays.push({ id: `play-${v.id}-${f.timestamp}`, videoId: v.id, videoUrl: v.url, title: v.title, thumbnailUrl: v.thumbnailUrl, date: v.date, ...f, duration: 10 });
       }
     }
-
-    // Take top 10 newest
     const sorted = plays.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 10);
     const week = Math.ceil((Date.now() - new Date(new Date().getFullYear(),8,1).getTime())/(7*24*3600*1000));
     const outMeta = { week, generatedAt: new Date().toISOString(), plays: sorted };
-
+    try { fs.mkdirSync(HIGHLIGHTS_DIR, { recursive: true }); } catch (e) {}
     const metaPath = path.join(HIGHLIGHTS_DIR, `week-${week}.json`);
     fs.writeFileSync(metaPath, JSON.stringify(outMeta, null, 2), 'utf-8');
-
-    // Try to create per-play clips using ffmpeg if available
-    const ffmpegAvailable = (() => {
-      try { execSync('ffmpeg -version', { stdio: 'ignore' }); return true; } catch (e) { return false; }
-    })();
-
+    const ffmpegAvailable = (() => { try { execSync('ffmpeg -version', { stdio: 'ignore' }); return true; } catch (e) { return false; } })();
     for (const p of sorted) {
       const outClip = path.join(CLIPS_DIR, `${p.id}.mp4`);
       if (fs.existsSync(outClip)) continue;
       if (!ffmpegAvailable) continue;
-      try {
-        // Use ffmpeg to create a short clip. If NFHS requires auth headers, ffmpeg may not work; this is best-effort.
-        const cmd = `ffmpeg -y -ss ${p.timestamp} -i "${p.videoUrl}" -t ${p.duration} -c copy "${outClip}"`;
-        execSync(cmd, { stdio: 'ignore', timeout: 1000 * 60 * 2 });
-      } catch (e) {
-        console.warn('ffmpeg clip failed for', p.id, e.message || e);
-      }
+      try { const cmd = `ffmpeg -y -ss ${p.timestamp} -i "${p.videoUrl}" -t ${p.duration} -c copy "${outClip}"`; execSync(cmd, { stdio: 'ignore', timeout: 1000 * 60 * 2 }); } catch (e) { console.warn('ffmpeg clip failed for', p.id, e.message || e); }
     }
-
-    return res.json({ ok: true, metaPath: `/highlights/week-${week}.json`, clipsAvailable: ffmpegAvailable });
+    return sendJSON(res, 200, { ok: true, metaPath: `/highlights/week-${week}.json`, clipsAvailable: ffmpegAvailable });
   } catch (e) {
     console.error('generate error', e);
-    return res.status(500).json({ error: e.message || String(e) });
+    return sendJSON(res, 500, { error: String(e) });
+  }
+}
+
+function serveStatic(req, res, parsedUrl) {
+  const pathname = decodeURIComponent(parsedUrl.pathname);
+  const filePath = path.join(PUBLIC_DIR, pathname === '/' ? 'index.html' : pathname);
+  if (!filePath.startsWith(PUBLIC_DIR)) return sendJSON(res, 403, { error: 'Forbidden' });
+  fs.stat(filePath, (err, stat) => {
+    if (err || !stat.isFile()) return sendJSON(res, 404, { error: 'Not found' });
+    const stream = fs.createReadStream(filePath);
+    res.writeHead(200, { 'Content-Type': lookupContentType(filePath) });
+    stream.pipe(res);
+  });
+}
+function lookupContentType(p) {
+  if (p.endsWith('.json')) return 'application/json';
+  if (p.endsWith('.html')) return 'text/html';
+  if (p.endsWith('.js')) return 'application/javascript';
+  if (p.endsWith('.css')) return 'text/css';
+  if (p.endsWith('.png')) return 'image/png';
+  if (p.endsWith('.jpg') || p.endsWith('.jpeg')) return 'image/jpeg';
+  return 'application/octet-stream';
+}
+
+const server = http.createServer(async (req, res) => {
+  // CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.end();
+
+  const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+  try {
+    if (req.method === 'POST' && parsedUrl.pathname === '/api/temp-nfhs-token') return await handleTempToken(req, res);
+    if (req.method === 'POST' && parsedUrl.pathname === '/api/set-token') return await handleSetToken(req, res);
+    if (req.method === 'POST' && parsedUrl.pathname === '/api/generate-highlights') return await handleGenerate(req, res);
+    if (req.method === 'GET' && parsedUrl.pathname === '/api/broadcasts/videos') {
+      try { if (!nfhsAuth.token || nfhsAuth.expiresAt < Date.now()) return sendJSON(res, 401, { error: 'Not authenticated or token expired' }); const videos = await fetchVideos(); return sendJSON(res, 200, { videos }); } catch (e) { return sendJSON(res, 500, { error: String(e) }); }
+    }
+    // static files
+    if (req.method === 'GET') return serveStatic(req, res, parsedUrl);
+    return sendJSON(res, 404, { error: 'Not found' });
+  } catch (e) {
+    console.error('server error', e);
+    return sendJSON(res, 500, { error: String(e) });
   }
 });
 
-// Serve static public directory so highlights are accessible
-app.use('/', express.static(PUBLIC_DIR, { index: false }));
-
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`NFHS helper server listening on http://0.0.0.0:${PORT}/`);
-  console.log('Endpoints: POST /api/temp-nfhs-token, POST /api/generate-highlights');
-});
+server.listen(PORT, '0.0.0.0', () => console.log(`NFHS helper server listening on http://0.0.0.0:${PORT}/`));

@@ -12,7 +12,7 @@ export function GoogleDriveGallery() {
   const [filteredPhotos, setFilteredPhotos] = useState<Photo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedFolder, setSelectedFolder] = useState<'all' | 'jv' | 'varsity'>('all');
+  const [selectedFolder, setSelectedFolder] = useState<'all' | 'jv' | 'varsity' | 'freshman'>('all');
   const [viewerOpen, setViewerOpen] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
   const [error, setError] = useState<string | null>(null);
@@ -119,7 +119,7 @@ export function GoogleDriveGallery() {
 
         {/* Folder Filter */}
         <div className="flex gap-2">
-          {(['all', 'jv', 'varsity'] as const).map((folder) => (
+          {(['all', 'jv', 'varsity', 'freshman'] as const).map((folder) => (
             <button
               key={folder}
               onClick={() => setSelectedFolder(folder)}

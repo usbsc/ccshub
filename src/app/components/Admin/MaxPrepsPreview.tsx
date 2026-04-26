@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 
 
+type MaxPrepsData = { meta: unknown; roster: unknown; schedule: unknown; photos: unknown };
+
 export function MaxPrepsPreview() {
   const [slug, setSlug] = useState('santa-clara-high-school');
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<MaxPrepsData | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -25,8 +27,12 @@ export function MaxPrepsPreview() {
         const res = await resp.json();
         setData(res);
       }
-    } catch (e: any) {
-      setError(e.message || 'Failed to fetch preview');
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        setError(e.message);
+      } else {
+        setError(String(e) || 'Failed to fetch preview');
+      }
     } finally {
       setLoading(false);
     }

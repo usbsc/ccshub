@@ -8,7 +8,6 @@ export default defineConfig({
   base: '/ccshub/',
   plugins: [
     tailwindcss(),
-    react(),
   ],
   resolve: {
     alias: {

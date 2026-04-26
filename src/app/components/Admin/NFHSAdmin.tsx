@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 
 export function NFHSAdmin() {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [tokenInput, setTokenInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -58,7 +58,7 @@ export function NFHSAdmin() {
         setMessage(`Trying ${url} ...`);
         const r = await fetch(url, {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, password }),
+          body: JSON.stringify({ email, password }),
         });
         const j = await r.json().catch(() => ({}));
         if (!r.ok) throw new Error(j.error || `HTTP ${r.status}`);
@@ -117,7 +117,7 @@ export function NFHSAdmin() {
     <div className="space-y-4 p-4">
       <h2 className="text-xl font-bold">NFHS Admin</h2>
       <div className="flex gap-2">
-        <input value={username} onChange={(e)=>setUsername(e.target.value)} placeholder="username" className="p-2" />
+        <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="email" className="p-2" />
         <input value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="password" type="password" className="p-2" />
         <button onClick={connect} disabled={loading} className="px-4 py-2 bg-blue-600 text-white rounded">Connect</button>
         <button onClick={generate} disabled={loading} className="px-4 py-2 bg-green-600 text-white rounded">Generate Highlights</button>

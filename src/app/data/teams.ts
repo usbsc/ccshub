@@ -1,5 +1,6 @@
 import { maxprepsTeamData } from "./teams.maxpreps.generated";
 import { schoolInfoData } from "./school-info";
+import { baseTeamsOverride } from "./teams.override";
 
 export interface SchoolInfo {
   founded: number; // Year the school was founded
@@ -59,7 +60,7 @@ export interface Team {
 const GENERIC_LOGO =
   "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?auto=format&fit=crop&w=200&h=200&q=80";
 
-export const baseTeams: Team[] = [
+export const baseTeamsLegacy: Team[] = [
   {
     id: "riordan",
     name: "Archbishop Riordan",
@@ -3757,68 +3758,7 @@ export const baseTeams: Team[] = [
       maxpreps: "TBD",
     },
   },
-  {
-    id: "buchser",
-    name: "Charles S. Buchser",
-    mascot: "Bears",
-    colors: {
-      primary: "#8B0000",
-      secondary: "#FFD700",
-    },
-    uniforms: {
-      home: {
-        primary: "#8B0000",
-        secondary: "#FFD700",
-        description: "Charles S. Buchser home uniform",
-      },
-      away: {
-        primary: "#FFFFFF",
-        secondary: "#8B0000",
-        description: "Charles S. Buchser away uniform",
-      },
-      alternate: {
-        primary: "#FFD700",
-        secondary: "#8B0000",
-        description: "Charles S. Buchser alternate uniform",
-      },
-    },
-    league: "SCVAL - De Anza",
-    division: "SCVAL - De Anza",
-    record: {
-      wins: 0,
-      losses: 0,
-    },
-    ranking: 68,
-    image:
-      "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?auto=format&fit=crop&w=200&h=200&q=80",
-    stadium: "Buchser High",
-    headCoach: "TBD",
-    offensiveCoordinator: "TBD",
-    defensiveCoordinator: "TBD",
-    offensiveSystem: "TBD",
-    defensiveSystem: "TBD",
-    commonPlays: [],
-    commonDefensiveTendencies: ["Gap Discipline", "Linebacker Flow", "Coverage Rotation", "Pass Rush"],
-    strengths: [],
-    keyPlayers: [],
-    levels: {
-      varsity: {
-        wins: 0,
-        losses: 0,
-      },
-      jv: {
-        wins: 0,
-        losses: 0,
-      },
-      freshman: {
-        wins: 0,
-        losses: 0,
-      },
-    },
-    socials: {
-      maxpreps: "TBD",
-    },
-  },
+
   {
     id: "soquel",
     name: "Soquel",
@@ -4036,6 +3976,50 @@ export const baseTeams: Team[] = [
     },
   },
 ];
+
+// Build baseTeams from simplified override list (provided by teams.override.ts)
+export const baseTeams: Team[] = baseTeamsOverride.map((t) => {
+  const id = t.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^[-]+|[-]+$/g, "");
+
+  const legacy = baseTeamsLegacy.find((b) => b.id === id || b.name.toLowerCase() === t.name.toLowerCase());
+
+  const image = legacy?.image ?? t.logo_url;
+
+  const socials = {
+    ...(legacy?.socials ?? {}),
+    maxpreps: t.maxpreps_url ?? legacy?.socials?.maxpreps ?? null,
+  };
+
+  return {
+    id,
+    name: t.name,
+    mascot: legacy?.mascot ?? "",
+    colors: legacy?.colors ?? { primary: "#111827", secondary: "#3b82f6" },
+    league: t.league,
+    division: legacy?.division ?? t.league,
+    record: legacy?.record ?? { wins: 0, losses: 0 },
+    ranking: legacy?.ranking ?? 0,
+    stateRank: legacy?.stateRank,
+    image,
+    stadium: legacy?.stadium ?? "",
+    headCoach: legacy?.headCoach ?? "",
+    offensiveCoordinator: legacy?.offensiveCoordinator ?? "",
+    defensiveCoordinator: legacy?.defensiveCoordinator ?? "",
+    offensiveSystem: legacy?.offensiveSystem ?? "",
+    defensiveSystem: legacy?.defensiveSystem ?? "",
+    commonPlays: legacy?.commonPlays ?? [],
+    commonDefensiveTendencies: legacy?.commonDefensiveTendencies ?? [],
+    strengths: legacy?.strengths ?? [],
+    keyPlayers: legacy?.keyPlayers ?? [],
+    levels: legacy?.levels ?? { varsity: { wins: 0, losses: 0 }, jv: "N/A", freshman: "N/A" },
+    socials,
+    schoolInfo: legacy?.schoolInfo ?? undefined,
+    lastUpdated: legacy?.lastUpdated ?? undefined,
+  } as Team;
+});
 
 function getTeamInitials(teamName: string) {
   const words = teamName

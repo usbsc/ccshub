@@ -33,12 +33,7 @@ export function Root() {
       <header className="bg-card/80 backdrop-blur-md border-b border-border sticky top-0 z-50 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between gap-4">
-            <a
-              href="https://x.com/CCSHUBOFFICIAL"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 hover:opacity-80 transition-all active:scale-95 group"
-            >
+            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-all active:scale-95 group">
               <div className="w-12 h-12 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 group-hover:rotate-3 transition-transform overflow-hidden p-0">
                 <img
                   src="/ccshub/logos/ccshub-banner.jpg"
@@ -57,7 +52,7 @@ export function Root() {
                   Central Coast Section
                 </p>
               </div>
-            </a>
+            </Link>
 
             <div className="flex items-center gap-2">
               <button
@@ -80,6 +75,17 @@ export function Root() {
                   <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 border-2 border-background rounded-full"></span>
                 )}
               </button>
+
+              {/* Twitter link */}
+              <a
+                href="https://x.com/CCSHUBOFFICIAL"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl transition-all border bg-secondary border-border text-muted-foreground hover:bg-secondary/80 hover:text-foreground"
+                title="CCSHUB on X (Twitter)"
+              >
+                <ImageWithFallback src="/ccshub/logos/x-logo.svg" alt="X" className="w-5 h-5" />
+              </a>
             </div>
           </div>
 

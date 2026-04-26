@@ -35,6 +35,91 @@ function parseJSONBody(req) {
   });
 }
 
+// Optional headless login using Puppeteer (requires puppeteer-core or puppeteer and a Chromium binary)
+async function headlessLogin(identity, password) {
+  if (!process.env.USE_HEADLESS_LOGIN) {
+    throw new Error('Headless login disabled (set USE_HEADLESS_LOGIN=1)');
+  }
+
+  // Determine executable path and try to import puppeteer-core first
+  const execPath = process.env.PUPPETEER_EXECUTABLE_PATH;
+  let puppeteer;
+  try {
+    try {
+      puppeteer = await import('puppeteer-core');
+    } catch (e) {
+      // fallback to full puppeteer if core not available
+      puppeteer = await import('puppeteer');
+    }
+  } catch (e) {
+    throw new Error('puppeteer not installed in this environment');
+  }
+
+  const launchOpts = {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  };
+  if (execPath) launchOpts.executablePath = execPath;
+
+  const browser = await puppeteer.launch(launchOpts);
+  try {
+    const page = await browser.newPage();
+    // Try to perform login via the site's API from the browser context which may bypass CloudFront restrictions
+    await page.goto('https://www.nfhsnetwork.com/', { waitUntil: 'networkidle2', timeout: 30000 });
+
+    const result = await page.evaluate(async (id, pw) => {
+      // Attempt JSON POST
+      try {
+        const r = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/plain, */*' },
+          body: JSON.stringify({ email: id, password: pw }),
+        });
+        const txt = await r.text();
+        try { return { status: r.status, body: JSON.parse(txt) }; } catch (e) { return { status: r.status, bodyText: txt }; }
+      } catch (e) {
+        // ignore
+      }
+      // Try form-encoded fallback
+      try {
+        const form = new URLSearchParams({ email: id, password: pw }).toString();
+        const r2 = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded', Accept: 'application/json, text/plain, */*' },
+          body: form,
+        });
+        const txt2 = await r2.text();
+        try { return { status: r2.status, body: JSON.parse(txt2) }; } catch (e) { return { status: r2.status, bodyText: txt2 }; }
+      } catch (e) {
+        // ignore
+      }
+      return { status: 0 };
+    }, identity, password);
+
+    if (result && result.status === 200) {
+      const body = result.body || {};
+      const token = body.token || body.access_token || (body.data && body.data.token);
+      if (token) {
+        return token;
+      }
+      // Try to inspect localStorage for tokens as a last resort
+      try {
+        const ls = await page.evaluate(() => JSON.stringify(window.localStorage || {}));
+        const store = JSON.parse(ls || '{}');
+        // heuristic: token may be in store under keys containing 'token' or 'auth'
+        for (const k of Object.keys(store)) {
+          if (/token|auth/i.test(k) && typeof store[k] === 'string' && store[k].length > 20) return store[k];
+        }
+      } catch (e) {}
+    }
+
+    // Not successful
+    throw new Error(`Headless login failed (status ${result && result.status})`);
+  } finally {
+    try { await browser.close(); } catch (e) {}
+  }
+}
+
 function normalizePlayType(type) {
   const s = (type || '').toLowerCase();
   if (s.includes('touchdown') || s.includes('td')) return 'touchdown';
@@ -107,7 +192,21 @@ async function handleTempToken(req, res) {
       body: JSON.stringify({ email: identity, password }),
     });
 
+    // If initial JSON POST got a 403, try a headless login first (if enabled), otherwise try form fallback
     if (!resp.ok && resp.status === 403) {
+      if (process.env.USE_HEADLESS_LOGIN) {
+        try {
+          const token = await headlessLogin(identity, password);
+          nfhsAuth.token = token;
+          nfhsAuth.username = username || identity;
+          nfhsAuth.expiresAt = Date.now() + 5 * 60 * 1000;
+          return sendJSON(res, 200, { ok: true, expiresAt: nfhsAuth.expiresAt, method: 'headless' });
+        } catch (hlErr) {
+          console.warn('Headless login attempt failed:', hlErr && hlErr.message);
+          // fall through to form fallback
+        }
+      }
+
       const formBody = new URLSearchParams({ email: identity, password }).toString();
       resp = await fetch('https://www.nfhsnetwork.com/api/auth/login', {
         method: 'POST',
@@ -128,9 +227,11 @@ async function handleTempToken(req, res) {
       const txt = await resp.text().catch(() => '');
       // CloudFront 403 - give actionable guidance for admin to run headless login locally
       if (resp.status === 403 && /cloudfront/i.test(txt)) {
+        // If headless is available but failed, include that note
+        const headlessNote = process.env.USE_HEADLESS_LOGIN ? 'Headless login was attempted and failed; ensure puppeteer and a Chromium binary are installed.' : 'You may enable headless login by setting USE_HEADLESS_LOGIN=1 and providing PUPPETEER_EXECUTABLE_PATH.';
         return sendJSON(res, 403, {
-          error: 'NFHS auth blocked by CloudFront (403). Use a local headless login to bypass.',
-          suggestion: 'Install Chrome and run: cd ccshub && npm install puppeteer --legacy-peer-deps && NODE_ENV=development USE_HEADLESS_LOGIN=1 node scripts/server.mjs',
+          error: 'NFHS auth blocked by CloudFront (403).',
+          suggestion: `${headlessNote} Suggested: cd ccshub && npm install puppeteer --legacy-peer-deps && NODE_ENV=development USE_HEADLESS_LOGIN=1 PUPPETEER_EXECUTABLE_PATH=/path/to/chrome node scripts/server.mjs`,
           upstreamBodyPreview: txt.slice(0, 1000),
         });
       }
@@ -250,4 +351,7 @@ const server = http.createServer(async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-server.listen(PORT, '0.0.0.0', () => console.log(`NFHS helper server listening on http://0.0.0.0:${PORT}/`));
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`NFHS helper server listening on http://0.0.0.0:${PORT}/`);
+  try { fs.writeFileSync('/tmp/nfhs-server.pid', String(process.pid), 'utf-8'); } catch (e) { /* ignore */ }
+});

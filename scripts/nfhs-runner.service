@@ -1,0 +1,18 @@
+[Unit]
+Description=NFHS Headless Runner
+After=network.target
+
+[Service]
+User=usb
+WorkingDirectory=/home/usb/ccshub
+# Set environment vars here or with systemctl set-environment
+# Environment=NODE_ENV=production
+# Environment=PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+# Environment=NFHS_RUNNER_SECRET=your-secret
+ExecStart=/usr/bin/node /home/usb/ccshub/scripts/nfhs-headless-runner.mjs
+Restart=always
+RestartSec=10
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

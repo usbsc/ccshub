@@ -1,4 +1,5 @@
 import { maxprepsTeamData } from "./teams.maxpreps.generated";
+import { nfhsTeamLogos } from "./teams.nfhs.generated";
 import { schoolInfoData } from "./school-info";
 import { baseTeamsOverride } from "./teams.override";
 
@@ -3986,7 +3987,7 @@ export const baseTeams: Team[] = baseTeamsOverride.map((t) => {
 
   const legacy = baseTeamsLegacy.find((b) => b.id === id || b.name.toLowerCase() === t.name.toLowerCase());
 
-  const image = legacy?.image ?? t.logo_url;
+  const image = nfhsTeamLogos[id] ?? legacy?.image ?? t.logo_url;
 
   const socials = {
     ...(legacy?.socials ?? {}),

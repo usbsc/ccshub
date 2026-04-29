@@ -38,6 +38,19 @@ export interface Play {
   week: number;
 }
 
+interface NFHSAuthResponse {
+  token?: string;
+  access_token?: string;
+}
+
+interface NFHSVideosResponse {
+  videos?: NFHSVideo[];
+}
+
+function isErrorLike(error: unknown): error is { name?: string; code?: string; message?: string } {
+  return typeof error === 'object' && error !== null;
+}
+
 class NFHSService {
   private credentials: NFHSCredentials | null = null;
   private authToken: string | null = null;
@@ -66,11 +79,12 @@ class NFHSService {
         }
         // 5xx - transient, retry
         console.warn(`NFHS request attempt ${attempt} failed with status ${response.status}. Retrying...`);
-      } catch (err: any) {
+      } catch (err: unknown) {
         clearTimeout(timeout);
         // AbortError or network error - retry
-        const isAbort = err && (err.name === 'AbortError' || err.code === 'ETIMEDOUT');
-        console.warn(`NFHS request attempt ${attempt} network error: ${err?.message || err}. ${isAbort ? 'Timed out.' : ''}`);
+        const isAbort = isErrorLike(err) && (err.name === 'AbortError' || err.code === 'ETIMEDOUT');
+        const message = isErrorLike(err) && err.message ? err.message : String(err);
+        console.warn(`NFHS request attempt ${attempt} network error: ${message}. ${isAbort ? 'Timed out.' : ''}`);
       }
       // exponential backoff
       const backoff = 200 * Math.pow(2, attempt - 1);
@@ -129,7 +143,7 @@ class NFHSService {
         throw new Error(`NFHS authentication failed with status ${response.status}`);
       }
 
-      const data = await response.json().catch(() => ({} as any));
+      const data = await response.json().catch(() => ({} as NFHSAuthResponse));
       this.authToken = data.token || data.access_token || null;
 
       if (!this.authToken) {
@@ -192,7 +206,7 @@ class NFHSService {
         return [];
       }
 
-      const data = await response.json().catch(() => ({} as any));
+      const data = await response.json().catch(() => ({} as NFHSVideosResponse));
       return data.videos || [];
     } catch (error) {
       console.error("Error fetching NFHS videos:", error);

@@ -45,23 +45,43 @@ export function PhotoGrid({
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             className="group cursor-pointer rounded-lg overflow-hidden bg-card border border-border shadow-lg hover:shadow-xl transition-shadow"
-            onClick={() => onPhotoClick(photo, index)}
+            onClick={() => {
+              if (photo.isVideo) {
+                window.open(photo.url, '_blank');
+              } else {
+                onPhotoClick(photo, index);
+              }
+            }}
           >
             {/* Image Container */}
             <div className="relative aspect-square bg-muted overflow-hidden">
-              <img
-                src={photo.url}
-                alt={photo.name}
-                className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
-                loading="lazy"
-                onError={(e) => {
-                  const img = e.target as HTMLImageElement;
-                  img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23333" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23666" font-size="16" font-family="system-ui"%3EImage unavailable%3C/text%3E%3C/svg%3E';
-                }}
-              />
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+              {photo.isVideo ? (
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-900 to-black">
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                      </svg>
+                    </div>
+                    <span className="text-xs text-white font-semibold">Video</span>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <img
+                    src={photo.url}
+                    alt={photo.name}
+                    className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      const img = e.target as HTMLImageElement;
+                      img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23333" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23666" font-size="16" font-family="system-ui"%3EImage unavailable%3C/text%3E%3C/svg%3E';
+                    }}
+                  />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                </>
+              )}
             </div>
 
             {/* Photo Info */}

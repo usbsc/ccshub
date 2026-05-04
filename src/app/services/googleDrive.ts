@@ -6,13 +6,14 @@
  */
 
 export interface Photo {
-  id: string; // Google Drive file ID
-  url: string; // Public image URL
+  id: string; // Google Drive file ID or custom ID for videos
+  url: string; // Public image URL or video URL
   name: string; // File name
   folder: 'jv' | 'varsity' | 'freshman'; // JV, Varsity, or Freshman folder
   team?: string; // Team association (optional)
   addedDate: Date; // Upload date from Drive
   mimeType?: string; // Image MIME type
+  isVideo?: boolean; // Whether this is a video link (not a Drive image)
 }
 
 class GoogleDriveService {
@@ -117,13 +118,37 @@ class GoogleDriveService {
 
       const allPhotos = [...jvResult.photos, ...varsityResult.photos, ...freshmanResult.photos];
 
+      // Add local photo albums/videos
+      const photoAlbums: Photo[] = [
+        {
+          id: 'jv-replay',
+          url: 'https://adobe.ly/4eR0wNL',
+          name: 'JV Replay',
+          folder: 'jv',
+          team: 'CCS',
+          addedDate: new Date(),
+          isVideo: true,
+        },
+        {
+          id: 'varsity-replay',
+          url: 'https://adobe.ly/42ACP53',
+          name: 'Varsity Replay',
+          folder: 'varsity',
+          team: 'CCS',
+          addedDate: new Date(),
+          isVideo: true,
+        },
+      ];
+
+      allPhotos.push(...photoAlbums);
+
       // Sort by date descending
       allPhotos.sort((a, b) => b.addedDate.getTime() - a.addedDate.getTime());
 
       this.cachedPhotos = allPhotos;
       this.lastFetchTime = now;
 
-      console.warn(`✓ Fetched ${allPhotos.length} photos from Google Drive`);
+      console.warn(`✓ Fetched ${allPhotos.length} photos from Google Drive and local albums`);
       return allPhotos;
     } catch (error) {
       console.error('Error fetching all photos:', error);

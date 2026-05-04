@@ -528,7 +528,7 @@ export function TeamDetail() {
           Photos
         </h2>
         {import.meta.env.VITE_LIGHTROOM_API_URL ? (
-          <PhotosGallery teamId={team.id} />
+          <PhotosGallery teamId={team.id} team={team} />
         ) : (
           <div className="flex flex-col items-center justify-center py-12 px-6 rounded-lg border-2 border-dashed border-border">
             <Image className="w-12 h-12 text-purple-400 mb-4" />

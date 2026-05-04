@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { type Team } from "../data/teams";
 
 type Photo = {
   url: string;
@@ -6,7 +7,7 @@ type Photo = {
   level?: string; // e.g. "JV", "VAR", or "FROSH"
 };
 
-export default function PhotosGallery({ teamId }: { teamId: string | undefined }) {
+export default function PhotosGallery({ teamId, team }: { teamId: string | undefined; team?: Team }) {
   const apiUrl = ((import.meta as unknown) as { env?: { VITE_LIGHTROOM_API_URL?: string } }).env?.VITE_LIGHTROOM_API_URL;
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(false);
@@ -16,10 +17,45 @@ export default function PhotosGallery({ teamId }: { teamId: string | undefined }
   const [promptOpen, setPromptOpen] = useState(false);
 
   useEffect(() => {
+    // Use local replays data if available
+    if (team?.replays) {
+      const localPhotos: Photo[] = [];
+      if (team.replays.jv) {
+        team.replays.jv.forEach((photo) => {
+          localPhotos.push({
+            url: photo.url,
+            caption: photo.caption,
+            level: "JV",
+          });
+        });
+      }
+      if (team.replays.varsity) {
+        team.replays.varsity.forEach((photo) => {
+          localPhotos.push({
+            url: photo.url,
+            caption: photo.caption,
+            level: "VAR",
+          });
+        });
+      }
+      if (team.replays.freshman) {
+        team.replays.freshman.forEach((photo) => {
+          localPhotos.push({
+            url: photo.url,
+            caption: photo.caption,
+            level: "FROSH",
+          });
+        });
+      }
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setPhotos(localPhotos);
+      return;
+    }
+
     if (!apiUrl) return;
     let cancelled = false;
     // setting loading here is intentional to indicate fetch start
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+     
     setLoading(true);
     setError(null);
     fetch(`${apiUrl.replace(/\/?$/, "")}?teamId=${encodeURIComponent(teamId ?? "")}`)
@@ -52,7 +88,7 @@ export default function PhotosGallery({ teamId }: { teamId: string | undefined }
     return () => {
       cancelled = true;
     };
-  }, [apiUrl, teamId]);
+  }, [apiUrl, teamId, team]);
 
   const visiblePhotos = showAll
     ? filterLevel
@@ -73,8 +109,13 @@ export default function PhotosGallery({ teamId }: { teamId: string | undefined }
         <>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
             {visiblePhotos.map((p, idx) => (
-              <div key={idx} className="rounded overflow-hidden bg-black/5">
+              <div key={idx} className="rounded overflow-hidden bg-black/5 relative">
                 <img src={p.url} alt={p.caption ?? `Photo ${idx + 1}`} className="w-full h-28 object-cover" />
+                {p.level && (
+                  <div className="absolute top-1 left-1 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                    {p.level}
+                  </div>
+                )}
                 {p.caption && <div className="text-xs p-1 text-muted-foreground">{p.caption}</div>}
               </div>
             ))}

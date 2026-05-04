@@ -2,6 +2,7 @@ import { maxprepsTeamData } from "./teams.maxpreps.generated";
 import { nfhsTeamLogos } from "./teams.nfhs.generated";
 import { schoolInfoData } from "./school-info";
 import { baseTeamsOverride } from "./teams.override";
+import { sobratoPhotos } from "./sobrato.photos.generated";
 
 export interface SchoolInfo {
   founded: number; // Year the school was founded
@@ -53,6 +54,11 @@ export interface Team {
     hudl?: string;
     youtube?: string;
     website?: string;
+  };
+  replays?: {
+    jv?: Array<{ url: string; caption?: string }>;
+    varsity?: Array<{ url: string; caption?: string }>;
+    freshman?: Array<{ url: string; caption?: string }>;
   };
   schoolInfo?: SchoolInfo;
   lastUpdated?: string; // ISO timestamp of last MaxPreps update
@@ -1902,6 +1908,10 @@ export const baseTeamsLegacy: Team[] = [
         wins: 8,
         losses: 5,
       },
+    },
+    replays: {
+      jv: sobratoPhotos.jv,
+      varsity: sobratoPhotos.varsity,
     },
   },
   {

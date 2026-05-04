@@ -30,8 +30,6 @@ export const baseTeamsOverride: Array<{name:string; league:string; logo_url:stri
   {"name":"Menlo School","league":"WBAL","logo_url":"https://via.placeholder.com/120?text=Menlo","maxpreps_url":"https://www.maxpreps.com/search/?query=Menlo+School+football"},
   {"name":"Notre Dame Belmont","league":"WBAL","logo_url":"https://via.placeholder.com/120?text=NDB","maxpreps_url":"https://www.maxpreps.com/search/?query=Notre+Dame+Belmont+football"},
   {"name":"Sacred Heart Prep","league":"WBAL","logo_url":"https://via.placeholder.com/120?text=SHP","maxpreps_url":"https://www.maxpreps.com/search/?query=Sacred+Heart+Prep+football"},
-  {"name":"Pinewood","league":"WBAL","logo_url":"https://via.placeholder.com/120?text=Pinewood","maxpreps_url":"https://www.maxpreps.com/search/?query=Pinewood+football"},
-  {"name":"Harker","league":"WBAL","logo_url":"https://via.placeholder.com/120?text=Harker","maxpreps_url":"https://www.maxpreps.com/search/?query=Harker+football"},
   {"name":"King's Academy","league":"WBAL","logo_url":"https://via.placeholder.com/120?text=TKA","maxpreps_url":"https://www.maxpreps.com/search/?query=Kings+Academy+football"},
   {"name":"Priory","league":"WBAL","logo_url":"https://via.placeholder.com/120?text=Priory","maxpreps_url":"https://www.maxpreps.com/search/?query=Priory+School+football"},
 
@@ -76,11 +74,11 @@ export const baseTeamsOverride: Array<{name:string; league:string; logo_url:stri
 
   /* ===================== PCAL ===================== */
   {"name":"Alisal","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Alisal","maxpreps_url":"https://www.maxpreps.com/search/?query=Alisal+football"},
-  {"name":"Alvarez","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Alvarez","maxpreps_url":"https://www.maxpreps.com/search/?query=Alvarez+football"},
+  {"name":"Everett Alvarez","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Alvarez","maxpreps_url":"https://www.maxpreps.com/search/?query=Alvarez+football"},
   {"name":"Carmel","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Carmel","maxpreps_url":"https://www.maxpreps.com/search/?query=Carmel+High+football"},
   {"name":"Gonzales","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Gonzales","maxpreps_url":"https://www.maxpreps.com/search/?query=Gonzales+football"},
   {"name":"Greenfield","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Greenfield","maxpreps_url":"https://www.maxpreps.com/search/?query=Greenfield+football"},
-  {"name":"Hollister","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Hollister","maxpreps_url":"https://www.maxpreps.com/search/?query=Hollister+football"},
+  {"name":"Hollister Haybalers","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Hollister","maxpreps_url":"https://www.maxpreps.com/search/?query=Hollister+football"},
   {"name":"King City","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=KingCity","maxpreps_url":"https://www.maxpreps.com/search/?query=King+City+football"},
   {"name":"Monterey","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=Monterey","maxpreps_url":"https://www.maxpreps.com/search/?query=Monterey+football"},
   {"name":"North Monterey County","league":"PCAL","logo_url":"https://via.placeholder.com/120?text=NMC","maxpreps_url":"https://www.maxpreps.com/search/?query=North+Monterey+County+football"},

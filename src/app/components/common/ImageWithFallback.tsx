@@ -10,6 +10,14 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
 
   const { src, alt, style, className, ...rest } = props;
 
+  const resolveAssetSrc = (value?: string) => {
+    if (!value) return value;
+    if (value.startsWith("/") && !value.startsWith("//")) {
+      return `${import.meta.env.BASE_URL.replace(/\/$/, "")}${value}`;
+    }
+    return value;
+  };
+
   let finalSrc = src;
   if (!src || errorCount === 1) {
     finalSrc = IMAGE_FALLBACKS.PRIMARY_PLACEHOLDER;
@@ -19,7 +27,7 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
 
   return (
     <img
-      src={finalSrc}
+      src={resolveAssetSrc(finalSrc)}
       alt={alt}
       className={className}
       style={style}
